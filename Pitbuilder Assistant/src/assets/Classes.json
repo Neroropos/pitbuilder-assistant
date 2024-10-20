@@ -1,0 +1,708 @@
+[
+  {
+    "Name": "Guard",
+    "DefScaling": 3,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {2} Gain {1} Block.",
+        "Values": ["1+DMG", "5+BLK", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. All adjacent enemies gain Slow 2. Block {1}.",
+        "Values": ["3+MOV", "5+BLK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Block {1}. Counter {2}.",
+        "Values": ["1+MOV", "10+BLK", "DMG"]
+      },
+      {
+        "Name": "Interrupt",
+        "Text": "Reaction - Enemy within Range 1 moves. Deal {0} Damage to them. {1}",
+        "Values": ["1+DMG", "PSTATK"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Type": "Defender"
+  },
+  {
+    "Name": "Bruiser",
+    "DefScaling": 3,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {1} Inflict 2 Dazed and 2 Slowed.",
+        "Values": ["1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2} Inflict 1 Dazed.",
+        "Values": ["2+MOV", "-1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Block {1}. When an adjacent enemy breaks your block, inflict 1 Dazed to them.",
+        "Values": ["4+MOV", "6+BLK"]
+      },
+      {
+        "Name": "Parry",
+        "Text": "Reaction - You are attacked. Gain {0} Block and {1} Counter.",
+        "Values": ["5+BLK", "DMG"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Type": "Defender"
+  },
+  {
+    "Name": "Ward Maker",
+    "DefScaling": 3,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Radius 1 - All friendly characters gain {1} Barrier. If they already have Barrier, they gain 2 extra.",
+        "Values": ["2+MOV", "3+BLK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Block {1}. Barrier {2}.",
+        "Values": ["3+MOV", "5+BLK", "3+BLK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Range 5 - Place a 3 HP Screamer.",
+        "Values": []
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Ranged Suppresion",
+        "Text": "Attacks against this and adjacent allies originating from Range 3 or greater deal half damage.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Defender"
+  },
+  {
+    "Name": "Pikeman",
+    "DefScaling": 2,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {2} Gain {1} Block.",
+        "Values": ["1+DMG", "5+BLK", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2} Block {3}.",
+        "Values": ["3+MOV", "1+DMG", "PSTATK", "2+BLK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Increase reaction Range and Line by 1 until the start of this character's next turn.",
+        "Values": ["4+MOV"]
+      },
+      {
+        "Name": "Interrupt",
+        "Text": "Reaction - Enemy within Range 2 moves while there are no other enemies adjacent to Pikeman. Deal {0} damage to them. {1}",
+        "Values": ["1+DMG", "PSTATK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Reach",
+        "Text": "All attacks are Line 2.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Defender"
+  },
+  {
+    "Name": "Fighter",
+    "DefScaling": 2,
+    "OffScaling": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {1} Inflict 1 Vulnerable.",
+        "Values": ["1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2}",
+        "Values": ["3+MOV", "-1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Block {1}. Counter {2}.",
+        "Values": ["3+MOV", "2+BLK", "-3+DMG"]
+      },
+      {
+        "Name": "Interrupt",
+        "Text": "Reaction - Enemy within Range 1 moves. Deal {0} Damage to them. {1}",
+        "Values": ["1+DMG", "PSTATK"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Archer",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Close",
+        "Text": "Deal {0} Damage. {1}",
+        "Values": ["1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Range +2. Deal {0} Damage. {1} Inflict 1 Slow",
+        "Values": ["-1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Melee",
+        "Text": "Move {0}.",
+        "Values": ["3+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Bow",
+        "Text": "All attacks have Range 5.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Caster",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Close",
+        "Text": "Deal {0} Damage to enemies ignoring Block. {1}",
+        "Values": ["1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Range +2. Deal {1} Damage to two targets ignoring Block. {2}",
+        "Values": ["1+MOV", "-1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Melee",
+        "Text": "Move {0}.",
+        "Values": ["3+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Rod",
+        "Text": "All attacks have Range 3 and ignore Block.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Musketman",
+    "DefScaling": 1,
+    "OffScaling": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Reload 1. Gain {1} Block.",
+        "Values": ["3+MOV", "3+BLK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2}",
+        "Values": ["1+MOV", "1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Choose a target in range. At the start of your next turn, if the target is in range, deal {0} Damage. {1}",
+        "Values": ["(1+DMG)*2", "PSTATK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Musket",
+        "Text": "All attacks have Range 10 and require 1 Ammo to use. \nStarts combat with 1 Ammo.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Beacon",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Radius 5 - Each ally gains {0} Block and {1} Counter",
+        "Values": ["4+BLK", "0+DMG"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Range 5 - Target Ally Moves 2 and Attacks.",
+        "Values": []
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Block.",
+        "Values": ["2+MOV", "2+BLK"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Officer",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Deal {1} Damage. {2} Target becomes Marked.",
+        "Values": ["1+MOV", "1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Range 5 - Target Ally Moves 2 and Attacks.",
+        "Values": []
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. All allies within Radius 3 can Move 3.",
+        "Values": ["3+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Gun",
+        "Text": "All attacks may gain Range 5. If they do, they cost 1 Ammo and they deal +2 Damage. \nStarts combat with 3 Ammo.",
+        "Values": []
+      },
+      {
+        "Name": "Officer's Mark",
+        "Text": "Marked characters take {0} extra damage.",
+        "Values": ["1+TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Arcanist",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Deploy a Binding Circle.",
+        "Values": ["3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deploy a Emboldening Circle.",
+        "Values": ["3+MOV"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Deploy a Invigorating Circle.",
+        "Values": ["3+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Circles",
+        "Text": "All Circles are Radius 3 terrain. They can be attacked at the center and have {0} HP.",
+        "Values": ["3*DEF+TIR*2"]
+      },
+      {
+        "Name": "Binding Circle",
+        "Text": "At the start of their turn, each enemy within this Circle suffers 1 Slowed and {0} Damage.",
+        "Values": ["DMG"]
+      },
+      {
+        "Name": "Emboldening Circle",
+        "Text": "At the start of their turn, each ally within this Circle gains 3 Strength for that turn and {0} Block.",
+        "Values": ["3+BLK"]
+      },
+      {
+        "Name": "Emboldening Circle",
+        "Text": "At the start of their turn, each ally within this Circle gains 3 Haste for that turn and {0} HP.",
+        "Values": ["TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Servant",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Adjacent ally recovers from all conditions.",
+        "Values": ["2+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2} Inflict {3} Bleed.",
+        "Values": ["3+MOV", "0+DMG", "PSTATK", "TIR*2"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Radius 2 - Allies gain 1 Strength for their next turn and their attacks inflict {0} Poison next turn.",
+        "Values": ["TIR*2"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Spite",
+        "Text": "Whenever an adjacent ally becomes Bloodied, gain 1 Strength.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Thief",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {1} Inflict {3} Bleed. Exile a random card from the target's hand. Move {2}.",
+        "Values": ["1+DMG", "PSTATK", "2+MOV", "TIR*2"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 2 - Deal {1} Damage. {2} Inflict {3} Bleed.",
+        "Values": ["4+MOV", "1+DMG", "PSTATK", "TIR*2"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}",
+        "Values": ["7+MOV"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Type": "Skirmisher"
+  },
+  {
+    "Name": "Assasin",
+    "DefScaling": 1,
+    "OffScaling": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {1} Move {2}.",
+        "Values": ["-1+DMG", "PSTATK", "5+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 3 - Deal {1} Damage. {2} Inflict {3} Poison.",
+        "Values": ["3+MOV", "-2+DMG", "PSTATK", "TIR*2"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain 1 Evasive.",
+        "Values": ["5+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Elusive",
+        "Text": "At the start of each turn and at the start of combat, gain 1 Evasive.",
+        "Values": []
+      },
+      {
+        "Name": "Pick off",
+        "Text": "When attacking enemies that have no allies within Range 3, deal double damage.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Skirmisher"
+  },
+  {
+    "Name": "Raider",
+    "DefScaling": 2,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {1} Inflict 3 Slow. Move {2}.",
+        "Values": ["1+DMG", "PSTATK", "5+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. Deal 1 extra Damage for every 2 and Inflict 1 Dazed for every 3 spaces moved in a straight line. {2}",
+        "Values": ["6+MOV", "-1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain 2 Haste for next turn only.",
+        "Values": ["3+MOV"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Type": "Skirmisher"
+  },
+  {
+    "Name": "Dasher",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. Inflict Weak 1. {1} Move {2} away.",
+        "Values": ["1+DMG", "PSTATK", "3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2} Move {0}.",
+        "Values": ["2+MOV", "1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain Evasive 1.",
+        "Values": ["5+MOV"]
+      }
+    ],
+    "PostAttack": [
+      {
+        "Name": "Dash",
+        "Text": "Move 1.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "Type": "Skirmisher"
+  },
+  {
+    "Name": "Hexer",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0} away. Create a 1 HP Size 1 obstacle in three adjacent spaces.",
+        "Values": ["3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Range 5 - Target exiles 2 non-status cards from their hand, then inflict 1 Stunned and {1} Poison",
+        "Values": ["TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. {1} Barrier.",
+        "Values": ["4+MOV", "3+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Auto-hex",
+        "Text": "When attacked, the attacker exiles 1 non-status card from their hand.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Controller"
+  },
+  {
+    "Name": "Inhibitor",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Place a Sapping Pillar.",
+        "Values": ["3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 5 - Deal {1} Damage. {2} Place a Chaining Pillar next to the target.",
+        "Values": ["3+MOV", "1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Range 5 - Place 3 size 1 Obstacles.",
+        "Values": ["3+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Wall Infusion",
+        "Text": "All obstacles within Range 3 of the Inhibitor take 3 less damage.",
+        "Values": []
+      },
+      {
+        "Name": "Pillar",
+        "Text": "All Pillars are Size 1 obstacles. They can be attacked and have {0} HP.",
+        "Values": ["3*DEF+TIR*2"]
+      },
+      {
+        "Name": "Sapping Pillar",
+        "Text": "All enemies within Radius 3 of it deal 3 less Damage.",
+        "Values": []
+      },
+      {
+        "Name": "Chaining Pillar",
+        "Text": "Any enemy that starts their turn adjacent to it can't move to be more than 3 away from it.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Controller"
+  },
+  {
+    "Name": "Poisoner",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Radius 2 - Inflict {1} Poison and 1 Weak to each enemy. Move {0}.",
+        "Values": ["2+MOV", "TIR*2"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 7. Inflict {1} Poison. They have 1 Slow for as long as they have Poison.",
+        "Values": ["2+MOV", "TIR*2"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. The next time the Poisoner inflicts Poison, they inflict {1} extra Poison and 1 Dazed.",
+        "Values": ["2+MOV", "TIR*2"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Toxic Fumes",
+        "Text": "If an enemy ends their turn adjacent to the Poisoner, they gain Poison {0}.",
+        "Values": ["TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Controller"
+  },
+  {
+    "Name": "Beguiler",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Adjacent enemies become Charmed. They Move 2, controlled by Beguiler. Move {0}",
+        "Values": ["2+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}.  Range 6. Target enemy Moves 1 and Strikes, dealing half damage with the Beguiler controlling both actions. If Charmed, they deal full damage.",
+        "Values": ["1+MOV"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Barrier. ",
+        "Values": ["3+MOV", "3+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Charming",
+        "Text": "Charmed characters deal half damage to this character.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Controller"
+  },
+  {
+    "Name": "Shadecaller",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Range 3 - Summon a Shade.",
+        "Values": ["3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Summon a Shade. Each shade deals {1} damage to each adjacent enemy.",
+        "Values": ["1+MOV", "1+DMG"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Range 5 - Summon a Shade, then swap spaces with any allied Shade.",
+        "Values": []
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Shade",
+        "Text": "All Shades are Size 1 creatures. They can be attacked and have {0} HP. Whenever an ally within Range 3 is attacked, the Shade may take the attack instead, swapping spaces with the ally.",
+        "Values": ["DEF+TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Defender"
+  },
+  {
+    "Name": "Puppeteer",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Range 3 - Summon a Puppet. Each Puppet inflicts 1 Slow and deals {1} damage",
+        "Values": ["3+MOV", "1+DMG"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 5 - Summon a Puppet. Each Puppet deals {1} damage.",
+        "Values": ["3+MOV", "-1+DMG"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Each Puppet moves {1}.",
+        "Values": ["3+MOV", "2+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Puppet",
+        "Text": "All Puppets are Size 1 creatures. They can be attacked and have {0} HP. When there are no Puppeteers, Puppet stops being a creature and becomes an obstacle.",
+        "Values": ["DEF*2+TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Striker"
+  }
+]
