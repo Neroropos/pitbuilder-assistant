@@ -4,7 +4,7 @@ import { Enemy, GetClassList, GetTemplateList } from '@/application/charMath'
 import Multiselect from 'primevue/multiselect'
 import Select from 'primevue/select'
 import FloatLabel from 'primevue/floatlabel'
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 const enemyClasses = GetClassList()
 const enemyTemplates = GetTemplateList()
 const currentEnemy = ref(new Enemy())
@@ -19,7 +19,6 @@ const turnTakenId = 'turnTaken' + props.id
 function changed(ev: {}) {
   currentEnemy.value.update()
   currHp.value = currentEnemy.value.HP
-  //aa
 }
 function damage() {
   let input = dealDmg.value
