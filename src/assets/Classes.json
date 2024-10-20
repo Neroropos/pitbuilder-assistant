@@ -704,5 +704,118 @@
     ],
     "PostAttack": [],
     "Type": "Striker"
+  },
+  {
+    "Name": "Knight of Embers",
+    "DefScaling": 2,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} damage. {1} Block {2}",
+        "Values": ["3+DMG", "PSTATK", "5+BLK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Consume Fire to gain 2 Strength. Deal {1} damage. {2} Block {3}.",
+        "Values": ["3+MOV", "1+DMG", "PSTATK", "3+BLK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Channel Fire. Block {1}.",
+        "Values": ["3+MOV", "5+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Blazing",
+        "Text": "Start of combat: Channel Fire.",
+        "Values": []
+      },
+      {
+        "Name": "Burn Bright",
+        "Text": "When defeated: Radius 3 - Deal {0} Fire damage to all enemies. Channel Fire.",
+        "Values": ["1+DMG"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Special"
+  },
+  {
+    "Name": "Storm Noble",
+    "DefScaling": 1,
+    "OffScaling": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Consume Electricity. Range 5. Deal {0} Damage. Deal 1 less Damage to another enemy within range 1 of the last target. Repeat until no new targets are available. Move {1}",
+        "Values": ["-1+DMG", "2+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 5. Deal {1} Damage. {2} Inflict 1 Stunned. ",
+        "Values": ["3+MOV", "1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Deal {1} Damage. {2} Move {0}. Channel Electricity.",
+        "Values": ["2+MOV", "1+DMG", "PSTATK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Shocking",
+        "Text": "Start of combat: Channel Electricity.",
+        "Values": []
+      },
+      {
+        "Name": "Storm Aura",
+        "Text": "When attacked in melee: Deal 1 Electric damage to the attacker.",
+        "Values": ["1+TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Special"
+  },
+  {
+    "Name": "Blade of Wind",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. Move {1}. {2} Repeat 2 times.",
+        "Values": ["3+DMG", "1+MOV", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} damage. {2} Inflict 2 Dazed.",
+        "Values": ["5+MOV", "1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain 3 Evasive. When evading, inflict 1 Dazed to the attacker. Channel Air.",
+        "Values": ["5+MOV"]
+      },
+      {
+        "Name": "Billowing",
+        "Text": "Reaction - you are attacked. Consume Air. Gain 1 Evasive.",
+        "Values": []
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Gale",
+        "Text": "Start of combat: Channel Air.",
+        "Values": []
+      },
+      {
+        "Name": "Burn Bright",
+        "Text": "Start of turn: Move {0}. If Air is Channeled, Radius 2. Deal {1} damage to all enemies.",
+        "Values": ["1+MOV", "1+TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Special"
   }
 ]
