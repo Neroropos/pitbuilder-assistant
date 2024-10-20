@@ -1,0 +1,363 @@
+[
+  {
+    "Name": "Sludge",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 3,
+    "MoveMod": -1,
+    "Actions": [],
+    "Passives": [],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {
+      "Name": "Toxic strikes",
+      "Text": "Inflict {0} Poison.",
+      "Values": ["Math.round(OFF/2)+TIR-1"]
+    }
+  },
+  {
+    "Name": "Corrupted",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": -2,
+    "MoveMod": 1,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Survivor",
+        "Text": "While Bloodied, gain Evasive 1 at the start of your turn.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": ["Water", "Air", "Nature", "Light"],
+    "Resistances": [],
+    "PostAttack": {
+      "Name": "Sharp blows",
+      "Text": "Inflict {0} Bleed.",
+      "Values": ["Math.round(OFF/2)+TIR-1"]
+    }
+  },
+  {
+    "Name": "Glimpser",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 2,
+    "MoveMod": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Diffused Light",
+        "Text": "Enemies attacking this from outside Range 3 gain 1 Weak at the end of their turn.",
+        "Values": []
+      },
+      {
+        "Name": "Auto-mending",
+        "Text": "While bloodied, regenerate {0} at the end of turn.",
+        "Values": ["Math.round(DEF/2)+TIR-1"]
+      }
+    ],
+    "Weaknesses": ["Fire", "Ice", "Lightning", "Dark"],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Demonic",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "DmgMod": 1,
+    "Actions": [
+      {
+        "Name": "Dark Surge",
+        "Text": "Channel Dark. Radius 1. Deal {0} dark damage and gain {1} Barrier.",
+        "Values": ["OFF+TIR-1", "DEF+TIR-1"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Dark Blood",
+        "Text": "When Bloodied for the first time, immediately perform Dark Surge.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": ["Light"],
+    "Resistances": ["Dark"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Divine",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 1,
+    "MoveMod": 0,
+    "DmgMod": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Shielding Pressence",
+        "Text": "As long as not bloodied, allies within Radius 1 take 1 less damage and deal 1 more damage.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": ["Dark"],
+    "Resistances": ["Light"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Imperial",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Resilience",
+        "Text": "Start of combat: Gain {0} Barrier.",
+        "Values": ["DEF*2+TIR"]
+      }
+    ],
+    "Passives": [],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Primal Fire",
+    "DefScaling": 0,
+    "OffScaling": 1,
+    "HpMod": 0,
+    "MoveMod": 1,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Elemental spread",
+        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "Weaknesses": ["Water", "Earth"],
+    "Resistances": ["Fire"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Primal Water",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 2,
+    "MoveMod": 1,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Elemental spread",
+        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "Weaknesses": ["Lightning", "Nature"],
+    "Resistances": ["Water"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Primal Air",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 2,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Elemental spread",
+        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "Weaknesses": ["Ice", "Lightning"],
+    "Resistances": ["Air"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Primal Earth",
+    "DefScaling": 1,
+    "OffScaling": 0,
+    "HpMod": 1,
+    "MoveMod": -1,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Elemental spread",
+        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "Weaknesses": ["Water", "Air"],
+    "Resistances": ["Earth"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Primal Lightning",
+    "DefScaling": 0,
+    "OffScaling": 1,
+    "HpMod": -3,
+    "MoveMod": 2,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Elemental spread",
+        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "Weaknesses": ["Nature", "Earth"],
+    "Resistances": ["Lightning"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Primal Nature",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 2,
+    "MoveMod": 0,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Elemental spread",
+        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
+        "Values": []
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Recovery",
+        "Text": "Regenerate {0} at the end of each turn.",
+        "Values": ["DEF+1+TIR"]
+      }
+    ],
+    "Weaknesses": ["Fire", "Ice"],
+    "Resistances": ["Nature"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Primal Ice",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 2,
+    "MoveMod": 0,
+    "BlockMod": 3,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Elemental spread",
+        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "Weaknesses": ["Fire", "Air"],
+    "Resistances": ["Ice"],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Armored",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": -1,
+    "BlockMod": 3,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Armored Blow",
+        "Text": "Deal Damage equal to your Block.",
+        "Values": []
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Bastion",
+        "Text": "Only loses half Block at the start of turn.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Swift",
+    "DefScaling": -1,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 2,
+    "BlockMod": -2,
+    "DmgMod": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Skirmish",
+        "Text": "Movement ignores zones of control.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Veteran",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 1,
+    "Actions": [],
+    "Passives": [],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Avaricious",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Paid For",
+        "Text": "Start each combat with {0} Money.",
+        "Values": ["1+TIR*2"]
+      },
+      {
+        "Name": "Invest in Yourself",
+        "Text": "When attacking, spend 1 Money to deal {0} extra Damage. When blocking, spend 1 Money to gain {0} Barrier. When moving, spend 1 Money to move 1 more.",
+        "Values": ["1+TIR"]
+      },
+      {
+        "Name": "Refusal to Die",
+        "Text": "When Bloodied and no Money is remaining, start retreating.",
+        "Values": []
+      },
+      {
+        "Name": "Performance Bonus",
+        "Text": "When defeating an enemy, gain 1 Money.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  }
+]
