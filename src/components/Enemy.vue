@@ -19,6 +19,7 @@ const turnTakenId = 'turnTaken' + props.id
 function changed(ev: {}) {
   currentEnemy.value.update()
   currHp.value = currentEnemy.value.HP
+  //aa
 }
 function damage() {
   let input = dealDmg.value
