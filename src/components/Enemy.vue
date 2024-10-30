@@ -22,6 +22,11 @@ function changed(ev: {}) {
 }
 function damage() {
   let input = dealDmg.value
+  if (input < 0) {
+    currHp.value = currHp.value - input
+    if (currHp.value > currentEnemy.value.HP) currHp.value = currentEnemy.value.HP
+    return
+  }
   if (!input) return
   if (currBlock.value > input) {
     currBlock.value = currBlock.value - input
