@@ -48,14 +48,15 @@
         "Name": "Far",
         "Text": "Move {0}. Block {1}. When an adjacent enemy breaks your block, inflict 1 Dazed to them.",
         "Values": ["4+MOV", "6+BLK"]
-      },
+      }
+    ],
+    "Passives": [
       {
         "Name": "Parry",
-        "Text": "Reaction - You are attacked. Gain {0} Block and {1} Counter.",
+        "Text": "At the end of your turn gain {0} Block and {1} Counter. If you have no Block, lose all Counter.",
         "Values": ["5+BLK", "DMG"]
       }
     ],
-    "Passives": [],
     "PostAttack": [],
     "Type": "Defender"
   },
@@ -373,8 +374,8 @@
       },
       {
         "Name": "Far",
-        "Text": "Radius 2 - Allies gain 1 Strength for their next turn and their attacks inflict {0} Poison next turn.",
-        "Values": ["TIR*2"]
+        "Text": "Move {0}. Radius 2 - Allies gain 1 Strength for their next turn and their attacks inflict {1} Poison next turn.",
+        "Values": ["2+MOV", "TIR"]
       }
     ],
     "Passives": [
@@ -516,7 +517,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Range 5 - Target exiles 2 non-status cards from their hand, then inflict 1 Stunned and {1} Poison",
+        "Text": "Range 5 - Target exiles 2 non-status cards from their hand, then inflict 1 Stunned and {0} Poison",
         "Values": ["TIR"]
       },
       {
