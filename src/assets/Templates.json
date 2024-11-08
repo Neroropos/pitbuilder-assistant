@@ -359,5 +359,68 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {}
+  },
+  {
+    "Name": "Lumbering",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 5,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Large",
+        "Text": "Size +1. No zone of control",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Disorienting",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Disorienting",
+        "Text": "When attacked, inflict 1 Dazed to the attacker.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Blazing",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 1,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Burning",
+        "Text": "At the end of turn, inflict {0} Burn to each adjacent enemy.",
+        "Values": ["TIR"]
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": { "Name": "Burning strikes", "Text": "Inflict {0} Burn.", "Values": ["TIR"] }
   }
 ]
