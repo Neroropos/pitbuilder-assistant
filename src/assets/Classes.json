@@ -818,5 +818,46 @@
     ],
     "PostAttack": [],
     "Type": "Special"
+  },
+  {
+    "Name": "Glider",
+    "DefScaling": 0,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {3} Inflict {1} Bleed and {1} Dazed. Move {2}.",
+        "Values": ["1+DMG", "1+TIR", "4+MOV", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} damage. {2} Inflict {3} Bleed and {3} Dazed. Move {0}.",
+        "Values": ["2+MOV", "-1+DMG", "PSTATK", "TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}.",
+        "Values": ["5+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Flight",
+        "Text": "Ignore terrain. Gain resistance to melee attacks.",
+        "Values": []
+      },
+      {
+        "Name": "Fluttering",
+        "Text": "After each move and at the start of combat, gain 1 Evasive.",
+        "Values": []
+      },
+      {
+        "Name": "Negligible",
+        "Text": "This character has no zone of control.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Skirmisher"
   }
 ]
