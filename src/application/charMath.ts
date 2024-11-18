@@ -128,7 +128,6 @@ export class EnemyTemplate {
   HPBar: number = 0
   public constructor(init?: Partial<EnemyTemplate>) {
     Object.assign(this, init)
-    console.log(this.HPBar)
   }
 }
 export class Enemy {
@@ -169,6 +168,9 @@ export class Enemy {
     this.HPMod =
       DefScaling * 7 + this.Templates?.reduce((sum, current) => sum + current.HpMod || 0, 0)
     this.HP = (1 + this.Tier) * 5 + this.HPMod
+    if (this.Templates.find((x) => x.Name == 'Grunt')) {
+      this.HP = 1
+    }
 
     const OffScaling =
       this.Class?.OffScaling +
@@ -180,7 +182,6 @@ export class Enemy {
 
     this.HPBar =
       1 + this.Class.HPBar + this.Templates?.reduce((sum, current) => sum + current.HPBar || 0, 0)
-    console.log(this.HPBar)
     this.MoveMod = this.Templates?.reduce((sum, current) => sum + current.MoveMod || 0, 0)
 
     this.BlockMod =

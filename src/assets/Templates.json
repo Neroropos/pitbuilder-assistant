@@ -422,5 +422,62 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": { "Name": "Burning strikes", "Text": "Inflict {0} Burn.", "Values": ["TIR"] }
+  },
+  {
+    "Name": "Weak",
+    "DefScaling": -1,
+    "OffScaling": -1,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Tiny",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": -10,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Tiny",
+        "Text": "Ignores zone of control.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Grunt",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Expendable",
+        "Text": "HP is 1.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
   }
 ]

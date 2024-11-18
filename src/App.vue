@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import Enemy from './components/Enemy.vue'
 const counter = ref([{ id: 1 }])
+let rounds = ref(1)
 function addEnemy() {
   let newId = 0
   if (counter.value.length > 0) newId = counter.value[counter.value.length - 1].id + 1
@@ -13,6 +14,7 @@ function close(id: number) {
 function newRound() {
   const checks = document.querySelectorAll('[id^="turnTaken"]') as NodeListOf<HTMLInputElement>
   checks.forEach((x) => (x.checked = false))
+  rounds.value++
 }
 </script>
 
@@ -20,7 +22,9 @@ function newRound() {
   <head>
     <link href="./assets/output.css" rel="stylesheet" />
   </head>
-  <button @click="newRound()" class="grid-item button">New round</button>
+  <div>
+    <button @click="newRound()" class="grid-item button">New round</button> Round {{ rounds }}
+  </div>
 
   <div class="grid-container">
     <div v-for="item in counter" :key="item.id" class="grid-item">
