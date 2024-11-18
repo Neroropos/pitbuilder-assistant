@@ -395,12 +395,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1} Inflict {3} Bleed. Exile a random card from the target's hand. Move {2}.",
-        "Values": ["1+DMG", "PSTATK", "2+MOV", "TIR*2"]
+        "Text": "Deal {0} Damage. {1} Inflict {3} Bleed. Exile a random card from the target's hand, deck and discard. Move {2}.",
+        "Values": ["3+DMG", "PSTATK", "2+MOV", "TIR*2"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 2 - Deal {1} Damage. {2} Inflict {3} Bleed.",
+        "Text": "Move {0}. Range 2 - Deal {1} Damage. {2} Inflict {3} Bleed. Exile a random card from the target's hand.",
         "Values": ["4+MOV", "1+DMG", "PSTATK", "TIR*2"]
       },
       {
