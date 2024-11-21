@@ -859,5 +859,112 @@
     ],
     "PostAttack": [],
     "Type": "Skirmisher"
+  },
+  {
+    "Name": "Duelist",
+    "DefScaling": 2,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {3}. Deal {0} Damage. {2} Inflict {1} Bleed and gain {4} Counter.",
+        "Values": ["1+DMG", "1+TIR", "PSTATK", "1+MOV", "DEF"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} damage. {2} Inflict {3} Bleed. Move {4}.",
+        "Values": ["4+MOV", "-1+DMG", "PSTATK", "TIR+1", "1+MOV"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain 1 Evasive",
+        "Values": ["6+MOV"]
+      },
+      {
+        "Name": "Riposte",
+        "Text": "Reaction - Ignore all damage from dice showing 1 or 2. Deal damage equal to damage ignored back to the attacker.",
+        "Values": ["5+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Duel",
+        "Text": "The last character attacked by Duelist is engaged in a duel with it. Duelist resists damage from enemies not dueling this character. Enemies dueling this Duelist deal half damage to other targets.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Defender"
+  },
+  {
+    "Name": "Illuminator",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {2} Inflict {1} Pulse. Move {3}. Channel Light",
+        "Values": ["1+DMG", "1+TIR", "PSTATK", "3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Radius 3. Allies gain {1} Barrier. Inflict {2} Pulse.",
+        "Values": ["3+MOV", "DEF+TIR", "OFF+TIR+1"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Teleport to be adjacent to an ally. That ally gains {0} Block. You may consume Light. If you do, Radius 5 - Inflict {1} Pulse.",
+        "Values": ["5+BLK", "OFF+TIR"]
+      },
+      {
+        "Name": "Illumination",
+        "Text": "Allies may draw line of sight, but not range, from you.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Mindmister",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Inflict {0} Dazed. Target shuffles their hand and discard into their deck, then draws that many cards. Move {0}.",
+        "Values": ["TIR+OFF+1", "2+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Radius 3. Inflict {1} Dazed and Knockback 2.",
+        "Values": ["3+MOV", "OFF+TIR+1"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Range 7. Inflict {1} Dazed and Slow {1}.",
+        "Values": ["5+MOV", "OFF+TIR-1"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Mist of Mind",
+        "Text": "Whenever an enemy ends their turn within range 5 of Mindmister, inflict {0} Dazed.",
+        "Values": ["TIR"]
+      },
+      {
+        "Name": "Pain of Clarity",
+        "Text": "Whenever an enemy within range 5 plays Dazed, they lose {0} life.",
+        "Values": ["TIR"]
+      },
+      {
+        "Name": "Last Breath",
+        "Text": "When defeated, perform the Melee action.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Support"
   }
 ]
