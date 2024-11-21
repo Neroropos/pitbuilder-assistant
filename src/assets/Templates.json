@@ -479,5 +479,26 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {}
+  },
+  {
+    "Name": "Mindwrecker",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Harming the addled mind",
+        "Text": "Deals +1 damage for each Dazed in target'shand.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": { "Name": "Dazing strikes", "Text": "Inflict {0} Dazed.", "Values": ["TIR"] }
   }
 ]
