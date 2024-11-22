@@ -1,0 +1,7 @@
+[
+  {
+    "Name": "Strike",
+    "Cost": 1,
+    "Type": ["Basic", "Attack"]
+  }
+]

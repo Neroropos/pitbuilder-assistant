@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Enemy from './components/Enemy.vue'
+import { isMobile } from './application/func'
 const counter = ref([{ id: 1 }])
 let rounds = ref(1)
 function addEnemy() {
@@ -26,7 +27,7 @@ function newRound() {
     <button @click="newRound()" class="grid-item button">New round</button> Round {{ rounds }}
   </div>
 
-  <div class="grid-container">
+  <div :class="[isMobile ? 'grid-container-mob' : 'grid-container']">
     <div v-for="item in counter" :key="item.id" class="grid-item">
       <span @click="close(item.id)" class="close"><i class="pi pi-times-circle"></i></span
       ><Enemy :id="item.id" />
@@ -39,6 +40,12 @@ function newRound() {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
+  background-color: #2196f3;
+  padding: 10px;
+}
+.grid-container-mob {
+  display: grid;
+  grid-template-columns: auto;
   background-color: #2196f3;
   padding: 10px;
 }
