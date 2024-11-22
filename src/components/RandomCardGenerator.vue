@@ -8,16 +8,18 @@ const cardTypes = GetCardTypes()
 const cardList = GetCardList(cardTypes)
 </script>
 <template>
-  <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block">
-    <Multiselect
-      v-model="selectedCardTypes"
-      filter
-      :options="cardTypes"
-      option-label="Name"
-      class="w-full md:w-80"
-      @change="changed($event)"
-      inputId="typeSelect"
-    />
-    <label for="typeSelect">Types</label>
-  </FloatLabel>
+  <div class="row" style="display: inline-block">
+    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block">
+      <Multiselect
+        v-model="selectedCardTypes"
+        filter
+        :options="cardTypes"
+        option-label="Name"
+        class="w-full md:w-80"
+        @change="changed($event)"
+        inputId="typeSelect"
+      />
+      <label for="typeSelect">Types</label>
+    </FloatLabel>
+  </div>
 </template>

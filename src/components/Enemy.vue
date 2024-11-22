@@ -16,18 +16,36 @@ currBarrier.value = 0
 const dealDmg = ref()
 const props = defineProps(['id'])
 const turnTakenId = 'turnTaken' + props.id
+const isBloodied = ref()
+isBloodied.value = false
 function changed(ev: {}) {
   currentEnemy.value.update()
   currHp.value = currentEnemy.value.HP
 }
+function hpChange() {
+  let trueHP = 0
+  const trueMaxHP = currentEnemy.value.HPBar * currentEnemy.value.HP
+  if (currentEnemy.value.HPBar > 1) {
+    const checks = document.querySelectorAll('[id^="HpBar"]') as NodeListOf<HTMLInputElement>
+    checks.forEach((x) => {
+      if (x.checked) {
+        trueHP += currentEnemy.value.HP
+      }
+    })
+    trueHP -= currentEnemy.value.HP
+  }
+  trueHP += currHp.value
+  if (trueHP * 2 <= trueMaxHP && trueHP > 0) isBloodied.value = true
+  else isBloodied.value = false
+}
 function damage() {
   let input = dealDmg.value
+  if (!input) return
   if (input < 0) {
     currHp.value = currHp.value - input
     if (currHp.value > currentEnemy.value.HP) currHp.value = currentEnemy.value.HP
     return
   }
-  if (!input) return
   if (currBlock.value > input) {
     currBlock.value = currBlock.value - input
     return
@@ -52,6 +70,7 @@ function damage() {
     if (uncheckThis >= 0) checks[uncheckThis].checked = false
     if (checks[0].checked) currHp.value = currentEnemy.value.HP + currHp.value
   }
+  hpChange()
 }
 </script>
 <template>
@@ -102,34 +121,39 @@ function damage() {
         :key="cnt"
         style="display: inline-block; width: 60px; font-size: 16px"
       >
-        <input :id="'HpBar' + cnt" type="checkbox" checked />
+        <input :id="'HpBar' + cnt" type="checkbox" checked @change="hpChange()" />
       </div>
     </div>
-    <div id="HP" style="display: inline-block">HP: {{ currentEnemy.HP }}/</div>
-    <input
-      v-model="currHp"
-      type="number"
-      style="display: inline-block; width: 60px; font-size: 16px"
-      placeholder="HP"
-    />
-    <input
-      v-model="currBarrier"
-      type="number"
-      style="display: inline-block; width: 60px; font-size: 16px"
-      placeholder="BAR"
-    />
-    <input
-      v-model="currBlock"
-      type="number"
-      style="display: inline-block; width: 60px; font-size: 16px"
-      placeholder="BLK"
-    />
-    <div
-      v-if="currHp <= currentEnemy.HP / 2 && currHp > 0"
-      style="display: inline-block; color: crimson"
-    >
-      Bloodied
+    <div id="HP" style="display: inline-block">
+      HP:
+      <input
+        v-model="currHp"
+        type="number"
+        style="display: inline-block; width: 60px; font-size: 16px"
+        placeholder="HP"
+        @change="hpChange()"
+      />
+      /{{ currentEnemy.HP }}
     </div>
+    <div id="BAR" class="inline-block">
+      BAR:
+      <input
+        v-model="currBarrier"
+        type="number"
+        style="width: 60px; font-size: 16px"
+        placeholder="BAR"
+      />
+    </div>
+    <div id="BAR" class="inline-block">
+      BLK:
+      <input
+        v-model="currBlock"
+        type="number"
+        style="width: 60px; font-size: 16px"
+        placeholder="BLK"
+      />
+    </div>
+    <div v-if="isBloodied" style="display: inline-block; color: crimson">Bloodied</div>
     <div v-if="currHp <= 0" style="display: inline-block; color: crimson">Defeated</div>
     <div class="row">
       <input

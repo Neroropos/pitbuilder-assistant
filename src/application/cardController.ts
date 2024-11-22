@@ -1,11 +1,15 @@
 import cardsJson from '../assets/Cards.json' assert { type: 'json' }
-export function GetCardList(types: string[]) {
+function GetCards() {
   const cards: PlayerCard[] = []
   const stringy = JSON.stringify(cardsJson)
-  const classesFromJson = JSON.parse(stringy) as PlayerCard[]
-  classesFromJson.forEach((element) => {
+  const cardsFromJson = JSON.parse(stringy) as PlayerCard[]
+  cardsFromJson.forEach((element) => {
     cards.push(new PlayerCard(element))
   })
+  return cards
+}
+export function GetCardList(types: string[]) {
+  const cards = GetCards()
   const result: PlayerCard[] = []
   cards.forEach((item) => {
     if (item.Types.some((x) => types.includes(x))) {
@@ -14,7 +18,16 @@ export function GetCardList(types: string[]) {
   })
   return result
 }
-export function GetCardTypes() {}
+export function GetCardTypes() {
+  const cards = GetCards()
+  const types: string[] = []
+  cards.forEach((item) => {
+    item.Types.forEach((type) => {
+      if (!types.includes(type)) types.push(type)
+    })
+  })
+  return types
+}
 export class PlayerCard {
   Types: string[] = []
   Cost: number | null = null
