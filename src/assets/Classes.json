@@ -939,7 +939,7 @@
       {
         "Name": "Close",
         "Text": "Move {0}. Radius 3. Inflict {1} Dazed and Knockback 2.",
-        "Values": ["3+MOV", "OFF+TIR+1"]
+        "Values": ["3+MOV", "OFF+TIR"]
       },
       {
         "Name": "Far",
@@ -965,6 +965,6 @@
       }
     ],
     "PostAttack": [],
-    "Type": "Support"
+    "Type": "Controller"
   }
 ]

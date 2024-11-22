@@ -493,7 +493,7 @@
     "Passives": [
       {
         "Name": "Harming the addled mind",
-        "Text": "Deals +1 damage for each Dazed in target'shand.",
+        "Text": "Deals +1 damage for each Dazed in target's hand.",
         "Values": []
       }
     ],
