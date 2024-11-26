@@ -23,6 +23,7 @@ export function GetCardList(typesOne: string[], typesAll: string[]) {
 }
 export function GetRandomCards(cardList: PlayerCard[], cardAmount) {
   let n = cardAmount
+  if (!n) n = 0
   const result = new Array(n)
   let len = cardList.length
   const taken = new Array(len)
