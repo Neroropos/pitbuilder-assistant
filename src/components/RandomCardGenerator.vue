@@ -5,11 +5,16 @@ import { GetCardList, GetCardTypes, GetRandomCards } from '@/application/cardCon
 import { ref } from 'vue'
 
 const cardTypes = GetCardTypes()
-let cardList = GetCardList([], [])
+let cardList = GetCardList()
 const selectedCardTypesAll = ref([])
 const selectedCardTypesOne = ref([])
+const excludeCardTypes = ref([])
 function changedTypes() {
-  cardList = GetCardList(selectedCardTypesOne.value, selectedCardTypesAll.value)
+  cardList = GetCardList(
+    selectedCardTypesOne.value,
+    selectedCardTypesAll.value,
+    excludeCardTypes.value
+  )
 }
 const cardAmount = ref()
 let cardsToShow = ref()
@@ -43,6 +48,18 @@ function getRandomCards() {
         style="width: 500px"
       />
       <label for="typeSelect2">Types (include at least one)</label>
+    </FloatLabel>
+    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block">
+      <Multiselect
+        v-model="excludeCardTypes"
+        filter
+        :options="cardTypes"
+        class="w-full md:w-80"
+        @change="changedTypes()"
+        inputId="typeSelect3"
+        style="width: 500px"
+      />
+      <label for="typeSelect3">Exlude types</label>
     </FloatLabel>
   </div>
   <div class="row">
