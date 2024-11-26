@@ -2,6 +2,355 @@
   {
     "Name": "Strike",
     "Cost": 1,
-    "Type": ["Basic", "Attack"]
+    "Types": ["Basic", "Attack"],
+    "Text": "Strike"
+  },
+  {
+    "Name": "Wind jump",
+    "Cost": 1,
+    "Types": ["Air", "Spell", "Maneuver", "Ranged"],
+    "Text": "Range 5. Target ally is removed from play. They appear at the start of the next round at any space within Range 5 from you. You may Consume Air to Knockback 1 all enemies adjacent to them when they appear."
+  },
+  {
+    "Name": "Blow off",
+    "Cost": 1,
+    "Types": ["Air", "Spell", "Maneuver", "Area", "Knocback"],
+    "Text": "Maneuver. Radius 2. Knockback 2."
+  },
+  {
+    "Name": "Air blade",
+    "Cost": 1,
+    "Types": ["Air", "Spell", "Maneuver", "Attack", "Bleed", "Ranged"],
+    "Text": "Consume Air. Range 4. Strike. Inflict 2 Bleed."
+  },
+  {
+    "Name": "Tempest strike",
+    "Cost": 2,
+    "Types": ["Air", "Spell", "Maneuver", "Attack"],
+    "Text": "Maneuver. Strike. Maneuver. Channel Air."
+  },
+  {
+    "Name": "Tailwind",
+    "Cost": 2,
+    "Types": ["Air", "Spell", "Maneuver", "Area", "Evasive"],
+    "Text": "Radius 1. Consume Air to increase Radius by 2. All allies may Move 3 and gain Evasive 1."
+  },
+  {
+    "Name": "Billowing",
+    "Cost": 1,
+    "Types": ["Air", "Spell", "Maneuver"],
+    "Text": "Consume Air. Continuous. Any number of times during your turn, you may discard a card. When you do, Move 1."
+  },
+  {
+    "Name": "Sacrificial stab",
+    "Cost": 0,
+    "Types": ["Dark", "Spell", "Attack", "Lifeloss"],
+    "Text": "Lose 2 Life. Strike. Channel Dark."
+  },
+  {
+    "Name": "Draining touch",
+    "Cost": 1,
+    "Types": ["Dark", "Spell", "Attack", "Lifegain"],
+    "Text": "Deal 1d6 damage. Consume Dark to gain life equal to damage dealt. Exile."
+  },
+  {
+    "Name": "Release pain",
+    "Cost": 2,
+    "Types": ["Dark", "Spell", "Attack", "Area", "Lifeloss"],
+    "Text": "Pay X life. This attack hits allies. Radius X. Deal 4d6 dark damage. "
+  },
+  {
+    "Name": "Blood pact",
+    "Cost": 2,
+    "Types": ["Dark", "Spell", "Buff", "Permanent", "Lifeloss", "Empower"],
+    "Text": "Permanent. End of turn - Lose 2 life and gain Empowered 1."
+  },
+  {
+    "Name": "Murderous aura",
+    "Cost": 1,
+    "Types": ["Dark", "Spell", "Area"],
+    "Text": "Continuous. Radius 1. Whenever an ally attacks, you lose 1 life and they deal an extra 1d6 damage."
+  },
+  {
+    "Name": "Shadow's grasp",
+    "Cost": 1,
+    "Types": ["Dark", "Spell", "Ranged", "Attack", "Soft"],
+    "Text": "Range 5. Up to three targets. Deal 1d6 damage and inflict Soft 2. Channel Dark."
+  },
+  {
+    "Name": "Bury",
+    "Cost": 1,
+    "Types": ["Earth", "Spell", "Attack"],
+    "Text": "Strike. Target can't move until the end of its next turn. Channel Earth."
+  },
+  {
+    "Name": "Cracking skin",
+    "Cost": 1,
+    "Types": ["Earth", "Spell", "Defend", "Obstacle"],
+    "Text": "Continuous. Defend. When attacked, create a Size 1 obstacle within Range 3."
+  },
+  {
+    "Name": "Blessing of stone",
+    "Cost": 1,
+    "Types": ["Earth", "Spell", "Defend", "Area", "Block"],
+    "Text": "Consume Earth. Radius 3. All friendly characters gain 5 Block."
+  },
+  {
+    "Name": "Stone cage",
+    "Cost": 3,
+    "Types": ["Earth", "Spell", "Area", "Obstacle", "Slow"],
+    "Text": "Radius 3. Create Size 3 walls around the radius. Inflict Slow 3. While no walls are destroyed and you are inside them, deal an extra 2d6 Earth damage on your attacks."
+  },
+  {
+    "Name": "Pocket cover",
+    "Cost": 0,
+    "Types": ["Earth", "Spell", "Ranged", "Obstacle"],
+    "Text": "Range 2. Create a Size 1 obstacle. Channel Earth."
+  },
+  {
+    "Name": "Dig",
+    "Cost": 1,
+    "Types": ["Earth", "Spell", "Recover"],
+    "Text": "Put a card from your discard into your hand."
+  },
+  {
+    "Name": "Reuse",
+    "Cost": 1,
+    "Types": ["Earth", "Spell", "Recover"],
+    "Text": "Shuffle any number of cards from your discard into your deck. "
+  },
+  {
+    "Name": "Forward strike",
+    "Cost": 1,
+    "Types": ["Fire", "Spell", "Attack", "Exile"],
+    "Text": "Strike. Exile the top card of your deck. You may play it this turn. Channel Fire."
+  },
+  {
+    "Name": "Sear",
+    "Cost": 0,
+    "Types": ["Fire", "Spell", "Attack", "Ranged", "Area"],
+    "Text": "Range 5. Blast 2. Deal an extra 1d6 damage to any non-bloodied enemies. Deal 1d6 fire damage."
+  },
+  {
+    "Name": "Burn bright",
+    "Cost": 2,
+    "Types": ["Fire", "Spell", "Draw"],
+    "Text": "Draw three cards. Consume Fire to play a card costing 1 or less from your hand for free."
+  },
+  {
+    "Name": "Blazing armamanet",
+    "Cost": 1,
+    "Types": ["Fire", "Spell", "Ranged"],
+    "Text": "Continuous. Range 3. Target ally deals an extra 1d6 Fire damage."
+  },
+  {
+    "Name": "Cauterize",
+    "Cost": 0,
+    "Types": ["Fire", "Spell", "Attack", "Draw"],
+    "Text": "Deal 1 Fire damage. Target loses all Bleed. Draw a card."
+  },
+  {
+    "Name": "Engulf in flames",
+    "Cost": 1,
+    "Types": ["Fire", "Spell", "Ranged"],
+    "Text": "Range 3. Inflict Burn on target ally. Their next attack gains Radius 1 and deals an extra 1d6 damage."
+  },
+  {
+    "Name": "Frost aura",
+    "Cost": 1,
+    "Types": ["Ice", "Spell", "Permanent", "Slow"],
+    "Text": "Permanent. Whenever an enemy starts their turn next to you, they gain Slow 1. Channel Ice."
+  },
+  {
+    "Name": "Snow day",
+    "Cost": 1,
+    "Types": ["Ice", "Spell", "Attack", "Area"],
+    "Text": "Radius 3. Create difficult terrain. Consume Ice to deal 1d6 Ice damage."
+  },
+  {
+    "Name": "Frost strike",
+    "Cost": 1,
+    "Types": ["Ice", "Spell", "Attack", "Slow"],
+    "Text": "Strike. Inflict Slow 2. Channel Ice."
+  },
+  {
+    "Name": "Frost beam",
+    "Cost": 2,
+    "Types": ["Ice", "Spell", "Attack", "Area"],
+    "Text": "Consume Ice. Line 4. Deal 3d6 damage. Create difficult terrain."
+  },
+  {
+    "Name": "Skating",
+    "Cost": 1,
+    "Types": ["Ice", "Spell", "Area", "Block"],
+    "Text": "Continuous. Radius 5. Friendly characters ignore movement cost increase on difficult terrain. When they end their turn on difficult terrain, they gain 2 Block."
+  },
+  {
+    "Name": "Ice armor",
+    "Cost": 0,
+    "Types": ["Ice", "Spell", "Slow", "Defend"],
+    "Text": "Opener. Defend. Gain Slow 1. Channel Ice."
+  },
+  {
+    "Name": "Balance",
+    "Cost": 1,
+    "Types": ["Light", "Spell", "Barrier"],
+    "Text": "Stance. Whenever you Strike, gain 1 Barrier. Whenever you Defend, your next attack deals an extra 1d6 damage. "
+  },
+  {
+    "Name": "Bestow armor",
+    "Cost": 1,
+    "Types": ["Light", "Spell", "Ranged", "Block"],
+    "Text": "Range 5. Target gains 5 Block. Channel Light."
+  },
+  {
+    "Name": "Soft wrappings",
+    "Cost": 1,
+    "Types": ["Light", "Spell", "Lifegain", "Draw", "Barrier"],
+    "Text": "Target gains 2 Barrier. You may Consume Light to Heal 2 instead. Target draws a card. Exile."
+  },
+  {
+    "Name": "Light strike",
+    "Cost": 1,
+    "Types": ["Light", "Spell", "Pulse", "Attack"],
+    "Text": "Strike. Inflict Pulse 3. Channel Light."
+  },
+  {
+    "Name": "Reveal",
+    "Cost": 1,
+    "Types": ["Light", "Spell", "Search", "Ranged"],
+    "Text": "Range 5. Target ally searches their deck for a card and puts it into their hand. You may consume Light to target a second ally. Exile."
+  },
+  {
+    "Name": "Smite",
+    "Cost": 1,
+    "Types": ["Light", "Spell", "Ranged", "Attack", "Pulse"],
+    "Text": "Consume Light. Range 10. Ignores line of sight. Deal 2d6 light damage. Inflict Pulse 2."
+  },
+  {
+    "Name": "Gleaming strike",
+    "Cost": 1,
+    "Types": ["Light", "Spell", "Scan", "Attack"],
+    "Text": "Scan, then Strike the target."
+  },
+  {
+    "Name": "Disect",
+    "Cost": 2,
+    "Types": ["Light", "Spell", "Attack", "Search"],
+    "Text": "Strike. If you defeat the enemy, search your deck for a card and put it on top of your deck."
+  },
+  {
+    "Name": "Chain lightning",
+    "Cost": 2,
+    "Types": ["Lightning", "Spell", "Attack", "Ranged"],
+    "Text": " Range 5. Deal 3d6 lightning damage. Another target within Range 3 takes 2d6 lightning  damage. Another target within Range 3 from the second target takes 1d6 lightning damage. Channel Lightning."
+  },
+  {
+    "Name": "Shocking wave",
+    "Cost": 1,
+    "Types": ["Lightning", "Spell", "Area", "Attack"],
+    "Text": "Radius 1. You may consume Lightning to increase radius by 2. Deal 2d6 lightning damage to all other characters."
+  },
+  {
+    "Name": "Crackling",
+    "Cost": 1,
+    "Types": ["Lightning", "Spell", "Counter", "Permanent"],
+    "Text": "Permanent. Start of turn - gain 2 Counter. Your counter deals Lightning damage."
+  },
+  {
+    "Name": "Distracting strike",
+    "Cost": 1,
+    "Types": ["Lightning", "Spell", "Distract", "Attack"],
+    "Text": "Strike. Inflict Distracted until the end of its turn."
+  },
+  {
+    "Name": "Spectacle",
+    "Cost": 0,
+    "Types": ["Lightning", "Spell", "Area", "Distract", "Counter"],
+    "Text": "ffects all enemies in line of sight. Inflict Distracted until the end of their turn. Consume Lightning to gain 3 Counter."
+  },
+  {
+    "Name": "Wreathe in Electricity",
+    "Cost": 1,
+    "Types": ["Lightning", "Spell", "Area", "Counter"],
+    "Text": "Consume Lightning. Radius 3. All allies gain 4 Counter."
+  },
+  {
+    "Name": "Lightning bolt",
+    "Cost": 2,
+    "Types": ["Lightning", "Spell", "Area", "Attack"],
+    "Text": "Consume Lightning. Line 5. Affects allies and enemies. Deal 4d6 damage and inflict 3 Sundered."
+  },
+  {
+    "Name": "Venomous strike",
+    "Cost": 1,
+    "Types": ["Nature", "Spell", "Attack", "Poison"],
+    "Text": "Strike. Inflict Poison 3. Channel Nature."
+  },
+  {
+    "Name": "Poison plants",
+    "Cost": 2,
+    "Types": ["Nature", "Spell", "Ranged", "Obstacle", "Poison", "Slow"],
+    "Text": "Range 3. Create 2 Size 2 obstacles. Enemies starting their turn adjacent to them gain Poison 2 and Slow 1."
+  },
+  {
+    "Name": "Natural remedy",
+    "Cost": 1,
+    "Types": ["Nature", "Spell", "Lifegain"],
+    "Text": "Consume Nature. Target recovers 2 Health and removes up to one condition. Exile."
+  },
+  {
+    "Name": "Poison coating",
+    "Cost": 1,
+    "Types": ["Nature", "Spell", "Permanent", "Poison"],
+    "Text": "Permanent. Your attacks inflict 1 Poison."
+  },
+  {
+    "Name": "Soothe plant",
+    "Cost": 1,
+    "Types": ["Nature", "Spell", "Ranged", "Obstacle"],
+    "Text": "Range 6. Create a Size 1 obstacle. When a friendly character ends their turn next to it, they remove up to 1 condition or status card from their hand. "
+  },
+  {
+    "Name": "Toxiburst",
+    "Cost": 1,
+    "Types": ["Nature", "Spell", "Slow", "Soft", "Poison", "Area"],
+    "Text": "Range 5. Blast 1. Inflict Soft 2, Slow 1 and Poison 1. Channel Nature."
+  },
+  {
+    "Name": "Clarity",
+    "Cost": 2,
+    "Types": ["Water", "Spell", "Draw"],
+    "Text": "Draw cards until you have 6 in hand. Channel Water"
+  },
+  {
+    "Name": "Current",
+    "Cost": 1,
+    "Types": ["Water", "Spell", "Ranged"],
+    "Text": "Range 5. Move target up to 3. The area it moves over turns into difficult terrain that moves a character ending their turn there the same direction and spaces."
+  },
+  {
+    "Name": "Geyser strike",
+    "Cost": 1,
+    "Types": ["Water", "Spell", "Knocback", "Attack"],
+    "Text": "Strike. Knockback 1. If the space the target was on is empty, it becomes water terrain that cannot be walked on."
+  },
+  {
+    "Name": "Drink",
+    "Cost": 0,
+    "Types": ["Water", "Spell", "Draw"],
+    "Text": "Consume Water. Draw 2 cards."
+  },
+  {
+    "Name": "Waterport",
+    "Cost": 1,
+    "Types": ["Water", "Spell", "Ranged"],
+    "Text": "Range 7. Swap positions of any two characters."
+  },
+  {
+    "Name": "Wave of thought",
+    "Cost": 1,
+    "Types": ["Water", "Spell", "Area", "Draw"],
+    "Text": "Radius 5. Each ally draws a card. You may consume Water to move them 2 towards you."
   }
 ]

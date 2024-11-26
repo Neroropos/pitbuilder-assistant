@@ -8,14 +8,34 @@ function GetCards() {
   })
   return cards
 }
-export function GetCardList(types: string[]) {
+export function GetCardList(typesOne: string[], typesAll: string[]) {
   const cards = GetCards()
   const result: PlayerCard[] = []
   cards.forEach((item) => {
-    if (item.Types.some((x) => types.includes(x))) {
+    if (
+      (typesOne.length < 1 || item.Types.some((x) => typesOne.includes(x))) &&
+      (typesAll.length < 1 || typesAll.every((t) => item.Types.includes(t)))
+    ) {
       result.push(item)
     }
   })
+  return result
+}
+export function GetRandomCards(cardList: PlayerCard[], cardAmount) {
+  let n = cardAmount
+  const result = new Array(n)
+  let len = cardList.length
+  const taken = new Array(len)
+
+  if (n > len) n = len
+  if (n < 1) {
+    return cardList.sort((a, b) => a.Name.localeCompare(b.Name))
+  }
+  while (n--) {
+    const x = Math.floor(Math.random() * len)
+    result[n] = cardList[x in taken ? taken[x] : x]
+    taken[x] = --len in taken ? taken[len] : len
+  }
   return result
 }
 export function GetCardTypes() {
@@ -26,7 +46,7 @@ export function GetCardTypes() {
       if (!types.includes(type)) types.push(type)
     })
   })
-  return types
+  return types.sort()
 }
 export class PlayerCard {
   Types: string[] = []
