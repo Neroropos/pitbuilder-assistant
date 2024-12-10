@@ -18,7 +18,7 @@ export function GetCardList(
     (item) =>
       (typesOne.length < 1 || item.Types.some((x) => typesOne.includes(x))) &&
       (typesAll.length < 1 || typesAll.every((t) => item.Types.includes(t))) &&
-      (typesExcluded.length < 1 || typesExcluded.some((t) => !item.Types.includes(t)))
+      (typesExcluded.length < 1 || !typesExcluded.some((t) => item.Types.includes(t)))
   )
 }
 export function GetRandomCards(cardList: PlayerCard[], cardAmount) {

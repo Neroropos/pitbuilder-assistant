@@ -8,13 +8,13 @@
   {
     "Name": "Wind jump",
     "Cost": 1,
-    "Types": ["Air", "Spell", "Maneuver", "Ranged"],
+    "Types": ["Air", "Spell", "Maneuver", "Ranged", "Knockback"],
     "Text": "Range 5. Target ally is removed from play. They appear at the start of the next round at any space within Range 5 from you. You may Consume Air to Knockback 1 all enemies adjacent to them when they appear."
   },
   {
     "Name": "Blow off",
     "Cost": 1,
-    "Types": ["Air", "Spell", "Maneuver", "Area", "Knocback"],
+    "Types": ["Air", "Spell", "Maneuver", "Area", "Knockback"],
     "Text": "Maneuver. Radius 2. Knockback 2."
   },
   {
@@ -332,7 +332,7 @@
   {
     "Name": "Geyser strike",
     "Cost": 1,
-    "Types": ["Water", "Spell", "Knocback", "Attack"],
+    "Types": ["Water", "Spell", "Knockback", "Attack"],
     "Text": "Strike. Knockback 1. If the space the target was on is empty, it becomes water terrain that cannot be walked on."
   },
   {
@@ -410,7 +410,7 @@
   {
     "Name": "Lengthy strike",
     "Cost": 2,
-    "Types": ["Attack", "Area", "Knocback"],
+    "Types": ["Attack", "Area", "Knockback"],
     "Text": "Line 3. Strike. Knockback 1."
   },
   {
