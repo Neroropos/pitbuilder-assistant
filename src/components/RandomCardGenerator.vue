@@ -3,6 +3,7 @@ import Multiselect from 'primevue/multiselect'
 import FloatLabel from 'primevue/floatlabel'
 import { GetCardList, GetCardTypes, GetRandomCards } from '@/application/cardController'
 import { ref } from 'vue'
+import { isMobile } from '../application/func'
 
 const cardTypes = GetCardTypes()
 let cardList = GetCardList()
@@ -24,57 +25,56 @@ function getRandomCards() {
 }
 </script>
 <template>
-  <div class="row" style="display: inline-block; width: 500px">
-    <FloatLabel class="w-full" variant="in" style="display: inline-block">
-      <Multiselect
-        v-model="selectedCardTypesAll"
-        filter
-        :options="cardTypes"
-        class="w-full"
-        @change="changedTypes()"
-        inputId="typeSelect"
-        style="width: 500px"
-      />
-      <label for="typeSelect">Types (include all)</label>
-    </FloatLabel>
-    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block">
-      <Multiselect
-        v-model="selectedCardTypesOne"
-        filter
-        :options="cardTypes"
-        class="w-full md:w-80"
-        @change="changedTypes()"
-        inputId="typeSelect2"
-        style="width: 500px"
-      />
-      <label for="typeSelect2">Types (include at least one)</label>
-    </FloatLabel>
-    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block">
-      <Multiselect
-        v-model="excludeCardTypes"
-        filter
-        :options="cardTypes"
-        class="w-full md:w-80"
-        @change="changedTypes()"
-        inputId="typeSelect3"
-        style="width: 500px"
-      />
-      <label for="typeSelect3">Exlude types</label>
-    </FloatLabel>
-  </div>
+  <!-- <div :class="[isMobile ? 'grid-container-mob' : 'grid-container']"> -->
+  <!-- <div class="row" style="display: inline-block; width: 100%"> -->
+  <FloatLabel variant="in" class="dropDown">
+    <Multiselect
+      v-model="selectedCardTypesAll"
+      filter
+      :options="cardTypes"
+      @change="changedTypes()"
+      inputId="typeSelect"
+      class="dropDown"
+    />
+    <label for="typeSelect">Types (include all)</label>
+  </FloatLabel>
+  <FloatLabel variant="in" class="dropDown">
+    <Multiselect
+      v-model="selectedCardTypesOne"
+      filter
+      :options="cardTypes"
+      @change="changedTypes()"
+      inputId="typeSelect2"
+      class="dropDown"
+    />
+    <label for="typeSelect2">Types (include at least one)</label>
+  </FloatLabel>
+  <FloatLabel variant="in" class="dropDown">
+    <Multiselect
+      v-model="excludeCardTypes"
+      filter
+      :options="cardTypes"
+      @change="changedTypes()"
+      inputId="typeSelect3"
+      class="dropDown"
+    />
+    <label for="typeSelect3">Exlude types</label>
+  </FloatLabel>
+  <!-- </div> -->
+  <!-- </div> -->
   <div class="row">
     <input
       v-model="cardAmount"
       type="number"
-      style="display: inline-block; width: 60px; font-size: 16px"
-      placeholder="Card amuont"
+      style="width: 40%; font-size: 16px"
+      placeholder="Card amount"
     />
-    <button style="display: inline-block" @click="getRandomCards()">Get cards</button>
+    <button @click="getRandomCards()">Get cards</button>
   </div>
-  <div v-if="cardsToShow.length > 0" style="display: inline-block; width: 500px; font-size: 16px">
+  <div v-if="cardsToShow.length > 0" style="width: 100%; font-size: 16px">
     <h3>Cards</h3>
     <div v-for="card in cardsToShow" :key="card.Name">
-      <div style="display: inline-block">
+      <div>
         <span style="font-weight: bold">{{ card.Cost }} {{ card.Name }}</span
         ><br />
         {{ card.Text }}
@@ -85,3 +85,15 @@ function getRandomCards() {
     </div>
   </div>
 </template>
+<style scoped>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-container-mob {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px;
+}
+</style>

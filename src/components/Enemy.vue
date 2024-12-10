@@ -75,7 +75,7 @@ function damage() {
 </script>
 <template>
   <div class="row" style="display: inline-block">
-    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block">
+    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block; width: 100%">
       <Select
         v-model="currentEnemy.Class"
         filter
@@ -86,11 +86,12 @@ function damage() {
         class="w-full md:w-56"
         @change="changed($event)"
         inputId="classSelect"
+        style="width: 100%"
       ></Select>
       <label for="classSelect">Class</label>
     </FloatLabel>
 
-    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block">
+    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block; width: 100%">
       <Multiselect
         v-model="currentEnemy.Templates"
         filter
@@ -99,10 +100,11 @@ function damage() {
         class="w-full md:w-80"
         @change="changed($event)"
         inputId="templateSelect"
+        style="width: 100%"
       />
       <label for="templateSelect">Templates</label>
     </FloatLabel>
-    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block">
+    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block; width: 100%">
       <Select
         v-model="currentEnemy.Tier"
         filter
@@ -110,32 +112,33 @@ function damage() {
         class="w-full md:w-80"
         @change="changed($event)"
         inputId="tierSelect"
+        style="width: 100%"
       ></Select>
       <label for="tierSelect">Tier</label>
     </FloatLabel>
   </div>
-  <div class="row">
-    <div v-if="currentEnemy.HPBar > 1" style="display: inline-block" class="row">
-      <div
+  <div>
+    <div v-if="currentEnemy.HPBar > 1">
+      <span
         v-for="cnt in currentEnemy.HPBar"
         :key="cnt"
         style="display: inline-block; width: 60px; font-size: 16px"
       >
         <input :id="'HpBar' + cnt" type="checkbox" checked @change="hpChange()" />
-      </div>
+      </span>
     </div>
-    <div id="HP" style="display: inline-block">
+    <div id="HP">
       HP:
       <input
         v-model="currHp"
         type="number"
-        style="display: inline-block; width: 60px; font-size: 16px"
+        style="width: 60px; font-size: 16px"
         placeholder="HP"
         @change="hpChange()"
       />
       /{{ currentEnemy.HP }}
     </div>
-    <div id="BAR" class="inline-block">
+    <div id="BAR">
       BAR:
       <input
         v-model="currBarrier"
@@ -144,7 +147,7 @@ function damage() {
         placeholder="BAR"
       />
     </div>
-    <div id="BAR" class="inline-block">
+    <div id="BAR">
       BLK:
       <input
         v-model="currBlock"
@@ -153,28 +156,24 @@ function damage() {
         placeholder="BLK"
       />
     </div>
-    <div v-if="isBloodied" style="display: inline-block; color: crimson">Bloodied</div>
-    <div v-if="currHp <= 0" style="display: inline-block; color: crimson">Defeated</div>
+    <div v-if="isBloodied" style="color: crimson">Bloodied</div>
+    <div v-if="currHp <= 0" style="color: crimson">Defeated</div>
     <div class="row">
       <input
         v-model="dealDmg"
         type="number"
-        style="display: inline-block; width: 60px; font-size: 16px"
+        style="width: 60px; font-size: 16px"
         placeholder="DMG"
       />
-      <button style="display: inline-block" @click="damage()">Deal damage</button>
+      <button @click="damage()">Deal damage</button>
     </div>
     <div>
       <div>Conditions</div>
-      <textarea type="text" style="display: inline-block; font-size: 16px"></textarea>
+      <textarea type="text" style="font-size: 16px"></textarea>
     </div>
     <div class="row">
-      <label :for="turnTakenId" style="display: inline-block">Turn taken?</label>
-      <input
-        :id="turnTakenId"
-        type="checkbox"
-        style="display: inline-block; width: 60px; font-size: 16px"
-      />
+      <label :for="turnTakenId">Turn taken?</label>
+      <input :id="turnTakenId" type="checkbox" style="width: 60px; font-size: 16px" />
     </div>
   </div>
   <div>
@@ -183,7 +182,7 @@ function damage() {
       <span style="font-weight: bold">{{ act.Name }}</span> - {{ act.Text }}
     </div>
     <div class="row">
-      <div id="Damage" style="display: inline-block">Basic damage: {{ currentEnemy.DmgMod }}</div>
+      <div id="Damage">Basic damage: {{ currentEnemy.DmgMod }}</div>
     </div>
   </div>
   <div v-if="currentEnemy.PassivesShown.length > 0">
