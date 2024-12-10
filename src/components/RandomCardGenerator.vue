@@ -3,7 +3,6 @@ import Multiselect from 'primevue/multiselect'
 import FloatLabel from 'primevue/floatlabel'
 import { GetCardList, GetCardTypes, GetRandomCards } from '@/application/cardController'
 import { ref } from 'vue'
-import { isMobile } from '../application/func'
 
 const cardTypes = GetCardTypes()
 let cardList = GetCardList()
@@ -25,8 +24,6 @@ function getRandomCards() {
 }
 </script>
 <template>
-  <!-- <div :class="[isMobile ? 'grid-container-mob' : 'grid-container']"> -->
-  <!-- <div class="row" style="display: inline-block; width: 100%"> -->
   <FloatLabel variant="in" class="dropDown">
     <Multiselect
       v-model="selectedCardTypesAll"
@@ -60,8 +57,6 @@ function getRandomCards() {
     />
     <label for="typeSelect3">Exlude types</label>
   </FloatLabel>
-  <!-- </div> -->
-  <!-- </div> -->
   <div class="row">
     <input
       v-model="cardAmount"
@@ -85,15 +80,4 @@ function getRandomCards() {
     </div>
   </div>
 </template>
-<style scoped>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-}
-.grid-container-mob {
-  display: grid;
-  grid-template-columns: auto;
-  padding: 10px;
-}
-</style>
+<style scoped></style>
