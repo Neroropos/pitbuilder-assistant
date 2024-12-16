@@ -398,7 +398,7 @@
   {
     "Name": "Refine",
     "Cost": 1,
-    "Types": ["Continuos", "Buff"],
+    "Types": ["Continuous", "Buff"],
     "Text": "Continuous. Your attacks deal +X damage, where X is the number of times you've played this card this combat."
   },
   {
@@ -444,22 +444,22 @@
     "Text": "The next time you attack, roll 1d6. On 4+, deal double damage. Otherwise, deal no damage."
   },
   {
-    "Name": "Thoughtful Strike",
+    "Name": "Thoughtful strike",
     "Cost": 1,
     "Types": ["Attack", "Draw", "Water", "Light", "Area"],
     "Text": "Strike. You may consume Water or Light. Radius 3. Each ally may draw a card."
   },
   {
-    "Name": "Stone Cold Defense",
+    "Name": "Stone cold defense",
     "Cost": 1,
     "Types": ["Defend", "Area", "Earth", "Ice"],
     "Text": "Defend. You may consume Ice or Earth. Radius 3. Each ally gains 3 Block."
   },
   {
-    "Name": "Creeping Tendrils",
+    "Name": "Creeping tendrils",
     "Cost": 2,
-    "Types": ["Ranged", "Attack", "Nature", "Darkness", "Lifegain"],
-    "Text": "Range 5. Deal 1d6 damage to up to 3 targets. You may consume Nature or Darkness. Gain half of the damage roll health."
+    "Types": ["Ranged", "Attack", "Nature", "Dark", "Lifegain"],
+    "Text": "Range 5. Deal 1d6 damage to up to 3 targets. You may consume Nature or Dark. Gain half of the damage roll health."
   },
   {
     "Name": "Blitz",
@@ -474,43 +474,43 @@
     "Text": "Consume Lightning or Fire. Radius 1. Deal 1d6 damage. Gain 2 Counter."
   },
   {
-    "Name": "Mass Expulsion",
+    "Name": "Mass expulsion",
     "Cost": 2,
     "Types": ["Pulse", "Area", "Light", "Fire"],
     "Text": "Radius 3. Inflict 3 Pulse on each character. You may consume Light or Fire. Radius 3. Trigger Pulse on each character and reduce it by 1."
   },
   {
-    "Name": "Beast Form",
+    "Name": "Beast form",
     "Cost": 2,
     "Types": ["Stance", "Buff"],
     "Text": "Stance. You may not use weapons to strike. Your Strike becomes “Deal 2d6 damage. Deal 1d6 damage.” You gain 3 Block at the start of each turn. Your attacks deal an extra 1d6 against non-bloodied enemies."
   },
   {
-    "Name": "Flicker Blow",
+    "Name": "Flicker blow",
     "Cost": 2,
     "Types": ["Movement", "Attack"],
     "Text": "Strike. Teleport 3 to be adjacent to another target. Strike that target."
   },
   {
-    "Name": "Melt Leg",
+    "Name": "Melt legs",
     "Cost": 1,
     "Types": ["Ranged", "Slow", "Soft", "Debuff"],
     "Text": "Range 5. Burst 2. Inflict 2 Soft and 2 Slow."
   },
   {
-    "Name": "Control Magic",
+    "Name": "Control magic",
     "Cost": 3,
     "Types": ["Ranged", "Debuff", "Spell"],
     "Text": "Range 5. You control the target on their next turn."
   },
   {
-    "Name": "Chromatic Strike",
+    "Name": "Chromatic strike",
     "Cost": 1,
     "Types": ["Fortune", "Debuff", "Attack", "Bleed", "Poison", "Pulse"],
     "Text": "Strike. Inflict 3 of a random status effect - d6 - 1-2 Bleed, 3-4 Poison, 5-6 Pulse."
   },
   {
-    "Name": "Prod Fortune",
+    "Name": "Prod fortune",
     "Cost": 1,
     "Types": [
       "Fortune",
@@ -533,7 +533,7 @@
     "Text": "Reload 3."
   },
   {
-    "Name": "Hot Reload",
+    "Name": "Hot reload",
     "Cost": 0,
     "Types": ["Pulse", "Reload", "Draw"],
     "Text": "Reload 1. Draw a card. Gain 2 Pulse."
@@ -545,21 +545,39 @@
     "Text": "Continuous. Range 5. Target enemy must target you with all abilities if able as long as it starts its turn within range."
   },
   {
-    "Name": "Be Loud",
+    "Name": "Be loud",
     "Cost": 1,
     "Types": ["Area", "Debuff", "Continuous"],
     "Text": "Continuous. Radius 3. Each enemy must target you if able."
   },
   {
-    "Name": "Drawing Stance",
+    "Name": "Drawing stance",
     "Cost": 1,
     "Types": ["Area", "Debuff", "Stance"],
     "Text": "Stance. Radius 3. Each enemy must target you if able."
   },
   {
-    "Name": "Vanguard's Assault",
+    "Name": "Vanguard's assault",
     "Cost": 1,
     "Types": ["Attack", "Defend", "Counter"],
     "Text": "Strike. If you are bloodied, Defend. Gain 3 Counter."
+  },
+  {
+    "Name": "Probing blow",
+    "Cost": 1,
+    "Types": ["Attack", "Scan", "Draw"],
+    "Text": "Scan target within Strike range, then Strike or Draw 2 cards."
+  },
+  {
+    "Name": "Singe brain",
+    "Cost": 0,
+    "Types": ["Draw", "Burn"],
+    "Text": "Draw 2 cards. Gain 1 Burn."
+  },
+  {
+    "Name": "Toxic lesson",
+    "Cost": 0,
+    "Types": ["Draw", "Poison", "Ranged"],
+    "Text": "Range 3. Inflict 3 Poson to target friendly character. They draw 2 cards."
   }
 ]
