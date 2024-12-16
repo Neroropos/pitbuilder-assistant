@@ -8,37 +8,37 @@
   {
     "Name": "Wind jump",
     "Cost": 1,
-    "Types": ["Air", "Spell", "Maneuver", "Ranged", "Knockback"],
+    "Types": ["Air", "Spell", "Movement", "Ranged", "Knockback"],
     "Text": "Range 5. Target ally is removed from play. They appear at the start of the next round at any space within Range 5 from you. You may Consume Air to Knockback 1 all enemies adjacent to them when they appear."
   },
   {
     "Name": "Blow off",
     "Cost": 1,
-    "Types": ["Air", "Spell", "Maneuver", "Area", "Knockback"],
+    "Types": ["Air", "Spell", "Movement", "Area", "Knockback"],
     "Text": "Maneuver. Radius 2. Knockback 2."
   },
   {
     "Name": "Air blade",
     "Cost": 1,
-    "Types": ["Air", "Spell", "Maneuver", "Attack", "Bleed", "Ranged"],
+    "Types": ["Air", "Spell", "Attack", "Bleed", "Ranged"],
     "Text": "Consume Air. Range 4. Strike. Inflict 2 Bleed."
   },
   {
     "Name": "Tempest strike",
     "Cost": 2,
-    "Types": ["Air", "Spell", "Maneuver", "Attack"],
+    "Types": ["Air", "Spell", "Movement", "Attack"],
     "Text": "Maneuver. Strike. Maneuver. Channel Air."
   },
   {
     "Name": "Tailwind",
     "Cost": 2,
-    "Types": ["Air", "Spell", "Maneuver", "Area", "Evasive"],
+    "Types": ["Air", "Spell", "Movement", "Area", "Evasive"],
     "Text": "Radius 1. Consume Air to increase Radius by 2. All allies may Move 3 and gain Evasive 1."
   },
   {
     "Name": "Billowing",
     "Cost": 1,
-    "Types": ["Air", "Spell", "Maneuver"],
+    "Types": ["Air", "Spell", "Movement"],
     "Text": "Consume Air. Continuous. Any number of times during your turn, you may discard a card. When you do, Move 1."
   },
   {
@@ -356,37 +356,37 @@
   {
     "Name": "Run",
     "Cost": 1,
-    "Types": ["Maneuver"],
+    "Types": ["Movement"],
     "Text": "Maneuver +2."
   },
   {
     "Name": "Slink",
     "Cost": 1,
-    "Types": ["Maneuver", "Draw"],
+    "Types": ["Movement", "Draw"],
     "Text": "Maneuver -1. Draw 1"
   },
   {
     "Name": "Running reload",
     "Cost": 1,
-    "Types": ["Maneuver", "Reload"],
+    "Types": ["Movement", "Reload"],
     "Text": "Maneuver. Reload 2."
   },
   {
     "Name": "Easy reposition",
     "Cost": 0,
-    "Types": ["Maneuver"],
+    "Types": ["Movement"],
     "Text": "Maneuver."
   },
   {
     "Name": "Easy step",
     "Cost": 1,
-    "Types": ["Maneuver"],
+    "Types": ["Movement"],
     "Text": "Maneuver, ignoring difficult terrain and height."
   },
   {
     "Name": "Jump",
     "Cost": 1,
-    "Types": ["Maneuver"],
+    "Types": ["Movement"],
     "Text": " Maneuver. You may move up. You may play a card as you descend. If you strike as you descend, deal an extra 2d6 damage."
   },
   {
@@ -442,5 +442,124 @@
     "Cost": 1,
     "Types": ["Fortune", "Buff"],
     "Text": "The next time you attack, roll 1d6. On 4+, deal double damage. Otherwise, deal no damage."
+  },
+  {
+    "Name": "Thoughtful Strike",
+    "Cost": 1,
+    "Types": ["Attack", "Draw", "Water", "Light", "Area"],
+    "Text": "Strike. You may consume Water or Light. Radius 3. Each ally may draw a card."
+  },
+  {
+    "Name": "Stone Cold Defense",
+    "Cost": 1,
+    "Types": ["Defend", "Area", "Earth", "Ice"],
+    "Text": "Defend. You may consume Ice or Earth. Radius 3. Each ally gains 3 Block."
+  },
+  {
+    "Name": "Creeping Tendrils",
+    "Cost": 2,
+    "Types": ["Ranged", "Attack", "Nature", "Darkness", "Lifegain"],
+    "Text": "Range 5. Deal 1d6 damage to up to 3 targets. You may consume Nature or Darkness. Gain half of the damage roll health."
+  },
+  {
+    "Name": "Blitz",
+    "Cost": 1,
+    "Types": ["Movement", "Attack", "Air", "Lightning"],
+    "Text": "Line 5. Deal 1d6 damage to each target moved through.. You may consume Lightning or Air. Move to the end of the line."
+  },
+  {
+    "Name": "Bursting",
+    "Cost": 1,
+    "Types": ["Area", "Attack", "Counter", "Fire", "Lightning"],
+    "Text": "Consume Lightning or Fire. Radius 1. Deal 1d6 damage. Gain 2 Counter."
+  },
+  {
+    "Name": "Mass Expulsion",
+    "Cost": 2,
+    "Types": ["Pulse", "Area", "Light", "Fire"],
+    "Text": "Radius 3. Inflict 3 Pulse on each character. You may consume Light or Fire. Radius 3. Trigger Pulse on each character and reduce it by 1."
+  },
+  {
+    "Name": "Beast Form",
+    "Cost": 2,
+    "Types": ["Stance", "Buff"],
+    "Text": "Stance. You may not use weapons to strike. Your Strike becomes “Deal 2d6 damage. Deal 1d6 damage.” You gain 3 Block at the start of each turn. Your attacks deal an extra 1d6 against non-bloodied enemies."
+  },
+  {
+    "Name": "Flicker Blow",
+    "Cost": 2,
+    "Types": ["Movement", "Attack"],
+    "Text": "Strike. Teleport 3 to be adjacent to another target. Strike that target."
+  },
+  {
+    "Name": "Melt Leg",
+    "Cost": 1,
+    "Types": ["Ranged", "Slow", "Soft", "Debuff"],
+    "Text": "Range 5. Burst 2. Inflict 2 Soft and 2 Slow."
+  },
+  {
+    "Name": "Control Magic",
+    "Cost": 3,
+    "Types": ["Ranged", "Debuff", "Spell"],
+    "Text": "Range 5. You control the target on their next turn."
+  },
+  {
+    "Name": "Chromatic Strike",
+    "Cost": 1,
+    "Types": ["Fortune", "Debuff", "Attack", "Bleed", "Poison", "Pulse"],
+    "Text": "Strike. Inflict 3 of a random status effect - d6 - 1-2 Bleed, 3-4 Poison, 5-6 Pulse."
+  },
+  {
+    "Name": "Prod Fortune",
+    "Cost": 1,
+    "Types": [
+      "Fortune",
+      "Area",
+      "Debuff",
+      "Buff",
+      "Counter",
+      "Soft",
+      "Barrier",
+      "Bleed",
+      "Poison",
+      "Pulse"
+    ],
+    "Text": "Radius 6. For each character, inflict them with 3 of a random status effect d6 1 Counter, 2 Soft 3 Barrier 4 Bleed 5 Poison 6 Pulse"
+  },
+  {
+    "Name": "Reload",
+    "Cost": 1,
+    "Types": ["Reload"],
+    "Text": "Reload 3."
+  },
+  {
+    "Name": "Hot Reload",
+    "Cost": 0,
+    "Types": ["Pulse", "Reload", "Draw"],
+    "Text": "Reload 1. Draw a card. Gain 2 Pulse."
+  },
+  {
+    "Name": "Demand",
+    "Cost": 1,
+    "Types": ["Ranged", "Debuff", "Continuous"],
+    "Text": "Continuous. Range 5. Target enemy must target you with all abilities if able as long as it starts its turn within range."
+  },
+  {
+    "Name": "Be Loud",
+    "Cost": 1,
+    "Types": ["Area", "Debuff", "Continuous"],
+    "Text": "Continuous. Radius 3. Each enemy must target you if able."
+  },
+  {
+    "Name": "Drawing Stance",
+    "Cost": 1,
+    "Types": ["Area", "Debuff", "Stance"],
+    "Text": "Stance. Radius 3. Each enemy must target you if able."
+  },
+  {
+    "Name": "Vanguard's Assault",
+    "Cost": 1,
+    "Types": ["Attack", "Defend", "Counter"],
+    "Text": "Strike. If you are bloodied, Defend. Gain 3 Counter."
   }
 ]
