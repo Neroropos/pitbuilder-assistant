@@ -515,5 +515,31 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {}
+  },
+  {
+    "Name": "Leader",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "They follow",
+        "Text": "Radius 3 - At the end of your turn, all allies gain 1 Haste and 1 Strength for their next turn.",
+        "Values": []
+      },
+      {
+        "Name": "Guide",
+        "Text": "Whenever you target an ally, they gain 2 Strength.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
   }
 ]
