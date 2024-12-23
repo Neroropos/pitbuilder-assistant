@@ -979,8 +979,8 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Radius 3 - Inflict 1 Soft. Deal 1 damage {2} times.",
-        "Values": ["OFF+TIR - 1"]
+        "Text": "Move {0}. Radius 3 - Inflict 1 Soft. Deal 1 damage {1} times.",
+        "Values": ["2+MOV", "OFF+TIR - 1"]
       },
       {
         "Name": "Far",
