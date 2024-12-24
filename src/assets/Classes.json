@@ -349,7 +349,7 @@
         "Values": ["3+BLK"]
       },
       {
-        "Name": "Emboldening Circle",
+        "Name": "Invigorating Circle",
         "Text": "At the start of their turn, each ally within this Circle gains 3 Haste for that turn and {0} HP.",
         "Values": ["TIR"]
       }
