@@ -12,7 +12,8 @@ let elements = ref([
   { name: 'light', value: false, icon: 'pi pi-sun', onColor: 'yellow', color: '' },
   { name: 'water', value: false, icon: 'fa-solid fa-water', onColor: 'blue', color: '' },
   { name: 'earth', value: false, icon: 'fa-solid fa-mountain', onColor: 'brown', color: '' },
-  { name: 'air', value: false, icon: 'fa-solid fa-wind', onColor: 'lightGrey', color: '' }
+  { name: 'air', value: false, icon: 'fa-solid fa-wind', onColor: 'lightGrey', color: '' },
+  { name: 'lightning', value: false, icon: 'fa-solid fa-bolt', onColor: 'magenta', color: '' }
 ])
 function addEnemy() {
   let newId = 0
@@ -36,12 +37,16 @@ function toggleElement(elementName: string) {
 }
 function refresh() {
   rounds.value = 1
+  elements.value.forEach((el) => {
+    el.value = true
+    toggleElement(el.name)
+  })
 }
 </script>
 
 <template>
   <head> </head>
-  <div>
+  <div style="width: 100%">
     <button @click="newRound()" class="grid-item button">New round</button> Round {{ rounds }}
     <span @click="refresh()" class="clickable"><i class="pi pi-refresh"></i></span>
     <span v-for="element in elements" :key="element.name">
@@ -93,19 +98,13 @@ function refresh() {
 .clickable {
   display: inline-block;
   padding: 2px 5px;
-  /* border-style: solid;
-  border-width: thin; */
-  /* width: 15px;
-  height: 15px; */
   font-size: 16px;
-  /* background: #dadae6; */
 }
 
 .clickable:hover {
   display: inline-block;
   padding: 2px 5px;
-  /* background: #515064; */
-  color: #fff;
+  color: #d4d4d4;
   cursor: pointer;
 }
 .button {
