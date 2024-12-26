@@ -12,12 +12,12 @@
       {
         "Name": "Close",
         "Text": "Move {0}. All adjacent enemies gain Slow 2. Block {1}.",
-        "Values": ["3+MOV", "5+BLK"]
+        "Values": ["2+MOV", "5+BLK"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Block {1}. Counter {2}.",
-        "Values": ["1+MOV", "10+BLK", "DMG"]
+        "Values": ["3+MOV", "10+BLK", "DMG"]
       },
       {
         "Name": "Interrupt",
@@ -77,8 +77,8 @@
       },
       {
         "Name": "Far",
-        "Text": "Range 5 - Place a 3 HP Screamer.",
-        "Values": []
+        "Text": "Move {0}. Range 5 - Place a 3 HP Screamer.",
+        "Values": ["3+MOV"]
       }
     ],
     "Passives": [
@@ -163,6 +163,11 @@
     "OffScaling": 2,
     "Actions": [
       {
+        "Name": "Mobility",
+        "Text": "Move {0}.",
+        "Values": ["3+MOV"]
+      },
+      {
         "Name": "Close",
         "Text": "Deal {0} Damage. {1}",
         "Values": ["1+DMG", "PSTATK"]
@@ -171,11 +176,6 @@
         "Name": "Far",
         "Text": "Range +2. Deal {0} Damage. {1} Inflict 1 Slow",
         "Values": ["-1+DMG", "PSTATK"]
-      },
-      {
-        "Name": "Melee",
-        "Text": "Move {0}.",
-        "Values": ["3+MOV"]
       }
     ],
     "Passives": [
@@ -194,6 +194,11 @@
     "OffScaling": 2,
     "Actions": [
       {
+        "Name": "Mobility",
+        "Text": "Move {0}.",
+        "Values": ["3+MOV"]
+      },
+      {
         "Name": "Close",
         "Text": "Deal {0} Damage to enemies ignoring Block. {1}",
         "Values": ["1+DMG", "PSTATK"]
@@ -202,11 +207,6 @@
         "Name": "Far",
         "Text": "Move {0}. Range +2. Deal {1} Damage to two targets ignoring Block. {2}",
         "Values": ["1+MOV", "-1+DMG", "PSTATK"]
-      },
-      {
-        "Name": "Melee",
-        "Text": "Move {0}.",
-        "Values": ["3+MOV"]
       }
     ],
     "Passives": [
@@ -225,7 +225,7 @@
     "OffScaling": 3,
     "Actions": [
       {
-        "Name": "Melee",
+        "Name": "Mobility",
         "Text": "Move {0}. Reload 1. Gain {1} Block.",
         "Values": ["3+MOV", "3+BLK"]
       },
@@ -292,7 +292,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. All allies within Radius 3 can Move 3.",
+        "Text": "Move {0}. All allies within Radius 3 may Move 3.",
         "Values": ["3+MOV"]
       }
     ],
@@ -381,7 +381,7 @@
     "Passives": [
       {
         "Name": "Spite",
-        "Text": "Whenever an adjacent ally becomes Bloodied, gain 1 Strength.",
+        "Text": "Whenever an ally within Range 3 becomes Bloodied, gain 1 Strength.",
         "Values": []
       }
     ],
@@ -405,7 +405,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}",
+        "Text": "Move {0}. Gain 1 Evasive",
         "Values": ["7+MOV"]
       }
     ],
@@ -481,7 +481,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. Inflict Weak 1. {1} Move {2} away.",
+        "Text": "Deal {0} Damage. Inflict 1 Weak. {1} Move {2} away.",
         "Values": ["1+DMG", "PSTATK", "3+MOV"]
       },
       {
@@ -993,6 +993,42 @@
         "Name": "Laugh at Weakness",
         "Text": "The Malaurge takes 1 less damage for each Soft on the attacker.",
         "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Shadewalker",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. Teleport {1}. Create a Shade in your previous location.",
+        "Values": ["1+DMG", "3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 2 - Create a Shade. Each shade deals {1} damage.",
+        "Values": ["2+MOV", "1+TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Each Shade may Move {1}.",
+        "Values": ["5+MOV", "2+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Knives in the Shadow",
+        "Text": "Whenever a shade dies, Radius 1 - it deals {0} damage.",
+        "Values": ["TIR"]
+      },
+      {
+        "Name": "Shade",
+        "Text": "All Shades are Size 1 creatures. They can be attacked and have {0} HP. Whenever an ally within Range 3 is attacked, the Shade may take the attack instead, swapping spaces with the ally.",
+        "Values": ["DEF+TIR"]
       }
     ],
     "PostAttack": [],

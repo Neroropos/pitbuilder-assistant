@@ -33,7 +33,7 @@ function getRandomCards() {
       inputId="typeSelect"
       class="dropDown"
     />
-    <label for="typeSelect">Types (include all)</label>
+    <label for="typeSelect">Must have types</label>
   </FloatLabel>
   <FloatLabel variant="in" class="dropDown">
     <Multiselect
@@ -44,7 +44,7 @@ function getRandomCards() {
       inputId="typeSelect2"
       class="dropDown"
     />
-    <label for="typeSelect2">Types (include at least one)</label>
+    <label for="typeSelect2">Include types</label>
   </FloatLabel>
   <FloatLabel variant="in" class="dropDown">
     <Multiselect
@@ -55,13 +55,13 @@ function getRandomCards() {
       inputId="typeSelect3"
       class="dropDown"
     />
-    <label for="typeSelect3">Exlude types</label>
+    <label for="typeSelect3">Exclude types</label>
   </FloatLabel>
   <div class="row">
     <input
       v-model="cardAmount"
       type="number"
-      style="width: 40%; font-size: 16px"
+      style="width: 50%; font-size: 16px"
       placeholder="Card amount"
     />
     <button @click="getRandomCards()">Get cards</button>

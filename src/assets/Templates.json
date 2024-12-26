@@ -526,5 +526,26 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {}
+  },
+  {
+    "Name": "Sticky",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Stick",
+        "Text": "Whenever an enemy starts their turn adjacent to this, they gain 1 Slow.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
   }
 ]

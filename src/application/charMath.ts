@@ -1,9 +1,8 @@
 export class CharMath {}
 import classesJson from '../assets/Classes.json' assert { type: 'json' }
 import templatesJson from '../assets/Templates.json' assert { type: 'json' }
-function escapeRegExp(str: string) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') // $& means the whole matched string
-}
+import { escapeRegExp } from './func'
+
 export function GetClassList() {
   const enemies: EnemyClass[] = []
   const stringy = JSON.stringify(classesJson)
@@ -20,7 +19,9 @@ export function GetClassList() {
       result.push(newGroup)
     }
   })
-
+  result.forEach((gr) => {
+    gr.Values.sort((a, b) => a.Name?.localeCompare(b.Name || '') || 0)
+  })
   return result
 }
 
@@ -40,34 +41,6 @@ export function GetTemplateList() {
     result.push(new EnemyTemplate(element))
   })
   result.sort((a, b) => a.Name?.localeCompare(b.Name || '') || 0)
-  return result
-}
-function replacePlaceholders(
-  DmgMod: number,
-  BlockMod: number,
-  MoveMod: number,
-  PostAttack: string,
-  DefScaling: number,
-  OffScaling: number,
-  Tier: number,
-  Text: string,
-  Values: string[]
-) {
-  let result = Text
-  //if (!Text) return ''
-  Values?.forEach((av, i) => {
-    if (av.indexOf('PSTATK') < 0) {
-      const newVal = av
-        .replace(/DMG/g, DmgMod.toString())
-        .replace(/BLK/g, BlockMod.toString())
-        .replace(/MOV/g, MoveMod.toString())
-        .replace(/DEF/g, DefScaling.toString())
-        .replace(/OFF/g, OffScaling.toString())
-        .replace(/TIR/g, Tier.toString())
-
-      result = result.replace(new RegExp(escapeRegExp('{' + i + '}'), 'g'), eval(newVal).toString())
-    } else result = result.replace(new RegExp(escapeRegExp('{' + i + '}'), 'g'), PostAttack)
-  })
   return result
 }
 export class Action {
@@ -149,18 +122,28 @@ export class Enemy {
   Passives: Passive[] = []
   PostAttack: string = ''
   HPBar: number = 1
-  // changeClass(eclass: { value: EnemyClass }) {
-  //   //this.Class = eclass.value
-  //   this.update()
-  // }
-  // changeTemplates(templates: { value: EnemyTemplate[] }) {
-  //   this.Templates = templates.value
-  //   this.update()
-  // }
-  // changeTier(tier: { value: number }) {
-  //   this.Tier = tier.value
-  //   this.update()
-  // }
+
+  replacePlaceholders(DefScaling: number, OffScaling: number, Text: string, Values: string[]) {
+    let result = Text
+
+    Values?.forEach((av, i) => {
+      if (av.indexOf('PSTATK') < 0) {
+        const newVal = av
+          .replace(/DMG/g, this.DmgMod.toString())
+          .replace(/BLK/g, this.BlockMod.toString())
+          .replace(/MOV/g, this.MoveMod.toString())
+          .replace(/DEF/g, DefScaling.toString())
+          .replace(/OFF/g, OffScaling.toString())
+          .replace(/TIR/g, this.Tier.toString())
+
+        result = result.replace(
+          new RegExp(escapeRegExp('{' + i + '}'), 'g'),
+          eval(newVal).toString()
+        )
+      } else result = result.replace(new RegExp(escapeRegExp('{' + i + '}'), 'g'), this.PostAttack)
+    })
+    return result
+  }
   update() {
     const DefScaling =
       this.Class?.DefScaling +
@@ -193,18 +176,7 @@ export class Enemy {
     )
     PostAttacks.forEach((p) => {
       if (p.Text)
-        this.PostAttack +=
-          replacePlaceholders(
-            this.DmgMod,
-            this.BlockMod,
-            this.MoveMod,
-            this.PostAttack,
-            DefScaling,
-            OffScaling,
-            this.Tier,
-            p.Text,
-            p.Values
-          ) + ' '
+        this.PostAttack += this.replacePlaceholders(DefScaling, OffScaling, p.Text, p.Values) + ' '
     })
     const Resistances = this.Class?.Resistances.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Resistances), [] as string[])
@@ -227,17 +199,7 @@ export class Enemy {
     this.Actions.forEach((a) => {
       this.ActionsShown.push({
         Name: a.Name || '',
-        Text: replacePlaceholders(
-          this.DmgMod,
-          this.BlockMod,
-          this.MoveMod,
-          this.PostAttack,
-          DefScaling,
-          OffScaling,
-          this.Tier,
-          a.Text,
-          a.Values
-        )
+        Text: this.replacePlaceholders(DefScaling, OffScaling, a.Text, a.Values)
       })
     })
     this.Passives = this.Class?.Passives.concat(
@@ -247,17 +209,7 @@ export class Enemy {
     this.Passives.forEach((p) => {
       this.PassivesShown.push({
         Name: p.Name || '',
-        Text: replacePlaceholders(
-          this.DmgMod,
-          this.BlockMod,
-          this.MoveMod,
-          this.PostAttack,
-          DefScaling,
-          OffScaling,
-          this.Tier,
-          p.Text,
-          p.Values
-        )
+        Text: this.replacePlaceholders(DefScaling, OffScaling, p.Text, p.Values)
       })
     })
   }
