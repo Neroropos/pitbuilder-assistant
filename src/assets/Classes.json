@@ -214,6 +214,11 @@
         "Name": "Rod",
         "Text": "All attacks have Range 3 and ignore Block.",
         "Values": []
+      },
+      {
+        "Name": "Rod",
+        "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
+        "Values": ["OFF", "2*DEF+BLK"]
       }
     ],
     "PostAttack": [],
@@ -498,11 +503,17 @@
     "PostAttack": [
       {
         "Name": "Dash",
-        "Text": "Move 1.",
-        "Values": []
+        "Text": "Move {0}.",
+        "Values": ["1+MOV"]
       }
     ],
-    "Passives": [],
+    "Passives": [
+      {
+        "Name": "Run for cover",
+        "Text": "When attacked by a non-adjacent character, gain resistance to that attack and Move {0}. If this puts you out of range/sight, ignore the attack.",
+        "Values": ["1+MOV"]
+      }
+    ],
     "Type": "Skirmisher"
   },
   {
@@ -908,7 +919,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Radius 3. Allies gain {1} Barrier. Inflict {2} Pulse.",
+        "Text": "Move {0}. Radius 3. Allies gain {1} Barrier. Inflict {2} Pulse. Enemies may not draw line of sight further than their Pulse value until the end of their turn.",
         "Values": ["3+MOV", "DEF+TIR", "OFF+TIR+1"]
       },
       {
@@ -1032,6 +1043,48 @@
       }
     ],
     "PostAttack": [],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Spellblade",
+    "DefScaling": 2,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Deal {1} damage. {2}",
+        "Values": ["1+MOV", "1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} damage. {2}",
+        "Values": ["3+MOV", "-1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Block",
+        "Values": ["4+MOV", "2*DEF+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Rod",
+        "Text": "All attacks have Range 3 and ignore Block.",
+        "Values": []
+      },
+      {
+        "Name": "Rod",
+        "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{1} Radius. Ice, Earth, Nature: Gain {2} Block.",
+        "Values": ["OFF", "TIR", "2*DEF+BLK"]
+      }
+    ],
+    "PostAttack": [
+      {
+        "Name": "Elemental forms",
+        "Text": "Channel any element.",
+        "Values": []
+      }
+    ],
     "Type": "Striker"
   }
 ]

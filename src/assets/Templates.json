@@ -96,8 +96,8 @@
     "Passives": [
       {
         "Name": "Shielding Pressence",
-        "Text": "As long as not bloodied, allies within Radius 1 take 1 less damage and deal 1 more damage.",
-        "Values": []
+        "Text": "As long as not bloodied, allies within Radius 3 take {0} less damage and deal {0} more damage.",
+        "Values": ["TIR"]
       }
     ],
     "Weaknesses": ["Dark"],
@@ -539,8 +539,29 @@
     "Actions": [],
     "Passives": [
       {
-        "Name": "Stick",
+        "Name": "Sticky",
         "Text": "Whenever an enemy starts their turn adjacent to this, they gain 1 Slow.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Billowing",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Billowing",
+        "Text": "Enemies attacking you have -2 Range. Consume Air when attacked to gain resistance to a ranged attack.",
         "Values": []
       }
     ],
