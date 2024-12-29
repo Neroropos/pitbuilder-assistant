@@ -216,7 +216,7 @@
         "Values": []
       },
       {
-        "Name": "Rod",
+        "Name": "Use elements",
         "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
         "Values": ["OFF", "2*DEF+BLK"]
       }
@@ -1068,12 +1068,7 @@
     ],
     "Passives": [
       {
-        "Name": "Rod",
-        "Text": "All attacks have Range 3 and ignore Block.",
-        "Values": []
-      },
-      {
-        "Name": "Rod",
+        "Name": "Use elements",
         "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{1} Radius. Ice, Earth, Nature: Gain {2} Block.",
         "Values": ["OFF", "TIR", "2*DEF+BLK"]
       }
