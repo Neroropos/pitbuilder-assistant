@@ -200,12 +200,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Deal {0} Damage to enemies ignoring Block. {1}",
+        "Text": "Deal {0} Damage. {1}",
         "Values": ["1+DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range +2. Deal {1} Damage to two targets ignoring Block. {2}",
+        "Text": "Move {0}. Range +2. Deal {1} Damage to up to two targets. {2}",
         "Values": ["1+MOV", "-1+DMG", "PSTATK"]
       }
     ],
@@ -1081,5 +1081,66 @@
       }
     ],
     "Type": "Striker"
+  },
+  {
+    "Name": "Monk",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} damage. {1} Consume Light and/or Dark: Deal {1} Damage. {1}. If Light was consumed, the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, the target discards {2} cards. Gain {2} Evasive.",
+        "Values": ["0+DMG", "PSTATK", "TIR"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} damage. {2}. Channel Light or Dark.",
+        "Values": ["4+MOV", "0+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Counter with Range 6.",
+        "Values": ["6+MOV", "2*DEF"]
+      },
+      {
+        "Name": "Reaction",
+        "Text": "You are attacked by a non adjacent enemy. Gain {0} Evasive.",
+        "Values": ["TIR"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Type": "Skirmisher"
+  },
+  {
+    "Name": "Diabolist",
+    "DefScaling": 3,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Channel Fire or Ice. Inflict {1} Poison and {1} Strength.",
+        "Values": ["3+MOV", "TIR+1"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 5. Target character gains {1} Block, {2} Strength and {2} Bleed.",
+        "Values": ["2+MOV", "2+DEF+BLK", "TIR+1"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Consume Fire or Ice. Range 5. Target ally and all characters within Radius 3 take {1} damage of the consumed element. If Fire was consumed, inflict {2} Burn to each enemy. If Ice was consumed, each ally gains {3} Block.",
+        "Values": ["4+MOV", "-1+DMG", "TIR+1", "2+DEF+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Blood scream",
+        "Text": "When bloodied for the first time, Channel Fire or Ice and inflict {0} Dazed to each enemy within line of sight.",
+        "Values": ["TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Skirmisher"
   }
 ]
