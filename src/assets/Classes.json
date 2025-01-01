@@ -1089,7 +1089,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Consume Light and/or Dark: Deal {1} Damage. {1}. If Light was consumed, the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, the target discards {2} cards. Gain {2} Evasive.",
+        "Text": "Deal {0} damage. {1} Consume Light and/or Dark: Deal {0} Damage. {1} If Light was consumed, the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, the target discards {2} cards. Gain {2} Evasive.",
         "Values": ["0+DMG", "PSTATK", "TIR"]
       },
       {
@@ -1110,6 +1110,7 @@
     ],
     "Passives": [],
     "PostAttack": [],
+    "Resistances": ["Light", "Dark"],
     "Type": "Skirmisher"
   },
   {
@@ -1141,6 +1142,7 @@
       }
     ],
     "PostAttack": [],
-    "Type": "Skirmisher"
+    "Resistances": ["Fire", "Ice"],
+    "Type": "Support"
   }
 ]
