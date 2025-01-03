@@ -568,5 +568,47 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {}
+  },
+  {
+    "Name": "Mounted",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 2,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Mount",
+        "Text": "Size +1. While Bloodied, lose 2 movement and 1 Size.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Bodyguard",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 4,
+    "MoveMod": 0,
+    "BlockMod": 2,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [
+      {
+        "Name": "Reaction",
+        "Text": "An adjacent ally is attacked. Knockback 1, then move into their space and take the attack.",
+        "Values": []
+      }
+    ],
+    "Passives": [],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
   }
 ]

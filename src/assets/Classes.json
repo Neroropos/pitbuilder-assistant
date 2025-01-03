@@ -1144,5 +1144,200 @@
     "PostAttack": [],
     "Resistances": ["Fire", "Ice"],
     "Type": "Support"
+  },
+  {
+    "Name": "Dreadheart",
+    "DefScaling": 2,
+    "OffScaling": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Radius 2. Deal {0} damage. {1} Gain 1 Vulnerable and channel Air, Dark or Water.",
+        "Values": ["1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 3 - Pull target to a space adjacent to you, then deal {1} damage. {2} All spaces adjacent to the target become difficult terrain.",
+        "Values": ["1+MOV", "-1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}.",
+        "Values": ["3+MOV"]
+      },
+      {
+        "Name": "Reaction",
+        "Text": "You are attacked. Consume Air, Dark or Water - move to be adjacent to the attacker and deal {0} damage to them. {1}",
+        "Values": ["DMG", "PSTATK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "It Bleeds",
+        "Text": "When you become Bloodied for the first time, each enemy within Radius 3 may draw a card.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": ["Light", "Earth", "Ice"],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Footman",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} damage. {1}",
+        "Values": ["2+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} damage. {2} Channel Ice or Earth.",
+        "Values": ["2+MOV", "DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Range 3 - target gains {1} Block. Consume Ice or Earth. Create a size 1 obstacle adjacent to the target.",
+        "Values": ["4+MOV", "DEF+TIR+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Death so close",
+        "Text": "Whenever a Footman dies, all Footmen within Radius 3 gain 1 Vulnerable.",
+        "Values": []
+      },
+      {
+        "Name": "Group deployment",
+        "Text": "{0} footmen are deployed as one unit, sharing activations but not spaces, statuses or health",
+        "Values": ["1+TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Dancer",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Mobility",
+        "Text": "Move {0}. Gain {1} Evasive.",
+        "Values": ["2+MOV", "1+TIR"]
+      },
+      {
+        "Name": "Dance",
+        "Text": "Move {0}. An Ally may perform an action.",
+        "Values": ["2+MOV"]
+      },
+      {
+        "Name": "Perform",
+        "Text": "Move {0}. Radius 3. Each Ally gains 2 Haste. Gain 1 Evasive.",
+        "Values": ["4+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Retaliation",
+        "Text": "After being attacked, any Ally within line of sight may attack the attacker.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": ["Air", "Water", "Fire"],
+    "Type": "Support"
+  },
+  {
+    "Name": "Virtue",
+    "DefScaling": 3,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Change into Virtue Form - Diligence.",
+        "Values": ["2+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Change into Virtue Form - Humility.",
+        "Values": ["2+MOV"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Change into Virtue Form - Temperance.",
+        "Values": ["4+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Stolen virtue",
+        "Text": "When defeating the Virtue, choose a friendly character within Range 5 from it. That ally gains the benefit of the current Virtue Form on their next turn.",
+        "Values": []
+      },
+      {
+        "Name": "Share virtue",
+        "Text": "Radius 5. All Allies gain the benefit of the current Virtue Form.",
+        "Values": []
+      },
+      {
+        "Name": "Diligence",
+        "Text": "Attacks deal {0} extra damage and inflict 1 Haste.",
+        "Values": ["TIR+1"]
+      },
+      {
+        "Name": "Humility",
+        "Text": "Take {0} less damage from attacks and gain {1} Block when attacking.",
+        "Values": ["DEF+TIR-1", "TIR"]
+      },
+      {
+        "Name": "Temperance",
+        "Text": "When ending the turn without attacking, gain {0} Barrier and {1} Strength.",
+        "Values": ["DEF+BLK+TIR-1", "TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Lifecrafter",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Range 3. Teleport your Homunculus to that space. It deals {1} damage and inflicts 2 Slow.",
+        "Values": ["2+MOV", "DMG-1"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Your Homunculus moves {1}, then deals {2} damage. The target exiles a non-status card from their hand.",
+        "Values": ["2+MOV", "4+MOV", "DMG-1"]
+      },
+      {
+        "Name": "Far",
+        "Text": "If you have no Homunculus, summon a Homunculus. Your Homunculus moves {0} and gains {1} Block",
+        "Values": ["2+MOV", "DEF*2+BLK"]
+      },
+      {
+        "Name": "Reaction",
+        "Text": "You are attacked. The Homunculus moves {0}, then if it is adjacent to you or blocking the line of sight, it takes the attack instead.",
+        "Values": ["2+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Homunculus",
+        "Text": "The Homunculus has {0} HP. When it dies, it inflicts {1} Stunned to the attacker.",
+        "Values": ["TIR*3+DEF*4", "TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Controller"
   }
 ]
