@@ -711,5 +711,11 @@
     "Cost": 0,
     "Types": ["Reaction"],
     "Text": "Reaction - an ally within range 3 is attacked. Swap spaces with that ally and take the attack in their place."
+  },
+  {
+    "Name": "Calling the Doves down to the sinners and allowing the bliss to flow",
+    "Cost": 5,
+    "Types": ["Attack"],
+    "Text": "Deal 1 damage to any target regardless of range or line of sight. Repeat 107 times. Gain 3 Wounds."
   }
 ]
