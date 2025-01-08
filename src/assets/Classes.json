@@ -1321,7 +1321,7 @@
       {
         "Name": "Far",
         "Text": "If you have no Homunculus, summon a Homunculus. Your Homunculus moves {0} and gains {1} Block",
-        "Values": ["2+MOV", "DEF*2+BLK"]
+        "Values": ["2+MOV", "DEF*2+BLK+TIR+1"]
       },
       {
         "Name": "Reaction",

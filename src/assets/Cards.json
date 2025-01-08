@@ -267,7 +267,7 @@
     "Name": "Spectacle",
     "Cost": 0,
     "Types": ["Lightning", "Spell", "Area", "Distract", "Counter"],
-    "Text": "ffects all enemies in line of sight. Inflict Distracted until the end of their turn. Consume Lightning to gain 3 Counter."
+    "Text": "Affects all enemies in line of sight. Inflict Distracted until the end of their turn. Consume Lightning to gain 3 Counter."
   },
   {
     "Name": "Wreathe in Electricity",
@@ -578,7 +578,7 @@
     "Name": "Toxic lesson",
     "Cost": 0,
     "Types": ["Draw", "Poison", "Ranged"],
-    "Text": "Range 3. Inflict 3 Poson to target friendly character. They draw 2 cards."
+    "Text": "Range 3. Inflict 3 Poison to target friendly character. They draw 2 cards."
   },
   {
     "Name": "Charge",
@@ -591,5 +591,125 @@
     "Cost": 1,
     "Types": ["Reaction", "Melee Weapon"],
     "Text": "Reaction - you are attacked by a non-adjacent enemy. Redirect the attack to any other target within Range 3."
+  },
+  {
+    "Name": "Nothingness strike",
+    "Cost": 0,
+    "Types": ["Attack", "Discard"],
+    "Text": "Discard two cards. If you do, Strike."
+  },
+  {
+    "Name": "Unceasing",
+    "Cost": 1,
+    "Types": ["Permanent", "Buff", "Draw"],
+    "Text": "Permanent. When you have no cards in hand, lose 1 life and draw a card."
+  },
+  {
+    "Name": "Siphon mind",
+    "Cost": 1,
+    "Types": ["Area", "Discard", "Draw", "Dark"],
+    "Text": "Radius 5. Each character discards a card. You draw a card for each card discarded this way. Channel Dark."
+  },
+  {
+    "Name": "Use waste",
+    "Cost": 1,
+    "Types": ["Stance", "Block"],
+    "Text": "Stance. Whenever you discard a card, gain 1 Block."
+  },
+  {
+    "Name": "Deadzone",
+    "Cost": 2,
+    "Types": ["Attack", "Area", "Movement"],
+    "Text": "Radius 3. For each enemy, teleport to that enemy, then Strike them."
+  },
+  {
+    "Name": "Blade rush",
+    "Cost": 2,
+    "Types": ["Attack", "Area", "Bleed", "Movement"],
+    "Text": "Line 3. Strike and inflict 3 Bleed, then move to the end of the line."
+  },
+  {
+    "Name": "Attack of oportunity",
+    "Cost": 0,
+    "Types": ["Attack", "Reaction"],
+    "Text": "Reaction - An adjacent enemy moves. Strike that enemy."
+  },
+  {
+    "Name": "Beat down",
+    "Cost": 1,
+    "Types": ["Attack", "Reaction", "Soft"],
+    "Text": "Reaction - an ally attacks an adjacent enemy. Strike that enemy and inflict 2 Soft."
+  },
+  {
+    "Name": "Reflect projectile",
+    "Cost": 1,
+    "Types": ["Reaction"],
+    "Text": "Reaction - a non-adjacent enemy attacks you. Gain resistance to the attack and damage the attacker for the same amount."
+  },
+  {
+    "Name": "Swift block",
+    "Cost": 1,
+    "Types": ["Reaction", "Block"],
+    "Text": "Reaction - you are attacked. Defend."
+  },
+  {
+    "Name": "Bloody twirl",
+    "Cost": 1,
+    "Types": ["Attack", "Area", "Lifeloss"],
+    "Text": "Lose 2 Life. Strike. If you are bloodied, the attack gains Radius 1."
+  },
+  {
+    "Name": "Evasive strike",
+    "Cost": 1,
+    "Types": ["Attack", "Evasive"],
+    "Text": "Strike. Gain 1 Evasive."
+  },
+  {
+    "Name": "Mark target",
+    "Cost": 1,
+    "Types": ["Ranged", "Debuff", "Permanent"],
+    "Text": "Range 5. Permanent. Attacks against the target deal 1d6 extra damage. When the target dies, exile."
+  },
+  {
+    "Name": "Time walk",
+    "Cost": 4,
+    "Types": ["Finisher"],
+    "Text": "Take an extra turn after this one. Finisher. Exile."
+  },
+  {
+    "Name": "Shell",
+    "Cost": 2,
+    "Types": ["Continuous", "Buff", "Area"],
+    "Text": "Continuous. Radius 3. Allies deal 3 more damage."
+  },
+  {
+    "Name": "Follow-up",
+    "Cost": 1,
+    "Types": ["Continuous", "Attack"],
+    "Text": "Continuous. Once per turn, when an ally attacks an enemy within range 3, you may deal 1d3 damage to that enemy. If you're adjacent to the enemy, deal 1d6 damage instead."
+  },
+  {
+    "Name": "Power in pain",
+    "Cost": 0,
+    "Types": ["Lifeloss", "Buff", "Strength"],
+    "Text": "Lose 2 Life. Gain 1 Strength"
+  },
+  {
+    "Name": "Empowering Blow",
+    "Cost": 2,
+    "Types": ["Attack", "Area", "Buff", "Empower"],
+    "Text": "Strike. Radius 3. Each ally gains 1 Empowered. If you defeat the enemy, they gain another 1 Empowered."
+  },
+  {
+    "Name": "Black hole",
+    "Cost": 3,
+    "Types": ["Ranged", "Area"],
+    "Text": " Range 6, Burst 3. All elements are consumed. Pull all targets as close to the center as possible. Deal 5d6 damage. Gain 1 Nihil. Exile."
+  },
+  {
+    "Name": "Cover",
+    "Cost": 0,
+    "Types": ["Reaction"],
+    "Text": "Reaction - an ally within range 3 is attacked. Swap spaces with that ally and take the attack in their place."
   }
 ]
