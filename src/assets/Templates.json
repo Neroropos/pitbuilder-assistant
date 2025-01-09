@@ -610,5 +610,47 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {}
+  },
+  {
+    "Name": "Pacifist",
+    "DefScaling": -1,
+    "OffScaling": -1,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Peaceful Demeanor",
+        "Text": "When attacked, exile the card used to attack it.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
+  },
+  {
+    "Name": "Bestial",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 5,
+    "MoveMod": 1,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Terror Instinct",
+        "Text": "When bloodied starts retreating.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {}
   }
 ]

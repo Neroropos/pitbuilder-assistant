@@ -1320,7 +1320,7 @@
       },
       {
         "Name": "Far",
-        "Text": "If you have no Homunculus, summon a Homunculus. Your Homunculus moves {0} and gains {1} Block",
+        "Text": "If you have no Homunculus, summon a Homunculus. Your Homunculus moves {0} and gains {1} Block.",
         "Values": ["2+MOV", "DEF*2+BLK+TIR+1"]
       },
       {
@@ -1334,6 +1334,38 @@
         "Name": "Homunculus",
         "Text": "The Homunculus has {0} HP. When it dies, it inflicts {1} Stunned to the attacker.",
         "Values": ["TIR*3+DEF*4", "TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Controller"
+  },
+  {
+    "Name": "Weeper",
+    "DefScaling": 0,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} damage. {1} The target reveals their hand and exiles all attack cards from it. Move {2}.",
+        "Values": ["DMG", "PSTATK", "2+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 5 - target reveals cards from the top of their deck until they reveal an attack card, then exiles it. Gain {1} Block.",
+        "Values": ["3+MOV", "3+BLK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Block. Until your next turn, when an enemy attacks you, exile all attack cards in their discard at the end of turn.",
+        "Values": ["5+MOV", "5+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Mortal Screech",
+        "Text": "When Weeper dies, the killer gains {0} Stunned.",
+        "Values": ["TIR"]
       }
     ],
     "PostAttack": [],
