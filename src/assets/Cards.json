@@ -717,5 +717,95 @@
     "Cost": 5,
     "Types": ["Attack"],
     "Text": "Deal 1 damage to any target regardless of range or line of sight. Repeat 107 times. Gain 3 Wounds."
+  },
+  {
+    "Name": "Pointy tossaways",
+    "Cost": 2,
+    "Types": ["Attack", "Stance", "Ranged", "Discard"],
+    "Text": "Stance. Whenever you discard a card, Range 3 - deal 1 damage."
+  },
+  {
+    "Name": "Endless blades",
+    "Cost": 1,
+    "Types": ["Attack", "Stance"],
+    "Text": "Stance. Once per turn, you may deal 1d6 damage."
+  },
+  {
+    "Name": "Indiscriminate pulsation",
+    "Cost": 2,
+    "Types": ["Pulse", "Stance"],
+    "Text": "Stance. Your Pulse deals damage to all characters in the radius."
+  },
+  {
+    "Name": "Grit",
+    "Cost": 1,
+    "Types": ["Permanent", "Wound"],
+    "Text": "Permanent. When you would be defeated, gain a wound and remain at 1 Health instead. Then, exile this."
+  },
+  {
+    "Name": "My beating, exposed heart",
+    "Cost": 1,
+    "Types": ["Vulnerable", "Stance", "Area"],
+    "Text": "Stance. At the end of your turn Radius 3 - you and all enemies gain 1 Vulnerable."
+  },
+  {
+    "Name": "Defensive antidote",
+    "Cost": 1,
+    "Types": ["Defend", "Poison"],
+    "Text": "Defend. Remove all Poison from any character."
+  },
+  {
+    "Name": "Gushing guard",
+    "Cost": 1,
+    "Types": ["Defend", "Bleed", "Area"],
+    "Text": "Defend. If you have any Bleed, Radius 3 - Inflict 3 Bleed, trigger Bleed damage on each character, then reduce Bleed by 1."
+  },
+  {
+    "Name": "Insightful defend",
+    "Cost": 1,
+    "Types": ["Defend", "Area", "Draw"],
+    "Text": "Defend. Radius 1. Each friendly character draws a card."
+  },
+  {
+    "Name": "Horde holder",
+    "Cost": 2,
+    "Types": ["Defend", "Continuous", "Zone of Control"],
+    "Text": "Continuous. Your zone of control is increased by 2. Whenever a character enters your zone of control, Defend."
+  },
+  {
+    "Name": "Pulsing guard",
+    "Cost": 1,
+    "Types": ["Defend", "Continuous", "Pulse"],
+    "Text": "Continuous. Defend. Whenever you are attacked, gain 1 Pulse. Your Pulse deals damage to enemies."
+  },
+  {
+    "Name": "Bleeding guard",
+    "Cost": 0,
+    "Types": ["Defend", "Bleed"],
+    "Text": "Defend. Gain 2 Bleed."
+  },
+  {
+    "Name": "Inviting defense",
+    "Cost": 0,
+    "Types": ["Defend"],
+    "Text": "Defend. Any enemy regardless of distance may Move 2, then attack you with a basic attack."
+  },
+  {
+    "Name": "Reusing guard",
+    "Cost": 1,
+    "Types": ["Defend", "Exile"],
+    "Text": "Exile the top card of your deck. Defend X times, where X is its cost."
+  },
+  {
+    "Name": "Sleight of hand",
+    "Cost": 0,
+    "Types": ["Draw"],
+    "Text": "Draw a card, then put a card on top of your deck."
+  },
+  {
+    "Name": "Shield the wounded",
+    "Cost": 2,
+    "Types": ["Defend", "Area"],
+    "Text": "Radius 3. Defend, allies gaining all effects of your Defend too. This costs 1 less for each Bloodied friendly character within range."
   }
 ]
