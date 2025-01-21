@@ -218,7 +218,7 @@
       {
         "Name": "Use elements",
         "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
-        "Values": ["OFF", "2*DEF+BLK"]
+        "Values": ["OFF", "DEF+BLK"]
       }
     ],
     "PostAttack": [],
@@ -1063,14 +1063,14 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Gain {1} Block",
-        "Values": ["4+MOV", "2*DEF+BLK"]
+        "Values": ["4+MOV", "DEF+BLK"]
       }
     ],
     "Passives": [
       {
         "Name": "Use elements",
         "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{1} Radius. Ice, Earth, Nature: Gain {2} Block.",
-        "Values": ["OFF", "TIR", "2*DEF+BLK"]
+        "Values": ["OFF", "TIR", "DEF+BLK"]
       }
     ],
     "PostAttack": [
@@ -1126,12 +1126,12 @@
       {
         "Name": "Close",
         "Text": "Move {0}. Range 5. Target character gains {1} Block, {2} Strength and {2} Bleed.",
-        "Values": ["2+MOV", "2+DEF+BLK", "TIR+1"]
+        "Values": ["2+MOV", "2+BLK", "TIR+1"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Consume Fire or Ice. Range 5. Target ally and all characters within Radius 3 take {1} damage of the consumed element. If Fire was consumed, inflict {2} Burn to each enemy. If Ice was consumed, each ally gains {3} Block.",
-        "Values": ["4+MOV", "-1+DMG", "TIR+1", "2+DEF+BLK"]
+        "Values": ["4+MOV", "-1+DMG", "TIR+1", "2+BLK"]
       }
     ],
     "Passives": [
@@ -1200,7 +1200,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Range 3 - target gains {1} Block. Consume Ice or Earth. Create a size 1 obstacle adjacent to the target.",
-        "Values": ["4+MOV", "DEF+TIR+BLK"]
+        "Values": ["4+MOV", "BLK+2"]
       }
     ],
     "Passives": [
@@ -1296,7 +1296,7 @@
       {
         "Name": "Temperance",
         "Text": "When ending the turn without attacking, gain {0} Barrier and {1} Strength.",
-        "Values": ["DEF+BLK+TIR-1", "TIR"]
+        "Values": ["BLK", "TIR"]
       }
     ],
     "PostAttack": [],
@@ -1321,7 +1321,7 @@
       {
         "Name": "Far",
         "Text": "If you have no Homunculus, summon a Homunculus. Your Homunculus moves {0} and gains {1} Block.",
-        "Values": ["2+MOV", "DEF*2+BLK+TIR+1"]
+        "Values": ["2+MOV", "DEF+BLK+1"]
       },
       {
         "Name": "Reaction",

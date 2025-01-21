@@ -168,7 +168,9 @@ export class Enemy {
     this.MoveMod = this.Templates?.reduce((sum, current) => sum + current.MoveMod || 0, 0)
 
     this.BlockMod =
-      this.Templates?.reduce((sum, current) => sum + current.BlockMod || 0, 0) + (this.Tier - 1) * 2
+      this.Templates?.reduce((sum, current) => sum + current.BlockMod || 0, 0) +
+      (this.Tier - 1) * 2 +
+      DefScaling
 
     this.PostAttack = ''
     const PostAttacks = this.Class?.PostAttack.concat(

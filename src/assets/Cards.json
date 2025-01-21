@@ -6,6 +6,18 @@
     "Text": "Strike"
   },
   {
+    "Name": "Move",
+    "Cost": 1,
+    "Types": ["Basic", "Movement"],
+    "Text": "Maneuver"
+  },
+  {
+    "Name": "Defend",
+    "Cost": 1,
+    "Types": ["Basic", "Defend"],
+    "Text": "Defend"
+  },
+  {
     "Name": "Wind jump",
     "Cost": 1,
     "Types": ["Air", "Spell", "Movement", "Ranged", "Knockback"],
@@ -807,5 +819,160 @@
     "Cost": 2,
     "Types": ["Defend", "Area"],
     "Text": "Radius 3. Defend, allies gaining all effects of your Defend too. This costs 1 less for each Bloodied friendly character within range."
+  },
+  {
+    "Name": "Wound",
+    "Types": ["Wound"],
+    "Text": "Unplayable."
+  },
+  {
+    "Name": "Bladestorm",
+    "Cost": 1,
+    "Types": ["Continuous", "Attack"],
+    "Text": "Continuous. Whenever you Strike, deal 1d6 damage."
+  },
+  {
+    "Name": "Teaching waters",
+    "Cost": 2,
+    "Types": ["Water", "Ranged", "Draw"],
+    "Text": "Range 5. An ally draws 5 cards. Channel Water."
+  },
+  {
+    "Name": "Divesting order",
+    "Cost": 0,
+    "Types": ["Ranged", "Attack", "Exile"],
+    "Text": "Exile the top 2 cards of your deck. Range 3 - target ally Strikes."
+  },
+  {
+    "Name": "Offense order",
+    "Cost": 2,
+    "Types": ["Area", "Attack"],
+    "Text": "Radius 3. All friendly characters may Strike an adjacent character."
+  },
+  {
+    "Name": "Targeted destruction",
+    "Cost": 2,
+    "Types": ["Ranged", "Attack"],
+    "Text": "Range 5. Any number of allies may Strike the target."
+  },
+  {
+    "Name": "Breaking combo",
+    "Cost": 3,
+    "Types": ["Knockback", "Attack", "Soft", "Area"],
+    "Text": "Strike. Knockback 1, then Move 1. Deal 1d6 damage. Inflict 3 Soft. Radius 1 - Strike."
+  },
+  {
+    "Name": "Trusting motion",
+    "Cost": 1,
+    "Types": ["Fortune", "Attack", "Movement", "Defend", "Draw"],
+    "Text": "Reveal the top card of your deck. If it's an attack, gain 1 Strength and Strike. If it's a Move, gain 2 Haste and Maneuver. If it's a Defend, gain 3 Hard and Defend. Otherwise, gain 1 Energy and draw a card."
+  },
+  {
+    "Name": "Elementor",
+    "Cost": 1,
+    "Types": ["Stance", "Buff", "Ranged"],
+    "Text": "Stance. Whenever you consume an element, you may have an ally within range 3 deal +1d6 damage and their damage is of that type."
+  },
+  {
+    "Name": "Guard",
+    "Cost": 1,
+    "Types": ["Defend", "Ranged"],
+    "Text": "Range 3. Defend."
+  },
+  {
+    "Name": "Oportune strike",
+    "Cost": 1,
+    "Types": ["Replenish", "Attack", "Discard"],
+    "Text": "Replenish. Strike. Discard a card."
+  },
+  {
+    "Name": "Liminal flow",
+    "Cost": 1,
+    "Types": ["Continuous", "Buff", "Lifegain", "Area"],
+    "Text": "Consume Dark and Light. Continuous. Radius 3 - Friendly characters' attacks deal +1d6 damage and deal Dark or Light damage of your choice. Whenever they defeat an enemy, they recover 1 Health."
+  },
+  {
+    "Name": "Burning frost",
+    "Cost": 1,
+    "Types": ["Continuous", "Slow", "Pulse", "Area"],
+    "Text": "Consume Fire and Ice. Continuous. Radius 3 - Whenever an enemy starts or ends their turn, inflict 2 Slow and 4 Pulse."
+  },
+  {
+    "Name": "Shadow call",
+    "Cost": 1,
+    "Types": ["Summon", "Dark"],
+    "Text": "Range 3 - Create a Shade (3 HP). It deals 1d6 damage. Consume Dark - each Shade moves 2, then deals 1d6 damage."
+  },
+  {
+    "Name": "Summon Golem",
+    "Cost": 3,
+    "Types": ["Summon", "Permanent", "Ice", "Earth"],
+    "Text": "Permanent. Range 3 - Summon a Golem (15 HP, Size 2, Immune to Poison and Bleed). It deals 2d6 damage. Once per turn, you may pay 1 Energy. When you do, the summoned Golem moves 2, then deals 2d6 damage and you may consume Ice or Earth to have the Golem gain 5 Block. When the Golem is defeated, Exile this."
+  },
+  {
+    "Name": "Guide creation",
+    "Cost": 1,
+    "Types": ["Ranged", "Buff", "Light"],
+    "Text": "Range 5. Target summoned ally recovers 3 health, may move 2 and its next attack deals +1d6 damage. Channel Light."
+  },
+  {
+    "Name": "Summon Elemental",
+    "Cost": 3,
+    "Types": ["Summon", "Fire", "Lightning"],
+    "Text": "Permanent. Consume Fire or Lightning. Range 3 - Summon an Elemental (8 HP). At the end of your turn it moves 4, gains 3 Counter and deals 2d6 damage."
+  },
+  {
+    "Name": "Barrier potion",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable", "Barrier"],
+    "Text": "Replenish. Gain 5 Barrier. Consumable 3."
+  },
+  {
+    "Name": "Bandages",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable", "Bleed"],
+    "Text": "Replenish. Remove all Bleed from a friendly character. Consumable 3."
+  },
+  {
+    "Name": "Antidote",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable", "Poison"],
+    "Text": "Replenish. Remove all Poison from a Friendly character. Consumable 3."
+  },
+  {
+    "Name": "Dampener",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable", "Pulse"],
+    "Text": "Replenish. Remove all Pulse from a Friendly character. Consumable 3."
+  },
+  {
+    "Name": "Strength potion",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable", "Strength"],
+    "Text": "Replenish. Gain 2 Strength. Consumable 3."
+  },
+  {
+    "Name": "Strand of wind",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable", "Evasive"],
+    "Text": "Replenish. Gain 5 Barrier. Consumable 3."
+  },
+  {
+    "Name": "Throwing dagger",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable", "Attack", "Ranged"],
+    "Text": "Replenish. Range 3. Deal 1d6 damage. Consumable 3."
+  },
+  {
+    "Name": "Blade ring",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable", "Attack", "Area"],
+    "Text": "Replenish. Radius 1. Deal 1d6 damage. Consumable 3."
+  },
+  {
+    "Name": "Stone of elements",
+    "Cost": 0,
+    "Types": ["Replenish", "Consumable"],
+    "Text": "Replenish. Channel any element. Consumable 3."
   }
 ]

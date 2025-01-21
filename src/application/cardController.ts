@@ -21,6 +21,14 @@ export function GetCardList(
       (typesExcluded.length < 1 || !typesExcluded.some((t) => item.Types.includes(t)))
   )
 }
+export function GetCard(name: string) {
+  const card = GetCards().filter((c) => c.Name == name)
+  if (card.length != 1) throw new ReferenceError()
+  else return card[0]
+}
+export function FindCardsByName(searchString: string) {
+  return GetCards().filter((c) => c.Name.toLowerCase().includes(searchString.toLowerCase()))
+}
 export function GetRandomCards(cardList: PlayerCard[], cardAmount) {
   let n = cardAmount
   let len = cardList.length
