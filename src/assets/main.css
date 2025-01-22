@@ -2,9 +2,6 @@
 @import 'primeicons/primeicons.css';
 @import './fontawesome/css/solid.css';
 @import './fontawesome/css/fontawesome.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 #app {
   max-width: 1280px;
