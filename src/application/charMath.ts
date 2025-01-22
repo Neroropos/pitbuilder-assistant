@@ -5,8 +5,7 @@ import { escapeRegExp } from './func'
 
 export function GetClassList() {
   const enemies: EnemyClass[] = []
-  const stringy = JSON.stringify(classesJson)
-  const classesFromJson = JSON.parse(stringy) as EnemyClass[]
+  const classesFromJson = classesJson as unknown as EnemyClass[]
   classesFromJson.forEach((element) => {
     enemies.push(new EnemyClass(element))
   })
@@ -35,8 +34,7 @@ export class GroupedClass {
 
 export function GetTemplateList() {
   const result: EnemyTemplate[] = []
-  const stringy = JSON.stringify(templatesJson)
-  const templatesFromJson = JSON.parse(stringy) as EnemyTemplate[]
+  const templatesFromJson = templatesJson as unknown as EnemyTemplate[]
   templatesFromJson.forEach((element) => {
     result.push(new EnemyTemplate(element))
   })

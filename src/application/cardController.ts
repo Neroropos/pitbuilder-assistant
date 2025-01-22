@@ -1,8 +1,7 @@
 import cardsJson from '../assets/Cards.json' assert { type: 'json' }
 function GetCards() {
   const cards: PlayerCard[] = []
-  const stringy = JSON.stringify(cardsJson)
-  const cardsFromJson = JSON.parse(stringy) as PlayerCard[]
+  const cardsFromJson = cardsJson as PlayerCard[]
   cardsFromJson.forEach((element) => {
     cards.push(new PlayerCard(element))
   })
