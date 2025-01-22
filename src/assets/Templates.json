@@ -602,7 +602,7 @@
     "Actions": [
       {
         "Name": "Reaction",
-        "Text": "An adjacent ally is attacked. Knockback 1, then move into their space and take the attack.",
+        "Text": "An adjacent ally is attacked. Push 1 away, then move into their space and take the attack.",
         "Values": []
       }
     ],

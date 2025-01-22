@@ -20,14 +20,14 @@
   {
     "Name": "Wind jump",
     "Cost": 1,
-    "Types": ["Air", "Spell", "Movement", "Ranged", "Knockback"],
-    "Text": "Range 5. Target ally is removed from play. They appear at the start of the next round at any space within Range 5 from you. You may Consume Air to Knockback 1 all enemies adjacent to them when they appear."
+    "Types": ["Air", "Spell", "Movement", "Ranged", "Push"],
+    "Text": "Range 5. Target ally is removed from play. They appear at the start of the next round at any space within Range 5 from you. You may Consume Air to Push 1 all enemies adjacent to them when they appear."
   },
   {
     "Name": "Blow off",
     "Cost": 1,
-    "Types": ["Air", "Spell", "Movement", "Area", "Knockback"],
-    "Text": "Maneuver. Radius 2. Knockback 2."
+    "Types": ["Air", "Spell", "Movement", "Area", "Push"],
+    "Text": "Maneuver. Radius 2. Push 2."
   },
   {
     "Name": "Air blade",
@@ -344,8 +344,8 @@
   {
     "Name": "Geyser strike",
     "Cost": 1,
-    "Types": ["Water", "Spell", "Knockback", "Attack"],
-    "Text": "Strike. Knockback 1. If the space the target was on is empty, it becomes water terrain that cannot be walked on."
+    "Types": ["Water", "Spell", "Push", "Attack"],
+    "Text": "Strike. Push 1. If the space the target was on is empty, it becomes water terrain that cannot be walked on."
   },
   {
     "Name": "Drink",
@@ -422,8 +422,8 @@
   {
     "Name": "Lengthy strike",
     "Cost": 2,
-    "Types": ["Attack", "Area", "Knockback", "2H Melee Weapon"],
-    "Text": "Line 3. Strike. Knockback 1."
+    "Types": ["Attack", "Area", "Push", "2H Melee Weapon"],
+    "Text": "Line 3. Strike. Push 1."
   },
   {
     "Name": "Bursting strike",
@@ -858,8 +858,8 @@
   {
     "Name": "Breaking combo",
     "Cost": 3,
-    "Types": ["Knockback", "Attack", "Soft", "Area"],
-    "Text": "Strike. Knockback 1, then Move 1. Deal 1d6 damage. Inflict 3 Soft. Radius 1 - Strike."
+    "Types": ["Push", "Attack", "Soft", "Area"],
+    "Text": "Strike. Push 1, then Move 1. Deal 1d6 damage. Inflict 3 Soft. Radius 1 - Strike."
   },
   {
     "Name": "Trusting motion",
