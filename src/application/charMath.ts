@@ -32,13 +32,32 @@ export class GroupedClass {
   }
 }
 
+export class GroupedTemplate {
+  Type: string = ''
+  Values: EnemyTemplate[] = []
+  public constructor(init?: Partial<GroupedTemplate>) {
+    Object.assign(this, init)
+  }
+}
+
 export function GetTemplateList() {
-  const result: EnemyTemplate[] = []
+  const templates: EnemyTemplate[] = []
   const templatesFromJson = templatesJson as unknown as EnemyTemplate[]
   templatesFromJson.forEach((element) => {
-    result.push(new EnemyTemplate(element))
+    templates.push(new EnemyTemplate(element))
   })
-  result.sort((a, b) => a.Name?.localeCompare(b.Name || '') || 0)
+  const result: GroupedTemplate[] = []
+  templates.forEach((item) => {
+    const arr = result.find((x) => x.Type == item.Type)
+    if (arr) result.find((x) => x.Type == item.Type)?.Values.push(item)
+    else {
+      const newGroup = new GroupedTemplate({ Type: item.Type, Values: [item] })
+      result.push(newGroup)
+    }
+  })
+  result.forEach((gr) => {
+    gr.Values.sort((a, b) => a.Name?.localeCompare(b.Name || '') || 0)
+  })
   return result
 }
 export class Action {
@@ -84,7 +103,7 @@ export class EnemyClass {
   }
 }
 export class EnemyTemplate {
-  Name: string | null = null
+  Name: string = ''
   DefScaling: number = 0
   OffScaling: number = 0
   HpMod: number = 0
@@ -97,6 +116,7 @@ export class EnemyTemplate {
   Resistances: string[] = []
   PostAttack: PostAttack[] = []
   HPBar: number = 0
+  Type: string = ''
   public constructor(init?: Partial<EnemyTemplate>) {
     Object.assign(this, init)
   }
@@ -149,9 +169,6 @@ export class Enemy {
     this.HPMod =
       DefScaling * 7 + this.Templates?.reduce((sum, current) => sum + current.HpMod || 0, 0)
     this.HP = (1 + this.Tier) * 5 + this.HPMod
-    if (this.Templates.find((x) => x.Name == 'Grunt')) {
-      this.HP = 1
-    }
 
     const OffScaling =
       this.Class?.OffScaling +
@@ -205,6 +222,9 @@ export class Enemy {
     this.Passives = this.Class?.Passives.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Passives), [] as Passive[])
     )
+    if (this.Passives.find((x) => x.Name == 'Grunt')) {
+      this.HP = 1
+    }
     this.PassivesShown = []
     this.Passives.forEach((p) => {
       this.PassivesShown.push({

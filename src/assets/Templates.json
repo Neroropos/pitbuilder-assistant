@@ -13,7 +13,8 @@
       "Name": "Toxic strikes",
       "Text": "Inflict {0} Poison.",
       "Values": ["Math.round(OFF/2)+TIR-1"]
-    }
+    },
+    "Type": "Lineage"
   },
   {
     "Name": "Corrupted",
@@ -35,7 +36,8 @@
       "Name": "Sharp blows",
       "Text": "Inflict {0} Bleed.",
       "Values": ["Math.round(OFF/2)+TIR-1"]
-    }
+    },
+    "Type": "Lineage"
   },
   {
     "Name": "Glimpser",
@@ -58,7 +60,8 @@
     ],
     "Weaknesses": ["Fire", "Ice", "Lightning", "Dark"],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Demonic",
@@ -83,7 +86,8 @@
     ],
     "Weaknesses": ["Light"],
     "Resistances": ["Dark"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Divine",
@@ -102,7 +106,8 @@
     ],
     "Weaknesses": ["Dark"],
     "Resistances": ["Light"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Imperial",
@@ -121,7 +126,8 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Primal Fire",
@@ -140,7 +146,8 @@
     "Passives": [],
     "Weaknesses": ["Water", "Earth"],
     "Resistances": ["Fire"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Primal Water",
@@ -159,7 +166,8 @@
     "Passives": [],
     "Weaknesses": ["Lightning", "Nature"],
     "Resistances": ["Water"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Primal Air",
@@ -178,7 +186,8 @@
     "Passives": [],
     "Weaknesses": ["Ice", "Lightning"],
     "Resistances": ["Air"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Primal Earth",
@@ -197,7 +206,8 @@
     "Passives": [],
     "Weaknesses": ["Water", "Air"],
     "Resistances": ["Earth"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Primal Lightning",
@@ -216,7 +226,8 @@
     "Passives": [],
     "Weaknesses": ["Nature", "Earth"],
     "Resistances": ["Lightning"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Primal Nature",
@@ -241,7 +252,8 @@
     ],
     "Weaknesses": ["Fire", "Ice"],
     "Resistances": ["Nature"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Primal Ice",
@@ -261,7 +273,8 @@
     "Passives": [],
     "Weaknesses": ["Fire", "Air"],
     "Resistances": ["Ice"],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   },
   {
     "Name": "Armored",
@@ -287,7 +300,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Swift",
@@ -307,7 +321,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Veteran",
@@ -322,7 +337,8 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Rank"
   },
   {
     "Name": "Avaricious",
@@ -358,7 +374,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Rank"
   },
   {
     "Name": "Lumbering",
@@ -379,7 +396,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Disorienting",
@@ -400,7 +418,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Blazing",
@@ -421,7 +440,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": { "Name": "Burning strikes", "Text": "Inflict {0} Burn.", "Values": ["TIR"] }
+    "PostAttack": { "Name": "Burning strikes", "Text": "Inflict {0} Burn.", "Values": ["TIR"] },
+    "Type": "Modification"
   },
   {
     "Name": "Weak",
@@ -436,7 +456,8 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Rank"
   },
   {
     "Name": "Tiny",
@@ -457,7 +478,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Grunt",
@@ -471,14 +493,15 @@
     "Actions": [],
     "Passives": [
       {
-        "Name": "Expendable",
+        "Name": "Grunt",
         "Text": "HP is 1.",
         "Values": []
       }
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Rank"
   },
   {
     "Name": "Mindwrecker",
@@ -499,7 +522,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": { "Name": "Dazing strikes", "Text": "Inflict {0} Dazed.", "Values": ["TIR"] }
+    "PostAttack": { "Name": "Dazing strikes", "Text": "Inflict {0} Dazed.", "Values": ["TIR"] },
+    "Type": "Modification"
   },
   {
     "Name": "Leader",
@@ -525,7 +549,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Sticky",
@@ -546,7 +571,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Billowing",
@@ -567,7 +593,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Mounted",
@@ -588,7 +615,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Bodyguard",
@@ -609,7 +637,8 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Pacifist",
@@ -630,7 +659,8 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Bestial",
@@ -651,6 +681,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {}
+    "PostAttack": {},
+    "Type": "Lineage"
   }
 ]

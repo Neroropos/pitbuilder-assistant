@@ -96,6 +96,8 @@ function damage() {
         v-model="currentEnemy.Templates"
         filter
         :options="enemyTemplates"
+        option-group-label="Type"
+        option-group-children="Values"
         option-label="Name"
         class="w-full md:w-80"
         @change="changed($event)"
