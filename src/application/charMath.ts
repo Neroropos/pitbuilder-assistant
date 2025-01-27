@@ -168,7 +168,7 @@ export class Enemy {
       this.Templates?.reduce((sum, current) => sum + current.DefScaling || 0, 0)
     this.HPMod =
       DefScaling * 7 + this.Templates?.reduce((sum, current) => sum + current.HpMod || 0, 0)
-    this.HP = (1 + this.Tier) * 5 + this.HPMod
+    this.HP = this.Tier * 10 + this.HPMod
 
     const OffScaling =
       this.Class?.OffScaling +
