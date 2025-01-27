@@ -894,7 +894,7 @@
   {
     "Name": "Burning frost",
     "Cost": 1,
-    "Types": ["Continuous", "Slow", "Pulse", "Area"],
+    "Types": ["Continuous", "Slow", "Pulse", "Area", "Fire", "Ice"],
     "Text": "Consume Fire and Ice. Continuous. Radius 3 - Whenever an enemy starts or ends their turn, inflict 2 Slow and 4 Pulse."
   },
   {
@@ -974,5 +974,281 @@
     "Cost": 0,
     "Types": ["Replenish", "Consumable"],
     "Text": "Replenish. Channel any element. Consumable 3."
+  },
+  {
+    "Name": "Prayer - Fire",
+    "Cost": 0,
+    "Types": ["Prayer", "Fire", "Strength", "Attack", "Ranged"],
+    "Text": "Choose one - Channel Fire or Consume Fire - Range 3. Target ally gains 1 Strength and may Strike."
+  },
+  {
+    "Name": "Prayer - Earth",
+    "Cost": 0,
+    "Types": ["Prayer", "Earth", "Hard", "Defend", "Ranged"],
+    "Text": "Choose one - Channel Earth or Consume Earth - Range 3. Target ally gains 2 Hard and may Defend."
+  },
+  {
+    "Name": "Shroud",
+    "Cost": 1,
+    "Types": ["Reaction", "Evasive"],
+    "Text": "Reaction - an adjacent ally is attacked. They gain 1 Evasive."
+  },
+  {
+    "Name": "Stormburst",
+    "Cost": 1,
+    "Types": ["Attack", "Lightning", "Area", "Sundered"],
+    "Text": "Consume Lightning. Strike. Then, Strike each target that has block within Burst 3 from the target. Inflict 3 Sundered."
+  },
+  {
+    "Name": "Bloody Strength",
+    "Cost": 1,
+    "Types": ["Area", "Empower", "Bleed"],
+    "Text": "Radius 3. Each ally gains 1 Empowered and 3 Bleed."
+  },
+  {
+    "Name": "There and back again",
+    "Cost": 1,
+    "Types": ["Movement"],
+    "Text": "Maneuver. At the end of this turn, you may Maneuver."
+  },
+  {
+    "Name": "Bring forth",
+    "Cost": 2,
+    "Types": ["Movement", "Ranged"],
+    "Text": "Maneuver twice. Range 8 - teleport an ally to a space adjacent to you."
+  },
+  {
+    "Name": "Run ragged",
+    "Cost": 0,
+    "Types": ["Movement", "Bleed"],
+    "Text": "Maneuver. Gain 3 Bleed."
+  },
+  {
+    "Name": "Call the spring Fairy",
+    "Cost": 1,
+    "Types": ["Summon", "Barrier", "Light", "Air"],
+    "Text": "Summon a Fairy (3 HP, flying). Consume Air - each Fairy may move 5. Consume Light - Each ally adjacent to a Fairy gains 1 barrier."
+  },
+  {
+    "Name": "Call the autumn Fairy",
+    "Cost": 1,
+    "Types": ["Summon", "Push", "Attack"],
+    "Text": "Summon a Fairy (3 HP, flying). Consume Water - each Fairy may push 2. Consume Dark - Each Fairy deals 1d3 damage."
+  },
+  {
+    "Name": "Devour",
+    "Cost": 0,
+    "Types": ["Lifegain", "Summon"],
+    "Text": "Destroy an adjacent Summon. You recover 2 health and gain 1 energy."
+  },
+  {
+    "Name": "Burst of Wind",
+    "Cost": 1,
+    "Types": ["Movement", "Air"],
+    "Text": "You may consume Air to ignore height, terrain and zone of control for this movement."
+  },
+  {
+    "Name": "Untouchable dash",
+    "Cost": 2,
+    "Types": ["Movement", "Haste", "Evasive"],
+    "Text": "Gain 2 Haste. Maneuver. Gain 1 Evasive for each adjacent enemy."
+  },
+  {
+    "Name": "Imperceptable movement",
+    "Cost": 0,
+    "Types": ["Movement", "Haste"],
+    "Text": "The next time you would move this turn, teleport instead. Gain 1 Haste."
+  },
+  {
+    "Name": "Forgetful run",
+    "Cost": 1,
+    "Types": ["Movement", "Area"],
+    "Text": "Maneuver. Radius 3 - Each player may discard up to two cards."
+  },
+  {
+    "Name": "Toss balast",
+    "Cost": 0,
+    "Types": ["Movement", "Discard"],
+    "Text": "Discard 2 cards. If you do, Maneuver."
+  },
+  {
+    "Name": "Already there",
+    "Cost": 0,
+    "Types": ["Movement"],
+    "Text": "Teleport to any space on the map. Costs 1 more for each other character in your line of sight."
+  },
+  {
+    "Name": "Air run",
+    "Cost": 1,
+    "Types": ["Movement", "Air", "Area", "Push", "Attack"],
+    "Text": "Maneuver. You may consume Air. If you do, Radius 1 - push 2 and deal 1d6 damage."
+  },
+  {
+    "Name": "Dark run",
+    "Cost": 1,
+    "Types": ["Movement", "Dark", "Area", "Soft"],
+    "Text": "Maneuver. You may consume Dark. If you do, Radius 1 - Inflict 2 Soft."
+  },
+  {
+    "Name": "Earth run",
+    "Cost": 1,
+    "Types": ["Movement", "Earth", "Obstacle"],
+    "Text": "Maneuver. You may consume Earth. If you do, create a size 1 Obstacle adjacent to you."
+  },
+  {
+    "Name": "Fire run",
+    "Cost": 1,
+    "Types": ["Movement", "Fire", "Area"],
+    "Text": "Maneuver. You may consume Fire. If you do, your next attack gains Radius +1 or Burst +1."
+  },
+  {
+    "Name": "Ice run",
+    "Cost": 1,
+    "Types": ["Movement", "Ice"],
+    "Text": "Maneuver. You may consume Ice. If you do, look at the top 3 cards of your deck. Put one of them into your hand, then exile one of them."
+  },
+  {
+    "Name": "Scry",
+    "Cost": 0,
+    "Types": ["Draw"],
+    "Text": "Look at the top 2 cards of your deck, put one in the discard pile, draw the other one."
+  },
+  {
+    "Name": "Rummaging",
+    "Cost": 1,
+    "Types": ["Discard", "Draw", "Lifeloss"],
+    "Text": "Discard any number of cards, draw that many. Lose 2 life."
+  },
+  {
+    "Name": "Preparation",
+    "Cost": 0,
+    "Types": ["Discard", "Recover"],
+    "Text": "Put a card from your discard pile on top of your deck, you can't draw cards until your end of turn."
+  },
+  {
+    "Name": "Inspiration",
+    "Cost": 0,
+    "Types": ["Discard", "Exile", "Draw"],
+    "Text": "Discard your hand. Draw 2 cards. Exile."
+  },
+  {
+    "Name": "Retry",
+    "Cost": 0,
+    "Types": ["Draw"],
+    "Text": "Shuffle your discard pile into your deck, draw a card."
+  },
+  {
+    "Name": "Blacing shield",
+    "Cost": 1,
+    "Types": ["Defend", "Fire", "Area", "Attack", "Area"],
+    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 damage to that enemy. You may consume Fire to have that attack gain Burst 2."
+  },
+  {
+    "Name": "Frozen shield",
+    "Cost": 1,
+    "Types": ["Defend", "Ice", "Attack", "Slow"],
+    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 damage to that enemy. You may consume Ice to inflict 3 Slow to that enemy."
+  },
+  {
+    "Name": "Earthen shield",
+    "Cost": 1,
+    "Types": ["Defend", "Earth", "Attack"],
+    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 damage to that enemy. You may consume Earth to Defend."
+  },
+  {
+    "Name": "Defensive gale",
+    "Cost": 1,
+    "Types": ["Defend", "Air", "Movement"],
+    "Text": "Defend. You may consume Air. If you do, Maneuver."
+  },
+  {
+    "Name": "Wrath",
+    "Cost": 2,
+    "Types": ["Stance"],
+    "Text": "Stance. You deal double damage. You receive double damage."
+  },
+  {
+    "Name": "Elemental sustenance",
+    "Cost": 0,
+    "Types": ["Draw"],
+    "Text": "Consume any number of elements. Draw a card for every 2 elements consumed."
+  },
+  {
+    "Name": "Twilight devotion",
+    "Cost": 0,
+    "Types": ["Light", "Dark", "Discard", "Barrier"],
+    "Text": "Channel Light and Dark. Discard a card, then gain 2 Barrier."
+  },
+  {
+    "Name": "Amplitude devotion",
+    "Cost": 0,
+    "Types": ["Fire", "Water", "Pulse", "Draw"],
+    "Text": "Channel Fire and Water. Gain 2 Pulse, then draw a card."
+  },
+  {
+    "Name": "Horizon devotion",
+    "Cost": 0,
+    "Types": ["Air", "Earth", "Slow", "Movement"],
+    "Text": "Channel Air and Earth. Gain 1 Slow, then Maneuver."
+  },
+  {
+    "Name": "Tundra devotion",
+    "Cost": 0,
+    "Types": ["Ice", "Nature", "Poison"],
+    "Text": "Channel Ice and Nature. Gain 1 Poison, then look at the top 2 cards of your deck and put one into your discard."
+  },
+  {
+    "Name": "Speed up",
+    "Cost": 1,
+    "Types": ["Haste", "Ranged"],
+    "Text": "Gain 1 Haste. Range 3 - target ally gains 1 Haste."
+  },
+  {
+    "Name": "Trustworthy guard",
+    "Cost": 2,
+    "Types": ["Defend", "Area", "Empower"],
+    "Text": "Defend. Radius 1 - each ally gains 1 Empower."
+  },
+  {
+    "Name": "Leeching defense",
+    "Cost": 1,
+    "Types": ["Defend", "Area", "Attack", "Draw", "Lifegain"],
+    "Text": "Defend. Radius 3 - Deal 1d6 damage to each character. For each ally targeted this way, recover 1 health."
+  },
+  {
+    "Name": "Crystal clarity",
+    "Cost": 1,
+    "Types": ["Area", "Ice", "Water", "Draw", "Slow"],
+    "Text": "Radius 3. You may consume Ice and/or Water. Each friendly character may look at the top 1 cards of their deck and put any number of them into their discard. If Ice was consumed, they may look at an additional 2 cards. If Water was consumed, they may draw a card. Inflict 1 Slow to each ally."
+  },
+  {
+    "Name": "Return from soil",
+    "Cost": 1,
+    "Types": ["Ranged", "Earth", "Discard", "Recover", "Area"],
+    "Text": "Range 5. Target ally may put a card from their discard into their hand. You may consume Earth. If you do, change the range to Radius 5."
+  },
+  {
+    "Name": "Repeating blow",
+    "Cost": 1,
+    "Types": ["Attack", "Exile"],
+    "Text": "Exile the top 2 cards of your deck, then put this card on top of your deck."
+  },
+  {
+    "Name": "Rise",
+    "Cost": 0,
+    "Types": ["Earth", "Obstacle"],
+    "Text": "Channel Earth. Create a Size 1 Obstacle in your space, placing yourself on top of it."
+  },
+  {
+    "Name": "Limit refutal",
+    "Cost": 2,
+    "Types": ["Movement", "Attack"],
+    "Text": "Maneuver. Strike. This card costs 1 less to play if you are bloodied. This card costs 1 less to play if you have 1 HP."
+  },
+  {
+    "Name": "Fresh ideas",
+    "Cost": 1,
+    "Types": ["Area", "Draw", "Exile"],
+    "Text": "Radius 5. Each ally may exile any number of cards from their hand, then draw that many cards."
   }
 ]
