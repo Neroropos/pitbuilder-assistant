@@ -5,15 +5,15 @@ import { isMobile } from '../application/func'
 const counter = ref([{ id: 1 }])
 let rounds = ref(1)
 let elements = ref([
+  { name: 'air', value: false, icon: 'fa-solid fa-wind', onColor: 'lightGrey', color: '' },
+  { name: 'dark', value: false, icon: 'pi pi-moon', onColor: 'black', color: '' },
+  { name: 'earth', value: false, icon: 'fa-solid fa-mountain', onColor: 'brown', color: '' },
   { name: 'fire', value: false, icon: 'fa-solid fa-fire', onColor: 'red', color: '' },
   { name: 'ice', value: false, icon: 'fa-solid fa-snowflake', onColor: 'lightBlue', color: '' },
-  { name: 'nature', value: false, icon: 'fa-solid fa-tree', onColor: 'green', color: '' },
-  { name: 'dark', value: false, icon: 'pi pi-moon', onColor: 'black', color: '' },
   { name: 'light', value: false, icon: 'pi pi-sun', onColor: 'yellow', color: '' },
-  { name: 'water', value: false, icon: 'fa-solid fa-water', onColor: 'blue', color: '' },
-  { name: 'earth', value: false, icon: 'fa-solid fa-mountain', onColor: 'brown', color: '' },
-  { name: 'air', value: false, icon: 'fa-solid fa-wind', onColor: 'lightGrey', color: '' },
-  { name: 'lightning', value: false, icon: 'fa-solid fa-bolt', onColor: 'magenta', color: '' }
+  { name: 'lightning', value: false, icon: 'fa-solid fa-bolt', onColor: 'magenta', color: '' },
+  { name: 'nature', value: false, icon: 'fa-solid fa-tree', onColor: 'green', color: '' },
+  { name: 'water', value: false, icon: 'fa-solid fa-water', onColor: 'blue', color: '' }
 ])
 function addEnemy() {
   let newId = 0
@@ -61,7 +61,9 @@ function refresh() {
 
   <div :class="[isMobile ? 'grid-container-mob' : 'grid-container']">
     <div v-for="item in counter" :key="item.id" class="grid-item">
-      <span @click="close(item.id)" class="close clickable"><i class="pi pi-times-circle"></i></span
+      <span style="float: left; padding-right: 8px">{{ item.id }}</span
+      ><span @click="close(item.id)" class="close clickable"
+        ><i class="pi pi-times-circle"></i></span
       ><Enemy :id="item.id" />
     </div>
     <button @click="addEnemy()" class="grid-item button">Add</button>
