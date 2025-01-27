@@ -14,7 +14,7 @@
       "Text": "Inflict {0} Poison.",
       "Values": ["Math.round(OFF/2)+TIR-1"]
     },
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Corrupted",
@@ -37,7 +37,7 @@
       "Text": "Inflict {0} Bleed.",
       "Values": ["Math.round(OFF/2)+TIR-1"]
     },
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Glimpser",
@@ -61,7 +61,7 @@
     "Weaknesses": ["Fire", "Ice", "Lightning", "Dark"],
     "Resistances": [],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Demonic",
@@ -87,7 +87,7 @@
     "Weaknesses": ["Light"],
     "Resistances": ["Dark"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Divine",
@@ -107,7 +107,7 @@
     "Weaknesses": ["Dark"],
     "Resistances": ["Light"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Imperial",
@@ -127,7 +127,7 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Primal Fire",
@@ -147,7 +147,7 @@
     "Weaknesses": ["Water", "Earth"],
     "Resistances": ["Fire"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Primal Water",
@@ -167,7 +167,7 @@
     "Weaknesses": ["Lightning", "Nature"],
     "Resistances": ["Water"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Primal Air",
@@ -187,7 +187,7 @@
     "Weaknesses": ["Ice", "Lightning"],
     "Resistances": ["Air"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Primal Earth",
@@ -207,7 +207,7 @@
     "Weaknesses": ["Water", "Air"],
     "Resistances": ["Earth"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Primal Lightning",
@@ -227,7 +227,7 @@
     "Weaknesses": ["Nature", "Earth"],
     "Resistances": ["Lightning"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Primal Nature",
@@ -253,7 +253,7 @@
     "Weaknesses": ["Fire", "Ice"],
     "Resistances": ["Nature"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Primal Ice",
@@ -274,7 +274,7 @@
     "Weaknesses": ["Fire", "Air"],
     "Resistances": ["Ice"],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
   },
   {
     "Name": "Armored",
@@ -682,6 +682,21 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {},
-    "Type": "Lineage"
+    "Type": "Physiology"
+  },
+  {
+    "Name": "Aggressive",
+    "DefScaling": -1,
+    "OffScaling": 1,
+    "HpMod": 0,
+    "MoveMod": 1,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "Actions": [],
+    "Passives": [],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {},
+    "Type": "Modification"
   }
 ]

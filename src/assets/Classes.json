@@ -7,17 +7,17 @@
       {
         "Name": "Melee",
         "Text": "Deal {0} Damage. {2} Gain {1} Block.",
-        "Values": ["1+DMG", "5+BLK", "PSTATK"]
+        "Values": ["1+DMG", "BLK-1", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. All adjacent enemies gain Slow 2. Block {1}.",
-        "Values": ["2+MOV", "5+BLK"]
+        "Text": "Move {0}. All adjacent enemies gain Slow 2. Gain {1} Block.",
+        "Values": ["2+MOV", "BLK-1"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Block {1}. Counter {2}.",
-        "Values": ["3+MOV", "10+BLK", "DMG"]
+        "Text": "Move {0}. Gain {1} Block. Gain {2} Counter.",
+        "Values": ["3+MOV", "4+BLK", "DMG"]
       },
       {
         "Name": "Interrupt",
@@ -46,15 +46,15 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Block {1}. When an adjacent enemy breaks your block, inflict 1 Dazed to them.",
-        "Values": ["4+MOV", "6+BLK"]
+        "Text": "Move {0}. Gain {1} Block. When an adjacent enemy breaks your block, inflict 1 Dazed to them.",
+        "Values": ["4+MOV", "BLK"]
       }
     ],
     "Passives": [
       {
         "Name": "Parry",
         "Text": "At the end of your turn gain {0} Block and {1} Counter. If you have no Block, lose all Counter.",
-        "Values": ["5+BLK", "DMG"]
+        "Values": ["BLK", "DMG"]
       }
     ],
     "PostAttack": [],
@@ -68,16 +68,16 @@
       {
         "Name": "Melee",
         "Text": "Move {0}. Radius 1 - All friendly characters gain {1} Barrier. If they already have Barrier, they gain 2 extra.",
-        "Values": ["2+MOV", "3+BLK"]
+        "Values": ["2+MOV", "BLK-3"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Block {1}. Barrier {2}.",
-        "Values": ["3+MOV", "5+BLK", "3+BLK"]
+        "Text": "Move {0}. Gain {1} Block and {2} Barrier.",
+        "Values": ["3+MOV", "BLK-1", "BLK-3"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range 5 - Place a 3 HP Screamer.",
+        "Text": "Move {0}. Range 5 - Place a Screamer.",
         "Values": ["3+MOV"]
       }
     ],
@@ -86,6 +86,11 @@
         "Name": "Ranged Suppresion",
         "Text": "Attacks against this and adjacent allies originating from Range 3 or greater deal half damage.",
         "Values": []
+      },
+      {
+        "Name": "Screamer",
+        "Text": "Size 1 Obstacle. Has {0} HP. At the end of each round, Radius 3 - inflict 1 Dazed.",
+        "Values": ["DEF"]
       }
     ],
     "PostAttack": [],
@@ -99,12 +104,12 @@
       {
         "Name": "Melee",
         "Text": "Deal {0} Damage. {2} Gain {1} Block.",
-        "Values": ["1+DMG", "5+BLK", "PSTATK"]
+        "Values": ["1+DMG", "BLK", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} Block {3}.",
-        "Values": ["3+MOV", "1+DMG", "PSTATK", "2+BLK"]
+        "Text": "Move {0}. Deal {1} Damage. {2} Gain {3} Block.",
+        "Values": ["3+MOV", "1+DMG", "PSTATK", "BLK-1"]
       },
       {
         "Name": "Far",
@@ -144,8 +149,8 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Block {1}. Counter {2}.",
-        "Values": ["3+MOV", "2+BLK", "-3+DMG"]
+        "Text": "Move {0}. Gain {1} Block and {2} Counter.",
+        "Values": ["3+MOV", "BLK", "-3+DMG"]
       },
       {
         "Name": "Interrupt",
@@ -200,7 +205,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Deal {0} Damage. {1}",
+        "Text": "Burst 1. Deal {0} Damage. {1}",
         "Values": ["1+DMG", "PSTATK"]
       },
       {
@@ -232,7 +237,7 @@
       {
         "Name": "Mobility",
         "Text": "Move {0}. Reload 1. Gain {1} Block.",
-        "Values": ["3+MOV", "3+BLK"]
+        "Values": ["3+MOV", "1+BLK"]
       },
       {
         "Name": "Close",
@@ -262,8 +267,8 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Radius 5 - Each ally gains {0} Block and {1} Counter",
-        "Values": ["4+BLK", "0+DMG"]
+        "Text": "Range 3 - Swap spaces with an ally. Radius 3 - Each ally gains {0} Block and {1} Counter",
+        "Values": ["BLK", "DMG"]
       },
       {
         "Name": "Close",
@@ -272,11 +277,17 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain {1} Block.",
-        "Values": ["2+MOV", "2+BLK"]
+        "Text": "Move {0}. Gain {1} Barrier.",
+        "Values": ["2+MOV", "BLK"]
       }
     ],
-    "Passives": [],
+    "Passives": [
+      {
+        "Name": "Shining Hope",
+        "Text": "Radius 3 - Whenever an ally would gain a negative condition, they gain 1 less of it. Allies deal +{0} damage.",
+        "Values": ["DMG"]
+      }
+    ],
     "PostAttack": [],
     "Type": "Support"
   },
@@ -351,7 +362,7 @@
       {
         "Name": "Emboldening Circle",
         "Text": "At the start of their turn, each ally within this Circle gains 3 Strength for that turn and {0} Block.",
-        "Values": ["3+BLK"]
+        "Values": ["BLK"]
       },
       {
         "Name": "Invigorating Circle",
@@ -369,24 +380,24 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {0}. Adjacent ally recovers from all conditions.",
+        "Text": "Move {0}. Adjacent ally recovers from all negative conditions and gains 2 Haste.",
         "Values": ["2+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} Inflict {3} Bleed.",
-        "Values": ["3+MOV", "0+DMG", "PSTATK", "TIR*2"]
+        "Text": "Move {0}. Deal {1} Damage. {2} Inflict {1} Bleed.",
+        "Values": ["2+MOV", "DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Radius 2 - Allies gain 1 Strength for their next turn and their attacks inflict {1} Poison next turn.",
-        "Values": ["2+MOV", "TIR"]
+        "Text": "Move {0}. Radius 2 - Allies gain 1 Strength and their attacks inflict {1} Poison next turn.",
+        "Values": ["3+MOV", "TIR"]
       }
     ],
     "Passives": [
       {
         "Name": "Spite",
-        "Text": "Whenever an ally within Range 3 becomes Bloodied, gain 1 Strength.",
+        "Text": "Whenever an ally within Range 3 becomes Bloodied, gain 2 Strength.",
         "Values": []
       }
     ],
@@ -401,12 +412,12 @@
       {
         "Name": "Melee",
         "Text": "Deal {0} Damage. {1} Inflict {3} Bleed. Exile a random card from the target's hand, deck and discard. Move {2}.",
-        "Values": ["3+DMG", "PSTATK", "2+MOV", "TIR*2"]
+        "Values": ["3+DMG", "PSTATK", "2+MOV", "DMG"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Range 2 - Deal {1} Damage. {2} Inflict {3} Bleed. Exile a random card from the target's hand.",
-        "Values": ["4+MOV", "1+DMG", "PSTATK", "TIR*2"]
+        "Values": ["4+MOV", "1+DMG", "PSTATK", "DMG"]
       },
       {
         "Name": "Far",
@@ -426,7 +437,7 @@
       {
         "Name": "Melee",
         "Text": "Deal {0} Damage. {1} Move {2}.",
-        "Values": ["-1+DMG", "PSTATK", "5+MOV"]
+        "Values": ["DMG", "PSTATK", "5+MOV"]
       },
       {
         "Name": "Close",
@@ -435,8 +446,8 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain 1 Evasive.",
-        "Values": ["5+MOV"]
+        "Text": "Move {0}. Gain {1} Evasive.",
+        "Values": ["5+MOV", "DEF"]
       }
     ],
     "Passives": [
@@ -486,7 +497,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. Inflict 1 Weak. {1} Move {2} away.",
+        "Text": "Deal {0} Damage. Inflict 1 Weak. {1} Move {2}.",
         "Values": ["1+DMG", "PSTATK", "3+MOV"]
       },
       {
@@ -496,7 +507,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain Evasive 1.",
+        "Text": "Move {0}. Gain 1 Evasive.",
         "Values": ["5+MOV"]
       }
     ],
@@ -523,18 +534,18 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {0} away. Create a 1 HP Size 1 obstacle in three adjacent spaces.",
+        "Text": "Move {0}. Create a 1 HP Size 1 obstacle in three adjacent spaces.",
         "Values": ["3+MOV"]
       },
       {
         "Name": "Close",
         "Text": "Range 5 - Target exiles 2 non-status cards from their hand, then inflict 1 Stunned and {0} Poison",
-        "Values": ["TIR"]
+        "Values": ["DMG-1"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. {1} Barrier.",
-        "Values": ["4+MOV", "3+BLK"]
+        "Values": ["4+MOV", "1+BLK"]
       }
     ],
     "Passives": [
@@ -611,7 +622,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. The next time the Poisoner inflicts Poison, they inflict {1} extra Poison and 1 Dazed.",
-        "Values": ["2+MOV", "TIR*2"]
+        "Values": ["2+MOV", "DMG"]
       }
     ],
     "Passives": [
@@ -642,13 +653,13 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Gain {1} Barrier. ",
-        "Values": ["3+MOV", "3+BLK"]
+        "Values": ["3+MOV", "1+BLK"]
       }
     ],
     "Passives": [
       {
         "Name": "Charming",
-        "Text": "Charmed characters deal half damage to this character.",
+        "Text": "Beguiler has resistance from Charmed characters.",
         "Values": []
       }
     ],
@@ -711,7 +722,7 @@
       {
         "Name": "Puppet",
         "Text": "All Puppets are Size 1 creatures. They can be attacked and have {0} HP. When there are no Puppeteers, Puppet stops being a creature and becomes an obstacle.",
-        "Values": ["DEF*2+TIR"]
+        "Values": ["DEF*2+TIR*3"]
       }
     ],
     "PostAttack": [],
@@ -838,12 +849,12 @@
       {
         "Name": "Melee",
         "Text": "Deal {0} Damage. {3} Inflict {1} Bleed and {1} Dazed. Move {2}.",
-        "Values": ["1+DMG", "1+TIR", "4+MOV", "PSTATK"]
+        "Values": ["1+DMG", "DMG", "4+MOV", "PSTATK"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Deal {1} damage. {2} Inflict {3} Bleed and {3} Dazed. Move {0}.",
-        "Values": ["2+MOV", "-1+DMG", "PSTATK", "TIR"]
+        "Values": ["2+MOV", "-1+DMG", "PSTATK", "DMG-1"]
       },
       {
         "Name": "Far",
@@ -883,24 +894,24 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2} Inflict {3} Bleed. Move {4}.",
-        "Values": ["4+MOV", "-1+DMG", "PSTATK", "TIR+1", "1+MOV"]
+        "Text": "Move {0}. Deal {1} damage. {2} Inflict {3} Bleed.",
+        "Values": ["3+MOV", "-1+DMG", "PSTATK", "TIR+1"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Gain 1 Evasive",
-        "Values": ["6+MOV"]
+        "Values": ["5+MOV"]
       },
       {
         "Name": "Riposte",
-        "Text": "Reaction - Ignore all damage from dice showing 1 or 2. Deal damage equal to damage ignored back to the attacker.",
+        "Text": "Reaction - You are attacked from any range. Ignore all damage from dice showing 1 or 2. Deal damage equal to damage ignored back to the attacker.",
         "Values": ["5+MOV"]
       }
     ],
     "Passives": [
       {
         "Name": "Duel",
-        "Text": "The last character attacked by Duelist is engaged in a duel with it. Duelist resists damage from enemies not dueling this character. Enemies dueling this Duelist deal half damage to other targets.",
+        "Text": "The last character attacked by Duelist is engaged in a duel with it. Enemies engaged in a duel deal and take half damage from other characters. While the duelist is engaged in a duel, it resists all damage from characters it's not dueling.",
         "Values": []
       }
     ],
@@ -925,7 +936,7 @@
       {
         "Name": "Far",
         "Text": "Teleport to be adjacent to an ally. That ally gains {0} Block. You may consume Light. If you do, Radius 5 - Inflict {1} Pulse.",
-        "Values": ["5+BLK", "OFF+TIR"]
+        "Values": ["1+BLK", "DMG+1"]
       },
       {
         "Name": "Illumination",
@@ -996,7 +1007,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Gain {1} Block",
-        "Values": ["4+MOV", "4+BLK"]
+        "Values": ["4+MOV", "BLK"]
       }
     ],
     "Passives": [
@@ -1022,7 +1033,7 @@
       {
         "Name": "Close",
         "Text": "Move {0}. Range 2 - Create a Shade. Each shade deals {1} damage.",
-        "Values": ["2+MOV", "1+TIR"]
+        "Values": ["2+MOV", "Math.round(DMG/2)"]
       },
       {
         "Name": "Far",
@@ -1034,7 +1045,7 @@
       {
         "Name": "Knives in the Shadow",
         "Text": "Whenever a shade dies, Radius 1 - it deals {0} damage.",
-        "Values": ["TIR"]
+        "Values": ["Math.round(DMG/2)"]
       },
       {
         "Name": "Shade",
@@ -1043,7 +1054,7 @@
       }
     ],
     "PostAttack": [],
-    "Type": "Striker"
+    "Type": "Skirmisher"
   },
   {
     "Name": "Spellblade",
@@ -1063,14 +1074,14 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Gain {1} Block",
-        "Values": ["4+MOV", "DEF+BLK"]
+        "Values": ["4+MOV", "BLK"]
       }
     ],
     "Passives": [
       {
         "Name": "Use elements",
         "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{1} Radius. Ice, Earth, Nature: Gain {2} Block.",
-        "Values": ["OFF", "TIR", "DEF+BLK"]
+        "Values": ["Math.round(DMG/2)", "TIR", "BLK"]
       }
     ],
     "PostAttack": [
@@ -1089,12 +1100,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Consume Light and/or Dark: Deal {0} Damage. {1} If Light was consumed, the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, the target discards {2} cards. Gain {2} Evasive.",
+        "Text": "Deal {0} damage. {1} Gain {2} Evasive. You may consume Light and/or Dark: If Light was consumed, deal {0} Damage and the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, deal {0} Damage and the target discards {2} cards.",
         "Values": ["0+DMG", "PSTATK", "TIR"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2}. Channel Light or Dark.",
+        "Text": "Move {0}. Deal {1} damage. {2} Channel Light or Dark.",
         "Values": ["4+MOV", "0+DMG", "PSTATK"]
       },
       {
@@ -1126,12 +1137,12 @@
       {
         "Name": "Close",
         "Text": "Move {0}. Range 5. Target character gains {1} Block, {2} Strength and {2} Bleed.",
-        "Values": ["2+MOV", "2+BLK", "TIR+1"]
+        "Values": ["2+MOV", "BLK-1", "TIR+1"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Consume Fire or Ice. Range 5. Target ally and all characters within Radius 3 take {1} damage of the consumed element. If Fire was consumed, inflict {2} Burn to each enemy. If Ice was consumed, each ally gains {3} Block.",
-        "Values": ["4+MOV", "-1+DMG", "TIR+1", "2+BLK"]
+        "Values": ["4+MOV", "-1+DMG", "TIR+1", "BLK-1"]
       }
     ],
     "Passives": [
@@ -1162,7 +1173,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}.",
+        "Text": "Move {0}. Channel Air, Dark or Water.",
         "Values": ["3+MOV"]
       },
       {
@@ -1199,8 +1210,8 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range 3 - target gains {1} Block. Consume Ice or Earth. Create a size 1 obstacle adjacent to the target.",
-        "Values": ["4+MOV", "BLK+2"]
+        "Text": "Move {0}. Range 3 - target gains {1} Block. You may consume Ice or Earth. If you do, create a size 1 obstacle adjacent to the target.",
+        "Values": ["4+MOV", "BLK"]
       }
     ],
     "Passives": [
@@ -1291,12 +1302,12 @@
       {
         "Name": "Humility",
         "Text": "Take {0} less damage from attacks and gain {1} Block when attacking.",
-        "Values": ["DEF+TIR-1", "TIR"]
+        "Values": ["Math.round(BLK/2)", "Math.round(BLK/2)-2"]
       },
       {
         "Name": "Temperance",
         "Text": "When ending the turn without attacking, gain {0} Barrier and {1} Strength.",
-        "Values": ["BLK", "TIR"]
+        "Values": ["Math.round(BLK/2)", "TIR"]
       }
     ],
     "PostAttack": [],
@@ -1311,7 +1322,7 @@
       {
         "Name": "Melee",
         "Text": "Move {0}. Range 3. Teleport your Homunculus to that space. It deals {1} damage and inflicts 2 Slow.",
-        "Values": ["2+MOV", "DMG-1"]
+        "Values": ["2+MOV", "DMG+1"]
       },
       {
         "Name": "Close",
@@ -1353,12 +1364,12 @@
       {
         "Name": "Close",
         "Text": "Move {0}. Range 5 - target reveals cards from the top of their deck until they reveal an attack card, then exiles it. Gain {1} Block.",
-        "Values": ["3+MOV", "3+BLK"]
+        "Values": ["3+MOV", "1+BLK"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Gain {1} Block. Until your next turn, when an enemy attacks you, exile all attack cards in their discard at the end of turn.",
-        "Values": ["5+MOV", "5+BLK"]
+        "Values": ["5+MOV", "3+BLK"]
       }
     ],
     "Passives": [
@@ -1371,5 +1382,153 @@
     "PostAttack": [],
     "Resistances": [],
     "Type": "Controller"
+  },
+  {
+    "Name": "Stone Cannon",
+    "DefScaling": 3,
+    "OffScaling": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Reload 1. Gain {1} Block. Channel Earth.",
+        "Values": ["1+MOV", "7+BLK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 10. Deal {1} damage. {2} May Consume Earth to gain 1 Ammo.",
+        "Values": ["1+MOV", "7+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Range 10. Burst 2. Deal {0} damage. {1} For each Obstacle destroyed, deal {2} damage to all characters in the area.",
+        "Values": ["10+DMG", "PSTATK", "OFF-1"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Earthen core",
+        "Text": "Start of combat: Channel Earth.",
+        "Values": []
+      },
+      {
+        "Name": "Big cannon",
+        "Text": "All attacks have Range 15 and require 1 Ammo to use. Starts with 1 Ammo.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Special"
+  },
+  {
+    "Name": "Nill Bringer",
+    "DefScaling": 3,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Gain {0} Block. Radius 3 - Deal {1} Damage. {2} Inflict {3} Slow.",
+        "Values": ["7+BLK", "5+DMG", "PSTATK", "OFF"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Gain {1} Block. Deal {2} Damage. {3} Channel Ice.",
+        "Values": ["2+MOV", "7+BLK", "3+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Consume Ice to move another {0}, turning all spaces moved over into difficult terrain and gain {1} Block.",
+        "Values": ["4+MOVE", "7+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Bringer of frost",
+        "Text": "Start of combat: Channel Ice",
+        "Values": []
+      },
+      {
+        "Name": "Capricious rime",
+        "Text": "Whenever your block is broken, Radius 3 - Deal 3 damage. If Ice is channeled, deal 2 extra damage.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Special"
+  },
+  {
+    "Name": "Druid",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Range 3 - Summon a Bramble. Channel Nature or Water.",
+        "Values": ["2+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Range 6 - Summon a Bramble. Inflict {0} Poison and {1} Slow to each enemy adjacent to the Bramble. You may consume Nature and/or Water. If Nature was consumed, inflict another {0} Poison. If Water was consumed, all spaces within Radius 2 of the Bramble become difficult terrain.",
+        "Values": ["TIR+1", "TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. You may move each Bramble in line of sight 1 space. They exert zone of control until your next turn.",
+        "Values": ["4+MOVE"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Bramble",
+        "Text": "Size 1 Obstacle. Has {0} HP. Resists damage from non adjacent sources. Vulnerable against Fire and Lightning. Always has {1} Counter.",
+        "Values": ["DEF*3", "OFF*3"]
+      },
+      {
+        "Name": "Bramble tender",
+        "Text": "Start of combat: place {0} Brambles within range 7 of the Druid.",
+        "Values": ["1+2*TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Special"
+  },
+  {
+    "Name": "Statue",
+    "DefScaling": 3,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {1} At the start of your next turn, if the target is adjacent to you and bloodied, inflict 1 Wound.",
+        "Values": ["2+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 5 - target enemy maneuvers to be as close as possible to you. If it becomes adjacent to you, inflict {1} Slow and deal {2} Damage. {3}",
+        "Values": ["1+MOV", "1+TIR", "2+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {9} Block.",
+        "Values": ["2+MOVE", "3+BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Large and Heavy.",
+        "Text": "Size 2. Reduce all push against the Statue by it's size.",
+        "Values": []
+      },
+      {
+        "Name": "Chipping",
+        "Text": "At the start of your turn, if you're bloodied, gain 1 Haste and 2 Soft.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Special"
   }
 ]

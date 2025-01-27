@@ -185,7 +185,7 @@ export class Enemy {
     this.BlockMod =
       this.Templates?.reduce((sum, current) => sum + current.BlockMod || 0, 0) +
       (this.Tier - 1) * 2 +
-      DefScaling
+      DefScaling * 2
 
     this.PostAttack = ''
     const PostAttacks = this.Class?.PostAttack.concat(
