@@ -1212,7 +1212,7 @@
   {
     "Name": "Leeching defense",
     "Cost": 1,
-    "Types": ["Defend", "Area", "Attack", "Draw", "Lifegain"],
+    "Types": ["Defend", "Area", "Attack", "Lifegain"],
     "Text": "Defend. Radius 3 - Deal 1d6 damage to each character. For each ally targeted this way, recover 1 health."
   },
   {
