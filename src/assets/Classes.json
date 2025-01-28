@@ -1581,7 +1581,7 @@
       }
     ],
     "PostAttack": [],
-    "Resistances": [],
+    "Resistances": ["Fire"],
     "Type": "Boss"
   }
 ]
