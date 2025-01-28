@@ -1517,7 +1517,7 @@
     ],
     "Passives": [
       {
-        "Name": "Large and Heavy.",
+        "Name": "Large and Heavy",
         "Text": "Size 2. Reduce all push against the Statue by it's size.",
         "Values": []
       },
@@ -1530,5 +1530,58 @@
     "PostAttack": [],
     "Resistances": [],
     "Type": "Controller"
+  },
+  {
+    "Name": "Salamander Matriarch",
+    "DefScaling": 3,
+    "OffScaling": 3,
+    "HPBar": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Radius 1. Deal {0} damage. {1} Inflict {2} Burn. Move {3}",
+        "Values": ["1+DMG", "PSTATK", "TIR*2", "3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Burst 1, Range 7 - Deal {1} damage. {2} You may consume Fire. If you do, turn all space hit into Hazardous terrain that deals {3} fire damage and inflicts {4} Burn when a character ends their turn on it.",
+        "Values": ["4+MOV", "-1+DMG", "PSTATK", "Math.round(DMG/2)", "TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Summon a Fire Salamander (Weak Blazing Bestial Caster). It may not act this turn. Channel Fire.",
+        "Values": ["6+MOVE"]
+      },
+      {
+        "Name": "Boss - Call",
+        "Text": "Summon {0} Grunt Fire Slamanders (Weak Blazing Bestial Caster). Each friendly character gains {1} Block. Channel Fire.",
+        "Values": ["2*TIR", "BLK"]
+      },
+      {
+        "Name": "Boss - Rain",
+        "Text": "4 Burst 2 Areas within Range 7. Deal {0} damage. {1} Inflict {2} burn. ",
+        "Values": ["DMG", "PSTATK", "TIR"]
+      },
+      {
+        "Name": "Boss - Hate",
+        "Text": "Line 15, targeting the furthest enemy. If they are out of line of sight, they take half damage. Deal {0} damage. {1} Inflict {2} Burn.",
+        "Values": ["2*DMG", "PSTATK", "TIR"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Boss",
+        "Text": "Start of round - chooses a boss action and target area or characters. Performs that action at the end of round. May take 1 turn per round. May take 1 extra turn each round for every 2 player characters.",
+        "Values": []
+      },
+      {
+        "Name": "Large",
+        "Text": "Size 2",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Boss"
   }
 ]
