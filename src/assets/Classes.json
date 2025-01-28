@@ -1559,7 +1559,7 @@
       },
       {
         "Name": "Boss - Rain",
-        "Text": "4 Burst 2 Areas within Range 7. Deal {0} damage. {1} Inflict {2} burn. ",
+        "Text": "Burst 2. 4 Areas. Range 7. Deal {0} damage. {1} Inflict {2} burn. ",
         "Values": ["DMG", "PSTATK", "TIR"]
       },
       {
