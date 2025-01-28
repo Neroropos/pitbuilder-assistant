@@ -1492,7 +1492,7 @@
     ],
     "PostAttack": [],
     "Resistances": [],
-    "Type": "Special"
+    "Type": "Controller"
   },
   {
     "Name": "Statue",
@@ -1529,6 +1529,6 @@
     ],
     "PostAttack": [],
     "Resistances": [],
-    "Type": "Special"
+    "Type": "Controller"
   }
 ]
