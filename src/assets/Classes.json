@@ -1550,7 +1550,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Summon a Fire Salamander (Weak Blazing Bestial Caster). It may not act this turn. Channel Fire.",
-        "Values": ["6+MOVE"]
+        "Values": ["6+MOV"]
       },
       {
         "Name": "Boss - Call",
