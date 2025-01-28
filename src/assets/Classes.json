@@ -1535,7 +1535,7 @@
     "Name": "Salamander Matriarch",
     "DefScaling": 3,
     "OffScaling": 3,
-    "HPBar": 3,
+    "HPBar": 2,
     "Actions": [
       {
         "Name": "Melee",
