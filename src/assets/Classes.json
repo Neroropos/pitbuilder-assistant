@@ -1481,7 +1481,7 @@
     "Passives": [
       {
         "Name": "Bramble",
-        "Text": "Size 1 Obstacle. Has {0} HP. Resists damage from non adjacent sources. Vulnerable against Fire and Lightning. Always has {1} Counter.",
+        "Text": "Size 1 Obstacle. Has {0} HP. Has resistance against damage from non-adjacent sources. Has weakness against Fire and Lightning. Always has {1} Counter.",
         "Values": ["DEF*3", "OFF*3"]
       },
       {
@@ -1511,7 +1511,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain {9} Block.",
+        "Text": "Move {0}. Gain {1} Block.",
         "Values": ["2+MOV", "3+BLK"]
       }
     ],
