@@ -1438,7 +1438,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Consume Ice to move another {0}, turning all spaces moved over into difficult terrain and gain {1} Block.",
-        "Values": ["4+MOVE", "7+BLK"]
+        "Values": ["4+MOV", "7+BLK"]
       }
     ],
     "Passives": [
@@ -1475,7 +1475,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. You may move each Bramble in line of sight 1 space. They exert zone of control until your next turn.",
-        "Values": ["4+MOVE"]
+        "Values": ["4+MOV"]
       }
     ],
     "Passives": [
@@ -1512,7 +1512,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Gain {9} Block.",
-        "Values": ["2+MOVE", "3+BLK"]
+        "Values": ["2+MOV", "3+BLK"]
       }
     ],
     "Passives": [
