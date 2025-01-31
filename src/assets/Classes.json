@@ -421,8 +421,8 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain 1 Evasive",
-        "Values": ["7+MOV"]
+        "Text": "Move {0}. Gain {1} Evasive",
+        "Values": ["7+MOV", "DEF"]
       }
     ],
     "Passives": [],
@@ -1583,5 +1583,42 @@
     "PostAttack": [],
     "Resistances": ["Fire"],
     "Type": "Boss"
+  },
+  {
+    "Name": "Sentinel",
+    "DefScaling": 3,
+    "OffScaling": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Gain {0} Block. Deal {1} damage. {2}. Inflict {3} Slow.",
+        "Values": ["DEF", "2+DMG", "PSTATK", "TIR+1"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Line 2. Deal {1} damage. {2}. Inflict {3} Slow. Channel Ice.",
+        "Values": ["3+MOV", "DMG", "PSTATK", "TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Block. Channel Light.",
+        "Values": ["4+MOV", "BLK"]
+      },
+      {
+        "Name": "Reaction",
+        "Text": "An enemy attacks. You and all allies within Range 3 gain {0} Block. You may consume Light and/or Ice. If Light is consumed, after this attack, inflict {1} Pulse on the attacker and they may only draw line of sight to adjacent spaces this turn. If Ice is consumed, you gain {2} Block and inflict {3} Slow to the attacker.",
+        "Values": ["Math.round(BLK/2)", "TIR+1", "BLK-1", "TIR"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Sentry",
+        "Text": "Zone of control +1.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Defender"
   }
 ]

@@ -68,10 +68,11 @@ function getRandomCards() {
   </div>
   <div v-if="cardsToShow.length > 0" style="width: 100%; font-size: 16px">
     <h3>Cards</h3>
-    <div v-for="card in cardsToShow" :key="card.Name">
+    <div v-for="(card, index) in cardsToShow" :key="card.Name">
       <div>
-        <span style="font-weight: bold">{{ card.Cost }} {{ card.Name }}</span
-        ><br />
+        <span style="font-size: small">{{ index + 1 }}. </span>
+        <span style="font-weight: bold">{{ card.Cost }} {{ card.Name }}</span>
+        <br />
         {{ card.Text }}
       </div>
       <div class="row">

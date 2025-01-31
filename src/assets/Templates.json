@@ -698,5 +698,30 @@
     "Resistances": [],
     "PostAttack": {},
     "Type": "Modification"
+  },
+  {
+    "Name": "Pickpocketing",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 1,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Loot",
+        "Text": "When you have 3 Loot, start retreating. When attacked, you may spend 2 Loot to gain resistance to the attack.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {
+      "Name": "Pickpocketing",
+      "Text": "Exile the top {0} cards of the target's deck. Gain 1 Loot. Gain 1 extra Loot for each Consumable exiled and reduce the Consumable value on those by 1.",
+      "Values": ["TIR"]
+    },
+    "Type": "Modification"
   }
 ]
