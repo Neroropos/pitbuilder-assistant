@@ -723,5 +723,89 @@
       "Values": ["TIR"]
     },
     "Type": "Modification"
+  },
+  {
+    "Name": "Fairy",
+    "DefScaling": -1,
+    "OffScaling": -1,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Blink away",
+        "Text": "Reaction - You become Bloodied. Teleport 5, then gain 2 Evasive.",
+        "Values": []
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Flight",
+        "Text": "While not Bloodied, gain Resistance to melee attacks and ignore terrain when moving.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {},
+    "Type": "Physiology"
+  },
+  {
+    "Name": "Fae",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "Actions": [
+      {
+        "Name": "Glamour",
+        "Text": "Move 2. Range 5 - Create an illusion. Its a creature or obstacle that has {0} health.",
+        "Values": ["TIR"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Concealed weakness",
+        "Text": "Resists 2 types. has weakness to 1 type. When scanned, all three types show up as having a weakness to.",
+        "Values": []
+      },
+      {
+        "Name": "Exposed vulnerability",
+        "Text": "Whenever an enemy within Range 5 becomes bloodied, gain 1 Scheme.",
+        "Values": []
+      },
+      {
+        "Name": "Backup plan",
+        "Text": "When defeated, if you have any Scheme, lose 1 and retreat instead.",
+        "Values": []
+      },
+      {
+        "Name": "Schemer",
+        "Text": "Scheme is conserved between combats.",
+        "Values": []
+      },
+      {
+        "Name": "Hidden dagger",
+        "Text": "At the start of your turn, you may spend 3 Scheme. If you do, deploy another enemy.",
+        "Values": []
+      },
+      {
+        "Name": "Foreseen tactics",
+        "Text": "Whenever an enemy within Range 7 plays a card, you may spend 2 Scheme. If you do, exile that card, then that player adds a Dazed on top of their deck. You are immune to an effects of that card.",
+        "Values": []
+      },
+      {
+        "Name": "Haunting defeat",
+        "Text": "When you defeat an enemy, they gain a Delirium instead of a Wound.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {},
+    "Type": "Physiology"
   }
 ]

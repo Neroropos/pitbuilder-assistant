@@ -327,7 +327,7 @@
     "Name": "Toxiburst",
     "Cost": 1,
     "Types": ["Nature", "Spell", "Slow", "Soft", "Poison", "Area"],
-    "Text": "Range 5. Blast 1. Inflict Soft 2, Slow 1 and Poison 1. Channel Nature."
+    "Text": "Range 5. Blast 1. Inflict 2 Soft, 1 Slow and 1 Poison. Channel Nature."
   },
   {
     "Name": "Clarity",
