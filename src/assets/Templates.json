@@ -763,7 +763,7 @@
       {
         "Name": "Glamour",
         "Text": "Move 2. Range 5 - Create an illusion. Its a creature or obstacle that has {0} health.",
-        "Values": ["TIR"]
+        "Values": ["TIR*5"]
       }
     ],
     "Passives": [
