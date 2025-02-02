@@ -375,7 +375,7 @@
     "Weaknesses": [],
     "Resistances": [],
     "PostAttack": {},
-    "Type": "Rank"
+    "Type": "Modification"
   },
   {
     "Name": "Lumbering",
@@ -664,9 +664,9 @@
   },
   {
     "Name": "Bestial",
-    "DefScaling": 0,
+    "DefScaling": -1,
     "OffScaling": 0,
-    "HpMod": 5,
+    "HpMod": 15,
     "MoveMod": 1,
     "BlockMod": 0,
     "DmgMod": 0,
@@ -750,6 +750,27 @@
     "Resistances": [],
     "PostAttack": {},
     "Type": "Physiology"
+  },
+  {
+    "Name": "Flying",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "HpMod": 0,
+    "MoveMod": 2,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Flight",
+        "Text": "While not Bloodied, gain Resistance to melee attacks and ignore terrain when moving. While Bloodied, Move -3.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {},
+    "Type": "Modification"
   },
   {
     "Name": "Fae",
