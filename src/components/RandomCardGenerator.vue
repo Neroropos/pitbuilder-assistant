@@ -13,10 +13,12 @@ function changedTypes() {
   cardList = GetCardList(
     selectedCardTypesOne.value,
     selectedCardTypesAll.value,
-    excludeCardTypes.value
+    excludeCardTypes.value,
+    cardName.value
   )
 }
 const cardAmount = ref()
+const cardName = ref()
 let cardsToShow = ref()
 cardsToShow.value = []
 let cardsPicked = ref()
@@ -71,6 +73,15 @@ function removeAllPickedCards() {
     />
     <label for="typeSelect3">Exclude types</label>
   </FloatLabel>
+  <div class="row">
+    <input
+      v-model="cardName"
+      type="text"
+      style="width: 100%; font-size: 16px"
+      @change="changedTypes()"
+      placeholder="Card name"
+    />
+  </div>
   <div class="row">
     <input
       v-model="cardAmount"

@@ -1486,7 +1486,7 @@
       },
       {
         "Name": "Bramble tender",
-        "Text": "Start of combat: place {0} Brambles within range 7 of the Druid.",
+        "Text": "Start of combat: place {0} Brambles within Range 7 of the Druid.",
         "Values": ["1+2*TIR"]
       }
     ],

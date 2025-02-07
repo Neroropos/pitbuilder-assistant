@@ -10,14 +10,16 @@ function GetCards() {
 export function GetCardList(
   typesOne: string[] = [],
   typesAll: string[] = [],
-  typesExcluded: string[] = []
+  typesExcluded: string[] = [],
+  cardName: string = ''
 ) {
   const cards = GetCards()
   return cards.filter(
     (item) =>
       (typesOne.length < 1 || item.Types.some((x) => typesOne.includes(x))) &&
       (typesAll.length < 1 || typesAll.every((t) => item.Types.includes(t))) &&
-      (typesExcluded.length < 1 || !typesExcluded.some((t) => item.Types.includes(t)))
+      (typesExcluded.length < 1 || !typesExcluded.some((t) => item.Types.includes(t))) &&
+      item.Name.toLowerCase().includes(cardName.toLowerCase())
   )
 }
 export function GetCard(name: string) {
