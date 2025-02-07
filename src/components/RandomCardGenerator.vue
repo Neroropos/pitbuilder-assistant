@@ -92,13 +92,14 @@ function removeAllPickedCards() {
     <button @click="getRandomCards()">Get cards</button>
   </div>
   <div v-if="cardsPicked.length > 0" style="width: 100%; font-size: 16px">
-    <h3>Cards</h3>
+    <h3>Saved cards</h3>
     <div v-for="(card, index) in cardsPicked" :key="card.Name">
       <div>
         <span style="font-size: small">{{ index + 1 }}. </span>
         <span style="font-weight: bold"
           >{{ card.Cost }} {{ card.Name
-          }}<span @click="removeCard(card)" class="clickable"><i class="pi pi-minus"></i></span
+          }}<span @click="removeCard(card)" class="clickable" v-tooltip="'Remove'"
+            ><i class="pi pi-minus"></i></span
         ></span>
 
         <br />
@@ -117,7 +118,8 @@ function removeAllPickedCards() {
         <span style="font-size: small">{{ index + 1 }}. </span>
         <span style="font-weight: bold"
           >{{ card.Cost }} {{ card.Name }}
-          <span @click="pickCard(card)" class="clickable"><i class="pi pi-plus"></i></span
+          <span @click="pickCard(card)" class="clickable" v-tooltip="'Save'"
+            ><i class="pi pi-plus"></i></span
         ></span>
         <br />
         {{ card.Text }}
