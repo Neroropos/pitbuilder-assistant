@@ -179,15 +179,15 @@
       },
       {
         "Name": "Far",
-        "Text": "Range +2. Deal {0} Damage. {1} Inflict 1 Slow",
-        "Values": ["-1+DMG", "PSTATK"]
+        "Text": "Range +{2}. Deal {0} Damage. {1} Inflict 1 Slow",
+        "Values": ["-1+DMG", "PSTATK", "1+TIR"]
       }
     ],
     "Passives": [
       {
         "Name": "Bow",
-        "Text": "All attacks have Range 5.",
-        "Values": []
+        "Text": "All attacks have Range {0}.",
+        "Values": ["3+TIR*2"]
       }
     ],
     "PostAttack": [],
@@ -210,15 +210,15 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range +2. Deal {1} Damage to up to two targets. {2}",
-        "Values": ["1+MOV", "-1+DMG", "PSTATK"]
+        "Text": "Move {0}. Range +{3}. Deal {1} Damage to up to two targets. {2}",
+        "Values": ["1+MOV", "-1+DMG", "PSTATK", "1+TIR"]
       }
     ],
     "Passives": [
       {
         "Name": "Rod",
-        "Text": "All attacks have Range 3 and ignore Block.",
-        "Values": []
+        "Text": "All attacks have Range {0} and ignore Block.",
+        "Values": ["1+TIR*2"]
       },
       {
         "Name": "Use elements",
@@ -315,8 +315,8 @@
     "Passives": [
       {
         "Name": "Gun",
-        "Text": "All attacks may gain Range 5. If they do, they cost 1 Ammo and they deal +2 Damage. \nStarts combat with 3 Ammo.",
-        "Values": []
+        "Text": "All attacks may gain Range {0}. If they do, they cost 1 Ammo and they deal +2 Damage. \nStarts combat with 3 Ammo.",
+        "Values": ["3+TIR*2"]
       },
       {
         "Name": "Officer's Mark",

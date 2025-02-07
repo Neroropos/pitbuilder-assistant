@@ -471,7 +471,7 @@
     "Name": "Creeping tendrils",
     "Cost": 2,
     "Types": ["Ranged", "Attack", "Nature", "Dark", "Lifegain"],
-    "Text": "Range 5. Deal 1d6 damage to up to 3 targets. You may consume Nature or Dark. Gain half of the damage roll health."
+    "Text": "Range 5. Deal 1d6 damage to up to 3 targets. You may consume Nature or Dark. If you do, recover half of the damage roll health."
   },
   {
     "Name": "Blitz",
