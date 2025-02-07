@@ -93,23 +93,7 @@ function refresh() {
 .close {
   float: right;
 }
-
 .close:hover {
   float: right;
-}
-.clickable {
-  display: inline-block;
-  padding: 2px 5px;
-  font-size: 16px;
-}
-
-.clickable:hover {
-  display: inline-block;
-  padding: 2px 5px;
-  color: #d4d4d4;
-  cursor: pointer;
-}
-.button {
-  cursor: pointer;
 }
 </style>

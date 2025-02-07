@@ -19,8 +19,22 @@ function changedTypes() {
 const cardAmount = ref()
 let cardsToShow = ref()
 cardsToShow.value = []
+let cardsPicked = ref()
+cardsPicked.value = []
 function getRandomCards() {
   cardsToShow.value = GetRandomCards(cardList, cardAmount.value)
+}
+function pickCard(card) {
+  cardsPicked.value.push(card)
+}
+function removeCard(card) {
+  var index = cardsPicked.value.indexOf(card)
+  if (index !== -1) {
+    cardsPicked.value.splice(index, 1)
+  }
+}
+function removeAllPickedCards() {
+  cardsPicked.value = []
 }
 </script>
 <template>
@@ -66,12 +80,34 @@ function getRandomCards() {
     />
     <button @click="getRandomCards()">Get cards</button>
   </div>
+  <div v-if="cardsPicked.length > 0" style="width: 100%; font-size: 16px">
+    <h3>Cards</h3>
+    <div v-for="(card, index) in cardsPicked" :key="card.Name">
+      <div>
+        <span style="font-size: small">{{ index + 1 }}. </span>
+        <span style="font-weight: bold"
+          >{{ card.Cost }} {{ card.Name
+          }}<span @click="removeCard(card)" class="clickable"><i class="pi pi-minus"></i></span
+        ></span>
+
+        <br />
+        {{ card.Text }}
+      </div>
+      <div class="row">
+        <i>{{ card.Types.sort().join(', ') }}</i>
+      </div>
+    </div>
+    <button @click="removeAllPickedCards()" class="button">Remove all</button>
+  </div>
   <div v-if="cardsToShow.length > 0" style="width: 100%; font-size: 16px">
     <h3>Cards</h3>
     <div v-for="(card, index) in cardsToShow" :key="card.Name">
       <div>
         <span style="font-size: small">{{ index + 1 }}. </span>
-        <span style="font-weight: bold">{{ card.Cost }} {{ card.Name }}</span>
+        <span style="font-weight: bold"
+          >{{ card.Cost }} {{ card.Name }}
+          <span @click="pickCard(card)" class="clickable"><i class="pi pi-plus"></i></span
+        ></span>
         <br />
         {{ card.Text }}
       </div>
