@@ -1591,12 +1591,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Gain {0} Block. Deal {1} damage. {2}. Inflict {3} Slow.",
+        "Text": "Gain {0} Block. Deal {1} damage. {2} Inflict {3} Slow.",
         "Values": ["DEF", "2+DMG", "PSTATK", "TIR+1"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Line 2. Deal {1} damage. {2}. Inflict {3} Slow. Channel Ice.",
+        "Text": "Move {0}. Line 2. Deal {1} damage. {2} Inflict {3} Slow. Channel Ice.",
         "Values": ["3+MOV", "DMG", "PSTATK", "TIR"]
       },
       {
@@ -1620,5 +1620,42 @@
     "PostAttack": [],
     "Resistances": [],
     "Type": "Defender"
+  },
+  {
+    "Name": "Stilness",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {1} Until the end of the target's next turn, their cards cost 1 more to play. Move {2}.",
+        "Values": ["1+DMG", "PSTATK", "2+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2} You may consume Air and/or Ice. If Air is consumed, the target discards cards until they have 3 in hand. If Ice was consumed, inflict {3} Slow and until the end of their next turn their cards cost 1 more to play for each Slow they have.",
+        "Values": ["3+MOV", "DMG-2", "PSTATK", "TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Channel Air or Ice. ",
+        "Values": ["6+MOV"]
+      },
+      {
+        "Name": "Reaction",
+        "Text": "A character within Range 3 plays their third card this turn. Move 2. Then, if you are adjacent to them, deal 5 Damage to them and their cards cost 1 more to play this turn.",
+        "Values": ["Math.round(BLK/2)", "TIR+1", "BLK-1", "TIR"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Punishment of Action",
+        "Text": "Whenever a character within Range 3 plays a card, deal {0} damage to them.",
+        "Values": ["OFF"]
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Skirmisher"
   }
 ]

@@ -9,7 +9,6 @@ export function GetClassList() {
   classesFromJson.forEach((element) => {
     enemies.push(new EnemyClass(element))
   })
-  console.log(enemies)
 
   const result: GroupedClass[] = []
   enemies.forEach((item) => {
