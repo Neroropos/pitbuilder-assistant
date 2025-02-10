@@ -1250,5 +1250,225 @@
     "Cost": 1,
     "Types": ["Area", "Draw", "Exile"],
     "Text": "Radius 5. Each ally may exile any number of cards from their hand, then draw that many cards."
+  },
+  {
+    "Name": "Gale blade",
+    "Cost": 3,
+    "Types": ["Area", "Attack", "Air", "Push"],
+    "Text": "Line 4. Strike, then move to the end of the line. Radius 2. Strike. You may consume Air to Push all targets up 3. They fall at the end of your turn."
+  },
+  {
+    "Name": "Perfect turn",
+    "Cost": 0,
+    "Types": ["Opener", "Attack", "Finisher"],
+    "Text": "Opener. Strike. Strike. Finisher."
+  },
+  {
+    "Name": "Flowing motions",
+    "Cost": 1,
+    "Types": ["Flow", "Movement", "Counter"],
+    "Text": "Flow. Maneuver. Gain 3 Counter."
+  },
+  {
+    "Name": "Like water",
+    "Cost": 1,
+    "Types": ["Permanent", "Push", "Water", "Draw"],
+    "Text": "Permanent. After an enemy attacks you from any range, you may Push them 1 and you may consume Water. If you do, Push +1 and you draw a card."
+  },
+  {
+    "Name": "Breezy rebuttal",
+    "Cost": 2,
+    "Types": ["Area", "Attack", "Movement", "Reaction"],
+    "Text": "Reaction - you are attacked. Consume Air. If you do, teleport to be adjacent to the triggering enemy and Radius 1 - Strike."
+  },
+  {
+    "Name": "Bloody rebuttal",
+    "Cost": 1,
+    "Types": [
+      "Reaction",
+      "Strength",
+      "Defend",
+      "Dark",
+      "Attack",
+      "Lifegain",
+      "Ranged",
+      "Barrier",
+      "Exile"
+    ],
+    "Text": "Reaction - you become bloodied. Gain 2 Strength and Defend. You may consume Darkness. If you do, Range 5 - Deal 1d6 damage. Gain half the damage dealt in Barrier. Exile."
+  },
+  {
+    "Name": "Abandon",
+    "Cost": 0,
+    "Types": ["Nihil", "Energy", "Draw"],
+    "Text": "Gain 1 Nihil. Draw 3 cards, gain 3 Energy."
+  },
+  {
+    "Name": "Novice strike",
+    "Cost": 1,
+    "Types": ["Attack", "Exile"],
+    "Text": "Strike. Improves after 5 uses. Exile."
+  },
+  {
+    "Name": "Learning fury",
+    "Cost": 1,
+    "Types": ["Draw"],
+    "Text": "Draw a card for each attack you made this turn."
+  },
+  {
+    "Name": "Reposition",
+    "Cost": 1,
+    "Types": ["Ranged", "Push"],
+    "Text": "Range 5 - Push 4."
+  },
+  {
+    "Name": "Chessboard",
+    "Cost": 2,
+    "Types": ["Area", "Push"],
+    "Text": "Radius 5 - Push 3 any other characters. "
+  },
+  {
+    "Name": "Think tank",
+    "Cost": 1,
+    "Types": ["Area"],
+    "Text": "Permanent. When played, Radius 5 - each friendly character exiles a card from their hand. Friendly characters within Radius 5 may play those cards as though the cards were in their hand."
+  },
+  {
+    "Name": "Shove",
+    "Cost": 0,
+    "Types": ["Push", "Draw"],
+    "Text": "Push 1. Draw a card."
+  },
+  {
+    "Name": "Novice Strike",
+    "Cost": 1,
+    "Types": ["Attack", "Exile"],
+    "Text": "Strike. Improves after 5 uses. Exile."
+  },
+  {
+    "Name": "Call blood",
+    "Cost": 1,
+    "Types": ["Ranged", "Bleed"],
+    "Text": "Range 7 - Inflict 5 Bleed."
+  },
+  {
+    "Name": "Cutting gale",
+    "Cost": 2,
+    "Types": ["Ranged", "Area", "Bleed", "Air"],
+    "Text": "Range 5, Burst 2 - Inflict 5 Bleed. You may consume Air. If you do, trigger Bleed on each enemy and reduce their Bleed by 1."
+  },
+  {
+    "Name": "Darkness consumes",
+    "Cost": 1,
+    "Types": ["Dark", "Wound"],
+    "Text": "Consume Dark. Range 5 - target loses 15 health. Gain 1 Wound."
+  },
+  {
+    "Name": "Burning heels",
+    "Cost": 1,
+    "Types": ["Area", "Burn", "Haste", "Movement"],
+    "Text": "Radius 5 - inflict 2 Burn to each ally. They gain 2 Haste and may Move 1."
+  },
+  {
+    "Name": "Wariness",
+    "Cost": 1,
+    "Types": ["Wary", "Exile"],
+    "Text": "Gain 4 Wary. Exile. "
+  },
+  {
+    "Name": "Danger call",
+    "Cost": 1,
+    "Types": ["Area", "Exile", "Wary"],
+    "Text": "Radius 1. Each friendly character gains 2 Wary."
+  },
+  {
+    "Name": "Cautious strike",
+    "Cost": 1,
+    "Types": ["Attack", "Exile", "Wary"],
+    "Text": "Strike. For each 1 or 2 rolled, gain 1 Warry."
+  },
+  {
+    "Name": "Sea's preparation",
+    "Cost": 1,
+    "Types": ["Area", "Water", "Wary", "Push"],
+    "Text": "Consume Water. Gain 3 Wary. Radius 1 - Push 2."
+  },
+  {
+    "Name": "Aquatic tendril",
+    "Cost": 1,
+    "Types": ["Ranged", "Water", "Push"],
+    "Text": "Range 3 - Push target ally 3. You may consume Water. If you do, target an additional ally."
+  },
+  {
+    "Name": "Pyroport",
+    "Cost": 1,
+    "Types": ["Fire", "Range", "Movement", "Pulse"],
+    "Text": "Range 3 - Teleport target ally to any space within Range 3. You may consume Fire. If you do, increase both ranges by 3 and inflict 3 Pulse to the target and each enemy adjacent to them after they teleport."
+  },
+  {
+    "Name": "Frost guard",
+    "Cost": 1,
+    "Types": ["Ice", "Wary", "Block"],
+    "Text": "Consume Ice. Gain 1 Wary, then gain Block equal to your Wary."
+  },
+  {
+    "Name": "Stand",
+    "Cost": 3,
+    "Types": ["Continuous", "Finisher", "Wary", "Attack"],
+    "Text": "Continuous. Gain 8 Wary. Whenever an enemy moves into an adjacent space, Strike. Finisher."
+  },
+  {
+    "Name": "Burning approach",
+    "Cost": 1,
+    "Types": ["Fire", "Area", "Attack"],
+    "Text": "Consume Fire. Maneuver, then Radius 1 - Strike. Turn all spaces moved over into Hazardous terrain, dealing 5 fire damage to any character ending their turn on it."
+  },
+  {
+    "Name": "Wary guard",
+    "Cost": 1,
+    "Types": ["Defend", "Wary"],
+    "Text": "Defend. Gain 2 Wary. "
+  },
+  {
+    "Name": "Drag around",
+    "Cost": 1,
+    "Types": ["Attack"],
+    "Text": "Strike an adjacent enemy. Move them to any space adjacent to you."
+  },
+  {
+    "Name": "Novice Strike",
+    "Cost": 1,
+    "Types": ["Replenish", "Daze", "Draw"],
+    "Text": "Replenish. Inflict 2 Daze to yourself, then shuffle your discard into your deck and draw two cards."
+  },
+  {
+    "Name": "Shade walk",
+    "Cost": 1,
+    "Types": ["Summon"],
+    "Text": "Summon a Shade(3 HP). You may move each Shade 2."
+  },
+  {
+    "Name": "Study",
+    "Cost": 1,
+    "Types": ["Draw", "Finisher"],
+    "Text": "Draw 5 cards. Finisher."
+  },
+  {
+    "Name": "Novice Strike",
+    "Cost": 1,
+    "Types": ["Attack", "Exile"],
+    "Text": "Strike. Improves after 5 uses. Exile."
+  },
+  {
+    "Name": "Time to watch",
+    "Cost": 1,
+    "Types": ["Finisher", "Exile"],
+    "Text": "Take an extra turn after this one. You may not play cards during that turn. Finisher. Exile."
+  },
+  {
+    "Name": "Approaching counter",
+    "Cost": 1,
+    "Types": ["Attack", "Reaction", "Movement"],
+    "Text": "Reaction - an enemy within Range 3 attacks. Move 2, then Strike that enemy."
   }
 ]
