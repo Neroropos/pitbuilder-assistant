@@ -404,37 +404,37 @@
   {
     "Name": "Flick",
     "Cost": 0,
-    "Types": ["Attack", "Ranged", "Melee Weapon"],
+    "Types": ["Attack", "Ranged"],
     "Text": "Range 3. Deal 1d6 damage."
   },
   {
     "Name": "Refine",
     "Cost": 1,
-    "Types": ["Continuous", "Buff", "Melee Weapon"],
+    "Types": ["Continuous", "Buff"],
     "Text": "Continuous. Your attacks deal +X damage, where X is the number of times you've played this card this combat."
   },
   {
     "Name": "Blade dig",
     "Cost": 1,
-    "Types": ["Draw", "Melee Weapon"],
+    "Types": ["Draw"],
     "Text": "Draw a card. Repeat this process until you draw a non-attack card."
   },
   {
     "Name": "Lengthy strike",
     "Cost": 2,
-    "Types": ["Attack", "Area", "Push", "2H Melee Weapon"],
+    "Types": ["Attack", "Area", "Push"],
     "Text": "Line 3. Strike. Push 1."
   },
   {
     "Name": "Bursting strike",
     "Cost": 2,
-    "Types": ["Attack", "Area", "Ranged Weapon"],
+    "Types": ["Attack", "Area"],
     "Text": "Burst 2. Strike."
   },
   {
     "Name": "Unload",
     "Cost": 2,
-    "Types": ["Attack", "Ranged Weapon"],
+    "Types": ["Attack"],
     "Text": "Strike with an Ammo weapon until you run out of Ammo. You may not reload with these strikes."
   },
   {
@@ -595,13 +595,13 @@
   {
     "Name": "Charge",
     "Cost": 1,
-    "Types": ["Movement", "Melee Weapon", "Attack"],
+    "Types": ["Movement", "Attack"],
     "Text": "Maneuver. Strike an adjacent enemy."
   },
   {
     "Name": "Deflect",
     "Cost": 1,
-    "Types": ["Reaction", "Melee Weapon"],
+    "Types": ["Reaction"],
     "Text": "Reaction - you are attacked by a non-adjacent enemy. Redirect the attack to any other target within Range 3."
   },
   {
