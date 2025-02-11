@@ -1704,5 +1704,37 @@
     "PostAttack": [],
     "Resistances": [],
     "Type": "Skirmisher"
+  },
+  {
+    "Name": "Giant Rat",
+    "DefScaling": 0,
+    "OffScaling": 2,
+    "Challenge": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} Damage. {1}",
+        "Values": ["1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Charge",
+        "Text": "Move exactly {0}. Deal {1} Damage. {2}",
+        "Values": ["4+MOV", "DMG+1", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2}",
+        "Values": ["2+MOV", "DMG-1", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Block {1}",
+        "Values": ["2+MOV", "BLK+3"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Striker"
   }
 ]
