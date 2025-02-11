@@ -1258,7 +1258,7 @@
       },
       {
         "Name": "Group deployment",
-        "Text": "{0} footmen are deployed as one unit, sharing activations but not spaces, statuses or health",
+        "Text": "{0} footmen are deployed as one unit, sharing activations but not spaces, statuses or health. When acting, they must all perform the same action.",
         "Values": ["1+TIR"]
       }
     ],
@@ -1736,5 +1736,81 @@
     "PostAttack": [],
     "Resistances": [],
     "Type": "Striker"
+  },
+  {
+    "Name": "Valkyrie",
+    "DefScaling": 1,
+    "OffScaling": 2,
+    "Challenge": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Line 4. Deal {0} Damage. {1} Move to the end of the line. Channel Air.",
+        "Values": ["1+DMG", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Deal {1} Damage. {2} You may consume Air or Light. If Air was consumed, deal {1} Damage. {2} to an enemy within Range 3 of the target, then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier.",
+        "Values": ["3+MOV", "DMG-1", "PSTATK", "DEF"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Channel Light. Gain 1 Evasive.",
+        "Values": ["6+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Carry the Warriors",
+        "Text": "Whenever an ally with Radius 5 is defeated, gain 1 Haste, 1 Strength and channel Light.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Skirmisher"
+  },
+  {
+    "Name": "Rabble",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Challenge": 1,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Gain {2} Block. Deal {0} Damage. {1} Inflict 1 Slow.",
+        "Values": ["DMG", "PSTATK", "BLK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 3 - Inflict {1} Slow and {1} Soft. Channel Nature.",
+        "Values": ["2+MOV", "TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Block. Channel Water. ",
+        "Values": ["4+MOV", "BLK"]
+      },
+      {
+        "Name": "Reaction",
+        "Text": "an adjacent ally is attacked. The Rabble swaps spaces with the ally and takes the attack.",
+        "Values": []
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Group deployment",
+        "Text": "{0} rabble are deployed as one unit, sharing activations but not spaces, statuses or health. When acting, they must all perform the same action.",
+        "Values": ["1+TIR"]
+      },
+      {
+        "Name": "Natural powers",
+        "Text": "At the end of turn, if Nature is channeled, Inflict {0} Soft. If Water is channeled, Push {1}",
+        "Values": ["1+TIR", "TIR"]
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Defender"
   }
 ]
