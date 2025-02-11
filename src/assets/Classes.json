@@ -1427,7 +1427,7 @@
     "Name": "Stone Cannon",
     "DefScaling": 3,
     "OffScaling": 3,
-    "Challenge": 3,
+    "Challenge": 6,
     "Actions": [
       {
         "Name": "Melee",
@@ -1503,7 +1503,7 @@
     "Name": "Druid",
     "DefScaling": 2,
     "OffScaling": 1,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1671,7 +1671,7 @@
     "Name": "Stilness",
     "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1741,7 +1741,7 @@
     "Name": "Valkyrie",
     "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
