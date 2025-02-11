@@ -1750,8 +1750,8 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} You may consume Air or Light. If Air was consumed, deal {1} Damage. {2} to an enemy within Range 3 of the target, then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier.",
-        "Values": ["3+MOV", "DMG-1", "PSTATK", "DEF"]
+        "Text": "Move {0}. Deal {1} Damage. {2} You may consume Air or Light. If Air was consumed, deal {1} Damage. {2} to an enemy within Range 3 of the target, then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier. Reduce any number of conditions on both of you by 2.",
+        "Values": ["3+MOV", "DMG-1", "PSTATK", "BLK"]
       },
       {
         "Name": "Far",
@@ -1779,7 +1779,7 @@
       {
         "Name": "Melee",
         "Text": "Gain {2} Block. Deal {0} Damage. {1} Inflict 1 Slow.",
-        "Values": ["DMG", "PSTATK", "BLK"]
+        "Values": ["DMG", "PSTATK", "BLK+2"]
       },
       {
         "Name": "Close",
@@ -1789,7 +1789,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Gain {1} Block. Channel Water. ",
-        "Values": ["4+MOV", "BLK"]
+        "Values": ["4+MOV", "BLK+2"]
       },
       {
         "Name": "Reaction",
