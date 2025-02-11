@@ -753,23 +753,23 @@
   {
     "Name": "Knight of Embers",
     "DefScaling": 2,
-    "OffScaling": 2,
-    "Challenge": 3,
+    "OffScaling": 3,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Melee",
         "Text": "Deal {0} damage. {1} Block {2}",
-        "Values": ["3+DMG", "PSTATK", "5+BLK"]
+        "Values": ["1+DMG", "PSTATK", "1+BLK"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Consume Fire to gain 2 Strength. Deal {1} damage. {2} Block {3}.",
-        "Values": ["3+MOV", "1+DMG", "PSTATK", "3+BLK"]
+        "Values": ["3+MOV", "DMG-1", "PSTATK", "2+BLK"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Channel Fire. Block {1}.",
-        "Values": ["3+MOV", "5+BLK"]
+        "Values": ["3+MOV", "3+BLK"]
       }
     ],
     "Passives": [
@@ -785,7 +785,7 @@
       }
     ],
     "PostAttack": [],
-    "Type": "Special"
+    "Type": "Striker"
   },
   {
     "Name": "Storm Noble",
@@ -822,7 +822,7 @@
       }
     ],
     "PostAttack": [],
-    "Type": "Special"
+    "Type": "Striker"
   },
   {
     "Name": "Blade of Wind",
@@ -864,7 +864,7 @@
       }
     ],
     "PostAttack": [],
-    "Type": "Special"
+    "Type": "Skirmisher"
   },
   {
     "Name": "Glider",
@@ -994,7 +994,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range 7. Inflict {1} Dazed and Slow {1}.",
+        "Text": "Move {0}. Range 7. Inflict {1} Dazed and {1} Slow.",
         "Values": ["5+MOV", "OFF+TIR-1"]
       }
     ],
@@ -1470,17 +1470,17 @@
       {
         "Name": "Melee",
         "Text": "Gain {0} Block. Radius 3 - Deal {1} Damage. {2} Inflict {3} Slow.",
-        "Values": ["3+BLK", "5+DMG", "PSTATK", "OFF"]
+        "Values": ["1+BLK", "5+DMG", "PSTATK", "OFF"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Gain {1} Block. Deal {2} Damage. {3} Channel Ice.",
-        "Values": ["2+MOV", "3+BLK", "3+DMG", "PSTATK"]
+        "Values": ["2+MOV", "1+BLK", "3+DMG", "PSTATK"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Consume Ice to move another {0}, turning all spaces moved over into difficult terrain and gain {1} Block.",
-        "Values": ["4+MOV", "3+BLK"]
+        "Values": ["4+MOV", "1+BLK"]
       }
     ],
     "Passives": [
@@ -1497,7 +1497,7 @@
     ],
     "PostAttack": [],
     "Resistances": [],
-    "Type": "Special"
+    "Type": "Defender"
   },
   {
     "Name": "Druid",
