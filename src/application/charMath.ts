@@ -94,6 +94,7 @@ export class EnemyClass {
   Weaknesses: string[] = []
   Resistances: string[] = []
   PostAttack: PostAttack[] = []
+  Challenge: number | number = 0
   Type: string = ''
   HPBar: number = 0
   //Id!: number
@@ -107,7 +108,7 @@ export class EnemyTemplate {
   Name: string = ''
   DefScaling: number = 0
   OffScaling: number = 0
-  HpMod: number = 0
+  HPMod: number = 0
   DmgMod: number = 0
   MoveMod: number = 0
   BlockMod: number = 0
@@ -116,6 +117,8 @@ export class EnemyTemplate {
   Weaknesses: string[] = []
   Resistances: string[] = []
   PostAttack: PostAttack[] = []
+  Challenge: number | number = 0
+  ChallengeMult: number | number = 1
   HPBar: number = 0
   Type: string = ''
   public constructor(init?: Partial<EnemyTemplate>) {
@@ -133,6 +136,7 @@ export class Enemy {
   DmgMod: number = 0
   MoveMod: number = 0
   BlockMod: number = 0
+  Challenge: number | number = 0
   Actions: Action[] = []
   ActionsShown: { Name: string; Text: string }[] = []
   PassivesShown: { Name: string; Text: string }[] = []
@@ -168,7 +172,7 @@ export class Enemy {
       this.Class?.DefScaling +
       this.Templates?.reduce((sum, current) => sum + current.DefScaling || 0, 0)
     this.HPMod =
-      DefScaling * 7 + this.Templates?.reduce((sum, current) => sum + current.HpMod || 0, 0)
+      DefScaling * 7 + this.Templates?.reduce((sum, current) => sum + current.HPMod || 0, 0)
     this.HP = this.Tier * 10 + this.HPMod
 
     const OffScaling =
@@ -178,6 +182,13 @@ export class Enemy {
       OffScaling * 2 +
       this.Templates?.reduce((sum, current) => sum + current.DmgMod || 0, 0) +
       (this.Tier - 1) * 2
+
+    this.Challenge = Math.round(
+      (this.Class?.Challenge +
+        this.Templates?.reduce((sum, current) => sum + current.Challenge || 0, 0) +
+        this.Tier * 2) *
+        this.Templates?.reduce((sum, current) => sum * current.ChallengeMult || 0, 1)
+    )
 
     this.HPBar =
       1 + this.Class.HPBar + this.Templates?.reduce((sum, current) => sum + current.HPBar || 0, 0)

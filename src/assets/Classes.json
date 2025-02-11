@@ -3,6 +3,7 @@
     "Name": "Guard",
     "DefScaling": 3,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -33,6 +34,7 @@
     "Name": "Bruiser",
     "DefScaling": 3,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -64,6 +66,7 @@
     "Name": "Ward Maker",
     "DefScaling": 3,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -100,6 +103,7 @@
     "Name": "Pikeman",
     "DefScaling": 2,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -136,6 +140,7 @@
     "Name": "Fighter",
     "DefScaling": 2,
     "OffScaling": 3,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Melee",
@@ -166,6 +171,7 @@
     "Name": "Archer",
     "DefScaling": 1,
     "OffScaling": 2,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Mobility",
@@ -197,6 +203,7 @@
     "Name": "Caster",
     "DefScaling": 1,
     "OffScaling": 2,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Mobility",
@@ -233,6 +240,7 @@
     "Name": "Musketman",
     "DefScaling": 1,
     "OffScaling": 3,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Mobility",
@@ -264,6 +272,7 @@
     "Name": "Beacon",
     "DefScaling": 1,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -295,6 +304,7 @@
     "Name": "Officer",
     "DefScaling": 2,
     "OffScaling": 1,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -331,6 +341,7 @@
     "Name": "Arcanist",
     "DefScaling": 2,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -377,6 +388,7 @@
     "Name": "Servant",
     "DefScaling": 1,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -408,6 +420,7 @@
     "Name": "Thief",
     "DefScaling": 1,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -433,6 +446,7 @@
     "Name": "Assasin",
     "DefScaling": 1,
     "OffScaling": 3,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Melee",
@@ -469,6 +483,7 @@
     "Name": "Raider",
     "DefScaling": 2,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -494,6 +509,7 @@
     "Name": "Dasher",
     "DefScaling": 1,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -531,6 +547,7 @@
     "Name": "Hexer",
     "DefScaling": 1,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -562,6 +579,7 @@
     "Name": "Inhibitor",
     "DefScaling": 2,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -608,6 +626,7 @@
     "Name": "Poisoner",
     "DefScaling": 2,
     "OffScaling": 1,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -639,6 +658,7 @@
     "Name": "Beguiler",
     "DefScaling": 1,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -670,6 +690,7 @@
     "Name": "Shadecaller",
     "DefScaling": 2,
     "OffScaling": 1,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -701,6 +722,7 @@
     "Name": "Puppeteer",
     "DefScaling": 1,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -732,6 +754,7 @@
     "Name": "Knight of Embers",
     "DefScaling": 2,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -768,6 +791,7 @@
     "Name": "Storm Noble",
     "DefScaling": 1,
     "OffScaling": 3,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -804,6 +828,7 @@
     "Name": "Blade of Wind",
     "DefScaling": 1,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -845,6 +870,7 @@
     "Name": "Glider",
     "DefScaling": 0,
     "OffScaling": 1,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
@@ -886,6 +912,7 @@
     "Name": "Duelist",
     "DefScaling": 2,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -922,6 +949,7 @@
     "Name": "Illuminator",
     "DefScaling": 2,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -952,6 +980,7 @@
     "Name": "Mindmister",
     "DefScaling": 1,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -993,6 +1022,7 @@
     "Name": "Malaurge",
     "DefScaling": 2,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1024,6 +1054,7 @@
     "Name": "Shadewalker",
     "DefScaling": 1,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1060,6 +1091,7 @@
     "Name": "Spellblade",
     "DefScaling": 2,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1097,6 +1129,7 @@
     "Name": "Monk",
     "DefScaling": 2,
     "OffScaling": 1,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1128,6 +1161,7 @@
     "Name": "Diabolist",
     "DefScaling": 3,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1160,6 +1194,7 @@
     "Name": "Dreadheart",
     "DefScaling": 2,
     "OffScaling": 3,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Melee",
@@ -1197,6 +1232,7 @@
     "Name": "Footman",
     "DefScaling": 1,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1234,6 +1270,7 @@
     "Name": "Dancer",
     "DefScaling": 1,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Mobility",
@@ -1266,6 +1303,7 @@
     "Name": "Virtue",
     "DefScaling": 3,
     "OffScaling": 1,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1318,6 +1356,7 @@
     "Name": "Lifecrafter",
     "DefScaling": 1,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1355,6 +1394,7 @@
     "Name": "Weeper",
     "DefScaling": 0,
     "OffScaling": 1,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
@@ -1387,6 +1427,7 @@
     "Name": "Stone Cannon",
     "DefScaling": 3,
     "OffScaling": 3,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Melee",
@@ -1418,27 +1459,28 @@
     ],
     "PostAttack": [],
     "Resistances": [],
-    "Type": "Special"
+    "Type": "Striker"
   },
   {
     "Name": "Nill Bringer",
     "DefScaling": 3,
     "OffScaling": 2,
+    "Challenge": 5,
     "Actions": [
       {
         "Name": "Melee",
         "Text": "Gain {0} Block. Radius 3 - Deal {1} Damage. {2} Inflict {3} Slow.",
-        "Values": ["7+BLK", "5+DMG", "PSTATK", "OFF"]
+        "Values": ["3+BLK", "5+DMG", "PSTATK", "OFF"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Gain {1} Block. Deal {2} Damage. {3} Channel Ice.",
-        "Values": ["2+MOV", "7+BLK", "3+DMG", "PSTATK"]
+        "Values": ["2+MOV", "3+BLK", "3+DMG", "PSTATK"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Consume Ice to move another {0}, turning all spaces moved over into difficult terrain and gain {1} Block.",
-        "Values": ["4+MOV", "7+BLK"]
+        "Values": ["4+MOV", "3+BLK"]
       }
     ],
     "Passives": [
@@ -1461,6 +1503,7 @@
     "Name": "Druid",
     "DefScaling": 2,
     "OffScaling": 1,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Melee",
@@ -1498,6 +1541,7 @@
     "Name": "Statue",
     "DefScaling": 3,
     "OffScaling": 1,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1536,6 +1580,7 @@
     "DefScaling": 3,
     "OffScaling": 3,
     "HPBar": 2,
+    "Challenge": 15,
     "Actions": [
       {
         "Name": "Melee",
@@ -1588,6 +1633,7 @@
     "Name": "Sentinel",
     "DefScaling": 3,
     "OffScaling": 1,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1625,6 +1671,7 @@
     "Name": "Stilness",
     "DefScaling": 1,
     "OffScaling": 2,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",

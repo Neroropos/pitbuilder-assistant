@@ -5,6 +5,8 @@ import Multiselect from 'primevue/multiselect'
 import Select from 'primevue/select'
 import FloatLabel from 'primevue/floatlabel'
 import { ref } from 'vue'
+import { computed } from 'vue'
+
 const enemyClasses = GetClassList()
 const enemyTemplates = GetTemplateList()
 const currentEnemy = ref(new Enemy())
@@ -14,14 +16,26 @@ currBlock.value = 0
 const currBarrier = ref()
 currBarrier.value = 0
 const dealDmg = ref()
-const props = defineProps(['id'])
-const turnTakenId = 'turnTaken' + props.id
+const props = defineProps(['modelValue'])
+const emit = defineEmits(['update:modelValue'])
+const modelValue = computed({
+  get() {
+    return props.modelValue
+  },
+  set(val) {
+    emit('update:modelValue', modelValue.value)
+  }
+})
+const turnTakenId = 'turnTaken' + modelValue.value.id
 const isBloodied = ref()
 isBloodied.value = false
+
 function changed(ev: {}) {
   currentEnemy.value.update()
+  modelValue.value.Challenge = currentEnemy.value.Challenge
   currHp.value = currentEnemy.value.HP
 }
+
 function hpChange() {
   let trueHP = 0
   const trueMaxHP = currentEnemy.value.HPBar * currentEnemy.value.HP
@@ -74,6 +88,7 @@ function damage() {
 }
 </script>
 <template>
+  <div>Challenge: {{ currentEnemy.Challenge }}</div>
   <div class="row" style="display: inline-block">
     <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block; width: 100%">
       <Select

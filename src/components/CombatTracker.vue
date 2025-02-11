@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import Enemy from './Enemy.vue'
 import { isMobile } from '../application/func'
-const counter = ref([{ id: 1 }])
+const counter = ref([{ id: 1, Challenge: 0 }])
 let rounds = ref(1)
 let elements = ref([
   { name: 'air', value: false, icon: 'fa-solid fa-wind', onColor: 'lightGrey', color: '' },
@@ -16,9 +16,9 @@ let elements = ref([
   { name: 'water', value: false, icon: 'fa-solid fa-water', onColor: 'blue', color: '' }
 ])
 function addEnemy() {
-  let newId = 0
+  let newId = 1
   if (counter.value.length > 0) newId = counter.value[counter.value.length - 1].id + 1
-  counter.value.push({ id: newId })
+  counter.value.push({ id: newId, Challenge: 0 })
 }
 function close(id: number) {
   counter.value.splice(counter.value.map((item) => item.id).indexOf(id), 1)
@@ -60,14 +60,17 @@ function refresh() {
   </div>
 
   <div :class="[isMobile ? 'grid-container-mob' : 'grid-container']">
-    <div v-for="item in counter" :key="item.id" class="grid-item">
+    <div v-for="(item, index) in counter" :key="item.id" class="grid-item">
       <span style="float: left; padding-right: 8px">{{ item.id }}</span
       ><span @click="close(item.id)" class="close clickable"
         ><i class="pi pi-times-circle"></i></span
-      ><Enemy :id="item.id" />
+      ><Enemy :id="item.id" v-model="counter[index]" />
     </div>
     <button @click="addEnemy()" class="grid-item button">Add</button>
   </div>
+  <span>
+    Total Challenge: {{ counter.reduce((sum, current) => sum + current.Challenge || 0, 0) }}
+  </span>
 </template>
 
 <style scoped>
