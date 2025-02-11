@@ -3,7 +3,7 @@
     "Name": "Guard",
     "DefScaling": 3,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -66,7 +66,7 @@
     "Name": "Ward Maker",
     "DefScaling": 3,
     "OffScaling": 1,
-    "Challenge": 2,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
@@ -103,7 +103,7 @@
     "Name": "Pikeman",
     "DefScaling": 2,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -140,7 +140,7 @@
     "Name": "Fighter",
     "DefScaling": 2,
     "OffScaling": 3,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -171,7 +171,7 @@
     "Name": "Archer",
     "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Mobility",
@@ -203,7 +203,7 @@
     "Name": "Caster",
     "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Mobility",
@@ -240,7 +240,7 @@
     "Name": "Musketman",
     "DefScaling": 1,
     "OffScaling": 3,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Mobility",
@@ -304,7 +304,7 @@
     "Name": "Officer",
     "DefScaling": 2,
     "OffScaling": 1,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -341,7 +341,7 @@
     "Name": "Arcanist",
     "DefScaling": 2,
     "OffScaling": 1,
-    "Challenge": 2,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
@@ -367,7 +367,7 @@
       },
       {
         "Name": "Binding Circle",
-        "Text": "At the start of their turn, each enemy within this Circle suffers 1 Slowed and {0} Damage.",
+        "Text": "At the start of their turn, to each enemy within this Circle inflict 1 Slowed and deal {0} Damage.",
         "Values": ["DMG"]
       },
       {
@@ -388,7 +388,7 @@
     "Name": "Servant",
     "DefScaling": 1,
     "OffScaling": 1,
-    "Challenge": 2,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
@@ -425,12 +425,12 @@
       {
         "Name": "Melee",
         "Text": "Deal {0} Damage. {1} Inflict {3} Bleed. Exile a random card from the target's hand, deck and discard. Move {2}.",
-        "Values": ["3+DMG", "PSTATK", "2+MOV", "DMG"]
+        "Values": ["1+DMG", "PSTATK", "2+MOV", "DMG"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Range 2 - Deal {1} Damage. {2} Inflict {3} Bleed. Exile a random card from the target's hand.",
-        "Values": ["4+MOV", "1+DMG", "PSTATK", "DMG"]
+        "Values": ["4+MOV", "DMG", "PSTATK", "DMG"]
       },
       {
         "Name": "Far",
@@ -446,7 +446,7 @@
     "Name": "Assasin",
     "DefScaling": 1,
     "OffScaling": 3,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -483,7 +483,7 @@
     "Name": "Raider",
     "DefScaling": 2,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -557,11 +557,11 @@
       {
         "Name": "Close",
         "Text": "Range 5 - Target exiles 2 non-status cards from their hand, then inflict 1 Stunned and {0} Poison",
-        "Values": ["DMG-1"]
+        "Values": ["DMG"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. {1} Barrier.",
+        "Text": "Move {0}. Gain {1} Barrier.",
         "Values": ["4+MOV", "1+BLK"]
       }
     ],
@@ -631,12 +631,12 @@
       {
         "Name": "Melee",
         "Text": "Radius 2 - Inflict {1} Poison and 1 Weak to each enemy. Move {0}.",
-        "Values": ["2+MOV", "TIR*2"]
+        "Values": ["2+MOV", "DMG"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Range 7. Inflict {1} Poison. They have 1 Slow for as long as they have Poison.",
-        "Values": ["2+MOV", "TIR*2"]
+        "Values": ["2+MOV", "DMG"]
       },
       {
         "Name": "Far",
@@ -647,7 +647,7 @@
     "Passives": [
       {
         "Name": "Toxic Fumes",
-        "Text": "If an enemy ends their turn adjacent to the Poisoner, they gain Poison {0}.",
+        "Text": "If an enemy ends their turn adjacent to the Poisoner, Inflict {0} Poison to them.",
         "Values": ["TIR"]
       }
     ],
@@ -658,7 +658,7 @@
     "Name": "Beguiler",
     "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -690,7 +690,7 @@
     "Name": "Shadecaller",
     "DefScaling": 2,
     "OffScaling": 1,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -722,7 +722,7 @@
     "Name": "Puppeteer",
     "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -754,7 +754,7 @@
     "Name": "Knight of Embers",
     "DefScaling": 2,
     "OffScaling": 3,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -949,7 +949,7 @@
     "Name": "Illuminator",
     "DefScaling": 2,
     "OffScaling": 1,
-    "Challenge": 2,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
@@ -980,22 +980,22 @@
     "Name": "Mindmister",
     "DefScaling": 1,
     "OffScaling": 1,
-    "Challenge": 2,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
         "Text": "Inflict {0} Dazed. Target shuffles their hand and discard into their deck, then draws that many cards. Move {0}.",
-        "Values": ["TIR+OFF+1", "2+MOV"]
+        "Values": ["DMG+1", "2+MOV"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Radius 3. Inflict {1} Dazed and Push 2.",
-        "Values": ["3+MOV", "OFF+TIR"]
+        "Values": ["3+MOV", "DMG+1"]
       },
       {
         "Name": "Far",
         "Text": "Move {0}. Range 7. Inflict {1} Dazed and {1} Slow.",
-        "Values": ["5+MOV", "OFF+TIR-1"]
+        "Values": ["5+MOV", "DMG"]
       }
     ],
     "Passives": [
@@ -1007,7 +1007,7 @@
       {
         "Name": "Pain of Clarity",
         "Text": "Whenever an enemy within range 5 plays Dazed, they lose {0} life.",
-        "Values": ["TIR"]
+        "Values": ["DMG"]
       },
       {
         "Name": "Last Breath",
@@ -1027,12 +1027,12 @@
       {
         "Name": "Melee",
         "Text": "Inflict 2 Soft. Deal 1 damage {0} times.",
-        "Values": ["TIR+OFF"]
+        "Values": ["DMG-1"]
       },
       {
         "Name": "Close",
         "Text": "Move {0}. Radius 3 - Inflict 1 Soft. Deal 1 damage {1} times.",
-        "Values": ["2+MOV", "OFF+TIR - 1"]
+        "Values": ["2+MOV", "DMG - 2"]
       },
       {
         "Name": "Far",
@@ -1054,7 +1054,7 @@
     "Name": "Shadewalker",
     "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1129,7 +1129,7 @@
     "Name": "Monk",
     "DefScaling": 2,
     "OffScaling": 1,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1194,7 +1194,7 @@
     "Name": "Dreadheart",
     "DefScaling": 2,
     "OffScaling": 3,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1232,7 +1232,7 @@
     "Name": "Footman",
     "DefScaling": 1,
     "OffScaling": 1,
-    "Challenge": 2,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
@@ -1270,7 +1270,7 @@
     "Name": "Dancer",
     "DefScaling": 1,
     "OffScaling": 1,
-    "Challenge": 2,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Mobility",
@@ -1303,7 +1303,7 @@
     "Name": "Virtue",
     "DefScaling": 3,
     "OffScaling": 1,
-    "Challenge": 2,
+    "Challenge": 1,
     "Actions": [
       {
         "Name": "Melee",
@@ -1356,7 +1356,7 @@
     "Name": "Lifecrafter",
     "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1427,7 +1427,7 @@
     "Name": "Stone Cannon",
     "DefScaling": 3,
     "OffScaling": 3,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1465,7 +1465,7 @@
     "Name": "Nill Bringer",
     "DefScaling": 3,
     "OffScaling": 2,
-    "Challenge": 5,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Melee",
@@ -1503,7 +1503,7 @@
     "Name": "Druid",
     "DefScaling": 2,
     "OffScaling": 1,
-    "Challenge": 4,
+    "Challenge": 3,
     "Actions": [
       {
         "Name": "Melee",
@@ -1541,7 +1541,7 @@
     "Name": "Statue",
     "DefScaling": 3,
     "OffScaling": 1,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1633,7 +1633,7 @@
     "Name": "Sentinel",
     "DefScaling": 3,
     "OffScaling": 1,
-    "Challenge": 3,
+    "Challenge": 2,
     "Actions": [
       {
         "Name": "Melee",
@@ -1709,7 +1709,7 @@
     "Name": "Giant Rat",
     "DefScaling": 0,
     "OffScaling": 2,
-    "Challenge": 1,
+    "Challenge": 0,
     "Actions": [
       {
         "Name": "Melee",

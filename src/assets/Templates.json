@@ -132,7 +132,7 @@
       {
         "Name": "Resilience",
         "Text": "Start of combat: Gain {0} Barrier.",
-        "Values": ["DEF*2+TIR"]
+        "Values": ["BLK"]
       }
     ],
     "Passives": [],
