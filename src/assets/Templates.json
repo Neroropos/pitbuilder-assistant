@@ -152,9 +152,9 @@
     "DmgMod": 0,
     "Actions": [
       {
-        "Name": "Elemental spread",
-        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
-        "Values": []
+        "Name": "Blast of flame",
+        "Text": "Range 5, Burst 1 - Deal {0} damage. {2} Inflict {1} Pulse. Channel Fire.",
+        "Values": ["Math.round(DMG/2)", "TIR", "PSTATK"]
       }
     ],
     "Passives": [],
@@ -174,9 +174,9 @@
     "DmgMod": 0,
     "Actions": [
       {
-        "Name": "Elemental spread",
-        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
-        "Values": []
+        "Name": "Sink",
+        "Text": "Range 5. Deal {0} damage. {1} Iflict 1 Slow. Push {2}. Channel Water.",
+        "Values": ["Math.round(DMG/2)", "PSTATK", "TIR"]
       }
     ],
     "Passives": [],
@@ -196,9 +196,9 @@
     "DmgMod": 0,
     "Actions": [
       {
-        "Name": "Elemental spread",
-        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
-        "Values": []
+        "Name": "Burst of air",
+        "Text": "Range 5, Burst 1 - Deal {0} damage. {2} Push {1}. Channel Air.",
+        "Values": ["Math.round(DMG/2)", "TIR", "PSTATK"]
       }
     ],
     "Passives": [],
@@ -218,9 +218,9 @@
     "DmgMod": 0,
     "Actions": [
       {
-        "Name": "Elemental spread",
-        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
-        "Values": []
+        "Name": "Stone spires",
+        "Text": "Range 5. Create a size 1 Obstacle. Each ally adjacent to the obstacle gains {1} Block. Repeat {0} times. Channel Earth.",
+        "Values": ["TIR", "Math.round(BLK/2)"]
       }
     ],
     "Passives": [],
@@ -240,9 +240,9 @@
     "DmgMod": 0,
     "Actions": [
       {
-        "Name": "Elemental spread",
-        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
-        "Values": []
+        "Name": "Lightning strikes",
+        "Text": "Range 5. Deal {1} Damage. {2} Repeat {0} times. Channel Lightning.",
+        "Values": ["TIR", "Math.round(DMG/2)", "PSTATK"]
       }
     ],
     "Passives": [],
@@ -262,9 +262,9 @@
     "DmgMod": 0,
     "Actions": [
       {
-        "Name": "Elemental spread",
-        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
-        "Values": []
+        "Name": "Overgrowth",
+        "Text": "Range 5. Blast 2. The area becomes difficult terrain. Inflict {0} Poison. Channel Nature.",
+        "Values": ["TIR"]
       }
     ],
     "Passives": [
@@ -291,9 +291,9 @@
     "DmgMod": 0,
     "Actions": [
       {
-        "Name": "Elemental spread",
-        "Text": "Place 3 Hazards adjacent to each other within Range 5. They deal 1 damage of the character's element to adjacent enemies at the end of each turn.",
-        "Values": []
+        "Name": "Stone spires",
+        "Text": "Range 5. Create a size 1 Obstacle. Inflict 1 Slow to each enemy adjacent to the obstacle. Repeat {0} times. Channel Ice.",
+        "Values": ["TIR"]
       }
     ],
     "Passives": [],
