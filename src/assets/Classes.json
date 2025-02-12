@@ -467,7 +467,7 @@
     "Passives": [
       {
         "Name": "Elusive",
-        "Text": "At the start of each turn and at the start of combat, gain 1 Evasive.",
+        "Text": "At the start of your turn and at the start of combat, gain 1 Evasive.",
         "Values": []
       },
       {
@@ -859,7 +859,7 @@
       },
       {
         "Name": "Blow",
-        "Text": "Start of turn: Move {0}. If Air is Channeled, Radius 2. Deal {1} damage to all enemies.",
+        "Text": "Start of your turn: Move {0}. If Air is Channeled, Radius 2. Deal {1} damage to all enemies.",
         "Values": ["1+MOV", "1+TIR"]
       }
     ],
