@@ -219,7 +219,7 @@
     "Actions": [
       {
         "Name": "Stone spires",
-        "Text": "Range 5. Create a size 1 Obstacle. Each ally adjacent to the obstacle gains {1} Block. Repeat {0} times. Channel Earth.",
+        "Text": "{0} times, Range 5 - create a size 1 Obstacle. Then, each ally adjacent to one of the obstacles gains {1} Block. Channel Earth.",
         "Values": ["TIR", "Math.round(BLK/2)"]
       }
     ],
@@ -292,7 +292,7 @@
     "Actions": [
       {
         "Name": "Stone spires",
-        "Text": "Range 5. Create a size 1 Obstacle. Inflict 1 Slow to each enemy adjacent to the obstacle. Repeat {0} times. Channel Ice.",
+        "Text": "{0} times, Range 5 - create a size 1 Obstacle. Then, inflict 1 Slow to each enemy adjacent to one of the obstacles. Channel Ice.",
         "Values": ["TIR"]
       }
     ],

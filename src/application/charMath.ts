@@ -178,10 +178,9 @@ export class Enemy {
           .replace(/DEF/g, DefScaling.toString())
           .replace(/OFF/g, OffScaling.toString())
           .replace(/TIR/g, this.Tier.toString())
-
         result = result.replace(
           new RegExp(escapeRegExp('{' + i + '}'), 'g'),
-          eval(newVal).toString()
+          eval?.('"use strict";' + newVal).toString()
         )
       } else result = result.replace(new RegExp(escapeRegExp('{' + i + '}'), 'g'), this.PostAttack)
     })
