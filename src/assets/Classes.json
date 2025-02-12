@@ -1599,7 +1599,7 @@
       },
       {
         "Name": "Boss - Call",
-        "Text": "Summon {0} Grunt Fire Slamanders (Weak Blazing Bestial Caster). Each friendly character gains {1} Block. Channel Fire.",
+        "Text": "Summon {0} Grunt Fire Slamanders (Weak Blazing Bestial Grunt Caster). They may not act this turn. Each friendly character gains {1} Block. Channel Fire.",
         "Values": ["2*TIR", "BLK"]
       },
       {

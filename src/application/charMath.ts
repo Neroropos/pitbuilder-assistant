@@ -70,9 +70,17 @@ export class Action {
   }
 }
 export class Passive {
+  Valid(char: Enemy): boolean {
+    if (this.Condition == null) return true
+    else if (this.Condition.Check == 'Type') {
+      return char.Class.Type == this.Condition.Value
+    }
+    return true
+  }
   Name: string | null = null
   Text: string = ''
   Values: string[] = []
+  Condition: { Check: string; Value: string } | null = null
   public constructor(init?: Partial<Passive>) {
     Object.assign(this, init)
   }
@@ -105,6 +113,13 @@ export class EnemyClass {
   }
 }
 export class EnemyTemplate {
+  GetPassives(char: Enemy): ConcatArray<Passive> {
+    const result: Passive[] = []
+    this.Passives.forEach((passive) => {
+      if (passive.Valid(char)) result.push(passive)
+    })
+    return result
+  }
   Name: string = ''
   DefScaling: number = 0
   OffScaling: number = 0
@@ -123,6 +138,11 @@ export class EnemyTemplate {
   Type: string = ''
   public constructor(init?: Partial<EnemyTemplate>) {
     Object.assign(this, init)
+    this.Passives = []
+    if (init?.Passives != undefined)
+      init?.Passives.forEach((passive) => {
+        this.Passives.push(new Passive(passive))
+      })
   }
 }
 export class Enemy {
@@ -232,7 +252,10 @@ export class Enemy {
       })
     })
     this.Passives = this.Class?.Passives.concat(
-      this.Templates?.reduce((sum, current) => sum.concat(current.Passives), [] as Passive[])
+      this.Templates?.reduce(
+        (sum, current) => sum.concat(current.GetPassives(this)),
+        [] as Passive[]
+      )
     )
     if (this.Passives.find((x) => x.Name == 'Grunt')) {
       this.HP = 1

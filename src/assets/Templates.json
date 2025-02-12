@@ -900,5 +900,83 @@
     "Resistances": [],
     "PostAttack": {},
     "Type": "Physiology"
+  },
+  {
+    "Name": "Group",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "Challenge": 3,
+    "ChallengeMult": 1,
+    "HPBar": 2,
+    "HPMod": -10,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Group cohesion",
+        "Text": "Deals 2 less damage for each HP bar missing.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": ["Area of effect"],
+    "Resistances": ["Single target"],
+    "PostAttack": {},
+    "Type": "Rank"
+  },
+  {
+    "Name": "Elite",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "Challenge": 0,
+    "ChallengeMult": 2,
+    "HPMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "HPBar": 1,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Elite",
+        "Text": "Takes 2 turns each round.",
+        "Values": []
+      },
+      {
+        "Name": "Elite - Skirmisher",
+        "Text": "At the start of your turn and at the start of combat, gain 1 Evasive.",
+        "Values": [],
+        "Condition": { "Check": "Type", "Value": "Skirmisher" }
+      },
+      {
+        "Name": "Elite - Defender",
+        "Text": "At the start of your turn and at the start of combat, gain {0} Block.",
+        "Values": ["BLK"],
+        "Condition": { "Check": "Type", "Value": "Defender" }
+      },
+      {
+        "Name": "Elite - Striker",
+        "Text": "At the end of your turn, deal {0} Damage. {1}",
+        "Values": ["Math.round(DMG/2)", "PSTATK"],
+        "Condition": { "Check": "Type", "Value": "Striker" }
+      },
+      {
+        "Name": "Elite - Controller",
+        "Text": "At the end of your turn, Range {0} - inflict 1 Stunned.",
+        "Values": ["TIR*2+3"],
+        "Condition": { "Check": "Type", "Value": "Controller" }
+      },
+      {
+        "Name": "Elite - Support",
+        "Text": "At the start of your turn and at the start of combat, Range {0} - target ally gains 1 Haste and 1 Strength.",
+        "Values": ["TIR*2+3"],
+        "Condition": { "Check": "Type", "Value": "Support" }
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {},
+    "Type": "Rank"
   }
 ]

@@ -64,7 +64,7 @@ function refresh() {
       <span style="float: left; padding-right: 8px">{{ item.id }}</span
       ><span @click="close(item.id)" class="close clickable"
         ><i class="pi pi-times-circle"></i></span
-      ><Enemy :id="item.id" v-model="counter[index]" />
+      ><Enemy v-model="counter[index]" />
     </div>
     <button @click="addEnemy()" class="grid-item button">Add</button>
   </div>
