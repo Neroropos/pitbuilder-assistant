@@ -1807,6 +1807,11 @@
         "Name": "Natural powers",
         "Text": "At the end of turn, if Nature is channeled, Inflict {0} Soft. If Water is channeled, Push {1}",
         "Values": ["1+TIR", "TIR"]
+      },
+      {
+        "Name": "Death so close",
+        "Text": "Whenever a Rabble dies, all Rabble within Radius 3 gain 1 Vulnerable.",
+        "Values": []
       }
     ],
     "PostAttack": [],
