@@ -104,7 +104,7 @@
   {
     "Name": "Blessing of stone",
     "Cost": 1,
-    "Types": ["Earth", "Spell", "Defend", "Area", "Block"],
+    "Types": ["Earth", "Spell", "Area", "Block"],
     "Text": "Consume Earth. Radius 3. All friendly characters gain 5 Block."
   },
   {
@@ -877,7 +877,7 @@
     "Name": "Guard",
     "Cost": 1,
     "Types": ["Defend", "Ranged"],
-    "Text": "Range 3. Defend."
+    "Text": "Range 3. Defend, the target gaining the effects of your Defend."
   },
   {
     "Name": "Oportune strike",
