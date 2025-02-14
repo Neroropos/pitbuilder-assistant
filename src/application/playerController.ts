@@ -32,9 +32,9 @@ export class PlayerCharacter {
     const woundCard = GetCard('Wound')
     const arr = [
       { item: strikeCard, amount: 3 },
-      { item: moveCard, amount: 2 },
+      { item: moveCard, amount: 3 },
       { item: defendCard, amount: 3 },
-      { item: woundCard, amount: 2 }
+      { item: woundCard, amount: 1 }
     ]
     arr.forEach((pair) => {
       for (let i = 0; i < pair.amount; i++) {

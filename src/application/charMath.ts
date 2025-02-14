@@ -101,6 +101,7 @@ export class EnemyClass {
   Passives: Passive[] = []
   Weaknesses: string[] = []
   Resistances: string[] = []
+  Immunities: string[] = []
   PostAttack: PostAttack[] = []
   Challenge: number | number = 0
   Type: string = ''
@@ -131,6 +132,7 @@ export class EnemyTemplate {
   Passives: Passive[] = []
   Weaknesses: string[] = []
   Resistances: string[] = []
+  Immunities: string[] = []
   PostAttack: PostAttack[] = []
   Challenge: number | number = 0
   ChallengeMult: number | number = 1
@@ -162,6 +164,7 @@ export class Enemy {
   PassivesShown: { Name: string; Text: string }[] = []
   ResistancesShown: string = ''
   WeaknessesShown: string = ''
+  ImmunitiesShown: string = ''
   Passives: Passive[] = []
   PostAttack: string = ''
   HPBar: number = 1
@@ -232,14 +235,19 @@ export class Enemy {
     const Weaknesses = this.Class?.Weaknesses.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Weaknesses), [] as string[])
     )
+    const Immunities = this.Class?.Resistances.concat(
+      this.Templates?.reduce((sum, current) => sum.concat(current.Resistances), [] as string[])
+    )
     const ResistancesFiltered = Resistances.filter((x) => !Weaknesses.find((y) => y == x)).filter(
       (value, index, array) => array.indexOf(value) === index
     )
     const WeaknessesFiltered = Weaknesses.filter((x) => !Resistances.find((y) => y == x)).filter(
       (value, index, array) => array.indexOf(value) === index
     )
+
     this.ResistancesShown = ResistancesFiltered.sort((a, b) => a.localeCompare(b)).join(', ')
     this.WeaknessesShown = WeaknessesFiltered.sort((a, b) => a.localeCompare(b)).join(', ')
+    this.ImmunitiesShown = Immunities.sort((a, b) => a.localeCompare(b)).join(', ')
     this.Actions = this.Class?.Actions.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Actions), [] as Action[])
     )

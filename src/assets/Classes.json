@@ -1465,7 +1465,7 @@
     "Name": "Nill Bringer",
     "DefScaling": 3,
     "OffScaling": 2,
-    "Challenge": 4,
+    "Challenge": 6,
     "Actions": [
       {
         "Name": "Melee",
@@ -1604,7 +1604,7 @@
       },
       {
         "Name": "Boss - Rain",
-        "Text": "Burst 2. 4 Areas. Range 7. Deal {0} damage. {1} Inflict {2} burn. ",
+        "Text": "Burst 2. 4 Areas. Range 7. Deal {0} damage. {1} Inflict {2} Burn. ",
         "Values": ["DMG", "PSTATK", "TIR"]
       },
       {
@@ -1626,7 +1626,7 @@
       }
     ],
     "PostAttack": [],
-    "Resistances": ["Fire"],
+    "Immunities": ["Fire"],
     "Type": "Boss"
   },
   {
@@ -1817,5 +1817,73 @@
     "PostAttack": [],
     "Resistances": [],
     "Type": "Defender"
+  },
+  {
+    "Name": "Drakeblood Marauder",
+    "DefScaling": 3,
+    "OffScaling": 3,
+    "HPBar": 3,
+    "Challenge": 20,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} damage. {1} Inflict {2} Bleed and {2} Pulse. Gain {3} Evasive.",
+        "Values": ["1+DMG", "PSTATK", "TIR*3", "TIR"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Line 3 - Deal {1} damage of your element. {2} Gain {3} Barrier.",
+        "Values": ["3+MOV", "-1+DMG", "PSTATK", "BLK-1"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Counter with Range 6 and {2} Block.",
+        "Values": ["6+MOV", "DMG-2", "BLK"]
+      },
+      {
+        "Name": "Boss - Break",
+        "Text": "Targets the closest enemy. Move to be adjacent to them, then perform melee action, targeting them. Then, target the next closest enemy, move to them and perform the melee action targeting them.",
+        "Values": []
+      },
+      {
+        "Name": "Boss - Barrage",
+        "Text": "Five Line 5, not adjacent to or touching each other originating anywhere on the map. Deal {0} damage. {1} inflict {2} Soft.",
+        "Values": ["DMG+4", "PSTATK", "TIR*3"]
+      },
+      {
+        "Name": "Boss - Burst",
+        "Text": "Radius 3. Deal {0} damage of your element. {1} Push each target {2}. If they hit anything and are stopped, they take an extra {3} damage.",
+        "Values": ["DMG+2", "PSTATK", "TIR*3", "DMG-2"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Boss",
+        "Text": "Start of round - chooses a boss action and target area or characters. Performs that action at the end of round. May take 1 turn per round. May take 1 extra turn each round for every 2 player characters.",
+        "Values": []
+      },
+      {
+        "Name": "Large",
+        "Text": "Size 2.",
+        "Values": []
+      },
+      {
+        "Name": "Winged",
+        "Text": "Flying.",
+        "Values": []
+      },
+      {
+        "Name": "Draconic type",
+        "Text": "Choose one element to be Drakeblood Marauder's element. It is immune to that element's damage. It is weak to that element's natural weakness.",
+        "Values": []
+      },
+      {
+        "Name": "Drive off",
+        "Text": "When Drakeblood Marauder becomes bloodied, each of its enemies may take a wound. If they do, Drakeblood Marauder retreats.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Type": "Boss"
   }
 ]
