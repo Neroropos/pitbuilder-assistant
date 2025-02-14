@@ -880,7 +880,7 @@
     "Text": "Range 3. Defend, the target gaining the effects of your Defend."
   },
   {
-    "Name": "Oportune strike",
+    "Name": "Opportune strike",
     "Cost": 1,
     "Types": ["Replenish", "Attack", "Discard"],
     "Text": "Replenish. Strike. Discard a card."
