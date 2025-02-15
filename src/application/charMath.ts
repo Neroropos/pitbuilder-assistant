@@ -235,9 +235,26 @@ export class Enemy {
     const Weaknesses = this.Class?.Weaknesses.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Weaknesses), [] as string[])
     )
-    const Immunities = this.Class?.Resistances.concat(
-      this.Templates?.reduce((sum, current) => sum.concat(current.Resistances), [] as string[])
+    const Immunities = this.Class?.Immunities.concat(
+      this.Templates?.reduce((sum, current) => sum.concat(current.Immunities), [] as string[])
     )
+    const TotalledRWI: { name: string; value: number }[] = []
+    Resistances.forEach((res) => {
+      const item = TotalledRWI.find((x) => x.name == res)
+      if (item) item.value++
+      else TotalledRWI.push({ name: res, value: 1 })
+    })
+    Weaknesses.forEach((wea) => {
+      const item = TotalledRWI.find((x) => x.name == wea)
+      if (item) item.value--
+      else TotalledRWI.push({ name: wea, value: -1 })
+    })
+    Immunities.forEach((imm) => {
+      const item = TotalledRWI.find((x) => x.name == imm)
+      if (item) item.value += 2
+      else TotalledRWI.push({ name: imm, value: 2 })
+    })
+    console.log(TotalledRWI)
     const ResistancesFiltered = Resistances.filter((x) => !Weaknesses.find((y) => y == x)).filter(
       (value, index, array) => array.indexOf(value) === index
     )
@@ -245,9 +262,18 @@ export class Enemy {
       (value, index, array) => array.indexOf(value) === index
     )
 
-    this.ResistancesShown = ResistancesFiltered.sort((a, b) => a.localeCompare(b)).join(', ')
-    this.WeaknessesShown = WeaknessesFiltered.sort((a, b) => a.localeCompare(b)).join(', ')
-    this.ImmunitiesShown = Immunities.sort((a, b) => a.localeCompare(b)).join(', ')
+    this.ResistancesShown = TotalledRWI.filter((x) => x.value == 1)
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map((x) => x.name)
+      .join(', ') //ResistancesFiltered.sort((a, b) => a.localeCompare(b)).join(', ')
+    this.WeaknessesShown = TotalledRWI.filter((x) => x.value < 0)
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map((x) => x.name)
+      .join(', ') // this.WeaknessesShown = WeaknessesFiltered.sort((a, b) => a.localeCompare(b)).join(', ')
+    this.ImmunitiesShown = TotalledRWI.filter((x) => x.value > 1)
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map((x) => x.name)
+      .join(', ') // this.ImmunitiesShown = Immunities.sort((a, b) => a.localeCompare(b)).join(', ')
     this.Actions = this.Class?.Actions.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Actions), [] as Action[])
     )

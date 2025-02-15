@@ -208,6 +208,10 @@ function damage() {
       <span style="font-weight: bold">{{ pass.Name }}</span> - {{ pass.Text }}
     </div>
   </div>
+  <div v-if="currentEnemy.ImmunitiesShown.length > 0">
+    <span style="font-weight: bold">Immunities</span><br />
+    {{ currentEnemy.ImmunitiesShown }}
+  </div>
   <div v-if="currentEnemy.ResistancesShown.length > 0">
     <span style="font-weight: bold">Resistances</span><br />
     {{ currentEnemy.ResistancesShown }}
