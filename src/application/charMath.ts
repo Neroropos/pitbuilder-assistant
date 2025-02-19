@@ -22,7 +22,6 @@ export function GetClassList() {
   result.forEach((gr) => {
     gr.Values.sort((a, b) => a.Name?.localeCompare(b.Name || '') || 0)
   })
-  console.log(result)
   return result
 }
 
@@ -255,13 +254,12 @@ export class Enemy {
       if (item) item.value += 2
       else TotalledRWI.push({ name: imm, value: 2 })
     })
-    console.log(TotalledRWI)
-    const ResistancesFiltered = Resistances.filter((x) => !Weaknesses.find((y) => y == x)).filter(
-      (value, index, array) => array.indexOf(value) === index
-    )
-    const WeaknessesFiltered = Weaknesses.filter((x) => !Resistances.find((y) => y == x)).filter(
-      (value, index, array) => array.indexOf(value) === index
-    )
+    // const ResistancesFiltered = Resistances.filter((x) => !Weaknesses.find((y) => y == x)).filter(
+    //   (value, index, array) => array.indexOf(value) === index
+    // )
+    // const WeaknessesFiltered = Weaknesses.filter((x) => !Resistances.find((y) => y == x)).filter(
+    //   (value, index, array) => array.indexOf(value) === index
+    // )
 
     this.ResistancesShown = TotalledRWI.filter((x) => x.value == 1)
       .sort((a, b) => a.name.localeCompare(b.name))
