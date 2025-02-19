@@ -92,7 +92,7 @@
       },
       {
         "Name": "Screamer",
-        "Text": "Size 1 Obstacle. Has {0} HP. At the end of each round, Radius 3 - inflict 1 Dazed.",
+        "Text": "Size 1 obstacle. Has {0} HP. At the end of each round, Radius 3 - inflict 1 Dazed.",
         "Values": ["DEF"]
       }
     ],
@@ -593,7 +593,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range 5 - Place 3 size 1 Obstacles.",
+        "Text": "Move {0}. Range 5 - Place 3 size 1 obstacles.",
         "Values": ["3+MOV"]
       }
     ],
@@ -1444,7 +1444,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Range 10. Burst 2. Deal {0} damage. {1} For each Obstacle destroyed, deal {2} damage to all characters in the area.",
+        "Text": "Range 10. Burst 2. Deal {0} damage. {1} For each obstacle destroyed, deal {2} damage to all characters in the area.",
         "Values": ["10+DMG", "PSTATK", "OFF-1"]
       }
     ],
@@ -1527,7 +1527,7 @@
     "Passives": [
       {
         "Name": "Bramble",
-        "Text": "Size 1 Obstacle. Has {0} HP. Has resistance against damage from non-adjacent sources. Has weakness against Fire and Lightning. Always has {1} Counter.",
+        "Text": "Size 1 obstacle. Has {0} HP. Has resistance against damage from non-adjacent sources. Has weakness against Fire and Lightning. Always has {1} Counter.",
         "Values": ["DEF*3", "OFF*3"]
       },
       {
@@ -1902,24 +1902,24 @@
       },
       {
         "Name": "Close",
-        "Text": "Radius 3 - each ally may move 3. One of them may attack.",
+        "Text": "Radius 3 - each ally may Move 3. One of them may attack.",
         "Values": []
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Radius 3 - each ally gains {1} Block nad {2} Haste.",
+        "Text": "Move {0}. Radius 3 - each ally gains {1} Block and {2} Haste.",
         "Values": ["4+MOV", "BLK", "TIR"]
       }
     ],
     "Passives": [
       {
         "Name": "Banner",
-        "Text": "Allies within radius 3 deal {0} more damage and take {0} less damage. ",
+        "Text": "Allies within Radius 3 deal {0} more damage and take {0} less damage. ",
         "Values": ["1+TIR"]
       },
       {
         "Name": "Legacy",
-        "Text": "When Banneret is defeated, place a size 1 obstacle in its space. It has all the effects of “Banner”.",
+        "Text": "When Banneret is defeated, place a Size 1 obstacle in its space. It has all the effects of “Banner”.",
         "Values": []
       }
     ],
