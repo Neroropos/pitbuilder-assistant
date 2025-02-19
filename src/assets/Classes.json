@@ -736,7 +736,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Each Puppet moves {1}.",
+        "Text": "Move {0}. Each Puppet Moves {1}.",
         "Values": ["3+MOV", "2+MOV"]
       }
     ],
@@ -785,6 +785,7 @@
       }
     ],
     "PostAttack": [],
+    "Resistances": ["Fire"],
     "Type": "Striker"
   },
   {
@@ -821,6 +822,7 @@
         "Values": ["1+TIR"]
       }
     ],
+    "Resistances": ["Lightning"],
     "PostAttack": [],
     "Type": "Striker"
   },
@@ -863,6 +865,7 @@
         "Values": ["1+MOV", "1+TIR"]
       }
     ],
+    "Resistances": ["Air"],
     "PostAttack": [],
     "Type": "Skirmisher"
   },
@@ -891,7 +894,7 @@
     "Passives": [
       {
         "Name": "Flight",
-        "Text": "Ignore terrain. Gain resistance to melee attacks.",
+        "Text": "Flying.",
         "Values": []
       },
       {
@@ -1458,7 +1461,7 @@
       }
     ],
     "PostAttack": [],
-    "Resistances": [],
+    "Resistances": ["Earth"],
     "Type": "Striker"
   },
   {
@@ -1496,7 +1499,7 @@
       }
     ],
     "PostAttack": [],
-    "Resistances": [],
+    "Resistances": ["Ice"],
     "Type": "Defender"
   },
   {
@@ -1534,7 +1537,7 @@
       }
     ],
     "PostAttack": [],
-    "Resistances": [],
+    "Resistances": ["Water", "Nature"],
     "Type": "Controller"
   },
   {
@@ -1885,5 +1888,103 @@
     ],
     "PostAttack": [],
     "Type": "Boss"
+  },
+  {
+    "Name": "Banneret",
+    "DefScaling": 2,
+    "OffScaling": 2,
+    "Challenge": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Line 2. Deal {0} Damage. {1} Move {2}.",
+        "Values": ["DMG", "PSTATK", "MOV+2"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Radius 3 - each ally may move 3. One of them may attack.",
+        "Values": []
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Radius 3 - each ally gains {1} Block nad {2} Haste.",
+        "Values": ["4+MOV", "BLK", "TIR"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Banner",
+        "Text": "Allies within radius 3 deal {0} more damage and take {0} less damage. ",
+        "Values": ["1+TIR"]
+      },
+      {
+        "Name": "Legacy",
+        "Text": "When Banneret is defeated, place a size 1 obstacle in its space. It has all the effects of “Banner”.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Lake Lance",
+    "DefScaling": 2,
+    "OffScaling": 3,
+    "Challenge": 5,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Line 3. Deal {0} Damage. {1} Consume Water to deal another {2} damage to each target and Push 2 in a random direction.",
+        "Values": ["DMG+1", "PSTATK", "Math.round(DMG/2)"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {0}. Range 3 - Deal {1} damage. {2} Push 1 all enemies adjacent to the target. Channel Water.",
+        "Values": ["MOV+2", "DMG-1", "PSTATK"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Block.",
+        "Values": ["4+MOV", "BLK"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Dripping",
+        "Text": "Start of combat: Channel Water.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": ["Water"],
+    "Type": "Striker"
+  },
+  {
+    "Name": "Tactician",
+    "DefScaling": 1,
+    "OffScaling": 1,
+    "Challenge": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. An ally within Range 3 may Move 3 and gain {1} Block.",
+        "Values": ["MOV+2", "BLK*2"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Radius 3 - place each ally into any space within Radius 3. One of them may attack.",
+        "Values": []
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Until your next turn, Radius 5 - whenever an ally is attacked, they gain {1} Block. Whenever an enemy moves, an ally may Move 2.",
+        "Values": ["4+MOV", "BLK"]
+      }
+    ],
+    "Passives": [],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Support"
   }
 ]

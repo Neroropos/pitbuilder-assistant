@@ -22,6 +22,7 @@ export function GetClassList() {
   result.forEach((gr) => {
     gr.Values.sort((a, b) => a.Name?.localeCompare(b.Name || '') || 0)
   })
+  console.log(result)
   return result
 }
 
