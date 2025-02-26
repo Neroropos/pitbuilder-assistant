@@ -1576,7 +1576,7 @@
   {
     "Name": "Evasive order",
     "Cost": 2,
-    "Types": ["Area", "Evasve", "Movement"],
+    "Types": ["Area", "Evasive", "Movement"],
     "Text": "Radius 2 - Each ally may move 1, then gains 1 Evasive."
   },
   {
