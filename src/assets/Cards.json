@@ -955,7 +955,7 @@
     "Name": "Strand of wind",
     "Cost": 0,
     "Types": ["Replenish", "Consumable", "Evasive"],
-    "Text": "Replenish. Gain 5 Barrier. Consumable 3."
+    "Text": "Replenish. Gain 1 Evasive. Consumable 3."
   },
   {
     "Name": "Throwing dagger",
@@ -1470,5 +1470,167 @@
     "Cost": 1,
     "Types": ["Attack", "Reaction", "Movement"],
     "Text": "Reaction - an enemy within Range 3 attacks. Move 2, then Strike that enemy."
+  },
+  {
+    "Name": "Prepare",
+    "Cost": 1,
+    "Types": ["Draw", "Empower"],
+    "Text": "Draw 3 cards. Gain 1 Empowered."
+  },
+  {
+    "Name": "Fairy counsel",
+    "Cost": 1,
+    "Types": ["Summon", "Draw", "Light"],
+    "Text": "Summon a Fairy (3 HP, flying, no zone of control). Draw a card for each Fairy. Channel Light."
+  },
+  {
+    "Name": "Soothing draw",
+    "Cost": 1,
+    "Types": ["Draw", "Area"],
+    "Text": "Draw 3 cards. Radius 1 - Reduce any number of conditions on each friendly character by 1."
+  },
+  {
+    "Name": "Restock",
+    "Cost": 1,
+    "Types": ["Draw"],
+    "Text": "Draw a card for each other card you've played this turn. Exile."
+  },
+  {
+    "Name": "Steady purging",
+    "Cost": 1,
+    "Types": ["Permanent", "Exile"],
+    "Text": "Permanent. At the end of your turn, look at the top two cards of your deck. You may exile any number of them."
+  },
+  {
+    "Name": "Evasion stance",
+    "Cost": 2,
+    "Types": ["Stance", "Evasive"],
+    "Text": "Stance. At the start of your turn, gain 1 Evasive."
+  },
+  {
+    "Name": "Refuse",
+    "Cost": 2,
+    "Types": ["Reaction"],
+    "Text": "Reaction - you are attacked. Ignore all effects from that attack."
+  },
+  {
+    "Name": "Swiftness command",
+    "Cost": 1,
+    "Types": ["Ranged", "Movement", "Water"],
+    "Text": "Range 5 - Target ally may maneuver, then play a card. Channel Water."
+  },
+  {
+    "Name": "Burn bright",
+    "Cost": 1,
+    "Types": ["Exile", "Fire"],
+    "Text": "Exile the top five cards of your deck. You may play them this turn. Channel Fire."
+  },
+  {
+    "Name": "Grant protection",
+    "Cost": 1,
+    "Types": ["Wary", "Ranged"],
+    "Text": "Range 5 - Target ally gains 2 Wary, then may increase any condition by 1."
+  },
+  {
+    "Name": "Owned domain",
+    "Cost": 1,
+    "Types": ["Area", "Pulse", "Wary"],
+    "Text": "Radius 5 - Inflict 2 Pulse or 2 Wary to each character. Swap spaces of any two characters."
+  },
+  {
+    "Name": "Sprinting finish",
+    "Cost": 1,
+    "Types": ["Movement", "Finisher"],
+    "Text": "Maneuver. Maneuver. Finisher."
+  },
+  {
+    "Name": "Guarding preparation",
+    "Cost": 2,
+    "Types": ["Defend"],
+    "Text": "Defend. The next card with Strike you play this turn costs 0 energy."
+  },
+  {
+    "Name": "Striking preparation",
+    "Cost": 2,
+    "Types": ["Strike"],
+    "Text": "Strike. The next card with Maneuver you play this turn costs 0 energy."
+  },
+  {
+    "Name": "Moving preparation",
+    "Cost": 2,
+    "Types": ["Movement"],
+    "Text": "Maneuver. The next card with Defend you play this turn costs 0 energy."
+  },
+  {
+    "Name": "Share knowledge",
+    "Cost": 1,
+    "Types": ["Range", "Draw"],
+    "Text": "Range 3 - You and target ally each draw 2 cards."
+  },
+  {
+    "Name": "Evade",
+    "Cost": 2,
+    "Types": ["Evasive"],
+    "Text": "Gain 3 Evasive."
+  },
+  {
+    "Name": "Evasive order",
+    "Cost": 2,
+    "Types": ["Area", "Evasve", "Movement"],
+    "Text": "Radius 2 - Each ally may move 1, then gains 1 Evasive."
+  },
+  {
+    "Name": "Toss and run",
+    "Cost": 0,
+    "Types": ["Discard", "Movement", "Air"],
+    "Text": "Discard 2 cards. Maneuver. Channel Air."
+  },
+  {
+    "Name": "Bloody approach",
+    "Cost": 1,
+    "Types": ["Area", "Movement", "Air", "Bleed"],
+    "Text": "Consume Air. Maneuver. Radius 2 - Inflict Bleed equal to spaces moved with this card."
+  },
+  {
+    "Name": "Mass retrieval",
+    "Cost": 1,
+    "Types": ["Replenish", "Earth", "Area"],
+    "Text": "Radius 1 - Each ally may put a card from their discard into their hand. Channel Earth."
+  },
+  {
+    "Name": "Dust off",
+    "Cost": 0,
+    "Types": ["Earth", "Replenish"],
+    "Text": "Consume Earth. Return a card from your discard to your hand."
+  },
+  {
+    "Name": "Swiftness",
+    "Cost": 1,
+    "Types": ["Stance", "Haste"],
+    "Text": "Stance. At the start of your turn, gain 1 Haste."
+  },
+  {
+    "Name": "Cheapness",
+    "Cost": 1,
+    "Types": ["Stance"],
+    "Text": "Stance. The first card you play each turn costs 1 less."
+  },
+  {
+    "Name": "Reaching",
+    "Cost": 1,
+    "Types": ["Stance"],
+    "Text": "Stance. Your Strikes gain +1 Range."
+  },
+  {
+    "Name": "Drawing",
+    "Cost": 1,
+    "Types": ["Draw", "Stance"],
+    "Text": "Stance. At the start of your turn, draw a card."
+  },
+  {
+    "Name": "Barring",
+    "Cost": 1,
+    "Types": ["Stance", "Barrier"],
+    "Text": "Stance. Radius 1 - At the start of your turn, each friendly character gains 1 Barrier."
   }
 ]
