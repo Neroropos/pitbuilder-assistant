@@ -513,7 +513,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. Inflict 1 Weak. {1} Move {2}.",
+        "Text": "Deal {0} Damage. Inflict 1 Feeble. {1} Move {2}.",
         "Values": ["1+DMG", "PSTATK", "3+MOV"]
       },
       {
@@ -630,7 +630,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Radius 2 - Inflict {1} Poison and 1 Weak to each enemy. Move {0}.",
+        "Text": "Radius 2 - Inflict {1} Poison and 1 Feeble to each enemy. Move {0}.",
         "Values": ["2+MOV", "DMG"]
       },
       {
@@ -1986,5 +1986,81 @@
     "PostAttack": [],
     "Resistances": [],
     "Type": "Support"
+  },
+  {
+    "Name": "Wretch",
+    "DefScaling": 2,
+    "OffScaling": 2,
+    "Challenge": 5,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} damage. {1} Inflict {2} Bleed. Inflict -1 Bleed for each channeled element.",
+        "Values": ["DMG+1", "PSTATK", "OFF+TIR"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {3}. Deal {0} damage. {1} Gain {2} Strength. Gain -1 Strength for each channeled element.",
+        "Values": ["DMG-1", "PSTATK", "OFF+TIR", "3+MOV"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Evasive. Gain -1 Evasive for each channeled element.",
+        "Values": ["5+MOV", "OFF+TIR"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Hiden from Gods' sight",
+        "Text": "As long as there are {0} or fewer elements channeled, the Wretch has resistance to all damage.",
+        "Values": ["OFF+TIR"]
+      },
+      {
+        "Name": "Snuff their gifts",
+        "Text": "At the end of turn, consume any element.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Skirmisher"
+  },
+  {
+    "Name": "Blessed",
+    "DefScaling": 3,
+    "OffScaling": 2,
+    "Challenge": 5,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Line 1. Deal {0} damage. {1} Inflict {2} Sundered. For each channeled element, Line +1 and inflict +1 Sundered.",
+        "Values": ["DMG+1", "PSTATK", "OFF+TIR-2"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {2}. Gain {0} block and {1} Sturdy. For each channeled element, gain +1 Sturdy.",
+        "Values": ["BLK", "DEF+TIR-3", "2+MOV"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Gain {1} Wary and {1} Counter. For each channeled element, gain +1 Wary and +2 Counter.",
+        "Values": ["4+MOV", "DEF+TIR-3", "OFF+TIR"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Reveling in Gods' sight",
+        "Text": "As long as there are {0} or more elements channeled, the Blessed has resistance to all damage.",
+        "Values": ["DEF-TIR+1"]
+      },
+      {
+        "Name": "Beckon their gifts",
+        "Text": "At the end of turn, channel any element.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Defender"
   }
 ]

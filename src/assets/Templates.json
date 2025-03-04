@@ -978,5 +978,28 @@
     "Resistances": [],
     "PostAttack": {},
     "Type": "Rank"
+  },
+  {
+    "Name": "Returning",
+    "DefScaling": -1,
+    "OffScaling": -1,
+    "Challenge": 2,
+    "ChallengeMult": 1,
+    "HPMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Returning",
+        "Text": "At the start of the round, if this character was defeated last round, it returns to play in the space it was defeated. It has no statuses and has Health equal to its bloodied threshold.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": {},
+    "Type": "Modification"
   }
 ]
