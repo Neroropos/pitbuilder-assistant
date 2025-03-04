@@ -12,7 +12,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. All adjacent enemies gain Slow 2. Gain {1} Block.",
+        "Text": "Move {0}. Radius 1 - Inflict 2 Slow. Gain {1} Block.",
         "Values": ["2+MOV", "BLK-1"]
       },
       {
@@ -55,7 +55,7 @@
     "Passives": [
       {
         "Name": "Parry",
-        "Text": "At the end of your turn gain {0} Block and {1} Counter. If you have no Block, lose all Counter.",
+        "Text": "At the end of your turn gain {0} Block and {1} Counter. When you have no Block, lose all Counter.",
         "Values": ["BLK", "DMG"]
       }
     ],
@@ -185,7 +185,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Range +{2}. Deal {0} Damage. {1} Inflict 1 Slow",
+        "Text": "Range +{2}. Deal {0} Damage. {1} Inflict 1 Slow.",
         "Values": ["-1+DMG", "PSTATK", "1+TIR"]
       }
     ],
@@ -230,7 +230,7 @@
       {
         "Name": "Use elements",
         "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
-        "Values": ["OFF", "DEF+BLK"]
+        "Values": ["OFF", "BLK"]
       }
     ],
     "PostAttack": [],
@@ -261,7 +261,7 @@
     "Passives": [
       {
         "Name": "Musket",
-        "Text": "All attacks have Range 10 and require 1 Ammo to use. \nStarts combat with 1 Ammo.",
+        "Text": "All attacks have Range 10 and require 1 Ammo to use. Starts combat with 1 Ammo and has 1 max Ammo.",
         "Values": []
       }
     ],
@@ -293,7 +293,7 @@
     "Passives": [
       {
         "Name": "Shining Hope",
-        "Text": "Radius 3 - Whenever an ally would gain a negative condition, they gain 1 less of it. Allies deal +{0} damage.",
+        "Text": "Radius 3 - Whenever an ally would gain a status, they may gain 1 less of it. Allies deal +{0} damage.",
         "Values": ["DMG"]
       }
     ],
@@ -325,13 +325,13 @@
     "Passives": [
       {
         "Name": "Gun",
-        "Text": "All attacks may gain Range {0}. If they do, they cost 1 Ammo and they deal +2 Damage. \nStarts combat with 3 Ammo.",
+        "Text": "All attacks may gain Range {0}. If they do, they cost 1 Ammo and they deal +2 Damage. Starts combat with 3 Ammo and max Ammo 3.",
         "Values": ["3+TIR*2"]
       },
       {
         "Name": "Officer's Mark",
         "Text": "Marked characters take {0} extra damage.",
-        "Values": ["1+TIR"]
+        "Values": ["OFF+TIR"]
       }
     ],
     "PostAttack": [],
@@ -367,7 +367,7 @@
       },
       {
         "Name": "Binding Circle",
-        "Text": "At the start of their turn, to each enemy within this Circle inflict 1 Slowed and deal {0} Damage.",
+        "Text": "At the start of their turn, inflict 1 Slowed and deal {0} Damage to each enemy within this Circle.",
         "Values": ["DMG"]
       },
       {
@@ -391,8 +391,8 @@
     "Challenge": 1,
     "Actions": [
       {
-        "Name": "Melee",
-        "Text": "Move {0}. Adjacent ally recovers from all negative conditions and gains 2 Haste.",
+        "Name": "Assist",
+        "Text": "Move {0}. An adjacent ally recovers from all negative conditions and gains 2 Haste.",
         "Values": ["2+MOV"]
       },
       {
@@ -403,14 +403,14 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Radius 2 - Allies gain 1 Strength and their attacks inflict {1} Poison next turn.",
-        "Values": ["3+MOV", "TIR"]
+        "Values": ["4+MOV", "TIR"]
       }
     ],
     "Passives": [
       {
         "Name": "Spite",
-        "Text": "Whenever an ally within Range 3 becomes Bloodied, gain 2 Strength.",
-        "Values": []
+        "Text": "Whenever an ally within Range 3 becomes Bloodied, gain {1} Strength.",
+        "Values": ["OFF+TIR"]
       }
     ],
     "PostAttack": [],
@@ -446,7 +446,7 @@
     "Name": "Assasin",
     "DefScaling": 1,
     "OffScaling": 3,
-    "Challenge": 3,
+    "Challenge": 4,
     "Actions": [
       {
         "Name": "Melee",
@@ -488,16 +488,16 @@
       {
         "Name": "Melee",
         "Text": "Deal {0} Damage. {1} Inflict 3 Slow. Move {2}.",
-        "Values": ["1+DMG", "PSTATK", "5+MOV"]
+        "Values": ["1+DMG", "PSTATK", "4+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. Deal 1 extra Damage for every 2 and Inflict 1 Dazed for every 3 spaces moved in a straight line. {2}",
+        "Text": "Move {0}. Deal {1} Damage. Deal 1 extra Damage and Inflict 1 Dazed for every 2 spaces moved in a straight line. {2}",
         "Values": ["6+MOV", "-1+DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain 2 Haste for next turn only.",
+        "Text": "Move {0}. Gain 2 Haste and 2 Strength for next turn only.",
         "Values": ["3+MOV"]
       }
     ],
@@ -610,12 +610,12 @@
       },
       {
         "Name": "Sapping Pillar",
-        "Text": "All enemies within Radius 3 of it deal 3 less Damage.",
+        "Text": "Radius 3 - All enemies deal 3 less Damage.",
         "Values": []
       },
       {
         "Name": "Chaining Pillar",
-        "Text": "Any enemy that starts their turn adjacent to it can't move to be more than 3 away from it.",
+        "Text": "Whenever an enemy starts their turn adjacent to the Chaining Pillar, that turn they may not move to be further than 3 spaces away from that Chaining Pillar unless it is destroyed.",
         "Values": []
       }
     ],
@@ -646,9 +646,9 @@
     ],
     "Passives": [
       {
-        "Name": "Toxic Fumes",
-        "Text": "If an enemy ends their turn adjacent to the Poisoner, Inflict {0} Poison to them.",
-        "Values": ["TIR"]
+        "Name": "Cleansing",
+        "Text": "Whenever the Poisoner is defeated, each adjacent character may lose all poison.",
+        "Values": []
       }
     ],
     "PostAttack": [],
@@ -667,7 +667,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}.  Range 6. Target enemy Moves 1 and Strikes, dealing half damage with the Beguiler controlling both actions. If Charmed, they deal full damage.",
+        "Text": "Move {0}. Range 6. Target enemy Moves 1 and Strikes, dealing half damage with the Beguiler controlling both actions. If Charmed, they deal full damage.",
         "Values": ["1+MOV"]
       },
       {
@@ -699,7 +699,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Summon a Shade. Each shade deals {1} damage to each adjacent enemy.",
+        "Text": "Move {0}. Summon a Shade. Each Shade deals {1} damage to each adjacent enemy.",
         "Values": ["1+MOV", "1+DMG"]
       },
       {
@@ -758,17 +758,17 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Block {2}",
+        "Text": "Deal {0} damage. {1} Gain {2} Block.",
         "Values": ["1+DMG", "PSTATK", "1+BLK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Consume Fire to gain 2 Strength. Deal {1} damage. {2} Block {3}.",
+        "Text": "Move {0}. You may consume Fire to gain 2 Strength. Deal {1} damage. {2} Gain {3} Block.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "2+BLK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Channel Fire. Block {1}.",
+        "Text": "Move {0}. Channel Fire. Gain {1} Block.",
         "Values": ["3+MOV", "3+BLK"]
       }
     ],
@@ -796,7 +796,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Consume Electricity. Range 5. Deal {0} Damage. Deal 1 less Damage to another enemy within range 1 of the last target. Repeat until no new targets are available. Move {1}",
+        "Text": "Consume Electricity. Range 5. Deal {0} Damage. Deal 1 less Damage to another enemy within range 1 of the last target. Repeat until no new targets are available. Move {1}.",
         "Values": ["-1+DMG", "2+MOV"]
       },
       {
@@ -844,7 +844,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain 3 Evasive. When evading, inflict 1 Dazed to the attacker. Channel Air.",
+        "Text": "Move {0}. Gain 3 Evasive. Until your next turn, when evading, inflict 1 Dazed to the attacker. Channel Air.",
         "Values": ["5+MOV"]
       },
       {
@@ -861,7 +861,7 @@
       },
       {
         "Name": "Blow",
-        "Text": "Start of your turn: Move {0}. If Air is Channeled, Radius 2. Deal {1} damage to all enemies.",
+        "Text": "Start of your turn: Move {0}. If Air is Channeled, Radius 2 - deal {1} damage to all enemies.",
         "Values": ["1+MOV", "1+TIR"]
       }
     ],
@@ -941,7 +941,7 @@
     "Passives": [
       {
         "Name": "Duel",
-        "Text": "The last character attacked by Duelist is engaged in a duel with it. Enemies engaged in a duel deal and take half damage from other characters. While the duelist is engaged in a duel, it resists all damage from characters it's not dueling.",
+        "Text": "The last character attacked by Duelist is dueling with it. Enemies engaged in a duel deal and take half damage from characters other than the one they dueling. While the duelist is dueling, it resists all damage from characters it's not dueling.",
         "Values": []
       }
     ],
@@ -956,17 +956,17 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {2} Inflict {1} Pulse. Move {3}. Channel Light",
+        "Text": "Deal {0} Damage. {2} Inflict {1} Pulse. Move {3}. Channel Light.",
         "Values": ["1+DMG", "1+TIR", "PSTATK", "3+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Radius 3. Allies gain {1} Barrier. Inflict {2} Pulse. Enemies may not draw line of sight further than their Pulse value until the end of their turn.",
+        "Text": "Move {0}. Radius 3 - Allies gain {1} Barrier. Inflict {2} Pulse. Enemies may not draw line of sight further than their Pulse value until the end of their turn.",
         "Values": ["3+MOV", "DEF+TIR", "OFF+TIR+1"]
       },
       {
         "Name": "Far",
-        "Text": "Teleport to be adjacent to an ally. That ally gains {0} Block. You may consume Light. If you do, Radius 5 - Inflict {1} Pulse.",
+        "Text": "Teleport to be adjacent to an ally. That ally gains {0} Block. You may consume Light. If you do, Radius 5 - inflict {1} Pulse.",
         "Values": ["1+BLK", "DMG+1"]
       },
       {
@@ -1066,7 +1066,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 2 - Create a Shade. Each shade deals {1} damage.",
+        "Text": "Move {0}. Range 2 - Create a Shade. Each Shade deals {1} damage.",
         "Values": ["2+MOV", "Math.round(DMG/2)"]
       },
       {
@@ -1078,7 +1078,7 @@
     "Passives": [
       {
         "Name": "Knives in the Shadow",
-        "Text": "Whenever a shade dies, Radius 1 - it deals {0} damage.",
+        "Text": "Whenever a Shade dies, Radius 1 - it deals {0} damage.",
         "Values": ["Math.round(DMG/2)"]
       },
       {
@@ -1178,7 +1178,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Consume Fire or Ice. Range 5. Target ally and all characters within Radius 3 take {1} damage of the consumed element. If Fire was consumed, inflict {2} Burn to each enemy. If Ice was consumed, each ally gains {3} Block.",
+        "Text": "Move {0}. Consume Fire and/or Ice. Range 5, Burst 3 - All characters take {1} damage of the consumed element. If Fire was consumed, inflict {2} Burn to each enemy. If Ice was consumed, each ally gains {3} Block.",
         "Values": ["4+MOV", "-1+DMG", "TIR+1", "BLK-1"]
       }
     ],
@@ -1249,7 +1249,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range 3 - target gains {1} Block. You may consume Ice or Earth. If you do, create a size 1 obstacle adjacent to the target.",
+        "Text": "Move {0}. Range 3 - target gains {1} Block. You may consume Ice or Earth. If you do, create a size 1 Obstacle adjacent to the target.",
         "Values": ["4+MOV", "BLK"]
       }
     ],
@@ -1278,23 +1278,23 @@
       {
         "Name": "Mobility",
         "Text": "Move {0}. Gain {1} Evasive.",
-        "Values": ["2+MOV", "1+TIR"]
+        "Values": ["3+MOV", "1+TIR"]
       },
       {
         "Name": "Dance",
-        "Text": "Move {0}. An Ally may perform an action.",
+        "Text": "Move {0}. An ally may perform an action.",
         "Values": ["2+MOV"]
       },
       {
         "Name": "Perform",
-        "Text": "Move {0}. Radius 3. Each Ally gains 2 Haste. Gain 1 Evasive.",
+        "Text": "Move {0}. Gain 1 Evasive. Radius 3 - Each ally gains 2 Haste.",
         "Values": ["4+MOV"]
       }
     ],
     "Passives": [
       {
         "Name": "Retaliation",
-        "Text": "After being attacked, any Ally within line of sight may attack the attacker.",
+        "Text": "After being attacked, any ally within line of sight may attack the attacker.",
         "Values": []
       }
     ],
@@ -1333,6 +1333,11 @@
       {
         "Name": "Share virtue",
         "Text": "Radius 5. All Allies gain the benefit of the current Virtue Form.",
+        "Values": []
+      },
+      {
+        "Name": "Virtue Form",
+        "Text": "At the start of combat, choose Diligence, Humility or Temperence. Gain all effects of that passive and none of the others. When changing forms, gain the benefits of the new form and lose the benefits of the others.",
         "Values": []
       },
       {
@@ -1406,7 +1411,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 5 - target reveals cards from the top of their deck until they reveal an attack card, then exiles it. Gain {1} Block.",
+        "Text": "Move {0}. Range 5 - target reveals cards from the top of their deck until they reveal an attack card, then exiles it. Put the other revealed cards into their discard. Gain {1} Block.",
         "Values": ["3+MOV", "1+BLK"]
       },
       {
@@ -1418,7 +1423,7 @@
     "Passives": [
       {
         "Name": "Mortal Screech",
-        "Text": "When Weeper dies, the killer gains {0} Stunned.",
+        "Text": "When the Weeper is defeat, inflict {0} to the character that defeated it.",
         "Values": ["TIR"]
       }
     ],
@@ -1439,7 +1444,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 10. Deal {1} damage. {2} May Consume Earth to gain 1 Ammo.",
+        "Text": "Move {0}. Range 10. Deal {1} damage. {2} May Consume Earth to reload 1.",
         "Values": ["1+MOV", "7+DMG", "PSTATK"]
       },
       {
@@ -1456,7 +1461,7 @@
       },
       {
         "Name": "Big cannon",
-        "Text": "All attacks have Range 15 and require 1 Ammo to use. Starts with 1 Ammo.",
+        "Text": "All attacks have Range 15 and require 1 Ammo to use. Starts with 1 Ammo and max Ammo 1.",
         "Values": []
       }
     ],
@@ -1655,7 +1660,7 @@
       },
       {
         "Name": "Reaction",
-        "Text": "An enemy attacks. You and all allies within Range 3 gain {0} Block. You may consume Light and/or Ice. If Light is consumed, after this attack, inflict {1} Pulse on the attacker and they may only draw line of sight to adjacent spaces this turn. If Ice is consumed, you gain {2} Block and inflict {3} Slow to the attacker.",
+        "Text": "An enemy attacks you or an ally within Radius 3. Radius 3 - you and all allies gain {0} Block. You may consume Light and/or Ice. If Light is consumed, after this attack, inflict {1} Pulse on the attacker and they may only draw line of sight to adjacent spaces this turn. If Ice is consumed, you gain {2} Block and inflict {3} Slow to the attacker.",
         "Values": ["Math.round(BLK/2)", "TIR+1", "BLK-1", "TIR"]
       }
     ],
@@ -1753,7 +1758,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} You may consume Air or Light. If Air was consumed, deal {1} Damage. {2} to an enemy within Range 3 of the target, then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier. Reduce any number of conditions on both of you by 2.",
+        "Text": "Move {0}. Deal {1} Damage. {2} You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {1} Damage. {2} Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier and reduce any number of conditions on both of you by 2.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "BLK"]
       },
       {
