@@ -2018,7 +2018,7 @@
       {
         "Name": "Hidden from Gods' sight",
         "Text": "As long as there are {0} or fewer elements channeled, the Wretch has resistance to all damage.",
-        "Values": ["OFF+TIR"]
+        "Values": ["OFF+TIR-1"]
       },
       {
         "Name": "Snuff their gifts",
