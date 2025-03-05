@@ -2011,7 +2011,7 @@
       {
         "Name": "Far",
         "Text": "Move {0}. Gain {1} Evasive. Gain -1 Evasive for each channeled element.",
-        "Values": ["5+MOV", "OFF+TIR"]
+        "Values": ["5+MOV", "DEF+TIR"]
       }
     ],
     "Passives": [
