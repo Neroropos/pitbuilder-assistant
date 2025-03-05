@@ -2000,8 +2000,8 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Inflict {2} Bleed. Inflict -1 Bleed for each channeled element.",
-        "Values": ["DMG+1", "PSTATK", "OFF+TIR"]
+        "Text": "Deal {0} damage. {1} Inflict {2} Bleed. Inflict -1 Bleed for each channeled element. Move {3}.",
+        "Values": ["DMG+1", "PSTATK", "OFF+TIR", "MOV+3"]
       },
       {
         "Name": "Close",
