@@ -47,7 +47,7 @@
     "Name": "Glimpser",
     "DefScaling": 0,
     "OffScaling": 0,
-    "Challenge": 1,
+    "Challenge": 0,
     "ChallengeMult": 1,
     "HPMod": 2,
     "MoveMod": 0,
@@ -73,7 +73,7 @@
     "Name": "Demonic",
     "DefScaling": 0,
     "OffScaling": 0,
-    "Challenge": 1,
+    "Challenge": 0,
     "ChallengeMult": 1,
     "HPMod": 0,
     "MoveMod": 0,
@@ -101,7 +101,7 @@
     "Name": "Divine",
     "DefScaling": 0,
     "OffScaling": 0,
-    "Challenge": 1,
+    "Challenge": 0,
     "ChallengeMult": 1,
     "HPMod": 1,
     "MoveMod": 0,
@@ -123,7 +123,7 @@
     "Name": "Imperial",
     "DefScaling": 0,
     "OffScaling": 0,
-    "Challenge": 1,
+    "Challenge": 0,
     "ChallengeMult": 1,
     "HPMod": 0,
     "MoveMod": 0,
@@ -291,7 +291,7 @@
     "DmgMod": 0,
     "Actions": [
       {
-        "Name": "Stone spires",
+        "Name": "Ice spires",
         "Text": "{0} times, Range 5 - create a size 1 Obstacle. Then, inflict 1 Slow to each enemy adjacent to one of the obstacles. Channel Ice.",
         "Values": ["TIR"]
       }
@@ -726,7 +726,7 @@
     "Name": "Bestial",
     "DefScaling": -1,
     "OffScaling": 0,
-    "Challenge": 1,
+    "Challenge": 0,
     "ChallengeMult": 1,
     "HPMod": 15,
     "MoveMod": 1,
