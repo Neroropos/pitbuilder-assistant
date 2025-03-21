@@ -1632,5 +1632,29 @@
     "Cost": 1,
     "Types": ["Stance", "Barrier"],
     "Text": "Stance. Radius 1 - At the start of your turn, each friendly character gains 1 Barrier."
+  },
+  {
+    "Name": "Imperial heritage",
+    "Cost": 1,
+    "Types": ["Movement", "Attack", "Defend", "Heritage", "Ranged"],
+    "Text": "Range 3 - Target may perform a Strike, Defend or Maneuver."
+  },
+  {
+    "Name": "Demonic heritage",
+    "Cost": 0,
+    "Types": ["Lifeloss", "Draw", "Energy", "Heritage"],
+    "Text": "Lose 2 life. Draw 1 card. Gain 1 Energy. Channel your element."
+  },
+  {
+    "Name": "Divine heritage",
+    "Cost": 1,
+    "Types": ["Barrier", "Strength", "Haste", "Heritage", "Ranged"],
+    "Text": " Range 3 - Target gains 3 Barrier, 1 Haste and 1 Strength. Channel your element."
+  },
+  {
+    "Name": "Primal heritage",
+    "Cost": 1,
+    "Types": ["Ranged", "Obstacle", "Attack", "Heritage"],
+    "Text": "Range 5 - Place a size 1 Obstacle. Deal 2d6 damage of your element to each enemy adjacent to the obstacle. Channel your element."
   }
 ]

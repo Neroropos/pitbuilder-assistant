@@ -1,4 +1,53 @@
 import { GetCard, PlayerCard } from './cardController'
+import backgroundsJson from '../assets/Backgrounds.json' assert { type: 'json' }
+import heritageJson from '../assets/Heritages.json' assert { type: 'json' }
+
+export function GetHeritages() {
+  const heritages: Heritage[] = []
+  const heritagesFromJson = heritageJson as unknown as Heritage[]
+  heritagesFromJson.forEach((element) => {
+    heritages.push(new Heritage(element))
+  })
+  return heritages
+}
+
+export function GetBackgrounds() {
+  const backgrounds: Background[] = []
+  const backgroundsFromJson = backgroundsJson as unknown as Background[]
+  backgroundsFromJson.forEach((element) => {
+    backgrounds.push(new Background(element))
+  })
+  return backgrounds
+}
+
+export class Heritage {
+  Name: string = ''
+  Elements: string[] = []
+  CardName: string = ''
+  Card: PlayerCard | null = null
+
+  public constructor(init?: Partial<Heritage>) {
+    Object.assign(this, init)
+    this.Card = GetCard(this.CardName)
+  }
+}
+
+export class Background {
+  Name: string = ''
+  Stats: string[] = []
+  Skills: string[] = []
+  Talent: string = ''
+  CardNames: string[] = []
+  Cards: PlayerCard[] = []
+  StartingBoost: string = ''
+
+  public constructor(init?: Partial<Heritage>) {
+    Object.assign(this, init)
+    this.CardNames.forEach((cardName) => {
+      this.Cards.push(GetCard(cardName))
+    })
+  }
+}
 
 export class PlayerCharacter {
   Name: string = ''
@@ -20,7 +69,7 @@ export class PlayerCharacter {
   Element: string | null = null
   Background: string | null = null
   MaxHP: number = 10
-  Heritage: string | null = null
+  Heritage: Heritage | null = null
   CardsInDeck: PlayerCard[] = []
   public constructor(init?: Partial<PlayerCharacter>) {
     Object.assign(this, init)

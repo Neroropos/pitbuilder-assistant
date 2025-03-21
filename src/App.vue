@@ -6,6 +6,7 @@ import TabPanels from 'primevue/tabpanels'
 import TabPanel from 'primevue/tabpanel'
 import CombatTracker from './components/CombatTracker.vue'
 import RandomCardGenerator from './components/RandomCardGenerator.vue'
+import ThePlayer from './components/ThePlayer.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import RandomCardGenerator from './components/RandomCardGenerator.vue'
     <TabList>
       <Tab value="0">Enemies</Tab>
       <Tab value="1">Cards</Tab>
+      <Tab value="2">Player</Tab>
     </TabList>
 
     <TabPanels>
@@ -20,6 +22,7 @@ import RandomCardGenerator from './components/RandomCardGenerator.vue'
         <CombatTracker></CombatTracker>
       </TabPanel>
       <TabPanel value="1"> <RandomCardGenerator></RandomCardGenerator></TabPanel>
+      <TabPanel value="2"> <ThePlayer></ThePlayer></TabPanel>
     </TabPanels>
   </Tabs>
 </template>

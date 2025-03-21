@@ -1,0 +1,22 @@
+[
+  {
+    "Name": "Imperial",
+    "Elements": ["Fire", "Earth", "Air"],
+    "CardName": "Imperial heritage"
+  },
+  {
+    "Name": "Divine",
+    "Elements": ["Water", "Nature", "Air", "Light"],
+    "CardName": "Divine heritage"
+  },
+  {
+    "Name": "Demonic",
+    "Elements": ["Fire", "Ice", "Lightning", "Dark"],
+    "CardName": "Demonic heritage"
+  },
+  {
+    "Name": "Primal",
+    "Elements": ["Fire", "Water", "Air", "Earth", "Lightning", "Nature", "Ice"],
+    "CardName": "Primal heritage"
+  }
+]

@@ -24,7 +24,7 @@ export function GetCardList(
 }
 export function GetCard(name: string) {
   const card = GetCards().filter((c) => c.Name == name)
-  if (card.length != 1) throw new ReferenceError()
+  if (card.length != 1) return new PlayerCard()
   else return card[0]
 }
 export function FindCardsByName(searchString: string) {

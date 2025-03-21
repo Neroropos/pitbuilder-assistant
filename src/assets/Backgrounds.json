@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Adept",
+    "Stats": ["Shadow", "Brain"],
+    "Skills": ["Spells", "Hymns"],
+    "Talent": "Cunning",
+    "CardNames": ["Study", "Mana darts"],
+    "StartingBoost": "Add Mana Potion to your deck."
+  },
+  {
+    "Name": "Criminal",
+    "Stats": ["Shadow", "Edge"],
+    "Skills": ["Streets", "Tools"],
+    "Talent": "Fleet",
+    "CardNames": ["Sneak", "Extort"],
+    "StartingBoost": "Gain 2 money."
+  },
+  {
+    "Name": "Hermit",
+    "Stats": ["Edge", "Brain"],
+    "Skills": ["Bodies", "Weeds"],
+    "Talent": "Keen",
+    "CardNames": ["Cultivate", "Meditate"],
+    "StartingBoost": "Gain Foresight Amulet."
+  },
+  {
+    "Name": "Noble",
+    "Stats": ["Shadow", "Bright"],
+    "Skills": ["Courts", "Hymns"],
+    "Talent": "Exploitative",
+    "CardNames": ["Regal strike", "Inspire"],
+    "StartingBoost": "Start with 3 fullness"
+  },
+  {
+    "Name": "Priest",
+    "Stats": ["Bright", "Brain"],
+    "Skills": ["Bodies", "Hymns"],
+    "Talent": "Inspiring",
+    "CardNames": ["Bless", "Damn"],
+    "StartingBoost": "Gain Priestly Garb."
+  },
+  {
+    "Name": "Soldier",
+    "Stats": ["Force", "Edge"],
+    "Skills": ["Battles", "Bodies"],
+    "Talent": "Weapon Adept",
+    "CardNames": ["Parry", "Power blow"],
+    "StartingBoost": "Add Strength Potion to your deck."
+  }
+]
