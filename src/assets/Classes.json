@@ -7,7 +7,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {2} Gain {1} Block.",
+        "Text": "Deal {0} damage. {2} Gain {1} Block.",
         "Values": ["1+DMG", "BLK-1", "PSTATK"]
       },
       {
@@ -22,7 +22,7 @@
       },
       {
         "Name": "Interrupt",
-        "Text": "Reaction - Enemy within Range 1 moves. Deal {0} Damage to them. {1}",
+        "Text": "Reaction - Enemy within Range 1 moves. Deal {0} damage to them. {1}",
         "Values": ["1+DMG", "PSTATK"]
       }
     ],
@@ -38,12 +38,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1} Inflict 2 Dazed and 2 Slowed.",
+        "Text": "Deal {0} damage. {1} Inflict 2 Dazed and 2 Slowed.",
         "Values": ["1+DMG", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} Inflict 1 Dazed.",
+        "Text": "Move {0}. Deal {1} damage. {2} Inflict 1 Dazed.",
         "Values": ["2+MOV", "-1+DMG", "PSTATK"]
       },
       {
@@ -107,12 +107,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {2} Gain {1} Block.",
+        "Text": "Deal {0} damage. {2} Gain {1} Block.",
         "Values": ["1+DMG", "BLK", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} Gain {3} Block.",
+        "Text": "Move {0}. Deal {1} damage. {2} Gain {3} Block.",
         "Values": ["3+MOV", "1+DMG", "PSTATK", "BLK-1"]
       },
       {
@@ -144,12 +144,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1} Inflict 1 Vulnerable.",
+        "Text": "Deal {0} damage. {1} Inflict 1 Vulnerable.",
         "Values": ["1+DMG", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2}",
+        "Text": "Move {0}. Deal {1} damage. {2}",
         "Values": ["3+MOV", "-1+DMG", "PSTATK"]
       },
       {
@@ -159,7 +159,7 @@
       },
       {
         "Name": "Interrupt",
-        "Text": "Reaction - Enemy within Range 1 moves. Deal {0} Damage to them. {1}",
+        "Text": "Reaction - Enemy within Range 1 moves. Deal {0} damage to them. {1}",
         "Values": ["1+DMG", "PSTATK"]
       }
     ],
@@ -180,12 +180,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Deal {0} Damage. {1}",
+        "Text": "Deal {0} damage. {1}",
         "Values": ["1+DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Range +{2}. Deal {0} Damage. {1} Inflict 1 Slow.",
+        "Text": "Range +{2}. Deal {0} damage. {1} Inflict 1 Slow.",
         "Values": ["-1+DMG", "PSTATK", "1+TIR"]
       }
     ],
@@ -212,12 +212,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Burst 1. Deal {0} Damage. {1}",
+        "Text": "Burst 1. Deal {0} damage. {1}",
         "Values": ["1+DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range +{3}. Deal {1} Damage to up to two targets. {2}",
+        "Text": "Move {0}. Range +{3}. Deal {1} damage to up to two targets. {2}",
         "Values": ["1+MOV", "-1+DMG", "PSTATK", "1+TIR"]
       }
     ],
@@ -229,7 +229,7 @@
       },
       {
         "Name": "Use elements",
-        "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
+        "Text": "May consume an element when attacking. The attack deals that element's damage. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
         "Values": ["OFF", "BLK"]
       }
     ],
@@ -249,12 +249,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2}",
+        "Text": "Move {0}. Deal {1} damage. {2}",
         "Values": ["1+MOV", "1+DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Choose a target in range. At the start of your next turn, if the target is in range, deal {0} Damage. {1}",
+        "Text": "Choose a target in range. At the start of your next turn, if the target is in range, deal {0} damage. {1}",
         "Values": ["(1+DMG)*2", "PSTATK"]
       }
     ],
@@ -308,7 +308,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {0}. Deal {1} Damage. {2} Target becomes Marked.",
+        "Text": "Move {0}. Deal {1} damage. {2} Target becomes Marked.",
         "Values": ["1+MOV", "1+DMG", "PSTATK"]
       },
       {
@@ -325,7 +325,7 @@
     "Passives": [
       {
         "Name": "Gun",
-        "Text": "All attacks may gain Range {0}. If they do, they cost 1 Ammo and they deal +2 Damage. Starts combat with 3 Ammo and max Ammo 3.",
+        "Text": "All attacks may gain Range {0}. If they do, they cost 1 Ammo and they deal +2 damage. Starts combat with 3 Ammo and max Ammo 3.",
         "Values": ["3+TIR*2"]
       },
       {
@@ -367,7 +367,7 @@
       },
       {
         "Name": "Binding Circle",
-        "Text": "At the start of their turn, inflict 1 Slowed and deal {0} Damage to each enemy within this Circle.",
+        "Text": "At the start of their turn, inflict 1 Slowed and deal {0} damage to each enemy within this Circle.",
         "Values": ["DMG"]
       },
       {
@@ -397,7 +397,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} Inflict {1} Bleed.",
+        "Text": "Move {0}. Deal {1} damage. {2} Inflict {1} Bleed.",
         "Values": ["2+MOV", "DMG", "PSTATK"]
       },
       {
@@ -424,12 +424,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1} Inflict {3} Bleed. Exile a random card from the target's hand, deck and discard. Move {2}.",
+        "Text": "Deal {0} damage. {1} Inflict {3} Bleed. Exile a random card from the target's hand, deck and discard. Move {2}.",
         "Values": ["1+DMG", "PSTATK", "2+MOV", "DMG"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 2 - Deal {1} Damage. {2} Inflict {3} Bleed. Exile a random card from the target's hand.",
+        "Text": "Move {0}. Range 2 - Deal {1} damage. {2} Inflict {3} Bleed. Exile a random card from the target's hand.",
         "Values": ["4+MOV", "DMG", "PSTATK", "DMG"]
       },
       {
@@ -450,12 +450,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1} Move {2}.",
+        "Text": "Deal {0} damage. {1} Move {2}.",
         "Values": ["DMG", "PSTATK", "5+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 3 - Deal {1} Damage. {2} Inflict {3} Poison.",
+        "Text": "Move {0}. Range 3 - Deal {1} damage. {2} Inflict {3} Poison.",
         "Values": ["3+MOV", "-2+DMG", "PSTATK", "TIR*2"]
       },
       {
@@ -487,12 +487,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1} Inflict 3 Slow. Move {2}.",
+        "Text": "Deal {0} damage. {1} Inflict 3 Slow. Move {2}.",
         "Values": ["1+DMG", "PSTATK", "4+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. Deal 1 extra Damage and Inflict 1 Dazed for every 2 spaces moved in a straight line. {2}",
+        "Text": "Move {0}. Deal {1} damage. Deal 1 extra damage and Inflict 1 Dazed for every 2 spaces moved in a straight line. {2}",
         "Values": ["6+MOV", "-1+DMG", "PSTATK"]
       },
       {
@@ -513,12 +513,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. Inflict 1 Feeble. {1} Move {2}.",
+        "Text": "Deal {0} damage. Inflict 1 Feeble. {1} Move {2}.",
         "Values": ["1+DMG", "PSTATK", "3+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} Move {0}.",
+        "Text": "Move {0}. Deal {1} damage. {2} Move {0}.",
         "Values": ["2+MOV", "1+DMG", "PSTATK"]
       },
       {
@@ -588,7 +588,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 5 - Deal {1} Damage. {2} Place a Chaining Pillar next to the target.",
+        "Text": "Move {0}. Range 5 - Deal {1} damage. {2} Place a Chaining Pillar next to the target.",
         "Values": ["3+MOV", "1+DMG", "PSTATK"]
       },
       {
@@ -610,7 +610,7 @@
       },
       {
         "Name": "Sapping Pillar",
-        "Text": "Radius 3 - All enemies deal 3 less Damage.",
+        "Text": "Radius 3 - All enemies deal 3 less damage.",
         "Values": []
       },
       {
@@ -796,17 +796,17 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Consume Electricity. Range 5. Deal {0} Damage. Deal 1 less Damage to another enemy within range 1 of the last target. Repeat until no new targets are available. Move {1}.",
-        "Values": ["-1+DMG", "2+MOV"]
+        "Text": "Consume Electricity. Range 5. Deal {0} Lightning damage. {2} Deal 1 less damage to another enemy within range 1 of the last target. Repeat until no new targets are available. Move {1}.",
+        "Values": ["-1+DMG", "2+MOV", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 5. Deal {1} Damage. {2} Inflict 1 Stunned. ",
+        "Text": "Move {0}. Range 5. Deal {1} damage. {2} Inflict 1 Stunned. ",
         "Values": ["3+MOV", "1+DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Deal {1} Damage. {2} Move {0}. Channel Electricity.",
+        "Text": "Move {0}. Deal {1} damage. {2} Move {0}. Channel Electricity.",
         "Values": ["2+MOV", "1+DMG", "PSTATK"]
       }
     ],
@@ -834,7 +834,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. Move {1}. {2} Repeat 2 times.",
+        "Text": "Deal {0} damage. Move {1}. {2} Repeat 2 times.",
         "Values": ["3+DMG", "1+MOV", "PSTATK"]
       },
       {
@@ -877,7 +877,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {3} Inflict {1} Bleed and {1} Dazed. Move {2}.",
+        "Text": "Deal {0} damage. {3} Inflict {1} Bleed and {1} Dazed. Move {2}.",
         "Values": ["1+DMG", "DMG", "4+MOV", "PSTATK"]
       },
       {
@@ -919,7 +919,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {3}. Deal {0} Damage. {2} Inflict {1} Bleed and gain {4} Counter.",
+        "Text": "Move {3}. Deal {0} damage. {2} Inflict {1} Bleed and gain {4} Counter.",
         "Values": ["1+DMG", "1+TIR", "PSTATK", "1+MOV", "DEF"]
       },
       {
@@ -956,7 +956,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {2} Inflict {1} Pulse. Move {3}. Channel Light.",
+        "Text": "Deal {0} damage. {2} Inflict {1} Pulse. Move {3}. Channel Light.",
         "Values": ["1+DMG", "1+TIR", "PSTATK", "3+MOV"]
       },
       {
@@ -1061,7 +1061,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. Teleport {1}. Create a Shade in your previous location.",
+        "Text": "Deal {0} damage. Teleport {1}. Create a Shade in your previous location.",
         "Values": ["1+DMG", "3+MOV"]
       },
       {
@@ -1115,7 +1115,7 @@
     "Passives": [
       {
         "Name": "Use elements",
-        "Text": "May consume an element when attacking. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{1} Radius. Ice, Earth, Nature: Gain {2} Block.",
+        "Text": "May consume an element when attacking. The attack deals that element's damage. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{1} Radius. Ice, Earth, Nature: Gain {2} Block.",
         "Values": ["Math.round(DMG/2)", "TIR", "BLK"]
       }
     ],
@@ -1136,7 +1136,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Gain {2} Evasive. You may consume Light and/or Dark: If Light was consumed, deal {0} Damage and the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, deal {0} Damage and the target discards {2} cards.",
+        "Text": "Deal {0} damage. {1} Gain {2} Evasive. You may consume Light and/or Dark: If Light was consumed, deal {0} Light damage and the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, deal {0} Dark damage and the target discards {2} cards.",
         "Values": ["0+DMG", "PSTATK", "TIR"]
       },
       {
@@ -1477,12 +1477,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Gain {0} Block. Radius 3 - Deal {1} Damage. {2} Inflict {3} Slow.",
+        "Text": "Gain {0} Block. Radius 3 - Deal {1} damage. {2} Inflict {3} Slow.",
         "Values": ["1+BLK", "5+DMG", "PSTATK", "OFF"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Gain {1} Block. Deal {2} Damage. {3} Channel Ice.",
+        "Text": "Move {0}. Gain {1} Block. Deal {2} damage. {3} Channel Ice.",
         "Values": ["2+MOV", "1+BLK", "3+DMG", "PSTATK"]
       },
       {
@@ -1553,12 +1553,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1} At the start of your next turn, if the target is adjacent to you and bloodied, inflict 1 Wound.",
+        "Text": "Deal {0} damage. {1} At the start of your next turn, if the target is adjacent to you and bloodied, inflict 1 Wound.",
         "Values": ["2+DMG", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 5 - target enemy maneuvers to be as close as possible to you. If it becomes adjacent to you, inflict {1} Slow and deal {2} Damage. {3}",
+        "Text": "Move {0}. Range 5 - target enemy maneuvers to be as close as possible to you. If it becomes adjacent to you, inflict {1} Slow and deal {2} damage. {3}",
         "Values": ["1+MOV", "1+TIR", "2+DMG", "PSTATK"]
       },
       {
@@ -1683,12 +1683,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1} Until the end of the target's next turn, their cards cost 1 more to play. Move {2}.",
+        "Text": "Deal {0} damage. {1} Until the end of the target's next turn, their cards cost 1 more to play. Move {2}.",
         "Values": ["1+DMG", "PSTATK", "2+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} You may consume Air and/or Ice. If Air is consumed, the target discards cards until they have 3 in hand. If Ice was consumed, inflict {3} Slow and until the end of their next turn their cards cost 1 more to play for each Slow they have.",
+        "Text": "Move {0}. Deal {1} damage. {2} You may consume Air and/or Ice. If Air is consumed, the target discards cards until they have 3 in hand. If Ice was consumed, inflict {3} Slow and until the end of their next turn their cards cost 1 more to play for each Slow they have.",
         "Values": ["3+MOV", "DMG-2", "PSTATK", "TIR"]
       },
       {
@@ -1698,7 +1698,7 @@
       },
       {
         "Name": "Reaction",
-        "Text": "A character within Range 3 plays their third card this turn. Move 2. Then, if you are adjacent to them, deal 5 Damage to them and their cards cost 1 more to play this turn.",
+        "Text": "A character within Range 3 plays their third card this turn. Move 2. Then, if you are adjacent to them, deal 5 damage to them and their cards cost 1 more to play this turn.",
         "Values": ["Math.round(BLK/2)", "TIR+1", "BLK-1", "TIR"]
       }
     ],
@@ -1721,17 +1721,17 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Damage. {1}",
+        "Text": "Deal {0} damage. {1}",
         "Values": ["1+DMG", "PSTATK"]
       },
       {
         "Name": "Charge",
-        "Text": "Move exactly {0}. Deal {1} Damage. {2}",
+        "Text": "Move exactly {0}. Deal {1} damage. {2}",
         "Values": ["4+MOV", "DMG+1", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2}",
+        "Text": "Move {0}. Deal {1} damage. {2}",
         "Values": ["2+MOV", "DMG-1", "PSTATK"]
       },
       {
@@ -1753,12 +1753,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Line 4. Deal {0} Damage. {1} Move to the end of the line. Channel Air.",
+        "Text": "Line 4. Deal {0} damage. {1} Move to the end of the line. Channel Air.",
         "Values": ["1+DMG", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Damage. {2} You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {1} Damage. {2} Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier and reduce any number of conditions on both of you by 2.",
+        "Text": "Move {0}. Deal {1} damage. {2} You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {1} Air damage. {2} Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier and reduce any number of conditions on both of you by 2.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "BLK"]
       },
       {
@@ -1786,7 +1786,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Gain {2} Block. Deal {0} Damage. {1} Inflict 1 Slow.",
+        "Text": "Gain {2} Block. Deal {0} damage. {1} Inflict 1 Slow.",
         "Values": ["DMG", "PSTATK", "BLK+2"]
       },
       {
@@ -1902,7 +1902,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Line 2. Deal {0} Damage. {1} Move {2}.",
+        "Text": "Line 2. Deal {0} damage. {1} Move {2}.",
         "Values": ["DMG", "PSTATK", "MOV+2"]
       },
       {
@@ -1940,7 +1940,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Line 3. Deal {0} Damage. {1} Consume Water to deal another {2} damage to each target and Push 2 in a random direction.",
+        "Text": "Line 3. Deal {0} damage. {1} Consume Water to deal another {2} damage to each target and Push 2 in a random direction.",
         "Values": ["DMG+1", "PSTATK", "Math.round(DMG/2)"]
       },
       {

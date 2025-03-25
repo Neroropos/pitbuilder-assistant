@@ -21,7 +21,7 @@
     "Name": "Wind jump",
     "Cost": 1,
     "Types": ["Air", "Spell", "Movement", "Ranged", "Push"],
-    "Text": "Range 5. Target ally is removed from play. They appear at the start of the next round at any space within Range 5 from you. You may Consume Air to Push 1 all enemies adjacent to them when they appear."
+    "Text": "Range 5. Target ally is removed from play. They appear at the start of the next round at any space within Range 5 from you. You may consume Air to Push 1 all enemies adjacent to them when they appear."
   },
   {
     "Name": "Blow off",
@@ -33,7 +33,7 @@
     "Name": "Air blade",
     "Cost": 1,
     "Types": ["Air", "Spell", "Attack", "Bleed", "Ranged"],
-    "Text": "Consume Air. Range 4. Strike. Inflict 2 Bleed."
+    "Text": "Consume Air. Range 4 - Strike, dealing Air damage. Inflict 2 Bleed."
   },
   {
     "Name": "Tempest strike",
@@ -63,7 +63,7 @@
     "Name": "Draining touch",
     "Cost": 1,
     "Types": ["Dark", "Spell", "Attack", "Lifegain"],
-    "Text": "Deal 1d6 damage. Consume Dark to gain life equal to damage dealt. Exile."
+    "Text": "Deal 1d6 Dark damage. Consume Dark to gain life equal to damage dealt. Exile."
   },
   {
     "Name": "Release pain",
@@ -189,7 +189,7 @@
     "Name": "Frost beam",
     "Cost": 2,
     "Types": ["Ice", "Spell", "Attack", "Area"],
-    "Text": "Consume Ice. Line 4. Deal 3d6 damage. Create difficult terrain."
+    "Text": "Consume Ice. Line 4. Deal 3d6 Ice damage. Create difficult terrain."
   },
   {
     "Name": "Skating",
@@ -237,7 +237,7 @@
     "Name": "Smite",
     "Cost": 1,
     "Types": ["Light", "Spell", "Ranged", "Attack", "Pulse"],
-    "Text": "Consume Light. Range 10. Ignores line of sight. Deal 2d6 light damage. Inflict Pulse 2."
+    "Text": "Consume Light. Range 10. Ignores line of sight. Deal 2d6 :ight damage. Inflict Pulse 2."
   },
   {
     "Name": "Gleaming strike",
@@ -291,7 +291,7 @@
     "Name": "Lightning bolt",
     "Cost": 2,
     "Types": ["Lightning", "Spell", "Area", "Attack"],
-    "Text": "Consume Lightning. Line 5. Affects allies and enemies. Deal 4d6 damage and inflict 3 Sundered."
+    "Text": "Consume Lightning. Line 5. Affects allies and enemies. Deal 4d6 Lightning damage and inflict 3 Sundered."
   },
   {
     "Name": "Venomous strike",
@@ -471,19 +471,19 @@
     "Name": "Creeping tendrils",
     "Cost": 2,
     "Types": ["Ranged", "Attack", "Nature", "Dark", "Lifegain"],
-    "Text": "Range 5. Deal 1d6 damage to up to 3 targets. You may consume Nature or Dark. If you do, recover half of the damage roll health."
+    "Text": "Range 5. Deal 1d6 Nature or Dark damage to up to 3 targets. You may consume Nature or Dark. If you do, recover half of the damage roll health."
   },
   {
     "Name": "Blitz",
     "Cost": 1,
     "Types": ["Movement", "Attack", "Air", "Lightning"],
-    "Text": "Line 5. Deal 1d6 damage to each target moved through.. You may consume Lightning or Air. Move to the end of the line."
+    "Text": "Line 5. Deal 1d6 Air or Lightning damage to each target moved through. You may consume Air or Lightning. Move to the end of the line."
   },
   {
     "Name": "Bursting",
     "Cost": 1,
     "Types": ["Area", "Attack", "Counter", "Fire", "Lightning"],
-    "Text": "Consume Lightning or Fire. Radius 1. Deal 1d6 damage. Gain 2 Counter."
+    "Text": "Consume Lightning or Fire. Radius 1. Deal 1d6 damage of the consumed element. Gain 2 Counter."
   },
   {
     "Name": "Mass expulsion",
@@ -710,19 +710,19 @@
     "Name": "Empowering Blow",
     "Cost": 2,
     "Types": ["Attack", "Area", "Buff", "Empower"],
-    "Text": "Strike. Radius 3. Each ally gains 1 Empowered. If you defeat the enemy, they gain another 1 Empowered."
+    "Text": "Strike. Radius 3 - Each ally gains 1 Empowered. If you defeat the enemy, they gain another 1 Empowered."
   },
   {
     "Name": "Black hole",
     "Cost": 3,
     "Types": ["Ranged", "Area"],
-    "Text": " Range 6, Burst 3. All elements are consumed. Pull all targets as close to the center as possible. Deal 5d6 damage. Gain 1 Nihil. Exile."
+    "Text": "Range 6, Burst 3 - All elements are consumed. Pull all targets as close to the center as possible. Deal 5d6 damage. Gain 1 Nihil. Exile."
   },
   {
     "Name": "Cover",
     "Cost": 0,
     "Types": ["Reaction"],
-    "Text": "Reaction - an ally within range 3 is attacked. Swap spaces with that ally and take the attack in their place."
+    "Text": "Reaction - an ally within Range 3 is attacked. Swap spaces with that ally and take the attack in their place."
   },
   {
     "Name": "Calling the Doves down to the sinners and allowing the bliss to flow",
@@ -871,7 +871,7 @@
     "Name": "Elementor",
     "Cost": 1,
     "Types": ["Stance", "Buff", "Ranged"],
-    "Text": "Stance. Whenever you consume an element, you may have an ally within range 3 deal +1d6 damage and their damage is of that type."
+    "Text": "Stance. Whenever you consume an element, you may have an ally within range 3 deal +1d6 damage and their damage is of the consumed element's type."
   },
   {
     "Name": "Guard",
@@ -907,7 +907,7 @@
     "Name": "Summon Golem",
     "Cost": 3,
     "Types": ["Summon", "Permanent", "Ice", "Earth"],
-    "Text": "Permanent. Range 3 - Summon a Golem (15 HP, Size 2, Immune to Poison and Bleed). It deals 2d6 damage. Once per turn, you may pay 1 Energy. When you do, the summoned Golem moves 2, then deals 2d6 damage and you may consume Ice or Earth to have the Golem gain 5 Block. When the Golem is defeated, Exile this."
+    "Text": "Permanent. Range 3 - Summon a Golem (15 HP, Size 2, Immune to Poison and Bleed). It deals 2d6 damage. Once per turn, you may pay 1 Energy. When you do, the summoned Golem moves 2, then deals 2d6 damage and you may consume Ice or Earth to have the Golem gain 5 Block. When the Golem is defeated, exile this card."
   },
   {
     "Name": "Guide creation",
@@ -919,7 +919,7 @@
     "Name": "Summon Elemental",
     "Cost": 3,
     "Types": ["Summon", "Fire", "Lightning"],
-    "Text": "Permanent. Consume Fire or Lightning. Range 3 - Summon an Elemental (8 HP). At the end of your turn it moves 4, gains 3 Counter and deals 2d6 damage."
+    "Text": "Permanent. Consume Fire or Lightning. Range 3 - Summon an Elemental (8 HP). At the end of your turn it moves 4, gains 3 Counter and deals 2d6 damage of the element that was consumed to play this card."
   },
   {
     "Name": "Barrier potion",
@@ -997,7 +997,7 @@
     "Name": "Stormburst",
     "Cost": 1,
     "Types": ["Attack", "Lightning", "Area", "Sundered"],
-    "Text": "Consume Lightning. Strike. Then, Strike each target that has block within Burst 3 from the target. Inflict 3 Sundered."
+    "Text": "Consume Lightning. Strike. Then, Strike each target that has block within Burst 3 from the target. All damage dealt by this card is Lightning type. Inflict 3 Sundered."
   },
   {
     "Name": "Bloody Strength",
@@ -1081,7 +1081,7 @@
     "Name": "Air run",
     "Cost": 1,
     "Types": ["Movement", "Air", "Area", "Push", "Attack"],
-    "Text": "Maneuver. You may consume Air. If you do, Radius 1 - push 2 and deal 1d6 damage."
+    "Text": "Maneuver. You may consume Air. If you do, Radius 1 - push 2 and deal 1d6 Air damage."
   },
   {
     "Name": "Dark run",
@@ -1099,7 +1099,7 @@
     "Name": "Fire run",
     "Cost": 1,
     "Types": ["Movement", "Fire", "Area"],
-    "Text": "Maneuver. You may consume Fire. If you do, your next attack gains Radius +1 or Burst +1."
+    "Text": "Maneuver. You may consume Fire. If you do, your next attack gains Radius +1 or Burst +1 and deals Fire damage."
   },
   {
     "Name": "Ice run",
@@ -1138,22 +1138,22 @@
     "Text": "Shuffle your discard pile into your deck, draw a card."
   },
   {
-    "Name": "Blacing shield",
+    "Name": "Blazing shield",
     "Cost": 1,
     "Types": ["Defend", "Fire", "Area", "Attack", "Area"],
-    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 damage to that enemy. You may consume Fire to have that attack gain Burst 2."
+    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 Fire damage to that enemy. You may consume Fire to have that attack gain Burst 2."
   },
   {
     "Name": "Frozen shield",
     "Cost": 1,
     "Types": ["Defend", "Ice", "Attack", "Slow"],
-    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 damage to that enemy. You may consume Ice to inflict 3 Slow to that enemy."
+    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 Ice damage to that enemy. You may consume Ice to inflict 3 Slow to that enemy."
   },
   {
     "Name": "Earthen shield",
     "Cost": 1,
     "Types": ["Defend", "Earth", "Attack"],
-    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 damage to that enemy. You may consume Earth to Defend."
+    "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 Earth damage to that enemy. You may consume Earth to Defend."
   },
   {
     "Name": "Defensive gale",
@@ -1219,7 +1219,7 @@
     "Name": "Crystal clarity",
     "Cost": 1,
     "Types": ["Area", "Ice", "Water", "Draw", "Slow"],
-    "Text": "Radius 3. You may consume Ice and/or Water. Each friendly character may look at the top 1 cards of their deck and put any number of them into their discard. If Ice was consumed, they may look at an additional 2 cards. If Water was consumed, they may draw a card. Inflict 1 Slow to each ally."
+    "Text": "Radius 3. You may consume Ice and/or Water. Each friendly character may look at the top 2 cards of their deck and put any number of them into their discard. If Ice was consumed, they may look at an additional 3 cards. If Water was consumed, they may draw a card. Inflict 1 Slow to each ally."
   },
   {
     "Name": "Return from soil",
@@ -1295,7 +1295,7 @@
       "Barrier",
       "Exile"
     ],
-    "Text": "Reaction - you become bloodied. Gain 2 Strength and Defend. You may consume Darkness. If you do, Range 5 - Deal 1d6 damage. Gain half the damage dealt in Barrier. Exile."
+    "Text": "Reaction - you become bloodied. Gain 2 Strength and Defend. You may consume Darkness. If you do, Range 5 - Deal 1d6 Dark damage. Gain half the damage dealt in Barrier. Exile."
   },
   {
     "Name": "Abandon",
