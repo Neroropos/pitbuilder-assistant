@@ -11,11 +11,13 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {
-      "Name": "Toxic strikes",
-      "Text": "Inflict {0} Poison.",
-      "Values": ["Math.round(DMG/2)"]
-    },
+    "PostAttack": [
+      {
+        "Name": "Toxic strikes",
+        "Text": "Inflict {0} Poison.",
+        "Values": ["Math.round(DMG/2)"]
+      }
+    ],
     "Type": "Physiology"
   },
   {
@@ -36,11 +38,13 @@
     ],
     "Weaknesses": ["Water", "Air", "Nature", "Light"],
     "Resistances": [],
-    "PostAttack": {
-      "Name": "Sharp blows",
-      "Text": "Inflict {0} Bleed.",
-      "Values": ["Math.round(OFF/2)+TIR-1"]
-    },
+    "PostAttack": [
+      {
+        "Name": "Sharp blows",
+        "Text": "Inflict {0} Bleed.",
+        "Values": ["TIR"]
+      }
+    ],
     "Type": "Physiology"
   },
   {
@@ -61,12 +65,12 @@
       {
         "Name": "Auto-mending",
         "Text": "While bloodied, regenerate {0} at the end of turn.",
-        "Values": ["Math.round(DEF/2)+TIR-1"]
+        "Values": ["TIR+3"]
       }
     ],
     "Weaknesses": ["Fire", "Ice", "Lightning", "Dark"],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -82,7 +86,7 @@
       {
         "Name": "Dark Surge",
         "Text": "Channel Dark. Radius 1. Deal {0} dark damage and gain {1} Barrier.",
-        "Values": ["OFF+TIR-1", "DEF+TIR-1"]
+        "Values": ["Math.round(DMG/2)", "BLK"]
       }
     ],
     "Passives": [
@@ -94,7 +98,7 @@
     ],
     "Weaknesses": ["Light"],
     "Resistances": ["Dark"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -116,7 +120,7 @@
     ],
     "Weaknesses": ["Dark"],
     "Resistances": ["Light"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -138,7 +142,7 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -160,7 +164,7 @@
     "Passives": [],
     "Weaknesses": ["Water", "Earth"],
     "Resistances": ["Fire"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -182,7 +186,7 @@
     "Passives": [],
     "Weaknesses": ["Lightning", "Nature"],
     "Resistances": ["Water"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -204,7 +208,7 @@
     "Passives": [],
     "Weaknesses": ["Ice", "Lightning"],
     "Resistances": ["Air"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -226,7 +230,7 @@
     "Passives": [],
     "Weaknesses": ["Water", "Air"],
     "Resistances": ["Earth"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -248,7 +252,7 @@
     "Passives": [],
     "Weaknesses": ["Nature", "Earth"],
     "Resistances": ["Lightning"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -271,12 +275,12 @@
       {
         "Name": "Recovery",
         "Text": "Regenerate {0} at the end of each turn.",
-        "Values": ["DEF+1+TIR"]
+        "Values": ["TIR+3"]
       }
     ],
     "Weaknesses": ["Fire", "Ice"],
     "Resistances": ["Nature"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -299,7 +303,7 @@
     "Passives": [],
     "Weaknesses": ["Fire", "Air"],
     "Resistances": ["Ice"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -328,7 +332,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -351,7 +355,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -369,7 +373,7 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Rank"
   },
   {
@@ -388,12 +392,12 @@
       {
         "Name": "Paid For",
         "Text": "Start each combat with {0} Money.",
-        "Values": ["1+TIR*2"]
+        "Values": ["TIR*2+1"]
       },
       {
         "Name": "Invest in Yourself",
         "Text": "When attacking, spend 1 Money to deal {0} extra Damage. When blocking, spend 1 Money to gain {0} Barrier. When moving, spend 1 Money to move 1 more.",
-        "Values": ["1+TIR"]
+        "Values": ["TIR+1"]
       },
       {
         "Name": "Refusal to Die",
@@ -408,7 +412,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -432,7 +436,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -456,7 +460,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -480,7 +484,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": { "Name": "Burning strikes", "Text": "Inflict {0} Burn.", "Values": ["TIR"] },
+    "PostAttack": [{ "Name": "Burning strikes", "Text": "Inflict {0} Burn.", "Values": ["TIR"] }],
     "Type": "Modification"
   },
   {
@@ -498,7 +502,7 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Rank"
   },
   {
@@ -522,7 +526,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -540,13 +544,13 @@
     "Passives": [
       {
         "Name": "Grunt",
-        "Text": "HP is 1.",
+        "Text": "Max health is always 1.",
         "Values": []
       }
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Rank"
   },
   {
@@ -570,7 +574,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": { "Name": "Dazing strikes", "Text": "Inflict {0} Dazed.", "Values": ["TIR"] },
+    "PostAttack": [{ "Name": "Dazing strikes", "Text": "Inflict {0} Dazed.", "Values": ["TIR"] }],
     "Type": "Modification"
   },
   {
@@ -599,7 +603,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -623,7 +627,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -647,7 +651,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -671,7 +675,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -695,7 +699,7 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -719,7 +723,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -743,7 +747,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -760,7 +764,7 @@
     "Passives": [],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -783,11 +787,13 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {
-      "Name": "Pickpocketing",
-      "Text": "Exile the top {0} cards of the target's deck. Gain 1 Loot. Gain 1 extra Loot for each Consumable exiled and reduce the Consumable value on those by 1.",
-      "Values": ["TIR"]
-    },
+    "PostAttack": [
+      {
+        "Name": "Pickpocketing",
+        "Text": "Exile the top {0} cards of the target's deck. Gain 1 Loot. Gain 1 extra Loot for each Consumable exiled and reduce the Consumable value on those by 1.",
+        "Values": ["TIR"]
+      }
+    ],
     "Type": "Modification"
   },
   {
@@ -816,7 +822,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -839,7 +845,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   },
   {
@@ -898,7 +904,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Physiology"
   },
   {
@@ -922,7 +928,7 @@
     ],
     "Weaknesses": ["Area of effect"],
     "Resistances": ["Single target"],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Rank"
   },
   {
@@ -976,7 +982,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Rank"
   },
   {
@@ -999,7 +1005,7 @@
     ],
     "Weaknesses": [],
     "Resistances": [],
-    "PostAttack": {},
+    "PostAttack": [],
     "Type": "Modification"
   }
 ]

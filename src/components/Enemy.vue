@@ -8,6 +8,7 @@ import { ref } from 'vue'
 import { computed } from 'vue'
 
 const enemyClasses = GetClassList()
+console.log(enemyClasses)
 const enemyTemplates = GetTemplateList()
 const currentEnemy = ref(new Enemy())
 const currHp = ref()

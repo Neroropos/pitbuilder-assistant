@@ -24,6 +24,62 @@ export function GetClassList() {
   })
   return result
 }
+export function GetClassListForPrint() {
+  const enemiesPR: EnemyClass[] = []
+  const classesPR = classesJson as unknown as EnemyClass[]
+  classesPR.forEach((element) => {
+    enemiesPR.push(JSON.parse(JSON.stringify(element)))
+  })
+  const result: EnemyClass[] = []
+  enemiesPR.forEach((element) => {
+    element.Actions.forEach((act) => (act.Text = parseTextForPrint(act.Text, act.Values)))
+    element.Passives.forEach((pas) => (pas.Text = parseTextForPrint(pas.Text, pas.Values)))
+    element.PostAttack?.forEach((pos) => (pos.Text = parseTextForPrint(pos.Text, pos.Values)))
+    element.Weaknesses?.sort((a, b) => a.localeCompare(b))
+    element.Resistances?.sort((a, b) => a.localeCompare(b))
+    element.Immunities?.sort((a, b) => a.localeCompare(b))
+    result.push(new EnemyClass(element))
+  })
+  return result.sort((a, b) => a.Type?.localeCompare(b.Type) || a.Name?.localeCompare(b.Name))
+}
+export function GetTemplateListForPrint() {
+  const templatesPR: EnemyTemplate[] = []
+  const result: EnemyTemplate[] = []
+  const templatesFromJsonPR = templatesJson as unknown as EnemyTemplate[]
+  templatesFromJsonPR.forEach((element) => {
+    templatesPR.push(JSON.parse(JSON.stringify(element)))
+  })
+  templatesPR.forEach((element) => {
+    element.Actions.forEach((act) => (act.Text = parseTextForPrint(act.Text, act.Values)))
+    element.Passives.forEach((pas) => (pas.Text = parseTextForPrint(pas.Text, pas.Values)))
+    element.PostAttack?.forEach((pos) => (pos.Text = parseTextForPrint(pos.Text, pos.Values)))
+    element.Weaknesses?.sort((a, b) => a.localeCompare(b))
+    element.Resistances?.sort((a, b) => a.localeCompare(b))
+    element.Immunities?.sort((a, b) => a.localeCompare(b))
+    result.push(new EnemyTemplate(element))
+  })
+  return result.sort((a, b) => a.Type?.localeCompare(b.Type) || a.Name?.localeCompare(b.Name))
+}
+function parseTextForPrint(text, values) {
+  let result = text
+
+  values?.forEach((av, i) => {
+    if (av.indexOf('PSTATK') < 0) {
+      const newVal = av
+        .replace(/DMG/g, 'BD')
+        .replace(/BLK/g, 'BB')
+        .replace(/MOV/g, 'MV')
+        .replace(/DEF/g, 'DS')
+        .replace(/OFF/g, 'OS')
+        .replace(/TIR/g, 'Tier')
+        .replace(/Math.round/g, 'half ')
+        .replace('(', '')
+        .replace('/2)', '')
+      result = result.replace(new RegExp(escapeRegExp('{' + i + '}'), 'g'), newVal)
+    } else result = result.replace(new RegExp(escapeRegExp('{' + i + '}'), 'g'), '')
+  })
+  return result
+}
 
 export class GroupedClass {
   Type: string = ''
@@ -170,6 +226,7 @@ export class Enemy {
   HPBar: number = 1
 
   replacePlaceholders(DefScaling: number, OffScaling: number, Text: string, Values: string[]) {
+    console.log(Text)
     let result = Text
 
     Values?.forEach((av, i) => {
@@ -201,9 +258,10 @@ export class Enemy {
       this.Class?.OffScaling +
       this.Templates?.reduce((sum, current) => sum + current.OffScaling || 0, 0)
     this.DmgMod =
-      OffScaling * 2 +
+      OffScaling * 2 -
+      2 +
       this.Templates?.reduce((sum, current) => sum + current.DmgMod || 0, 0) +
-      (this.Tier - 1) * 2
+      this.Tier * 2
 
     this.Challenge = Math.round(
       (this.Class?.Challenge +
@@ -217,8 +275,9 @@ export class Enemy {
     this.MoveMod = this.Templates?.reduce((sum, current) => sum + current.MoveMod || 0, 0)
 
     this.BlockMod =
-      this.Templates?.reduce((sum, current) => sum + current.BlockMod || 0, 0) +
-      (this.Tier - 1) * 2 +
+      this.Templates?.reduce((sum, current) => sum + current.BlockMod || 0, 0) -
+      2 +
+      this.Tier * 2 +
       DefScaling * 2
 
     this.PostAttack = ''
