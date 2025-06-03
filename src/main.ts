@@ -12,11 +12,11 @@ app.use(PrimeVue, {
   theme: {
     preset: Aura,
     options: {
+      darkModeSelector: false || 'none',
       cssLayer: {
         name: 'primevue',
         order: 'tailwind-base, primevue, tailwind-utilities'
-      },
-      darkModeSelector: false || 'none'
+      }
     }
   }
 })
