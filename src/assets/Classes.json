@@ -2067,5 +2067,140 @@
     "PostAttack": [],
     "Resistances": [],
     "Type": "Defender"
+  },
+  {
+    "Name": "Sage",
+    "DefScaling": 1,
+    "OffScaling": 0,
+    "Challenge": 2,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Move {0}. Range 5 - the target may Move 3, gains {1} Strength and {1} Sturdy, then may reduce any number of statuses by {1}.",
+        "Values": ["1+MOV", "TIR"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Range 5 - Inflict {0} Vulnerable. The target cannot attack the Sage until the end of their next turn.",
+        "Values": ["TIR"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. Channel any element. After your turn an ally may activate, rather than an enemy.",
+        "Values": ["4+MOV"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Aegis of Wisdom",
+        "Text": "Whenever an enemy ends their turn adjacent to the Sage, inflict 1 Vulnerable. Whenever an ally ends their turn adjacent ot the Sage, the Sage and that ally both gain {0} Block.",
+        "Values": ["BLK"]
+      },
+      {
+        "Name": "Research",
+        "Text": "At the end of turn, channel any element or consume an element to gain {0} Barrier.",
+        "Values": ["BLK"]
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Conduit",
+    "DefScaling": 2,
+    "OffScaling": 1,
+    "Challenge": 3,
+    "Actions": [
+      {
+        "Name": "Melee",
+        "Text": "Deal {0} damage of a random elemental type, ignoring Block. {1} Gain Barrier equal to Barier removed this way.",
+        "Values": ["DMG+1", "PSTATK"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Move {3}. Radius 3. Deal {0} damage. {1} Each ally gains {2} Barrier.",
+        "Values": ["DMG-1", "PSTATK", "BLK-1", "2+MOV"]
+      },
+      {
+        "Name": "Far",
+        "Text": "Move {0}. For every channeled element, gain {1} Barrier.",
+        "Values": ["4+MOV", "TIR"]
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Power battery",
+        "Text": "Whenever an ally within Range 3 would consume an element, they may have the Conduit lose 5 Health instead.",
+        "Values": []
+      },
+      {
+        "Name": "Bleeding power",
+        "Text": "Whenever the Conduit is dealt damage for the first time each turn, the attacker may Channel any element.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Resistances": [],
+    "Type": "Support"
+  },
+  {
+    "Name": "Master of Blades",
+    "DefScaling": 2,
+    "OffScaling": 3,
+    "HPBar": 2,
+    "Challenge": 15,
+    "Actions": [
+      {
+        "Name": "Cut",
+        "Text": "Deal {0} damage. {1} Move {2}. If Honor is 3 or more, the attack gains Line 5.",
+        "Values": ["DMG+1", "PSTATK", "3+MOV"]
+      },
+      {
+        "Name": "Close",
+        "Text": "Radius 1 + Honor. Deal {0} damage. {1} Inflict {3} Sundered. Move {2}.",
+        "Values": ["DMG-1", "PSTATK", "3+MOV", "TIR+2"]
+      },
+      {
+        "Name": "Approach",
+        "Text": "Move {0}. Radius 3. Each enemy moves to be adjacent to Master of Blades.",
+        "Values": ["4+MOV"]
+      },
+      {
+        "Name": "Boss - Reave",
+        "Text": "Every other line or column on the map. Deal {0} damage. {1} Inflict {2} Slow and {2} Dazed to each enemy not in the area of this attack.",
+        "Values": ["DMG", "PSTATK", "TIR*2"]
+      },
+      {
+        "Name": "Boss - Break",
+        "Text": "Targets the enemy with the most Block. Move to be adjacent to the target. Deal {0} damage. {1} Inflict {2} Bleed. Double the damage dealt and Bleed inflicted for every 3 Glory.",
+        "Values": ["DMG", "PSTATK", "TIR*2"]
+      },
+      {
+        "Name": "Boss - Blitz",
+        "Text": "Targets the closest enemy in line of sight not yet dealt damage by Boss - Blitz this turn. Move to be adjacent to the target. Deal {0} damage. {1} Exile the top {2} cards of their deck. Repeat this action any number of times.",
+        "Values": ["DMG-2", "PSTATK", "TIR"]
+      },
+      {
+        "Name": "Parry",
+        "Text": "Reaction - Master of Blades is attacked. Gain resistance against the attack. If Glory is 3 or more and the attacker is at range 3 or greater, gain immunity instead. If the attacker is at range 2 or less, inflict 1 Feeble and 1 Vulnerable to the attacker after the damage is dealt. If Glory is 9 or greater, this reaction may be used once per turn, rather than once per round.",
+        "Values": []
+      }
+    ],
+    "Passives": [
+      {
+        "Name": "Boss",
+        "Text": "Start of round - chooses a boss action and target area or characters. Performs that action at the end of round. May take 1 turn per round. May take 1 extra turn each round for every 2 player characters.",
+        "Values": []
+      },
+      {
+        "Name": "Honor and Glory",
+        "Text": "Whenever Master of Blades deals damage to an enemy, gain 1 Glory. Whenever Master of Blades is dealt damage, gain 1 Honor.",
+        "Values": []
+      }
+    ],
+    "PostAttack": [],
+    "Immunities": [],
+    "Type": "Boss"
   }
 ]
