@@ -118,7 +118,7 @@ export function GetTemplateList() {
   return result
 }
 export class Action {
-  Name: string | null = null
+  Name: string = ''
   Text: string = ''
   Values: string[] = []
   public constructor(init?: Partial<Action>) {
@@ -133,7 +133,7 @@ export class Passive {
     }
     return true
   }
-  Name: string | null = null
+  Name: string = ''
   Text: string = ''
   Values: string[] = []
   Condition: { Check: string; Value: string } | null = null
@@ -142,7 +142,7 @@ export class Passive {
   }
 }
 export class PostAttack {
-  Name: string | null = null
+  Name: string = ''
   Text: string = ''
   Values: string[] = []
   public constructor(init?: Partial<PostAttack>) {

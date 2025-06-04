@@ -57,19 +57,19 @@ const enemyTemplatesPR = GetTemplateListForPrint()
       <div v-if="eTemp.Immunities.length > 0">Immunities: {{ eTemp.Immunities.join(', ') }}</div>
       <div v-if="eTemp.Actions.length > 0">
         <h3>Actions</h3>
-        <div v-for="act in eTemp.Actions">
+        <div v-for="act in eTemp.Actions" :key="act.Name">
           <span style="font-weight: bold">{{ act.Name }}</span> - {{ act.Text }}
         </div>
       </div>
       <div v-if="eTemp.Passives.length > 0">
         <h3>Passives</h3>
-        <div v-for="pas in eTemp.Passives">
+        <div v-for="pas in eTemp.Passives" :key="pas.Name">
           <span style="font-weight: bold">{{ pas.Name }}</span> - {{ pas.Text }}
         </div>
       </div>
       <div v-if="eTemp.PostAttack.length > 0">
         <h3>After every attack</h3>
-        <div v-for="pos in eTemp.PostAttack">
+        <div v-for="pos in eTemp.PostAttack" :key="pos.Name">
           <span style="font-weight: bold">{{ pos.Name }}</span> - {{ pos.Text }}
         </div>
       </div>
