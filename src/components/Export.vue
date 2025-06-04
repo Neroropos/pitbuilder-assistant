@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/require-v-for-key -->
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { Enemy, GetClassListForPrint, GetTemplateListForPrint } from '@/application/charMath'
@@ -70,7 +69,7 @@ const enemyTemplatesPR = GetTemplateListForPrint()
       </div>
       <div v-if="eTemp.PostAttack.length > 0">
         <h3>After every attack</h3>
-        <div v-for="pos in eTemp.PostAttack" :key="pos.Name">
+        <div v-for="pos in eTemp.PostAttack">
           <span style="font-weight: bold">{{ pos.Name }}</span> - {{ pos.Text }}
         </div>
       </div>
