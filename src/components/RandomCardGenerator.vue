@@ -10,8 +10,8 @@ const selectedCardTypesAll = ref([])
 const selectedCardTypesOne = ref([])
 const excludeCardTypes = ref([] as string[])
 excludeCardTypes.value.push('Basic')
-excludeCardTypes.value.push('Wound')
 excludeCardTypes.value.push('Heritage')
+excludeCardTypes.value.push('Consumable')
 function changedTypes() {
   cardList = GetCardList(
     selectedCardTypesOne.value,

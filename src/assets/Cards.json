@@ -822,7 +822,7 @@
   },
   {
     "Name": "Wound",
-    "Types": ["Wound"],
+    "Types": ["Wound", "Basic"],
     "Text": "Unplayable."
   },
   {

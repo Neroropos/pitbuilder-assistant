@@ -1023,19 +1023,19 @@
   },
   {
     "Name": "Malaurge",
-    "DefScaling": 2,
+    "DefScaling": 1,
     "OffScaling": 2,
-    "Challenge": 3,
+    "Challenge": 5,
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Inflict 2 Soft. Deal 1 damage {0} times.",
-        "Values": ["DMG-1"]
+        "Text": "Inflict {0} Soft. Deal 1 damage {1} times.",
+        "Values": ["TIR+2", "TIR+2"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Radius 3 - Inflict 1 Soft. Deal 1 damage {1} times.",
-        "Values": ["2+MOV", "DMG-2"]
+        "Text": "Move {0}. Radius 2 - Inflict 1 Soft. Deal 1 damage {1} times.",
+        "Values": ["2+MOV", "TIR+1"]
       },
       {
         "Name": "Far",
