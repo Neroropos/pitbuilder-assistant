@@ -145,9 +145,9 @@
   },
   {
     "Name": "Burn bright",
-    "Cost": 2,
+    "Cost": 1,
     "Types": ["Fire", "Spell", "Draw"],
-    "Text": "Draw three cards. Consume Fire to play a card costing 1 or less from your hand for free."
+    "Text": "Draw 3 cards. Consume Fire to play a card costing 1 or less from your hand for free."
   },
   {
     "Name": "Blazing armament",
@@ -1616,21 +1616,21 @@
     "Text": "Stance. The first card you play each turn costs 1 less."
   },
   {
-    "Name": "Reaching",
+    "Name": "Reaching Stance",
     "Cost": 1,
     "Types": ["Stance"],
     "Text": "Stance. Your Strikes gain +1 Range."
   },
   {
-    "Name": "Drawing",
+    "Name": "Drawing Stance",
     "Cost": 1,
     "Types": ["Draw", "Stance"],
     "Text": "Stance. At the start of your turn, draw a card."
   },
   {
-    "Name": "Barring",
+    "Name": "Protective Chant",
     "Cost": 1,
-    "Types": ["Stance", "Barrier"],
+    "Types": ["Stance", "Barrier", "Area"],
     "Text": "Stance. Radius 1 - At the start of your turn, each friendly character gains 1 Barrier."
   },
   {

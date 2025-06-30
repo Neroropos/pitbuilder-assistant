@@ -600,8 +600,8 @@
     "Passives": [
       {
         "Name": "Wall Infusion",
-        "Text": "All obstacles within Range 3 of the Inhibitor take 3 less damage.",
-        "Values": []
+        "Text": "All obstacles within Range 3 of the Inhibitor take {0} less damage.",
+        "Values": ["TIR*2+1"]
       },
       {
         "Name": "Pillar",
@@ -699,7 +699,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Summon a Shade. Each Shade deals {1} damage to each adjacent enemy.",
+        "Text": "Move {0}. Summon a Shade. Each Shade deals {1} Dark damage to each adjacent enemy.",
         "Values": ["1+MOV", "DMG+1"]
       },
       {
@@ -758,12 +758,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Gain {2} Block.",
+        "Text": "Deal {0} Fire damage. {1} Gain {2} Block.",
         "Values": ["DMG+1", "PSTATK", "BLK+1"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. You may consume Fire to gain 2 Strength. Deal {1} damage. {2} Gain {3} Block.",
+        "Text": "Move {0}. You may consume Fire to gain 2 Strength. Deal {1} Fire damage. {2} Gain {3} Block.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "2+BLK"]
       },
       {
@@ -834,12 +834,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. Move {1}. {2} Repeat 2 times.",
-        "Values": ["DMG+3", "1+MOV", "PSTATK"]
+        "Text": "Deal {0} Air damage. Move {1}. {2} Repeat 2 times.",
+        "Values": ["DMG", "1+MOV", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2} Inflict 2 Dazed.",
+        "Text": "Move {0}. Deal {1} Air damage. {2} Inflict 2 Dazed.",
         "Values": ["5+MOV", "DMG+1", "PSTATK"]
       },
       {
@@ -861,7 +861,7 @@
       },
       {
         "Name": "Blow",
-        "Text": "Start of your turn: Move {0}. If Air is Channeled, Radius 2 - deal {1} damage to all enemies.",
+        "Text": "Start of your turn: Move {0}. If Air is Channeled, Radius 2 - deal {1} Air damage to all enemies.",
         "Values": ["1+MOV", "TIR+1"]
       }
     ],
@@ -956,7 +956,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {2} Inflict {1} Pulse. Move {3}. Channel Light.",
+        "Text": "Deal {0} Light damage. {2} Inflict {1} Pulse. Move {3}. Channel Light.",
         "Values": ["DMG+1", "TIR+1", "PSTATK", "3+MOV"]
       },
       {
@@ -1066,7 +1066,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 2 - Create a Shade. Each Shade deals {1} damage.",
+        "Text": "Move {0}. Range 2 - Create a Shade. Each Shade deals {1} Dark damage.",
         "Values": ["2+MOV", "Math.round(DMG/2)"]
       },
       {
@@ -1239,8 +1239,8 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1}",
-        "Values": ["DMG+2", "PSTATK"]
+        "Text": "Deal {0} damage. {1}. Gain {2} Block.",
+        "Values": ["DMG+2", "PSTATK", "BLK"]
       },
       {
         "Name": "Close",
@@ -1294,7 +1294,7 @@
     "Passives": [
       {
         "Name": "Retaliation",
-        "Text": "After being attacked, any ally within line of sight may attack the attacker.",
+        "Text": "After being attacked, any ally within line of sight may attack the attacker if able.",
         "Values": []
       }
     ],
@@ -1444,12 +1444,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 10. Deal {1} damage. {2} May Consume Earth to reload 1.",
+        "Text": "Move {0}. Range 10. Deal {1} Earth damage. {2} May Consume Earth to reload 1.",
         "Values": ["1+MOV", "DMG*2", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Range 10. Burst 2. Deal {0} damage. {1} For each obstacle destroyed, deal {2} damage to all characters in the area.",
+        "Text": "Range 10. Burst 2. Deal {0} Earth damage. {1} For each obstacle destroyed, deal {2} damage to all characters in the area.",
         "Values": ["DMG*2", "PSTATK", "TIR+1"]
       }
     ],
@@ -1477,12 +1477,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Gain {0} Block. Radius 3 - Deal {1} damage. {2} Inflict {3} Slow.",
+        "Text": "Gain {0} Block. Radius 3 - Deal {1} Ice damage. {2} Inflict {3} Slow.",
         "Values": ["BLK+1", "DMG+5", "PSTATK", "TIR+1"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Gain {1} Block. Deal {2} damage. {3} Channel Ice.",
+        "Text": "Move {0}. Gain {1} Block. Deal {2} Ice damage. {3} Channel Ice.",
         "Values": ["2+MOV", "BLK+1", "DMG+3", "PSTATK"]
       },
       {
@@ -1553,7 +1553,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} At the start of your next turn, if the target is adjacent to you and bloodied, inflict 1 Wound.",
+        "Text": "Deal {0} damage. {1} At the start of your next turn, if the target is adjacent to you and Bloodied, inflict 1 Wound.",
         "Values": ["DMG+2", "PSTATK"]
       },
       {
@@ -1753,12 +1753,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Line 4. Deal {0} damage. {1} Move to the end of the line. Channel Air.",
+        "Text": "Line 4. Deal {0} Air damage. {1} Move to the end of the line. Channel Air.",
         "Values": ["DMG+1", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2} You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {1} Air damage. {2} Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier and reduce any number of conditions on both of you by 2.",
+        "Text": "Move {0}. Deal {1} Light damage. {2} You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {1} Air damage. {2} Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier and reduce any number of conditions on both of you by 2.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "BLK"]
       },
       {
@@ -1940,12 +1940,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Line 3. Deal {0} damage. {1} Consume Water to deal another {2} damage to each target and Push 2 in a random direction.",
+        "Text": "Line 3. Deal {0} Water damage. {1} Consume Water to deal another {2} damage to each target and Push 2 in a random direction.",
         "Values": ["DMG+1", "PSTATK", "Math.round(DMG/2)"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 3 - Deal {1} damage. {2} Push 1 all enemies adjacent to the target. Channel Water.",
+        "Text": "Move {0}. Range 3 - Deal {1} Water damage. {2} Push 1 all enemies adjacent to the target. Channel Water.",
         "Values": ["MOV+2", "DMG-1", "PSTATK"]
       },
       {

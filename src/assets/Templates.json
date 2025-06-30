@@ -477,8 +477,13 @@
     "Actions": [],
     "Passives": [
       {
-        "Name": "Burning",
+        "Name": "Blazing",
         "Text": "At the end of turn, inflict {0} Burn to each adjacent enemy.",
+        "Values": ["TIR"]
+      },
+      {
+        "Name": "Fire element",
+        "Text": "All attacks deal Fire damage.",
         "Values": ["TIR"]
       }
     ],
@@ -989,8 +994,8 @@
     "Name": "Returning",
     "DefScaling": -1,
     "OffScaling": -1,
-    "Challenge": 2,
-    "ChallengeMult": 1,
+    "Challenge": 0,
+    "ChallengeMult": 1.5,
     "HPMod": 0,
     "MoveMod": 0,
     "BlockMod": 0,
@@ -1000,6 +1005,29 @@
       {
         "Name": "Returning",
         "Text": "At the start of the round, if this character was defeated last round, it returns to play in the space it was defeated. It has no statuses and has Health equal to its bloodied threshold.",
+        "Values": []
+      }
+    ],
+    "Weaknesses": [],
+    "Resistances": [],
+    "PostAttack": [],
+    "Type": "Modification"
+  },
+  {
+    "Name": "Destruction Infusing",
+    "DefScaling": 0,
+    "OffScaling": 0,
+    "Challenge": 2,
+    "ChallengeMult": 1,
+    "HPMod": 0,
+    "MoveMod": 0,
+    "BlockMod": 0,
+    "DmgMod": 0,
+    "Actions": [],
+    "Passives": [
+      {
+        "Name": "Infuse strike",
+        "Text": "When attacking, you may consume Fire, Lightning or Dark. If you do, the attack deals +2 damage and deals damage of that type.",
         "Values": []
       }
     ],
