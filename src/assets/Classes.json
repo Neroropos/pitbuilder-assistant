@@ -22,7 +22,7 @@
       },
       {
         "Name": "Interrupt",
-        "Text": "Reaction - Enemy within Range 1 moves. Deal {0} damage to them. {1}",
+        "Text": "Reaction - An adjacent enemy moves. Deal {0} damage to them. {1}",
         "Values": ["DMG+1", "PSTATK"]
       }
     ],
@@ -38,18 +38,18 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Inflict 2 Dazed and 2 Slowed.",
-        "Values": ["DMG+1", "PSTATK"]
+        "Text": "Deal {0} damage. {1} Inflict {2} Dazed and {2} Slowed.",
+        "Values": ["DMG+1", "PSTATK", "TIR+1"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2} Inflict 1 Dazed.",
-        "Values": ["2+MOV", "DMG-1", "PSTATK"]
+        "Text": "Move {0}. Deal {1} damage. {2} Inflict {3} Dazed.",
+        "Values": ["2+MOV", "DMG-1", "PSTATK", "TIR"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain {1} Block. When an adjacent enemy breaks your block, inflict 1 Dazed to them.",
-        "Values": ["4+MOV", "BLK"]
+        "Text": "Move {0}. Gain {1} Block. When an adjacent enemy breaks your block, inflict {2} Dazed to them.",
+        "Values": ["4+MOV", "BLK", "TIR"]
       }
     ],
     "Passives": [
@@ -229,7 +229,7 @@
       },
       {
         "Name": "Use elements",
-        "Text": "May consume an element when attacking. The attack deals that element's damage. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
+        "Text": "May consume one element when attacking. The attack deals that element's damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
         "Values": ["Math.round(DMG/2)", "BLK"]
       }
     ],
@@ -1151,8 +1151,8 @@
       },
       {
         "Name": "Reaction",
-        "Text": "You are attacked by a non adjacent enemy. Gain {0} Evasive.",
-        "Values": ["TIR"]
+        "Text": "You are attacked by a non adjacent enemy. Gain {0} Evasive. Deal {1} damage to the attacker.",
+        "Values": ["TIR", "DMG"]
       }
     ],
     "Passives": [],
