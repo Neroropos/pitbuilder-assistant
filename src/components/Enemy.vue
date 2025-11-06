@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { Enemy, GetClassList, GetTemplateList } from '@/application/charMath'
+import { Enemy, EnemyArchetype, GetClassList, GetTemplateList } from '@/application/charMath'
 import Multiselect from 'primevue/multiselect'
 import Select from 'primevue/select'
 import FloatLabel from 'primevue/floatlabel'
@@ -8,6 +8,7 @@ import { ref } from 'vue'
 import { computed } from 'vue'
 
 const enemyClasses = GetClassList()
+const enemyArchetypes = ref([{ Name: 'None' }] as EnemyArchetype[])
 console.log(enemyClasses)
 const enemyTemplates = GetTemplateList()
 const currentEnemy = ref(new Enemy())
@@ -30,6 +31,24 @@ const modelValue = computed({
 const turnTakenId = 'turnTaken' + modelValue.value.id
 const isBloodied = ref()
 isBloodied.value = false
+
+function changedClass(ev: {}) {
+  enemyArchetypes.value = currentEnemy.value.Class.Archetypes
+  enemyArchetypes.value.push(new EnemyArchetype())
+  // currentEnemy.value.Class.Archetypes.forEach((item) => {
+  //   const arr = result.find((x) => x.Type == item.Type)
+  //   if (arr) result.find((x) => x.Type == item.Type)?.Values.push(item)
+  //   else {
+  //     const newGroup = new GroupedClass({ Type: item.Type, Values: [item] })
+  //     result.push(newGroup)
+  //   }
+  // })
+  // result.forEach((gr) => {
+  //   gr.Values.sort((a, b) => a.Name?.localeCompare(b.Name || '') || 0)
+  // })
+  // return result
+  changed(ev)
+}
 
 function changed(ev: {}) {
   currentEnemy.value.update()
@@ -100,11 +119,25 @@ function damage() {
         option-group-children="Values"
         option-label="Name"
         class="w-full md:w-56"
-        @change="changed($event)"
+        @change="changedClass($event)"
         inputId="classSelect"
         style="width: 100%"
       ></Select>
       <label for="classSelect">Class</label>
+    </FloatLabel>
+
+    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block; width: 100%">
+      <Select
+        v-model="currentEnemy.Archetype"
+        filter
+        :options="enemyArchetypes"
+        option-label="Name"
+        class="w-full md:w-80"
+        @change="changed($event)"
+        inputId="archetypeSelect"
+        style="width: 100%"
+      ></Select>
+      <label for="archetypeSelect">Archetype</label>
     </FloatLabel>
 
     <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block; width: 100%">
@@ -192,6 +225,17 @@ function damage() {
     <div class="row">
       <label :for="turnTakenId">Turn taken?</label>
       <input :id="turnTakenId" type="checkbox" style="width: 60px; font-size: 16px" />
+    </div>
+  </div>
+  <div>
+    <div class="row">
+      <div><span style="font-weight: bold">Strike</span> - {{ currentEnemy.Strike }}</div>
+    </div>
+    <div class="row">
+      <div><span style="font-weight: bold">Defend</span> - {{ currentEnemy.Defend }}</div>
+    </div>
+    <div class="row">
+      <div><span style="font-weight: bold">Maneuver</span> - {{ currentEnemy.Maneuver }}</div>
     </div>
   </div>
   <div>

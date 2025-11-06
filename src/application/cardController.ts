@@ -59,7 +59,9 @@ export function GetCardTypes() {
 }
 export class PlayerCard {
   Types: string[] = []
+  Tags: string[] = []
   Cost: number | null = null
+  Range: string = ''
   Text: string = ''
   Name: string = ''
   public constructor(init?: Partial<PlayerCard>) {

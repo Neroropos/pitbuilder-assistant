@@ -1,5 +1,5 @@
 export class CharMath {}
-import classesJson from '../assets/Classes.json' assert { type: 'json' }
+import classesJson from '../assets/ClassesNew.json' assert { type: 'json' }
 import templatesJson from '../assets/Templates.json' assert { type: 'json' }
 import { escapeRegExp } from './func'
 
@@ -149,6 +149,21 @@ export class PostAttack {
     Object.assign(this, init)
   }
 }
+export class EnemyArchetype {
+  Name: string = 'None'
+  Actions: Action[] = []
+  Passives: Passive[] = []
+  Weaknesses: string[] = []
+  Resistances: string[] = []
+  Immunities: string[] = []
+  Strike: string = ''
+  Defend: string = ''
+  Maneuver: string = ''
+  HPMod: number = 0
+  public constructor(init?: Partial<EnemyArchetype>) {
+    Object.assign(this, init)
+  }
+}
 export class EnemyClass {
   Name: string = ''
   DefScaling: number | number = 1
@@ -159,9 +174,13 @@ export class EnemyClass {
   Resistances: string[] = []
   Immunities: string[] = []
   PostAttack: PostAttack[] = []
+  Archetypes: EnemyArchetype[] = []
   Challenge: number | number = 0
   Type: string = ''
   HPBar: number = 0
+  Strike: string = ''
+  Defend: string = ''
+  Maneuver: string = ''
   //Id!: number
   public constructor(init?: Partial<EnemyClass>) {
     this.Resistances = []
@@ -224,9 +243,12 @@ export class Enemy {
   Passives: Passive[] = []
   PostAttack: string = ''
   HPBar: number = 1
+  Strike: string = ''
+  Defend: string = ''
+  Maneuver: string = ''
+  Archetype: EnemyArchetype | EnemyArchetype = new EnemyArchetype()
 
   replacePlaceholders(DefScaling: number, OffScaling: number, Text: string, Values: string[]) {
-    console.log(Text)
     let result = Text
 
     Values?.forEach((av, i) => {
@@ -246,12 +268,32 @@ export class Enemy {
     })
     return result
   }
+  replacePlaceholdersDirect(DefScaling: number, OffScaling: number, Text: string) {
+    let result = Text
+    const newVal = Text.replace(/DMG/g, this.DmgMod.toString())
+      .replace(/BLK/g, this.BlockMod.toString())
+      .replace(/MOV/g, this.MoveMod.toString())
+      .replace(/DEF/g, DefScaling.toString())
+      .replace(/OFF/g, OffScaling.toString())
+      .replace(/TIR/g, this.Tier.toString())
+    result = newVal.replace(/{([^{}]+)}/g, (_, expr) => {
+      try {
+        return eval(expr)
+      } catch (e) {
+        console.error('Error evaluating:', expr, e)
+        return `{${expr}}` // fallback if eval fails
+      }
+    })
+    return result
+  }
   update() {
     const DefScaling =
       this.Class?.DefScaling +
       this.Templates?.reduce((sum, current) => sum + current.DefScaling || 0, 0)
     this.HPMod =
-      DefScaling * 7 + this.Templates?.reduce((sum, current) => sum + current.HPMod || 0, 0)
+      DefScaling * 7 +
+      this.Templates?.reduce((sum, current) => sum + current.HPMod || 0, 0) +
+      this.Archetype.HPMod
     this.HP = this.Tier * 10 + this.HPMod
 
     const OffScaling =
@@ -320,6 +362,24 @@ export class Enemy {
     //   (value, index, array) => array.indexOf(value) === index
     // )
 
+    this.Strike = this.replacePlaceholdersDirect(
+      DefScaling,
+      OffScaling,
+      this.Archetype.Strike != '' ? this.Archetype.Strike : this.Class.Strike
+    )
+    this.Defend = this.replacePlaceholdersDirect(
+      DefScaling,
+      OffScaling,
+      this.Archetype.Defend != '' ? this.Archetype.Defend : this.Class.Defend
+    )
+    this.Maneuver = this.replacePlaceholdersDirect(
+      DefScaling,
+      OffScaling,
+      this.Archetype.Maneuver != '' ? this.Archetype.Maneuver : this.Class.Maneuver
+    )
+
+    //Do actions and HP
+
     this.ResistancesShown = TotalledRWI.filter((x) => x.value == 1)
       .sort((a, b) => a.name.localeCompare(b.name))
       .map((x) => x.name)
@@ -337,9 +397,13 @@ export class Enemy {
     )
     this.ActionsShown = []
     this.Actions.forEach((a) => {
+      let text = a.Text
+      if (this.Archetype.Actions.find((x) => x.Name == a.Name)) {
+        text = this.Archetype.Actions.find((x) => x.Name == a.Name)?.Text as string
+      }
       this.ActionsShown.push({
         Name: a.Name || '',
-        Text: this.replacePlaceholders(DefScaling, OffScaling, a.Text, a.Values)
+        Text: this.replacePlaceholders(DefScaling, OffScaling, text, a.Values)
       })
     })
     this.Passives = this.Class?.Passives.concat(
@@ -353,9 +417,13 @@ export class Enemy {
     }
     this.PassivesShown = []
     this.Passives.forEach((p) => {
+      let text = p.Text
+      if (this.Archetype.Passives.find((x) => x.Name == p.Name)) {
+        text = this.Archetype.Passives.find((x) => x.Name == p.Name)?.Text as string
+      }
       this.PassivesShown.push({
         Name: p.Name || '',
-        Text: this.replacePlaceholders(DefScaling, OffScaling, p.Text, p.Values)
+        Text: this.replacePlaceholders(DefScaling, OffScaling, text, p.Values)
       })
     })
   }

@@ -2,528 +2,704 @@
   {
     "Name": "Strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Basic", "Attack"],
     "Text": "Strike"
   },
   {
     "Name": "Move",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Basic", "Movement"],
     "Text": "Maneuver"
   },
   {
     "Name": "Defend",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Basic", "Defend"],
     "Text": "Defend"
   },
   {
     "Name": "Wind jump",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Air", "Spell", "Movement", "Ranged", "Push"],
     "Text": "Range 5. Target ally is removed from play. They appear at the start of the next round at any space within Range 5 from you. You may consume Air to Push 1 all enemies adjacent to them when they appear."
   },
   {
     "Name": "Blow off",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Air", "Spell", "Movement", "Area", "Push"],
     "Text": "Maneuver. Radius 2. Push 2."
   },
   {
     "Name": "Air blade",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Air", "Spell", "Attack", "Bleed", "Ranged"],
     "Text": "Consume Air. Range 4 - Strike, dealing Air damage. Inflict 2 Bleed."
   },
   {
     "Name": "Tempest strike",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Air", "Spell", "Movement", "Attack"],
     "Text": "Maneuver. Strike. Maneuver. Channel Air."
   },
   {
     "Name": "Tailwind",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Air", "Spell", "Movement", "Area", "Evasive"],
     "Text": "Radius 1. Consume Air to increase Radius by 2. All allies may Move 3 and gain Evasive 1."
   },
   {
     "Name": "Billowing",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Air", "Spell", "Movement"],
     "Text": "Consume Air. Continuous. Any number of times during your turn, you may discard a card. When you do, Move 1."
   },
   {
     "Name": "Sacrificial stab",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Dark", "Spell", "Attack", "Lifeloss"],
     "Text": "Lose 2 Life. Strike. Channel Dark."
   },
   {
     "Name": "Draining touch",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Dark", "Spell", "Attack", "Lifegain"],
     "Text": "Deal 1d6 Dark damage. Consume Dark to gain life equal to damage dealt. Exile."
   },
   {
     "Name": "Release pain",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Dark", "Spell", "Attack", "Area", "Lifeloss"],
     "Text": "Pay X life. This attack hits allies. Radius X. Deal 4d6 dark damage. "
   },
   {
     "Name": "Blood pact",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Dark", "Spell", "Buff", "Permanent", "Lifeloss", "Empower"],
     "Text": "Permanent. End of turn - Lose 2 life and gain Empowered 1."
   },
   {
     "Name": "Murderous aura",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Dark", "Spell", "Area"],
     "Text": "Continuous. Radius 1. Whenever an ally attacks, you lose 1 life and they deal an extra 1d6 damage."
   },
   {
     "Name": "Shadow's grasp",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Dark", "Spell", "Ranged", "Attack", "Soft"],
     "Text": "Range 5. Up to three targets. Deal 1d6 damage and inflict Soft 2. Channel Dark."
   },
   {
     "Name": "Bury",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Spell", "Attack"],
     "Text": "Strike. Target can't move until the end of its next turn. Channel Earth."
   },
   {
     "Name": "Cracking skin",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Spell", "Defend", "Obstacle"],
     "Text": "Continuous. Defend. When attacked, create a Size 1 obstacle within Range 3."
   },
   {
     "Name": "Blessing of stone",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Spell", "Area", "Block"],
     "Text": "Consume Earth. Radius 3. All friendly characters gain 5 Block."
   },
   {
     "Name": "Stone cage",
     "Cost": 3,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Spell", "Area", "Obstacle", "Slow"],
     "Text": "Radius 3. Create Size 3 walls around the radius. Inflict Slow 3. While no walls are destroyed and you are inside them, deal an extra 2d6 Earth damage on your attacks."
   },
   {
     "Name": "Pocket cover",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Spell", "Ranged", "Obstacle"],
     "Text": "Range 2. Create a Size 1 obstacle. Channel Earth."
   },
   {
     "Name": "Dig",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Spell", "Recover"],
     "Text": "Put a card from your discard into your hand."
   },
   {
     "Name": "Reuse",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Spell", "Recover"],
     "Text": "Shuffle any number of cards from your discard into your deck. "
   },
   {
     "Name": "Forward strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Spell", "Attack", "Exile"],
     "Text": "Strike. Exile the top card of your deck. You may play it this turn. Channel Fire."
   },
   {
     "Name": "Sear",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Spell", "Attack", "Ranged", "Area"],
     "Text": "Range 5. Blast 2. Deal an extra 1d6 damage to any non-bloodied enemies. Deal 1d6 fire damage."
   },
   {
     "Name": "Burn bright",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Spell", "Draw"],
     "Text": "Draw 3 cards. Consume Fire to play a card costing 1 or less from your hand for free."
   },
   {
     "Name": "Blazing armament",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Spell", "Ranged"],
     "Text": "Continuous. Range 3. Target ally deals an extra 1d6 Fire damage."
   },
   {
     "Name": "Cauterize",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Spell", "Attack", "Draw"],
     "Text": "Deal 1 Fire damage. Target loses all Bleed. Draw a card."
   },
   {
     "Name": "Engulf in flames",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Spell", "Ranged"],
     "Text": "Range 3. Inflict Burn on target ally. Their next attack gains Radius 1 and deals an extra 1d6 damage."
   },
   {
     "Name": "Frost aura",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ice", "Spell", "Permanent", "Slow"],
     "Text": "Permanent. Whenever an enemy starts their turn next to you, they gain Slow 1. Channel Ice."
   },
   {
     "Name": "Snow day",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ice", "Spell", "Attack", "Area"],
     "Text": "Radius 3. Create difficult terrain. Consume Ice to deal 1d6 Ice damage."
   },
   {
     "Name": "Frost strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ice", "Spell", "Attack", "Slow"],
     "Text": "Strike. Inflict Slow 2. Channel Ice."
   },
   {
     "Name": "Frost beam",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ice", "Spell", "Attack", "Area"],
     "Text": "Consume Ice. Line 4. Deal 3d6 Ice damage. Create difficult terrain."
   },
   {
     "Name": "Skating",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ice", "Spell", "Area", "Block"],
     "Text": "Continuous. Radius 5. Friendly characters ignore movement cost increase on difficult terrain. When they end their turn on difficult terrain, they gain 2 Block."
   },
   {
     "Name": "Ice armor",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ice", "Spell", "Slow", "Defend"],
     "Text": "Opener. Defend. Gain Slow 1. Channel Ice."
   },
   {
     "Name": "Balance",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Spell", "Barrier"],
     "Text": "Stance. Whenever you Strike, gain 1 Barrier. Whenever you Defend, your next attack deals an extra 1d6 damage. "
   },
   {
     "Name": "Bestow armor",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Spell", "Ranged", "Block"],
     "Text": "Range 5. Target gains 5 Block. Channel Light."
   },
   {
     "Name": "Soft wrappings",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Spell", "Lifegain", "Draw", "Barrier"],
     "Text": "Target gains 2 Barrier. You may Consume Light to Heal 2 instead. Target draws a card. Exile."
   },
   {
     "Name": "Light strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Spell", "Pulse", "Attack"],
     "Text": "Strike. Inflict Pulse 3. Channel Light."
   },
   {
     "Name": "Reveal",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Spell", "Search", "Ranged"],
     "Text": "Range 5. Target ally searches their deck for a card and puts it into their hand. You may consume Light to target a second ally. Exile."
   },
   {
     "Name": "Smite",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Spell", "Ranged", "Attack", "Pulse"],
     "Text": "Consume Light. Range 10. Ignores line of sight. Deal 2d6 :ight damage. Inflict Pulse 2."
   },
   {
     "Name": "Gleaming strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Spell", "Scan", "Attack"],
     "Text": "Scan, then Strike the target."
   },
   {
     "Name": "Disect",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Spell", "Attack", "Search"],
     "Text": "Strike. If you defeat the enemy, search your deck for a card and put it on top of your deck."
   },
   {
     "Name": "Chain lightning",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lightning", "Spell", "Attack", "Ranged"],
     "Text": " Range 5. Deal 3d6 lightning damage. Another target within Range 3 takes 2d6 lightning  damage. Another target within Range 3 from the second target takes 1d6 lightning damage. Channel Lightning."
   },
   {
     "Name": "Shocking wave",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lightning", "Spell", "Area", "Attack"],
     "Text": "Radius 1. You may consume Lightning to increase radius by 2. Deal 2d6 lightning damage to all other characters."
   },
   {
     "Name": "Crackling",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lightning", "Spell", "Counter", "Permanent"],
     "Text": "Permanent. Start of turn - gain 2 Counter. Your counter deals Lightning damage."
   },
   {
     "Name": "Distracting strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lightning", "Spell", "Distract", "Attack"],
     "Text": "Strike. Inflict Distracted until the end of its turn."
   },
   {
     "Name": "Spectacle",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lightning", "Spell", "Area", "Distract", "Counter"],
     "Text": "Affects all enemies in line of sight. Inflict Distracted until the end of their turn. Consume Lightning to gain 3 Counter."
   },
   {
     "Name": "Wreathe in Electricity",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lightning", "Spell", "Area", "Counter"],
     "Text": "Consume Lightning. Radius 3. All allies gain 4 Counter."
   },
   {
     "Name": "Lightning bolt",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lightning", "Spell", "Area", "Attack"],
     "Text": "Consume Lightning. Line 5. Affects allies and enemies. Deal 4d6 Lightning damage and inflict 3 Sundered."
   },
   {
     "Name": "Venomous strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Nature", "Spell", "Attack", "Poison"],
     "Text": "Strike. Inflict Poison 3. Channel Nature."
   },
   {
     "Name": "Poison plants",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Nature", "Spell", "Ranged", "Obstacle", "Poison", "Slow"],
     "Text": "Range 3. Create 2 Size 2 obstacles. Enemies starting their turn adjacent to them gain Poison 2 and Slow 1."
   },
   {
     "Name": "Natural remedy",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Nature", "Spell", "Lifegain"],
     "Text": "Consume Nature. Target recovers 2 Health and removes up to one condition. Exile."
   },
   {
     "Name": "Poison coating",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Nature", "Spell", "Permanent", "Poison"],
     "Text": "Permanent. Your attacks inflict 1 Poison."
   },
   {
     "Name": "Soothe plant",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Nature", "Spell", "Ranged", "Obstacle"],
     "Text": "Range 6. Create a Size 1 obstacle. When a friendly character ends their turn next to it, they remove up to 1 condition or status card from their hand. "
   },
   {
     "Name": "Toxiburst",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Nature", "Spell", "Slow", "Soft", "Poison", "Area"],
     "Text": "Range 5. Blast 1. Inflict 2 Soft, 1 Slow and 1 Poison. Channel Nature."
   },
   {
     "Name": "Clarity",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Water", "Spell", "Draw"],
     "Text": "Draw cards until you have 6 in hand. Channel Water"
   },
   {
     "Name": "Current",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Water", "Spell", "Ranged"],
     "Text": "Range 5. Move target up to 3. The area it moves over turns into difficult terrain that moves a character ending their turn there the same direction and spaces."
   },
   {
     "Name": "Geyser strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Water", "Spell", "Push", "Attack"],
     "Text": "Strike. Push 1. If the space the target was on is empty, it becomes water terrain that cannot be walked on."
   },
   {
     "Name": "Drink",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Water", "Spell", "Draw"],
     "Text": "Consume Water. Draw 2 cards."
   },
   {
     "Name": "Waterport",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Water", "Spell", "Ranged"],
     "Text": "Range 7. Swap positions of any two characters."
   },
   {
     "Name": "Wave of thought",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Water", "Spell", "Area", "Draw"],
     "Text": "Radius 5. Each ally draws a card. You may consume Water to move them 2 towards you."
   },
   {
     "Name": "Run",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement"],
     "Text": "Maneuver +2."
   },
   {
     "Name": "Slink",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Draw"],
     "Text": "Maneuver -1. Draw 1"
   },
   {
     "Name": "Running reload",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Reload"],
     "Text": "Maneuver. Reload 2."
   },
   {
     "Name": "Easy reposition",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement"],
     "Text": "Maneuver."
   },
   {
     "Name": "Easy step",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement"],
     "Text": "Maneuver, ignoring difficult terrain and height."
   },
   {
     "Name": "Jump",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement"],
     "Text": "Maneuver. You may move up. You may play a card as you descend. If you strike as you descend, deal an extra 2d6 damage."
   },
   {
     "Name": "Flick",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Ranged"],
     "Text": "Range 3. Deal 1d6 damage."
   },
   {
     "Name": "Refine",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Continuous", "Buff"],
     "Text": "Continuous. Your attacks deal +X damage, where X is the number of times you've played this card this combat."
   },
   {
     "Name": "Blade dig",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw"],
     "Text": "Draw a card. Repeat this process until you draw a non-attack card."
   },
   {
     "Name": "Lengthy strike",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Area", "Push"],
     "Text": "Line 3. Strike. Push 1."
   },
   {
     "Name": "Bursting strike",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Area"],
     "Text": "Burst 2. Strike."
   },
   {
     "Name": "Unload",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack"],
     "Text": "Strike with an Ammo weapon until you run out of Ammo. You may not reload with these strikes."
   },
   {
     "Name": "Lucky roll",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fortune"],
     "Text": "Reaction - any die is rolled. Change the die up or down by 1."
   },
   {
     "Name": "Heart of the cards",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fortune"],
     "Text": "Play the top card of your deck for free, then exile it."
   },
   {
     "Name": "All in",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fortune", "Buff"],
     "Text": "The next time you attack, roll 1d6. On 4+, deal double damage. Otherwise, deal no damage."
   },
   {
     "Name": "Thoughtful strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Draw", "Water", "Light", "Area"],
     "Text": "Strike. You may consume Water or Light. Radius 3. Each ally may draw a card."
   },
   {
     "Name": "Stone cold defense",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Area", "Earth", "Ice"],
     "Text": "Defend. You may consume Ice or Earth. Radius 3. Each ally gains 3 Block."
   },
   {
     "Name": "Creeping tendrils",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Attack", "Nature", "Dark", "Lifegain"],
     "Text": "Range 5. Deal 1d6 Nature or Dark damage to up to 3 targets. You may consume Nature or Dark. If you do, recover half of the damage roll health."
   },
   {
     "Name": "Blitz",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Attack", "Air", "Lightning"],
     "Text": "Line 5. Deal 1d6 Air or Lightning damage to each target moved through. You may consume Air or Lightning. Move to the end of the line."
   },
   {
     "Name": "Bursting",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Attack", "Counter", "Fire", "Lightning"],
     "Text": "Consume Lightning or Fire. Radius 1. Deal 1d6 damage of the consumed element. Gain 2 Counter."
   },
   {
     "Name": "Mass expulsion",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Pulse", "Area", "Light", "Fire"],
     "Text": "Radius 3. Inflict 3 Pulse on each character. You may consume Light or Fire. Radius 3. Trigger Pulse on each character and reduce it by 1."
   },
   {
     "Name": "Beast form",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance", "Buff"],
     "Text": "Stance. You may not use weapons to strike. Your Strike becomes “Deal 2d6 damage. Deal 1d6 damage.” You gain 3 Block at the start of each turn. Your attacks deal an extra 1d6 against non-bloodied enemies."
   },
   {
     "Name": "Flicker blow",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Attack"],
     "Text": "Strike. Teleport 3 to be adjacent to another target. Strike that target."
   },
   {
     "Name": "Melt legs",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Slow", "Soft", "Debuff"],
     "Text": "Range 5. Burst 2. Inflict 2 Soft and 2 Slow."
   },
   {
     "Name": "Control magic",
     "Cost": 3,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Debuff", "Spell"],
     "Text": "Range 5. You control the target on their next turn."
   },
   {
     "Name": "Chromatic strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fortune", "Debuff", "Attack", "Bleed", "Poison", "Pulse"],
     "Text": "Strike. Inflict 3 of a random status effect - d6 - 1-2 Bleed, 3-4 Poison, 5-6 Pulse."
   },
   {
     "Name": "Prod fortune",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": [
       "Fortune",
       "Area",
@@ -541,749 +717,999 @@
   {
     "Name": "Reload",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Reload"],
     "Text": "Reload 3."
   },
   {
     "Name": "Hot reload",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Pulse", "Reload", "Draw"],
     "Text": "Reload 1. Draw a card. Gain 2 Pulse."
   },
   {
     "Name": "Demand",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Debuff", "Continuous"],
     "Text": "Continuous. Range 5. Target enemy must target you with all abilities if able as long as it starts its turn within range."
   },
   {
     "Name": "Be loud",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Debuff", "Continuous"],
     "Text": "Continuous. Radius 3. Each enemy must target you if able."
   },
   {
     "Name": "Drawing stance",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Debuff", "Stance"],
     "Text": "Stance. Radius 3. Each enemy must target you if able."
   },
   {
     "Name": "Vanguard's assault",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Defend", "Counter"],
     "Text": "Strike. If you are bloodied, Defend. Gain 3 Counter."
   },
   {
     "Name": "Probing blow",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Scan", "Draw"],
     "Text": "Scan target within Strike range, then Strike or Draw 2 cards."
   },
   {
     "Name": "Singe brain",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw", "Burn"],
     "Text": "Draw 2 cards. Gain 1 Burn."
   },
   {
     "Name": "Toxic lesson",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw", "Poison", "Ranged"],
     "Text": "Range 3. Inflict 3 Poison to target friendly character. They draw 2 cards."
   },
   {
     "Name": "Charge",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Attack"],
     "Text": "Maneuver. Strike an adjacent enemy."
   },
   {
     "Name": "Deflect",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Reaction"],
     "Text": "Reaction - you are attacked by a non-adjacent enemy. Redirect the attack to any other target within Range 3."
   },
   {
     "Name": "Nothingness strike",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Discard"],
     "Text": "Discard two cards. If you do, Strike."
   },
   {
     "Name": "Unceasing",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Permanent", "Buff", "Draw"],
     "Text": "Permanent. When you have no cards in hand, lose 1 life and draw a card."
   },
   {
     "Name": "Siphon mind",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Discard", "Draw", "Dark"],
     "Text": "Radius 5. Each character discards a card. You draw a card for each card discarded this way. Channel Dark."
   },
   {
     "Name": "Use waste",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance", "Block"],
     "Text": "Stance. Whenever you discard a card, gain 1 Block."
   },
   {
     "Name": "Deadzone",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Area", "Movement"],
     "Text": "Radius 3. For each enemy, teleport to that enemy, then Strike them."
   },
   {
     "Name": "Blade rush",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Area", "Bleed", "Movement"],
     "Text": "Line 3. Strike and inflict 3 Bleed, then move to the end of the line."
   },
   {
     "Name": "Attack of oportunity",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Reaction"],
     "Text": "Reaction - An adjacent enemy moves. Strike that enemy."
   },
   {
     "Name": "Beat down",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Reaction", "Soft"],
     "Text": "Reaction - an ally attacks an adjacent enemy. Strike that enemy and inflict 2 Soft."
   },
   {
     "Name": "Reflect projectile",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Reaction"],
     "Text": "Reaction - a non-adjacent enemy attacks you. Gain resistance to the attack and damage the attacker for the same amount."
   },
   {
     "Name": "Swift block",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Reaction", "Block"],
     "Text": "Reaction - you are attacked. Defend."
   },
   {
     "Name": "Bloody twirl",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Area", "Lifeloss"],
     "Text": "Lose 2 Life. Strike. If you are bloodied, the attack gains Radius 1."
   },
   {
     "Name": "Evasive strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Evasive"],
     "Text": "Strike. Gain 1 Evasive."
   },
   {
     "Name": "Mark target",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Debuff", "Permanent"],
     "Text": "Range 5. Permanent. Attacks against the target deal 1d6 extra damage. When the target dies, exile."
   },
   {
     "Name": "Time walk",
     "Cost": 4,
+    "Tags": [],
+    "Range": "",
     "Types": ["Finisher"],
     "Text": "Take an extra turn after this one. Finisher. Exile."
   },
   {
     "Name": "Shell",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Continuous", "Buff", "Area"],
     "Text": "Continuous. Radius 3. Allies deal 3 more damage."
   },
   {
     "Name": "Follow-up",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Continuous", "Attack"],
     "Text": "Continuous. Once per turn, when an ally attacks an enemy within range 3, you may deal 1d3 damage to that enemy. If you're adjacent to the enemy, deal 1d6 damage instead."
   },
   {
     "Name": "Power in pain",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lifeloss", "Buff", "Strength"],
     "Text": "Lose 2 Life. Gain 1 Strength"
   },
   {
     "Name": "Empowering Blow",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Area", "Buff", "Empower"],
     "Text": "Strike. Radius 3 - Each ally gains 1 Empowered. If you defeat the enemy, they gain another 1 Empowered."
   },
   {
     "Name": "Black hole",
     "Cost": 3,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Area"],
     "Text": "Range 6, Burst 3 - All elements are consumed. Pull all targets as close to the center as possible. Deal 5d6 damage. Gain 1 Nihil. Exile."
   },
   {
     "Name": "Cover",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Reaction"],
     "Text": "Reaction - an ally within Range 3 is attacked. Swap spaces with that ally and take the attack in their place."
   },
   {
     "Name": "Calling the Doves down to the sinners and allowing the bliss to flow",
     "Cost": 5,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack"],
     "Text": "Deal 1 damage to any target regardless of range or line of sight. Repeat 107 times. Gain 3 Wounds."
   },
   {
     "Name": "Pointy tossaways",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Stance", "Ranged", "Discard"],
     "Text": "Stance. Whenever you discard a card, Range 3 - deal 1 damage."
   },
   {
     "Name": "Endless blades",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Stance"],
     "Text": "Stance. Once per turn, you may deal 1d6 damage."
   },
   {
     "Name": "Indiscriminate pulsation",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Pulse", "Stance"],
     "Text": "Stance. Your Pulse deals damage to all characters in the radius."
   },
   {
     "Name": "Grit",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Permanent", "Wound"],
     "Text": "Permanent. When you would be defeated, gain a wound and remain at 1 Health instead. Then, exile this."
   },
   {
     "Name": "My beating, exposed heart",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Vulnerable", "Stance", "Area"],
     "Text": "Stance. At the end of your turn Radius 3 - you and all enemies gain 1 Vulnerable."
   },
   {
     "Name": "Defensive antidote",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Poison"],
     "Text": "Defend. Remove all Poison from any character."
   },
   {
     "Name": "Gushing guard",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Bleed", "Area"],
     "Text": "Defend. If you have any Bleed, Radius 3 - Inflict 3 Bleed, trigger Bleed damage on each character, then reduce Bleed by 1."
   },
   {
     "Name": "Insightful defend",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Area", "Draw"],
     "Text": "Defend. Radius 1. Each friendly character draws a card."
   },
   {
     "Name": "Horde holder",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Continuous", "Zone of Control"],
     "Text": "Continuous. Your zone of control is increased by 2. Whenever a character enters your zone of control, Defend."
   },
   {
     "Name": "Pulsing guard",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Continuous", "Pulse"],
     "Text": "Continuous. Defend. Whenever you are attacked, gain 1 Pulse. Your Pulse deals damage to enemies."
   },
   {
     "Name": "Bleeding guard",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Bleed"],
     "Text": "Defend. Gain 2 Bleed."
   },
   {
     "Name": "Inviting defense",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend"],
     "Text": "Defend. Any enemy regardless of distance may Move 2, then attack you with a basic attack."
   },
   {
     "Name": "Reusing guard",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Exile"],
     "Text": "Exile the top card of your deck. Defend X times, where X is its cost."
   },
   {
     "Name": "Sleight of hand",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw"],
     "Text": "Draw a card, then put a card on top of your deck."
   },
   {
     "Name": "Shield the wounded",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Area"],
     "Text": "Radius 3. Defend, allies gaining all effects of your Defend too. This costs 1 less for each Bloodied friendly character within range."
   },
   {
     "Name": "Wound",
+    "Tags": [],
+    "Range": "",
     "Types": ["Wound", "Basic"],
     "Text": "Unplayable."
   },
   {
     "Name": "Bladestorm",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Continuous", "Attack"],
     "Text": "Continuous. Whenever you Strike, deal 1d6 damage."
   },
   {
     "Name": "Teaching waters",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Water", "Ranged", "Draw"],
     "Text": "Range 5. An ally draws 5 cards. Channel Water."
   },
   {
     "Name": "Divesting order",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Attack", "Exile"],
     "Text": "Exile the top 2 cards of your deck. Range 3 - target ally Strikes."
   },
   {
     "Name": "Offense order",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Attack"],
     "Text": "Radius 3. All friendly characters may Strike an adjacent character."
   },
   {
     "Name": "Targeted destruction",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Attack"],
     "Text": "Range 5. Any number of allies may Strike the target."
   },
   {
     "Name": "Breaking combo",
     "Cost": 3,
+    "Tags": [],
+    "Range": "",
     "Types": ["Push", "Attack", "Soft", "Area"],
     "Text": "Strike. Push 1, then Move 1. Deal 1d6 damage. Inflict 3 Soft. Radius 1 - Strike."
   },
   {
     "Name": "Trusting motion",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fortune", "Attack", "Movement", "Defend", "Draw", "Sturdy", "Haste", "Strength"],
     "Text": "Reveal the top card of your deck. If it's an attack, gain 1 Strength and Strike. If it's a Move, gain 2 Haste and Maneuver. If it's a Defend, gain 2 Sturdy and Defend. Otherwise, gain 1 Energy and draw a card."
   },
   {
     "Name": "Elementor",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance", "Buff", "Ranged"],
     "Text": "Stance. Whenever you consume an element, you may have an ally within range 3 deal +1d6 damage and their damage is of the consumed element's type."
   },
   {
     "Name": "Guard",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Ranged"],
     "Text": "Range 3. Defend, the target gaining the effects of your Defend."
   },
   {
     "Name": "Opportune strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Attack", "Discard"],
     "Text": "Replenish. Strike. Discard a card."
   },
   {
     "Name": "Liminal flow",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Continuous", "Buff", "Lifegain", "Area"],
     "Text": "Consume Dark and Light. Continuous. Radius 3 - Friendly characters' attacks deal +1d6 damage and deal Dark or Light damage of your choice. Whenever they defeat an enemy, they recover 1 Health."
   },
   {
     "Name": "Burning frost",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Continuous", "Slow", "Pulse", "Area", "Fire", "Ice"],
     "Text": "Consume Fire and Ice. Continuous. Radius 3 - Whenever an enemy starts or ends their turn, inflict 2 Slow and 4 Pulse."
   },
   {
     "Name": "Shadow call",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Summon", "Dark"],
     "Text": "Range 3 - Create a Shade (3 HP). It deals 1d6 damage. Consume Dark - each Shade moves 2, then deals 1d6 damage."
   },
   {
     "Name": "Summon Golem",
     "Cost": 3,
+    "Tags": [],
+    "Range": "",
     "Types": ["Summon", "Permanent", "Ice", "Earth"],
     "Text": "Permanent. Range 3 - Summon a Golem (15 HP, Size 2, Immune to Poison and Bleed). It deals 2d6 damage. Once per turn, you may pay 1 Energy. When you do, the summoned Golem moves 2, then deals 2d6 damage and you may consume Ice or Earth to have the Golem gain 5 Block. When the Golem is defeated, exile this card."
   },
   {
     "Name": "Guide creation",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Buff", "Light"],
     "Text": "Range 5. Target summoned ally recovers 3 health, may move 2 and its next attack deals +1d6 damage. Channel Light."
   },
   {
     "Name": "Summon Elemental",
     "Cost": 3,
+    "Tags": [],
+    "Range": "",
     "Types": ["Summon", "Fire", "Lightning"],
     "Text": "Permanent. Consume Fire or Lightning. Range 3 - Summon an Elemental (8 HP). At the end of your turn it moves 4, gains 3 Counter and deals 2d6 damage of the element that was consumed to play this card."
   },
   {
     "Name": "Barrier potion",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable", "Barrier"],
     "Text": "Replenish. Gain 5 Barrier. Consumable 3."
   },
   {
     "Name": "Bandages",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable", "Bleed"],
     "Text": "Replenish. Remove all Bleed from a friendly character. Consumable 3."
   },
   {
     "Name": "Antidote",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable", "Poison"],
     "Text": "Replenish. Remove all Poison from a Friendly character. Consumable 3."
   },
   {
     "Name": "Dampener",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable", "Pulse"],
     "Text": "Replenish. Remove all Pulse from a Friendly character. Consumable 3."
   },
   {
     "Name": "Strength potion",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable", "Strength"],
     "Text": "Replenish. Gain 2 Strength. Consumable 3."
   },
   {
     "Name": "Strand of wind",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable", "Evasive"],
     "Text": "Replenish. Gain 1 Evasive. Consumable 3."
   },
   {
     "Name": "Throwing dagger",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable", "Attack", "Ranged"],
     "Text": "Replenish. Range 3. Deal 1d6 damage. Consumable 3."
   },
   {
     "Name": "Blade ring",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable", "Attack", "Area"],
     "Text": "Replenish. Radius 1. Deal 1d6 damage. Consumable 3."
   },
   {
     "Name": "Stone of elements",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Consumable"],
     "Text": "Replenish. Channel any element. Consumable 3."
   },
   {
     "Name": "Prayer - Fire",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Prayer", "Fire", "Strength", "Attack", "Ranged"],
     "Text": "Choose one - Channel Fire or Consume Fire - Range 3. Target ally gains 1 Strength and may Strike."
   },
   {
     "Name": "Prayer - Earth",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Prayer", "Earth", "Sturdy", "Defend", "Ranged"],
     "Text": "Choose one - Channel Earth or Consume Earth - Range 3. Target ally gains 2 Sturdy and may Defend."
   },
   {
     "Name": "Shroud",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Reaction", "Evasive"],
     "Text": "Reaction - an adjacent ally is attacked. They gain 1 Evasive."
   },
   {
     "Name": "Stormburst",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Lightning", "Area", "Sundered"],
     "Text": "Consume Lightning. Strike. Then, Strike each target that has block within Burst 3 from the target. All damage dealt by this card is Lightning type. Inflict 3 Sundered."
   },
   {
     "Name": "Bloody Strength",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Empower", "Bleed"],
     "Text": "Radius 3. Each ally gains 1 Empowered and 3 Bleed."
   },
   {
     "Name": "There and back again",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement"],
     "Text": "Maneuver. At the end of this turn, you may Maneuver."
   },
   {
     "Name": "Bring forth",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Ranged"],
     "Text": "Maneuver twice. Range 8 - teleport an ally to a space adjacent to you."
   },
   {
     "Name": "Run ragged",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Bleed"],
     "Text": "Maneuver. Gain 3 Bleed."
   },
   {
     "Name": "Call the spring Fairy",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Summon", "Barrier", "Light", "Air"],
     "Text": "Summon a Fairy (3 HP, flying). Consume Air - each Fairy may move 5. Consume Light - Each ally adjacent to a Fairy gains 1 barrier."
   },
   {
     "Name": "Call the autumn Fairy",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Summon", "Push", "Attack"],
     "Text": "Summon a Fairy (3 HP, flying). Consume Water - each Fairy may push 2. Consume Dark - Each Fairy deals 1d3 damage."
   },
   {
     "Name": "Devour",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lifegain", "Summon"],
     "Text": "Destroy an adjacent Summon. You recover 2 health and gain 1 energy."
   },
   {
     "Name": "Burst of Wind",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Air"],
     "Text": "You may consume Air to ignore height, terrain and zone of control for this movement."
   },
   {
     "Name": "Untouchable dash",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Haste", "Evasive"],
     "Text": "Gain 2 Haste. Maneuver. Gain 1 Evasive for each adjacent enemy."
   },
   {
     "Name": "Imperceptable movement",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Haste"],
     "Text": "The next time you would move this turn, teleport instead. Gain 1 Haste."
   },
   {
     "Name": "Forgetful run",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Area"],
     "Text": "Maneuver. Radius 3 - Each player may discard up to two cards."
   },
   {
     "Name": "Toss balast",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Discard"],
     "Text": "Discard 2 cards. If you do, Maneuver."
   },
   {
     "Name": "Already there",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement"],
     "Text": "Teleport to any space on the map. Costs 1 more for each other character in your line of sight."
   },
   {
     "Name": "Air run",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Air", "Area", "Push", "Attack"],
     "Text": "Maneuver. You may consume Air. If you do, Radius 1 - push 2 and deal 1d6 Air damage."
   },
   {
     "Name": "Dark run",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Dark", "Area", "Soft"],
     "Text": "Maneuver. You may consume Dark. If you do, Radius 1 - Inflict 2 Soft."
   },
   {
     "Name": "Earth run",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Earth", "Obstacle"],
     "Text": "Maneuver. You may consume Earth. If you do, create a size 1 Obstacle adjacent to you."
   },
   {
     "Name": "Fire run",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Fire", "Area"],
     "Text": "Maneuver. You may consume Fire. If you do, your next attack gains Radius +1 or Burst +1 and deals Fire damage."
   },
   {
     "Name": "Ice run",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Ice"],
     "Text": "Maneuver. You may consume Ice. If you do, look at the top 3 cards of your deck. Put one of them into your hand, then exile one of them."
   },
   {
     "Name": "Scry",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw"],
     "Text": "Look at the top 2 cards of your deck, put one in the discard pile, draw the other one."
   },
   {
     "Name": "Rummaging",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Discard", "Draw", "Lifeloss"],
     "Text": "Discard any number of cards, draw that many. Lose 2 life."
   },
   {
     "Name": "Preparation",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Discard", "Recover"],
     "Text": "Put a card from your discard pile on top of your deck, you can't draw cards until your end of turn."
   },
   {
     "Name": "Inspiration",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Discard", "Exile", "Draw"],
     "Text": "Discard your hand. Draw 2 cards. Exile."
   },
   {
     "Name": "Retry",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw"],
     "Text": "Shuffle your discard pile into your deck, draw a card."
   },
   {
     "Name": "Blazing shield",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Fire", "Area", "Attack", "Area"],
     "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 Fire damage to that enemy. You may consume Fire to have that attack gain Burst 2."
   },
   {
     "Name": "Frozen shield",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Ice", "Attack", "Slow"],
     "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 Ice damage to that enemy. You may consume Ice to inflict 3 Slow to that enemy."
   },
   {
     "Name": "Earthen shield",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Earth", "Attack"],
     "Text": "Continuous. Defend. Whenever an enemy breaks your Block, deal 2d6 Earth damage to that enemy. You may consume Earth to Defend."
   },
   {
     "Name": "Defensive gale",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Air", "Movement"],
     "Text": "Defend. You may consume Air. If you do, Maneuver."
   },
   {
     "Name": "Wrath",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance"],
     "Text": "Stance. You deal double damage. You receive double damage."
   },
   {
     "Name": "Elemental sustenance",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw"],
     "Text": "Consume any number of elements. Draw a card for every 2 elements consumed."
   },
   {
     "Name": "Twilight devotion",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Light", "Dark", "Discard", "Barrier"],
     "Text": "Channel Light and Dark. Discard a card, then gain 2 Barrier."
   },
   {
     "Name": "Amplitude devotion",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Water", "Pulse", "Draw"],
     "Text": "Channel Fire and Water. Gain 2 Pulse, then draw a card."
   },
   {
     "Name": "Horizon devotion",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Air", "Earth", "Slow", "Movement"],
     "Text": "Channel Air and Earth. Gain 1 Slow, then Maneuver."
   },
   {
     "Name": "Tundra devotion",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ice", "Nature", "Poison"],
     "Text": "Channel Ice and Nature. Gain 1 Poison, then look at the top 2 cards of your deck and put one into your discard."
   },
   {
     "Name": "Speed up",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Haste", "Ranged"],
     "Text": "Gain 1 Haste. Range 3 - target ally gains 1 Haste."
   },
   {
     "Name": "Trustworthy guard",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Area", "Empower"],
     "Text": "Defend. Radius 1 - each ally gains 1 Empower."
   },
   {
     "Name": "Leeching defense",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Area", "Attack", "Lifegain"],
     "Text": "Defend. Radius 3 - Deal 1d6 damage to each character. For each ally targeted this way, recover 1 health."
   },
   {
     "Name": "Crystal clarity",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Ice", "Water", "Draw", "Slow"],
     "Text": "Radius 3. You may consume Ice and/or Water. Each friendly character may look at the top 2 cards of their deck and put any number of them into their discard. If Ice was consumed, they may look at an additional 3 cards. If Water was consumed, they may draw a card. Inflict 1 Slow to each ally."
   },
   {
     "Name": "Return from soil",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Earth", "Discard", "Recover", "Area"],
     "Text": "Range 5. Target ally may put a card from their discard into their hand. You may consume Earth. If you do, change the range to Radius 5."
   },
   {
     "Name": "Repeating blow",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Exile"],
     "Text": "Exile the top 2 cards of your deck, then put this card on top of your deck."
   },
   {
     "Name": "Rise",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Obstacle"],
     "Text": "Channel Earth. Create a Size 1 Obstacle in your space, placing yourself on top of it."
   },
   {
     "Name": "Limit refutal",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Attack"],
     "Text": "Maneuver. Strike. This card costs 1 less to play if you are bloodied. This card costs 1 less to play if you have 1 HP."
   },
   {
     "Name": "Fresh ideas",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Draw", "Exile"],
     "Text": "Radius 5. Each ally may exile any number of cards from their hand, then draw that many cards."
   },
   {
     "Name": "Gale blade",
     "Cost": 3,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Attack", "Air", "Push"],
     "Text": "Line 4. Strike, then move to the end of the line. Radius 2. Strike. You may consume Air to Push all targets up 3. They fall at the end of your turn."
   },
   {
     "Name": "Perfect turn",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Opener", "Attack", "Finisher"],
     "Text": "Opener. Strike. Strike. Finisher."
   },
   {
     "Name": "Flowing motions",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Flow", "Movement", "Counter"],
     "Text": "Flow. Maneuver. Gain 3 Counter."
   },
   {
     "Name": "Like water",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Permanent", "Push", "Water", "Draw"],
     "Text": "Permanent. After an enemy attacks you from any range, you may Push them 1 and you may consume Water. If you do, Push +1 and you draw a card."
   },
   {
     "Name": "Breezy rebuttal",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Attack", "Movement", "Reaction"],
     "Text": "Reaction - you are attacked. Consume Air. If you do, teleport to be adjacent to the triggering enemy and Radius 1 - Strike."
   },
   {
     "Name": "Bloody rebuttal",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": [
       "Reaction",
       "Strength",
@@ -1300,360 +1726,480 @@
   {
     "Name": "Abandon",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Nihil", "Energy", "Draw"],
     "Text": "Gain 1 Nihil. Draw 3 cards, gain 3 Energy."
   },
   {
     "Name": "Novice strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Exile"],
     "Text": "Strike. Improves after 5 uses. Exile."
   },
   {
     "Name": "Learning fury",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw"],
     "Text": "Draw a card for each attack you made this turn."
   },
   {
     "Name": "Reposition",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Push"],
     "Text": "Range 5 - Push 4."
   },
   {
     "Name": "Chessboard",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Push"],
     "Text": "Radius 5 - Push 3 any other characters. "
   },
   {
     "Name": "Think tank",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area"],
     "Text": "Permanent. When played, Radius 5 - each friendly character exiles a card from their hand. Friendly characters within Radius 5 may play those cards as though the cards were in their hand."
   },
   {
     "Name": "Shove",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Push", "Draw"],
     "Text": "Push 1. Draw a card."
   },
   {
     "Name": "Novice Strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Exile"],
     "Text": "Strike. Improves after 5 uses. Exile."
   },
   {
     "Name": "Call blood",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Bleed"],
     "Text": "Range 7 - Inflict 5 Bleed."
   },
   {
     "Name": "Cutting gale",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Area", "Bleed", "Air"],
     "Text": "Range 5, Burst 2 - Inflict 5 Bleed. You may consume Air. If you do, trigger Bleed on each enemy and reduce their Bleed by 1."
   },
   {
     "Name": "Darkness consumes",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Dark", "Wound"],
     "Text": "Consume Dark. Range 5 - target loses 15 health. Gain 1 Wound."
   },
   {
     "Name": "Burning heels",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Burn", "Haste", "Movement"],
     "Text": "Radius 5 - inflict 2 Burn to each ally. They gain 2 Haste and may Move 1."
   },
   {
     "Name": "Wariness",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Wary", "Exile"],
     "Text": "Gain 4 Wary. Exile. "
   },
   {
     "Name": "Danger call",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Exile", "Wary"],
     "Text": "Radius 1. Each friendly character gains 2 Wary."
   },
   {
     "Name": "Cautious strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Exile", "Wary"],
     "Text": "Strike. For each 1 or 2 rolled, gain 1 Warry."
   },
   {
     "Name": "Sea's preparation",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Water", "Wary", "Push"],
     "Text": "Consume Water. Gain 3 Wary. Radius 1 - Push 2."
   },
   {
     "Name": "Aquatic tendril",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Water", "Push"],
     "Text": "Range 3 - Push target ally 3. You may consume Water. If you do, target an additional ally."
   },
   {
     "Name": "Pyroport",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Range", "Movement", "Pulse"],
     "Text": "Range 3 - Teleport target ally to any space within Range 3. You may consume Fire. If you do, increase both ranges by 3 and inflict 3 Pulse to the target and each enemy adjacent to them after they teleport."
   },
   {
     "Name": "Frost guard",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ice", "Wary", "Block"],
     "Text": "Consume Ice. Gain 1 Wary, then gain Block equal to your Wary."
   },
   {
     "Name": "Stand",
     "Cost": 3,
+    "Tags": [],
+    "Range": "",
     "Types": ["Continuous", "Finisher", "Wary", "Attack"],
     "Text": "Continuous. Gain 8 Wary. Whenever an enemy moves into an adjacent space, Strike. Finisher."
   },
   {
     "Name": "Burning approach",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Fire", "Area", "Attack"],
     "Text": "Consume Fire. Maneuver, then Radius 1 - Strike. Turn all spaces moved over into Hazardous terrain, dealing 5 fire damage to any character ending their turn on it."
   },
   {
     "Name": "Wary guard",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend", "Wary"],
     "Text": "Defend. Gain 2 Wary. "
   },
   {
     "Name": "Drag around",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack"],
     "Text": "Strike an adjacent enemy. Move them to any space adjacent to you."
   },
   {
     "Name": "Novice Strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Daze", "Draw"],
     "Text": "Replenish. Inflict 2 Daze to yourself, then shuffle your discard into your deck and draw two cards."
   },
   {
     "Name": "Shade walk",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Summon"],
     "Text": "Summon a Shade(3 HP). You may move each Shade 2."
   },
   {
     "Name": "Study",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw", "Finisher"],
     "Text": "Draw 5 cards. Finisher."
   },
   {
     "Name": "Novice Strike",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Exile"],
     "Text": "Strike. Improves after 5 uses. Exile."
   },
   {
     "Name": "Time to watch",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Finisher", "Exile"],
     "Text": "Take an extra turn after this one. You may not play cards during that turn. Finisher. Exile."
   },
   {
     "Name": "Approaching counter",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Attack", "Reaction", "Movement"],
     "Text": "Reaction - an enemy within Range 3 attacks. Move 2, then Strike that enemy."
   },
   {
     "Name": "Prepare",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw", "Empower"],
     "Text": "Draw 3 cards. Gain 1 Empowered."
   },
   {
     "Name": "Fairy counsel",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Summon", "Draw", "Light"],
     "Text": "Summon a Fairy (3 HP, flying, no zone of control). Draw a card for each Fairy. Channel Light."
   },
   {
     "Name": "Soothing draw",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw", "Area"],
     "Text": "Draw 3 cards. Radius 1 - Reduce any number of conditions on each friendly character by 1."
   },
   {
     "Name": "Restock",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw"],
     "Text": "Draw a card for each other card you've played this turn. Exile."
   },
   {
     "Name": "Steady purging",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Permanent", "Exile"],
     "Text": "Permanent. At the end of your turn, look at the top two cards of your deck. You may exile any number of them."
   },
   {
     "Name": "Evasion stance",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance", "Evasive"],
     "Text": "Stance. At the start of your turn, gain 1 Evasive."
   },
   {
     "Name": "Refuse",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Reaction"],
     "Text": "Reaction - you are attacked. Ignore all effects from that attack."
   },
   {
     "Name": "Swiftness command",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Movement", "Water"],
     "Text": "Range 5 - Target ally may maneuver, then play a card. Channel Water."
   },
   {
     "Name": "Burn bright",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Exile", "Fire"],
     "Text": "Exile the top five cards of your deck. You may play them this turn. Channel Fire."
   },
   {
     "Name": "Grant protection",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Wary", "Ranged"],
     "Text": "Range 5 - Target ally gains 2 Wary, then may increase any condition by 1."
   },
   {
     "Name": "Owned domain",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Pulse", "Wary"],
     "Text": "Radius 5 - Inflict 2 Pulse or 2 Wary to each character. Swap spaces of any two characters."
   },
   {
     "Name": "Sprinting finish",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Finisher"],
     "Text": "Maneuver. Maneuver. Finisher."
   },
   {
     "Name": "Guarding preparation",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Defend"],
     "Text": "Defend. The next card with Strike you play this turn costs 0 energy."
   },
   {
     "Name": "Striking preparation",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Strike"],
     "Text": "Strike. The next card with Maneuver you play this turn costs 0 energy."
   },
   {
     "Name": "Moving preparation",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement"],
     "Text": "Maneuver. The next card with Defend you play this turn costs 0 energy."
   },
   {
     "Name": "Share knowledge",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Range", "Draw"],
     "Text": "Range 3 - You and target ally each draw 2 cards."
   },
   {
     "Name": "Evade",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Evasive"],
     "Text": "Gain 3 Evasive."
   },
   {
     "Name": "Evasive order",
     "Cost": 2,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Evasive", "Movement"],
     "Text": "Radius 2 - Each ally may move 1, then gains 1 Evasive."
   },
   {
     "Name": "Toss and run",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Discard", "Movement", "Air"],
     "Text": "Discard 2 cards. Maneuver. Channel Air."
   },
   {
     "Name": "Bloody approach",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Area", "Movement", "Air", "Bleed"],
     "Text": "Consume Air. Maneuver. Radius 2 - Inflict Bleed equal to spaces moved with this card."
   },
   {
     "Name": "Mass retrieval",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Replenish", "Earth", "Area"],
     "Text": "Radius 1 - Each ally may put a card from their discard into their hand. Channel Earth."
   },
   {
     "Name": "Dust off",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Earth", "Replenish"],
     "Text": "Consume Earth. Return a card from your discard to your hand."
   },
   {
     "Name": "Swiftness",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance", "Haste"],
     "Text": "Stance. At the start of your turn, gain 1 Haste."
   },
   {
     "Name": "Cheapness",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance"],
     "Text": "Stance. The first card you play each turn costs 1 less."
   },
   {
     "Name": "Reaching Stance",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance"],
     "Text": "Stance. Your Strikes gain +1 Range."
   },
   {
     "Name": "Drawing Stance",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Draw", "Stance"],
     "Text": "Stance. At the start of your turn, draw a card."
   },
   {
     "Name": "Protective Chant",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Stance", "Barrier", "Area"],
     "Text": "Stance. Radius 1 - At the start of your turn, each friendly character gains 1 Barrier."
   },
   {
     "Name": "Imperial heritage",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Movement", "Attack", "Defend", "Heritage", "Ranged"],
     "Text": "Range 3 - Target may perform a Strike, Defend or Maneuver."
   },
   {
     "Name": "Demonic heritage",
     "Cost": 0,
+    "Tags": [],
+    "Range": "",
     "Types": ["Lifeloss", "Draw", "Energy", "Heritage"],
     "Text": "Lose 2 life. Draw 1 card. Gain 1 Energy. Channel your element."
   },
   {
     "Name": "Divine heritage",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Barrier", "Strength", "Haste", "Heritage", "Ranged"],
     "Text": " Range 3 - Target gains 3 Barrier, 1 Haste and 1 Strength. Channel your element."
   },
   {
     "Name": "Primal heritage",
     "Cost": 1,
+    "Tags": [],
+    "Range": "",
     "Types": ["Ranged", "Obstacle", "Attack", "Heritage"],
     "Text": "Range 5 - Place a size 1 Obstacle. Deal 2d6 damage of your element to each enemy adjacent to the obstacle. Channel your element."
   }

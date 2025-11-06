@@ -165,6 +165,17 @@
     ],
     "Passives": [],
     "PostAttack": [],
+    "Archetypes": [
+      {
+        "Name": "Swift",
+        "StrikeMod": "",
+        "DefendMod": "",
+        "ManeuverMod": "",
+        "HPMod": 0,
+        "Actions": [],
+        "Passives": []
+      }
+    ],
     "Type": "Striker"
   },
   {
@@ -228,8 +239,8 @@
         "Values": ["TIR*2+1"]
       },
       {
-        "Name": "Use elements",
-        "Text": "May consume one element when attacking. The attack deals that element's damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
+        "Name": "Elemental prowess",
+        "Text": "If there are three or more elements channeled, may consume one element when attacking. Otherwise, channel any element. The attack deals that element's damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{0} damage. Air, Light, Water: +{0} Range. Ice, Earth, Nature: Gain {1} Block. ",
         "Values": ["Math.round(DMG/2)", "BLK"]
       }
     ],
