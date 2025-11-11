@@ -113,7 +113,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Maneuver. Defend+4. Gain {0} Counter.",
+        "Text": "Maneuver. Defend+4. Gain {TIR*3} Counter.",
         "Values": ["TIR*3"]
       },
       {
@@ -213,7 +213,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Maneuver-1. Range 3 - Inflict {1} Slow and {1} Soft. Channel Nature.",
+        "Text": "Maneuver-1. Range 3 - Inflict {TIR} Slow and {TIR} Soft. Channel Nature.",
         "Values": ["2+MOV", "TIR"]
       },
       {
@@ -230,12 +230,12 @@
     "Passives": [
       {
         "Name": "Group deployment",
-        "Text": "{0} rabble are deployed as one unit, sharing activations but not spaces, statuses or health. When acting, they must all perform the same action.",
+        "Text": "{TIR+1} rabble are deployed as one unit, sharing activations but not spaces, statuses or health. When acting, they must all perform the same action.",
         "Values": ["TIR+1"]
       },
       {
         "Name": "Natural powers",
-        "Text": "At the end of turn, if Nature is channeled, Inflict {0} Soft. If Water is channeled, Push {1}",
+        "Text": "At the end of turn, if Nature is channeled, Inflict {TIR+1} Soft. If Water is channeled, Push {TIR}",
         "Values": ["TIR+1", "TIR"]
       },
       {
@@ -299,7 +299,7 @@
         "Passives": [
           {
             "Name": "Group deployment",
-            "Text": "{0} rabble are deployed as one unit, sharing activations but not spaces, statuses or health. When acting, they must all perform the same action.",
+            "Text": "{TIR*2+1} rabble are deployed as one unit, sharing activations but not spaces, statuses or health. When acting, they must all perform the same action.",
             "Values": ["TIR*2+1"]
           }
         ]
@@ -313,7 +313,7 @@
         "Actions": [
           {
             "Name": "Close",
-            "Text": "Maneuver-1. Range 3 - Inflict {1} Weak and {1} Soft. Channel Dark.",
+            "Text": "Maneuver-1. Range 3 - Inflict {TIR} Weak and {TIR} Soft. Channel Dark.",
             "Values": ["TIR"]
           }
         ],
@@ -333,12 +333,12 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Maneuver-1. Radius 1 - All friendly characters gain {1} Barrier. If they already have Barrier, they gain 2 extra.",
+        "Text": "Maneuver-1. Radius 1 - All friendly characters gain {BLK-3} Barrier. If they already have Barrier, they gain 2 extra.",
         "Values": ["2+MOV", "BLK-3"]
       },
       {
         "Name": "Close",
-        "Text": "Maneuver. Defend and gain {2} Barrier.",
+        "Text": "Maneuver. Defend and gain {BLK-3} Barrier.",
         "Values": ["3+MOV", "BLK-1", "BLK-3"]
       },
       {
@@ -355,7 +355,7 @@
       },
       {
         "Name": "Screamer",
-        "Text": "Size 1 obstacle. Has {0} HP. At the end of each round, Radius 3 - inflict 1 Dazed.",
+        "Text": "Size 1 obstacle. Has {TIR+3} HP. At the end of each round, Radius 3 - inflict 1 Dazed.",
         "Values": ["TIR+3"]
       }
     ],
@@ -398,7 +398,7 @@
         "Passives": [
           {
             "Name": "Screamer",
-            "Text": "Size 1 obstacle. Has {0} HP and {TIR*3} barrier. At the end of each round, Radius 3 - inflict 1 Dazed.",
+            "Text": "Size 1 obstacle. Has {TIR+3} HP and {TIR*3} barrier. At the end of each round, Radius 3 - inflict 1 Dazed.",
             "Values": ["TIR+3"]
           }
         ]
@@ -458,17 +458,17 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Maneuver-2. Strike+1. Inflict {1} Bleed and gain {4} Counter.",
+        "Text": "Maneuver-2. Strike+1. Inflict {TIR+1} Bleed and gain {DMG} Counter.",
         "Values": ["DMG+1", "TIR+1", "PSTATK", "1+MOV", "TIR+1"]
       },
       {
         "Name": "Close",
-        "Text": "Maneuver. Strike-1. Inflict {3} Bleed.",
+        "Text": "Maneuver. Strike-1. Inflict {TIR+1} Bleed.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "TIR+1"]
       },
       {
         "Name": "Far",
-        "Text": "Maneuver+2. Defend",
+        "Text": "Maneuver+2. Defend.",
         "Values": ["5+MOV"]
       },
       {
@@ -487,64 +487,70 @@
     "PostAttack": [],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
+        "Name": "Experienced",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "",
         "HPMod": -5,
         "Actions": [
           {
-            "Name": "Melee",
-            "Text": "Strike.",
+            "Name": "Riposte",
+            "Text": "Reaction - You or an adjacent character is attacked from any range. Ignore all damage from dice showing 1, 2 or 3. Deal damage equal to damage ignored back to the attacker.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Fearsome",
+        "Name": "Confident",
         "Strike": "",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Maneuver": "Move 5 towards the nearest enemy.",
         "HPMod": 0,
         "Actions": [
           {
             "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
+            "Text": "Maneuver. Strike-1. Channel Earth.",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Steady as Stone",
+            "Text": "Whenever you would be attacked or moved, you may consume Earth. If you do, gain {BLK} block and reduce the movement by {TIR*2}.",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Heavy",
+        "Name": "Spry",
         "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
+        "Defend": "Gain {TIR} Evasive. Channel Lightning.",
+        "Maneuver": "Move 4.",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
+            "Name": "Melee",
+            "Text": "Maneuver-2. Strike+1. Gain {DMG} Counter. You may consume Lightning. If you do, Strike-2 and gain {DMG} Counter.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
-        "Maneuver": "",
+        "Name": "Spellweaving",
+        "Strike": "If there are three or more elements, consume a random element. Your attack deals that type of damage and deals an extra {TIR*2} damage. Deal {DMG} damage.",
+        "Defend": "",
+        "Maneuver": "Move 3. Channel a random unchanneled element.",
         "HPMod": 0,
-        "Actions": [
+        "Actions": [],
+        "Passives": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Spellsnatch",
+            "Text": "Whenever the character you are dueling channels an element, gain {BLK} barrier and deal {DMG-2} damage to them.",
             "Values": []
           }
-        ],
-        "Passives": []
+        ]
       }
     ],
     "Type": "Defender"
@@ -575,7 +581,7 @@
       },
       {
         "Name": "Reaction",
-        "Text": "An enemy attacks you or an ally within Radius 3. Radius 3 - you and all allies gain {0} Block. You may consume Light and/or Ice. If Light is consumed, after this attack, inflict {1} Pulse on the attacker and they may only draw line of sight to adjacent spaces this turn. If Ice is consumed, you gain {2} Block and inflict {3} Slow to the attacker.",
+        "Text": "An enemy attacks you or an ally within Radius 3. Radius 3 - you and all allies gain {BLK-3} Block. You may consume Light and/or Ice. If Light is consumed, after this attack, inflict {TIR+1} Pulse on the attacker and they may only draw line of sight to adjacent spaces this turn. If Ice is consumed, Defend and inflict {TIR} Slow to the attacker.",
         "Values": ["Math.round(BLK/2)", "TIR+1", "BLK-1", "TIR"]
       }
     ],
@@ -678,13 +684,7 @@
         "Values": ["DMG-1", "PSTATK", "TIR+1"]
       }
     ],
-    "Passives": [
-      {
-        "Name": "Bow",
-        "Text": "All attacks have Range {0}.",
-        "Values": ["TIR*2+3"]
-      }
-    ],
+    "Passives": [],
     "PostAttack": [],
     "Archetypes": [
       {
@@ -755,7 +755,7 @@
     "DefScaling": 1,
     "OffScaling": 2,
     "Challenge": 3,
-    "Strike": "Range {TIR+2}. If there are three or more elements channeled, may consume one element. Otherwise, channel any element. The attack deals the consumed element's type of damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{TIR+1} damage. Air, Light, Water: +{TIR+1} Range. Ice, Earth, Nature: Gain {TIR+1} Block. Deal {DMG} damage. Ignore Block.",
+    "Strike": "Range {TIR*2+1}. If there are three or more elements channeled, may consume one element. Otherwise, channel any element. The attack deals the consumed element's type of damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{TIR+1} damage. Air, Light, Water: +{TIR+1} Range. Ice, Earth, Nature: Gain {TIR+1} Block. Deal {DMG} damage. Ignore Block.",
     "Maneuver": "Move 3.",
     "Defend": "Gain {BLK}.",
     "Actions": [
@@ -771,22 +771,16 @@
       },
       {
         "Name": "Far",
-        "Text": "Maneuver-1. Range + {3}. Strike-1 up to two targets.",
+        "Text": "Maneuver-1. Range + {TIR+1}. Strike-1 up to two targets.",
         "Values": ["1+MOV", "DMG-1", "PSTATK", "TIR+1"]
       }
     ],
-    "Passives": [
-      {
-        "Name": "Rod",
-        "Text": "All attacks have Range {0} and ignore Block.",
-        "Values": ["TIR*2+1"]
-      }
-    ],
+    "Passives": [],
     "PostAttack": [],
     "Archetypes": [
       {
         "Name": "Stormcaller ",
-        "Strike": "Range {TIR+2}. If there are three or more elements channeled, may consume one element. Otherwise, channel any element. The attack deals the consumed element's type of damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{TIR+1} damage. Air, Light, Water: +{TIR+1} Range. Ice, Earth, Nature: Gain {TIR+1} Block. Deal 2 damage {TIR+1} times. Ignore Block.",
+        "Strike": "Range {TIR*2+1}. If there are three or more elements channeled, may consume one element. Otherwise, channel any element. The attack deals the consumed element's type of damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{TIR+1} damage. Air, Light, Water: +{TIR+1} Range. Ice, Earth, Nature: Gain {TIR+1} Block. Deal 2 damage {TIR+1} times. Ignore Block.",
         "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
@@ -831,7 +825,7 @@
       },
       {
         "Name": "Immortal",
-        "Strike": "Range {TIR+2}. If there are three or more elements channeled, may consume one element. Otherwise, channel any element. The attack deals the consumed element's type of damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{TIR+1} damage. Air, Light, Water: +{TIR+1} Range. Ice, Earth, Nature: Gain {TIR+1} Block. Deal {DMG-1} damage. Ignore Block. Gain Barrier equal to half the damage dealt.",
+        "Strike": "Range {TIR*2+1}. If there are three or more elements channeled, may consume one element. Otherwise, channel any element. The attack deals the consumed element's type of damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{TIR+1} damage. Air, Light, Water: +{TIR+1} Range. Ice, Earth, Nature: Gain {TIR+1} Block. Deal {DMG-1} damage. Ignore Block. Gain Barrier equal to half the damage dealt.",
         "Defend": "Gain {BLK} Block. Consume any amount of elements - gain {TIR+1} block for each element consumed.",
         "Maneuver": "",
         "HPMod": 0,
@@ -977,7 +971,7 @@
       },
       {
         "Name": "Group deployment",
-        "Text": "{0} footmen are deployed as one unit, sharing activations but not spaces, statuses or health. When acting, they must all perform the same action.",
+        "Text": "{TIR+1} footmen are deployed as one unit, sharing activations but not spaces, statuses or health. When acting, they must all perform the same action.",
         "Values": ["TIR+1"]
       }
     ],
@@ -1076,78 +1070,89 @@
     "Passives": [
       {
         "Name": "Bramble",
-        "Text": "Size 1 obstacle. Has {0} HP. Has resistance against damage from non-adjacent sources. Has weakness against Fire and Lightning. Always has {1} Counter.",
+        "Text": "Size 1 obstacle. Has {TIR+3} HP. Has resistance against damage from non-adjacent sources. Has weakness against Fire and Lightning. Always has {TIR+2} Counter.",
         "Values": ["TIR+3", "TIR+2"]
       },
       {
         "Name": "Bramble tender",
-        "Text": "Start of combat: place {0} Brambles within Range 7 of the Druid.",
+        "Text": "Start of combat: place {TIR*2+1} Brambles within Range 7 of the Druid.",
         "Values": ["TIR*2+1"]
       }
     ],
     "PostAttack": [],
     "Resistances": ["Water", "Nature"],
-    "Weaknesses": ["Lightning"],
+    "Weaknesses": ["Fire"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
+        "Name": "Rot",
+        "Strike": "",
+        "Defend": "Gain {BLK} Block. Channel Dark.",
+        "Maneuver": "",
+        "HPMod": 0,
         "Actions": [
           {
             "Name": "Melee",
-            "Text": "Strike.",
+            "Text": "Manuever. Range 3 - Strike. You may destroy up to three Brambles. For each one destroyed, deal an additional {TIR} damage. Channel Dark",
+            "Values": []
+          },
+          {
+            "Name": "Close",
+            "Text": "Range 6 - Strike. Inflict {TIR+1} Poison to each enemy adjacent to the Bramble. You may Consume Dark and destroy two brambles to double the Poison on each of those enemies.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Fearsome",
+        "Name": "Growth",
         "Strike": "",
-        "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Defend": "Gain {BLK} Block. Summon a Bramble.",
+        "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
             "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
+            "Text": "Range 6 - Summon a Bramle {TIR+1} times. Inflict {TIR} Poison and {TIR} Slow to each enemy adjacent to any of the summoned Brambles.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Heavy",
-        "Strike": "",
+        "Name": "Healer",
+        "Strike": "Summon a Bramble. Restore {DMG-1} health to each ally adjacent to it.",
         "Defend": "Gain {BLK+3} Block.",
         "Maneuver": "Move 2.",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
+            "Name": "Close",
+            "Text": "Range 6 - Strike. Inflict {TIR} Slow to each enemy adjacent to the Bramble. You may consume Nature and/or Water. If Nature was consumed, each adjacent Ally recovers {DMG-1} Health. If Water was consumed, all spaces within Radius 2 of the Bramble become difficult terrain.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Toxic",
+        "Strike": "Summon a Bramble. Inflict {TIR+1} Poison to each enemy adjacent to it.",
+        "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Text": "Maneuver+2. You may move each Bramble in line of sight 1 space. Inflict {TIR} Poison to each enemy adjacent to a Bramble.",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Toxic Spikes",
+            "Text": "Whenever a Bramble deals Counter damage to a character, it also Inflicts {TIR} Poison to that character.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Controller"
@@ -1263,7 +1268,7 @@
     "Challenge": 2,
     "Strike": "Range 5. Target exiles 2 non-status cards from their hand. Inflict {DMG} Poison.",
     "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK+1} Barrier and {DMG-3} Counter.",
+    "Defend": "Gain {BLK+1} Barrier.",
     "Actions": [
       {
         "Name": "Melee",
@@ -1381,12 +1386,12 @@
     "Passives": [
       {
         "Name": "Wall Infusion",
-        "Text": "All obstacles within Range 3 of the Inhibitor take {0} less damage.",
+        "Text": "All obstacles within Range 3 of the Inhibitor take {TIR*2+1} less damage.",
         "Values": ["TIR*2+1"]
       },
       {
         "Name": "Pillar",
-        "Text": "All Pillars are Size 1 obstacles. They can be attacked and have {0} HP.",
+        "Text": "All Pillars are Size 1 obstacles. They can be attacked and have {TIR*5+5} HP.",
         "Values": ["TIR*2+6"]
       },
       {
@@ -1494,12 +1499,12 @@
     "Passives": [
       {
         "Name": "Mist of Mind",
-        "Text": "Whenever an enemy ends their turn within range 5 of Mindmister, inflict {0} Dazed.",
+        "Text": "Whenever an enemy ends their turn within range 5 of Mindmister, inflict {TIR} Dazed.",
         "Values": ["TIR"]
       },
       {
         "Name": "Pain of Clarity",
-        "Text": "Whenever an enemy within range 5 plays Dazed, they lose {0} life.",
+        "Text": "Whenever an enemy within range 5 plays Dazed, they lose {DMG} life.",
         "Values": ["DMG"]
       },
       {
@@ -1601,12 +1606,12 @@
     "Passives": [
       {
         "Name": "Gun",
-        "Text": "All attacks may gain Range {0}. If they do, they cost 1 Ammo and they deal +2 damage. Starts combat with 3 Ammo and max Ammo 3.",
+        "Text": "All attacks may gain Range {3+TIR*2}. If they do, they cost 1 Ammo and they deal +2 damage. Starts combat with 3 Ammo and max Ammo 3.",
         "Values": ["3+TIR*2"]
       },
       {
         "Name": "Officer's Mark",
-        "Text": "Marked characters take {0} extra damage.",
+        "Text": "Marked characters take {TIR+1} extra damage.",
         "Values": ["TIR+1"]
       }
     ],
@@ -1622,7 +1627,7 @@
         "Passives": [
           {
             "Name": "Banner",
-            "Text": "Allies within Radius 3 deal {0} more damage and take {0} less damage. ",
+            "Text": "Allies within Radius 3 deal {TIR+1} more damage and take {TIR+1} less damage. ",
             "Values": ["TIR+1"]
           },
           {
@@ -1724,22 +1729,22 @@
     "Passives": [
       {
         "Name": "Circles",
-        "Text": "All Circles are Radius 3 terrain. They can be attacked at the center and have {0} HP.",
+        "Text": "All Circles are Radius 3 terrain. They can be attacked at the center and have {TIR*5+5} HP.",
         "Values": ["TIR*2+6"]
       },
       {
         "Name": "Binding Circle",
-        "Text": "At the start of their turn, inflict 1 Slowed and deal {0} damage to each enemy within this Circle.",
+        "Text": "At the start of their turn, inflict 1 Slowed and deal {DMG} damage to each enemy within this Circle.",
         "Values": ["DMG"]
       },
       {
         "Name": "Emboldening Circle",
-        "Text": "At the start of their turn, each ally within this Circle gains 3 Strength for that turn and {0} Block.",
+        "Text": "At the start of their turn, each ally within this Circle gains 3 Strength for that turn and {BLK} Block.",
         "Values": ["BLK"]
       },
       {
         "Name": "Invigorating Circle",
-        "Text": "At the start of their turn, each ally within this Circle gains 3 Haste for that turn and recovers {0} HP.",
+        "Text": "At the start of their turn, each ally within this Circle gains 3 Haste for that turn and recovers {TIR} HP.",
         "Values": ["TIR"]
       }
     ],
@@ -1819,24 +1824,24 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Maneuver. Channel Fire or Ice. Inflict {1} Poison and {1} Strength.",
+        "Text": "Maneuver. Channel Fire or Ice. Inflict {TIR+1} Poison and {TIR+1} Strength.",
         "Values": ["3+MOV", "TIR+1"]
       },
       {
         "Name": "Close",
-        "Text": "Maneuver-1. Range 5 - Target character gains {1} Block, {2} Strength and {2} Bleed.",
+        "Text": "Maneuver-1. Range 5 - Target character gains {BLK-1} Block, {TIR+1} Strength and {TIR+1} Bleed.",
         "Values": ["2+MOV", "BLK-1", "TIR+1"]
       },
       {
         "Name": "Far",
-        "Text": "Maneuver+1. Consume Fire and/or Ice. Burst 3 - Strike-1 of the consumed elements type. If Fire was consumed, inflict {2} Burn to each enemy. If Ice was consumed, each ally gains {3} Block.",
+        "Text": "Maneuver+1. Consume Fire and/or Ice. Burst 3 - Strike-1 of the consumed elements type. If Fire was consumed, inflict {TIR+1} Burn to each enemy. If Ice was consumed, each ally gains {BLK-1} Block.",
         "Values": ["4+MOV", "DMG-1", "TIR+1", "BLK-1"]
       }
     ],
     "Passives": [
       {
         "Name": "Blood scream",
-        "Text": "When bloodied for the first time, Channel Fire or Ice and inflict {0} Dazed to each enemy within line of sight.",
+        "Text": "When bloodied for the first time, Channel Fire or Ice and inflict {TIR} Dazed to each enemy within line of sight.",
         "Values": ["TIR"]
       }
     ],
@@ -2021,12 +2026,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Maneuver. Radius 3 - Allies gain {1} Barrier. Inflict {2} Pulse. Enemies may not draw line of sight further than their Pulse value until the end of their turn.",
+        "Text": "Maneuver. Radius 3 - Allies gain {TIR+2} Barrier. Inflict {TIR+2} Pulse. Enemies may not draw line of sight further than their Pulse value until the end of their turn.",
         "Values": ["3+MOV", "TIR+2", "TIR+2"]
       },
       {
         "Name": "Far",
-        "Text": "Teleport to be adjacent to an ally. That ally gains {0} Block. You may consume Light. If you do, Radius 5 - inflict {1} Pulse.",
+        "Text": "Teleport to be adjacent to an ally. That ally gains {BLK+1} Block. You may consume Light. If you do, Radius 5 - inflict {DMG+1} Pulse.",
         "Values": ["BLK+1", "DMG+1"]
       },
       {
@@ -2210,7 +2215,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Maneuver-2. Range 3 - Strike-2. Inflict {3} Poison.",
+        "Text": "Maneuver-2. Range 3 - Strike-2. Inflict {TIR*2} Poison.",
         "Values": ["3+MOV", "DMG-2", "PSTATK", "TIR*2"]
       },
       {
@@ -2265,15 +2270,15 @@
       },
       {
         "Name": "Phantom",
-        "Strike": "Deal {DMG} damage. Consume Dark - inflict {TIR+1} Bleed.",
+        "Strike": "Deal {DMG} Air damage. Consume Air - inflict {TIR+1} Bleed.",
         "Defend": "Gain {TIR} Evasive. Channel Dark.",
         "Maneuver": "Move 5. Channel Air.",
         "HPMod": 0,
         "Actions": [],
         "Passives": [
           {
-            "Name": "Like the wind",
-            "Text": "Reaction - you are attacked. Consume Air - Teleport 3. Ignore all efects of the triggering attack.",
+            "Name": "Like the shadows",
+            "Text": "Reaction - you are attacked. Consume Dark - Teleport 3. Ignore all efects of the triggering attack.",
             "Values": []
           }
         ]
@@ -2393,7 +2398,7 @@
     "OffScaling": 2,
     "Challenge": 2,
     "Strike": "Line 2. Deal {DMG} Air damage.",
-    "Maneuver": "Move 3.",
+    "Maneuver": "Move 4.",
     "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
@@ -2403,12 +2408,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Maneuver. Strike-1 dealing Light damage instead. You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {DMG-1} Air damage. Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier and reduce any number of conditions on both of you by {TIR+1}.",
+        "Text": "Maneuver. Strike-1 dealing Light damage instead. You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {DMG-1} Air damage. Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {BLK} Barrier and reduce any number of conditions on both of you by {TIR+1}.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "BLK"]
       },
       {
         "Name": "Far",
-        "Text": "Maneuver+3. Channel Light. Defend.",
+        "Text": "Maneuver+2. Channel Light. Defend.",
         "Values": ["6+MOV"]
       }
     ],
@@ -2497,7 +2502,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Strike. Defend. You may consume Light and/or Dark: If Light was consumed, deal {0} Light damage and the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, deal {0} Dark damage and the target discards {2} cards.",
+        "Text": "Strike. Defend. You may consume Light and/or Dark: If Light was consumed, deal {DMG} Light damage and the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, deal {DMG} Dark damage and the target discards {TIR} cards.",
         "Values": ["DMG", "PSTATK", "TIR"]
       },
       {
@@ -2507,12 +2512,12 @@
       },
       {
         "Name": "Far",
-        "Text": "Maneuver+2. Defend. Gain {1} Counter with Range 6.",
+        "Text": "Maneuver+2. Defend. Gain {TIR*2+2} Counter with Range 6.",
         "Values": ["6+MOV", "TIR*2+2"]
       },
       {
         "Name": "Reaction",
-        "Text": "You are attacked by a non adjacent enemy. Gain {0} Evasive. Deal {1} damage to the attacker.",
+        "Text": "You are attacked by a non adjacent enemy. Gain {TIR} Evasive. Deal {DMG} damage to the attacker.",
         "Values": ["TIR", "DMG"]
       }
     ],
