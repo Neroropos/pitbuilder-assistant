@@ -246,6 +246,7 @@
     ],
     "PostAttack": [],
     "Resistances": [],
+    "Weaknesses": ["Air"],
     "Archetypes": [
       {
         "Name": "Roused",
@@ -359,6 +360,7 @@
       }
     ],
     "PostAttack": [],
+    "Weaknesses": ["Lightning"],
     "Archetypes": [
       {
         "Name": "Careful",
@@ -450,20 +452,23 @@
     "DefScaling": 2,
     "OffScaling": 2,
     "Challenge": 3,
+    "Strike": "Deal {DMG} damage.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {3}. Deal {0} damage. {2} Inflict {1} Bleed and gain {4} Counter.",
+        "Text": "Maneuver-2. Strike+1. Inflict {1} Bleed and gain {4} Counter.",
         "Values": ["DMG+1", "TIR+1", "PSTATK", "1+MOV", "TIR+1"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2} Inflict {3} Bleed.",
+        "Text": "Maneuver. Strike-1. Inflict {3} Bleed.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "TIR+1"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain 1 Evasive",
+        "Text": "Maneuver+2. Defend",
         "Values": ["5+MOV"]
       },
       {
@@ -475,14 +480,11 @@
     "Passives": [
       {
         "Name": "Duel",
-        "Text": "The last character attacked by Duelist is dueling with it. Enemies engaged in a duel deal and take half damage from characters other than the one they dueling. While the duelist is dueling, it resists all damage from characters it's not dueling.",
+        "Text": "The last character attacked by Duelist is dueling with it. Enemies dueling deal and take half damage from characters other than the one they are dueling. While the duelist is dueling, it resists all damage from characters it's not dueling.",
         "Values": []
       }
     ],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -552,20 +554,23 @@
     "DefScaling": 3,
     "OffScaling": 1,
     "Challenge": 2,
+    "Strike": "Line {TIR+1}. Deal {DMG} damage. Inflict {TIR+1} Slow.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK} Block.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Gain {0} Block. Deal {1} damage. {2} Inflict {3} Slow.",
+        "Text": "Defend. Strike+2.",
         "Values": ["BLK", "DMG+2", "PSTATK", "TIR+1"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Line 2. Deal {1} damage. {2} Inflict {3} Slow. Channel Ice.",
+        "Text": "Maneuver. Strike. Channel Ice.",
         "Values": ["3+MOV", "DMG", "PSTATK", "TIR"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain {1} Block. Channel Light.",
+        "Text": "Maneuver+1. Defend. Channel Light.",
         "Values": ["4+MOV", "BLK"]
       },
       {
@@ -582,10 +587,8 @@
       }
     ],
     "PostAttack": [],
-    "Resistances": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Resistances": ["Ice", "Light"],
+    "Weaknesses": ["Fire"],
     "Archetypes": [
       {
         "Name": "Swift",
@@ -655,20 +658,23 @@
     "DefScaling": 1,
     "OffScaling": 2,
     "Challenge": 3,
+    "Strike": "Range {TIR*2+3}. Deal {DMG} damage.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK} Block",
     "Actions": [
       {
         "Name": "Mobility",
-        "Text": "Move {0}.",
+        "Text": "Maneuver.",
         "Values": ["3+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Deal {0} damage. {1}",
+        "Text": "Strike+1.",
         "Values": ["DMG+1", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Range +{2}. Deal {0} damage. {1} Inflict 1 Slow.",
+        "Text": "Range +{TIR+1}. Strike-1. Inflict {TIR} Slow.",
         "Values": ["DMG-1", "PSTATK", "TIR+1"]
       }
     ],
@@ -680,9 +686,6 @@
       }
     ],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -849,34 +852,34 @@
     "DefScaling": 1,
     "OffScaling": 3,
     "Challenge": 3,
+    "Strike": "Range 10. Spend 1 Ammo to deal {DMG+1} damage or Reload 1.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK} Block. Reload 1.",
     "Actions": [
       {
         "Name": "Mobility",
-        "Text": "Move {0}. Reload 1. Gain {1} Block.",
+        "Text": "Maneuver. Defend.",
         "Values": ["3+MOV", "BLK+1"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2}",
+        "Text": "Maneuver-2. Strike.",
         "Values": ["1+MOV", "DMG+1", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Choose a target in range. At the start of your next turn, if the target is in range, deal {0} damage. {1}",
+        "Text": "Choose a target in range. At the start of your next turn, if the target is in range, Strike them dealing double damage.",
         "Values": ["(DMG+1)*2", "PSTATK"]
       }
     ],
     "Passives": [
       {
         "Name": "Musket",
-        "Text": "All attacks have Range 10 and require 1 Ammo to use. Starts combat with 1 Ammo and has 1 max Ammo.",
+        "Text": "Starts combat with 1 Ammo and has 1 max Ammo.",
         "Values": []
       }
     ],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -946,20 +949,23 @@
     "DefScaling": 1,
     "OffScaling": 1,
     "Challenge": 1,
+    "Strike": "Deal {DMG} damage.",
+    "Maneuver": "Move 2.",
+    "Defend": "Gain {BLK} Block.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1}. Gain {2} Block.",
+        "Text": "Strike+2. Defend.",
         "Values": ["DMG+2", "PSTATK", "BLK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2} Channel Ice or Earth.",
+        "Text": "Maneuver. Strike. Channel Ice or Earth.",
         "Values": ["2+MOV", "DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range 3 - target gains {1} Block. You may consume Ice or Earth. If you do, create a size 1 Obstacle adjacent to the target.",
+        "Text": "Maneuver+2. Range 3 - target gains {BLK} Block. You may consume Ice or Earth. If you do, create a size 1 Obstacle adjacent to the target.",
         "Values": ["4+MOV", "BLK"]
       }
     ],
@@ -977,9 +983,7 @@
     ],
     "PostAttack": [],
     "Resistances": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Weaknesses": ["Nature"],
     "Archetypes": [
       {
         "Name": "Swift",
@@ -1049,20 +1053,23 @@
     "DefScaling": 2,
     "OffScaling": 1,
     "Challenge": 2,
+    "Strike": "Summon a Bramble. Deal {DMG-1} damage to each enemy adjacent to it.",
+    "Maneuver": "Move 2.",
+    "Defend": "Gain {BLK} Block.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {0}. Range 3 - Summon a Bramble. Channel Nature or Water.",
+        "Text": "Maneuver. Range 3 - Strike. Channel Nature or Water.",
         "Values": ["2+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Range 6 - Summon a Bramble. Inflict {0} Poison and {1} Slow to each enemy adjacent to the Bramble. You may consume Nature and/or Water. If Nature was consumed, inflict another {0} Poison. If Water was consumed, all spaces within Radius 2 of the Bramble become difficult terrain.",
+        "Text": "Range 6 - Strike. Inflict {TIR+1} Poison and {TIR} Slow to each enemy adjacent to the Bramble. You may consume Nature and/or Water. If Nature was consumed, inflict another {TIR+1} Poison. If Water was consumed, all spaces within Radius 2 of the Bramble become difficult terrain.",
         "Values": ["TIR+1", "TIR"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. You may move each Bramble in line of sight 1 space. They exert zone of control until your next turn.",
+        "Text": "Maneuver+2. You may move each Bramble in line of sight 1 space. They exert zone of control until your next turn.",
         "Values": ["4+MOV"]
       }
     ],
@@ -1080,9 +1087,7 @@
     ],
     "PostAttack": [],
     "Resistances": ["Water", "Nature"],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Weaknesses": ["Lightning"],
     "Archetypes": [
       {
         "Name": "Swift",
@@ -1152,20 +1157,23 @@
     "DefScaling": 3,
     "OffScaling": 1,
     "Challenge": 2,
+    "Strike": "Deal {DMG} damage.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK+3} Block.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} At the start of your next turn, if the target is adjacent to you and Bloodied, inflict 1 Wound.",
+        "Text": "Strike+2. At the start of your next turn, if the target is adjacent to you and Bloodied, inflict 1 Wound.",
         "Values": ["DMG+2", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 5 - target enemy maneuvers to be as close as possible to you. If it becomes adjacent to you, inflict {1} Slow and deal {2} damage. {3}",
+        "Text": "Maneuver. Range 5 - target enemy maneuvers to be as close as possible to you. If it becomes adjacent to you, inflict {TIR+1} Slow and Strike them.",
         "Values": ["1+MOV", "TIR+1", "DMG+2", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain {1} Block.",
+        "Text": "Maneuver+1. Defend",
         "Values": ["2+MOV", "BLK+3"]
       }
     ],
@@ -1182,10 +1190,8 @@
       }
     ],
     "PostAttack": [],
-    "Resistances": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Resistances": ["Nature"],
+    "Weaknesses": ["Earth"],
     "Archetypes": [
       {
         "Name": "Swift",
@@ -1255,20 +1261,23 @@
     "DefScaling": 1,
     "OffScaling": 1,
     "Challenge": 2,
+    "Strike": "Range 5. Target exiles 2 non-status cards from their hand. Inflict {DMG} Poison.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK+1} Barrier and {DMG-3} Counter.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {0}. Create a 1 HP Size 1 obstacle in three adjacent spaces.",
+        "Text": "Maneuver. Create a three 1 HP Size 1 obstacles in three adjacent spaces.",
         "Values": ["3+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Range 5 - Target exiles 2 non-status cards from their hand, then inflict 1 Stunned and {0} Poison",
+        "Text": "Strike. Inflict 1 Stunned.",
         "Values": ["DMG"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain {1} Barrier.",
+        "Text": "Maneuver+1. Defend.",
         "Values": ["4+MOV", "BLK+1"]
       }
     ],
@@ -1280,9 +1289,6 @@
       }
     ],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -1352,20 +1358,23 @@
     "DefScaling": 2,
     "OffScaling": 1,
     "Challenge": 2,
+    "Strike": "Range 5 - Deal {DMG+1} damage.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {0}. Place a Sapping Pillar.",
+        "Text": "Maneuver. Place a Sapping Pillar.",
         "Values": ["3+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 5 - Deal {1} damage. {2} Place a Chaining Pillar next to the target.",
+        "Text": "Maneuver. Strike. Place a Chaining Pillar next to the target.",
         "Values": ["3+MOV", "DMG+1", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range 5 - Place 3 size 1 obstacles.",
+        "Text": "Maneuver. Range 5 - Place 3 size 1 obstacles.",
         "Values": ["3+MOV"]
       }
     ],
@@ -1392,9 +1401,7 @@
       }
     ],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Resistances": ["Earth"],
     "Archetypes": [
       {
         "Name": "Swift",
@@ -1464,20 +1471,23 @@
     "DefScaling": 1,
     "OffScaling": 1,
     "Challenge": 1,
+    "Strike": "Range 3 - Inflict {DMG+1} Dazed.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK} Block. When your block is broken, inflict {DMG} Dazed to the character breaking it.",
     "Actions": [
       {
-        "Name": "Melee",
-        "Text": "Inflict {0} Dazed. Target shuffles their hand and discard into their deck, then draws that many cards. Move {0}.",
+        "Name": "One",
+        "Text": "Strike. Target shuffles their hand and discard into their deck, then draws that many cards. Maneuver-1.",
         "Values": ["DMG+1", "2+MOV"]
       },
       {
-        "Name": "Close",
-        "Text": "Move {0}. Radius 3. Inflict {1} Dazed and Push 2.",
+        "Name": "Many",
+        "Text": "Maneuver. Radius 3 - Strike and Push 2.",
         "Values": ["3+MOV", "DMG+1"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Range 7. Inflict {1} Dazed and {1} Slow.",
+        "Text": "Maneuver+2. Range+4 - Strike-1 and {DMG} Slow.",
         "Values": ["5+MOV", "DMG"]
       }
     ],
@@ -1499,9 +1509,6 @@
       }
     ],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -1694,20 +1701,23 @@
     "DefScaling": 2,
     "OffScaling": 1,
     "Challenge": 1,
+    "Strike": "Deal {DMG-1} damage. If the target is inside a Circle, deal that damage {TIR} more times.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK-1} Barrier.",
     "Actions": [
       {
-        "Name": "Melee",
-        "Text": "Move {0}. Deploy a Binding Circle.",
+        "Name": "Bind",
+        "Text": "Maneuver. Deploy a Binding Circle.",
         "Values": ["3+MOV"]
       },
       {
-        "Name": "Close",
-        "Text": "Move {0}. Deploy an Emboldening Circle.",
+        "Name": "Embolbolden",
+        "Text": "Maneuver. Deploy an Emboldening Circle.",
         "Values": ["3+MOV"]
       },
       {
-        "Name": "Far",
-        "Text": "Move {0}. Deploy an Invigorating Circle.",
+        "Name": "Invigorate",
+        "Text": "Maneuver. Deploy an Invigorating Circle.",
         "Values": ["3+MOV"]
       }
     ],
@@ -1729,14 +1739,11 @@
       },
       {
         "Name": "Invigorating Circle",
-        "Text": "At the start of their turn, each ally within this Circle gains 3 Haste for that turn and {0} HP.",
+        "Text": "At the start of their turn, each ally within this Circle gains 3 Haste for that turn and recovers {0} HP.",
         "Values": ["TIR"]
       }
     ],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -1806,20 +1813,23 @@
     "DefScaling": 3,
     "OffScaling": 1,
     "Challenge": 2,
+    "Strike": "Range 5 - Deal {DMG} damage.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK} Block.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Move {0}. Channel Fire or Ice. Inflict {1} Poison and {1} Strength.",
+        "Text": "Maneuver. Channel Fire or Ice. Inflict {1} Poison and {1} Strength.",
         "Values": ["3+MOV", "TIR+1"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 5. Target character gains {1} Block, {2} Strength and {2} Bleed.",
+        "Text": "Maneuver-1. Range 5 - Target character gains {1} Block, {2} Strength and {2} Bleed.",
         "Values": ["2+MOV", "BLK-1", "TIR+1"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Consume Fire and/or Ice. Range 5, Burst 3 - All characters take {1} damage of the consumed element. If Fire was consumed, inflict {2} Burn to each enemy. If Ice was consumed, each ally gains {3} Block.",
+        "Text": "Maneuver+1. Consume Fire and/or Ice. Burst 3 - Strike-1 of the consumed elements type. If Fire was consumed, inflict {2} Burn to each enemy. If Ice was consumed, each ally gains {3} Block.",
         "Values": ["4+MOV", "DMG-1", "TIR+1", "BLK-1"]
       }
     ],
@@ -1832,9 +1842,7 @@
     ],
     "PostAttack": [],
     "Resistances": ["Fire", "Ice"],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Weaknesses": ["Light"],
     "Archetypes": [
       {
         "Name": "Swift",
@@ -1904,20 +1912,23 @@
     "DefScaling": 1,
     "OffScaling": 1,
     "Challenge": 1,
+    "Strike": "Deal {DMG} damage.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
         "Name": "Mobility",
-        "Text": "Move {0}. Gain {1} Evasive.",
+        "Text": "Maneuver. Defend+1.",
         "Values": ["3+MOV", "TIR+1"]
       },
       {
         "Name": "Dance",
-        "Text": "Move {0}. An ally may perform an action.",
+        "Text": "Maneuver-1. An ally may perform an action.",
         "Values": ["2+MOV"]
       },
       {
         "Name": "Perform",
-        "Text": "Move {0}. Gain 1 Evasive. Radius 3 - Each ally gains 2 Haste.",
+        "Text": "Maneuver+1. Defend. Radius 3 - Each ally gains 2 Haste.",
         "Values": ["4+MOV"]
       }
     ],
@@ -1930,9 +1941,6 @@
     ],
     "PostAttack": [],
     "Resistances": ["Air", "Water", "Fire"],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -2002,15 +2010,18 @@
     "DefScaling": 2,
     "OffScaling": 1,
     "Challenge": 1,
+    "Strike": "Range 3 - Deal {DMG} Light damage. Inflict {TIR+1} Pulse.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {BLK} Block.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} Light damage. {2} Inflict {1} Pulse. Move {3}. Channel Light.",
+        "Text": "Strike+1. Maneuver. Channel Light.",
         "Values": ["DMG+1", "TIR+1", "PSTATK", "3+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Radius 3 - Allies gain {1} Barrier. Inflict {2} Pulse. Enemies may not draw line of sight further than their Pulse value until the end of their turn.",
+        "Text": "Maneuver. Radius 3 - Allies gain {1} Barrier. Inflict {2} Pulse. Enemies may not draw line of sight further than their Pulse value until the end of their turn.",
         "Values": ["3+MOV", "TIR+2", "TIR+2"]
       },
       {
@@ -2026,9 +2037,8 @@
     ],
     "Passives": [],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Weaknesses": ["Dark"],
+    "Resistances": ["Light"],
     "Archetypes": [
       {
         "Name": "Swift",
@@ -2098,28 +2108,28 @@
     "DefScaling": 1,
     "OffScaling": 1,
     "Challenge": 2,
+    "Strike": "Deal {DMG} damage. Inflict {DMG-1} Bleed.",
+    "Maneuver": "Move 4.",
+    "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Inflict {3} Bleed. Exile a random card from the target's hand, deck and discard. Move {2}.",
+        "Text": "Strike+1. Exile a random card from the target's hand, deck and discard. Maneuver-2.",
         "Values": ["DMG+1", "PSTATK", "2+MOV", "DMG"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Range 2 - Deal {1} damage. {2} Inflict {3} Bleed. Exile a random card from the target's hand.",
+        "Text": "Maneuver. Range 2 - Strike. Exile a random card from the target's hand.",
         "Values": ["4+MOV", "DMG", "PSTATK", "DMG"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain 1 Evasive",
+        "Text": "Maneuver+2. Defend",
         "Values": ["7+MOV"]
       }
     ],
     "Passives": [],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -2291,28 +2301,28 @@
     "DefScaling": 2,
     "OffScaling": 2,
     "Challenge": 2,
+    "Strike": "Deal {DMG} damage.",
+    "Maneuver": "Move 4.",
+    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Inflict 3 Slow. Move {2}.",
+        "Text": "Strike+1. Inflict 3 Slow. Maneuver.",
         "Values": ["DMG+1", "PSTATK", "4+MOV"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. Deal 1 extra damage and Inflict 1 Dazed for every 2 spaces moved in a straight line. {2}",
+        "Text": "Maneuver+2. Strike-1. Deal 1 extra damage and Inflict 1 Dazed for every 2 spaces moved in a straight line.",
         "Values": ["6+MOV", "DMG-1", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain 2 Haste and 2 Strength for next turn only.",
+        "Text": "Maneuver-1. Gain 2 Haste and 2 Strength for next turn only.",
         "Values": ["3+MOV"]
       }
     ],
     "Passives": [],
     "PostAttack": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",
@@ -2382,20 +2392,23 @@
     "DefScaling": 1,
     "OffScaling": 2,
     "Challenge": 2,
+    "Strike": "Line 2. Deal {DMG} Air damage.",
+    "Maneuver": "Move 3.",
+    "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Line 4. Deal {0} Air damage. {1} Move to the end of the line. Channel Air.",
+        "Text": "Line +2. Strike+1. Move to the end of the line. Channel Air.",
         "Values": ["DMG+1", "PSTATK"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} Light damage. {2} You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {1} Air damage. {2} Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier and reduce any number of conditions on both of you by 2.",
+        "Text": "Maneuver. Strike-1 dealing Light damage instead. You may consume Air or Light. If Air was consumed, choose an enemy within Range 3 of the target and deal {DMG-1} Air damage. Then move to any space within Range 2 of the second target. If Light was consumed, you and an ally within Range 2 gain {3} Barrier and reduce any number of conditions on both of you by {TIR+1}.",
         "Values": ["3+MOV", "DMG-1", "PSTATK", "BLK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Channel Light. Gain 1 Evasive.",
+        "Text": "Maneuver+3. Channel Light. Defend.",
         "Values": ["6+MOV"]
       }
     ],
@@ -2407,10 +2420,8 @@
       }
     ],
     "PostAttack": [],
-    "Resistances": [],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Resistances": ["Air", "Light"],
+    "Weaknesses": ["Earth"],
     "Archetypes": [
       {
         "Name": "Swift",
@@ -2480,20 +2491,23 @@
     "DefScaling": 2,
     "OffScaling": 1,
     "Challenge": 2,
+    "Strike": "Deal {DMG-2} damage twice.",
+    "Maneuver": "Move 4.",
+    "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Deal {0} damage. {1} Gain {2} Evasive. You may consume Light and/or Dark: If Light was consumed, deal {0} Light damage and the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, deal {0} Dark damage and the target discards {2} cards.",
+        "Text": "Strike. Defend. You may consume Light and/or Dark: If Light was consumed, deal {0} Light damage and the target can only draw line of sight to adjacent spaces next turn. If Dark was consumed, deal {0} Dark damage and the target discards {2} cards.",
         "Values": ["DMG", "PSTATK", "TIR"]
       },
       {
         "Name": "Close",
-        "Text": "Move {0}. Deal {1} damage. {2} Channel Light or Dark.",
+        "Text": "Maneuver. Strike. Channel Light or Dark.",
         "Values": ["4+MOV", "DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Move {0}. Gain {1} Counter with Range 6.",
+        "Text": "Maneuver+2. Defend. Gain {1} Counter with Range 6.",
         "Values": ["6+MOV", "TIR*2+2"]
       },
       {
@@ -2505,9 +2519,6 @@
     "Passives": [],
     "PostAttack": [],
     "Resistances": ["Light", "Dark"],
-    "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Archetypes": [
       {
         "Name": "Swift",

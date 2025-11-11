@@ -403,7 +403,7 @@ export class Enemy {
       }
       this.ActionsShown.push({
         Name: a.Name || '',
-        Text: this.replacePlaceholders(DefScaling, OffScaling, text, a.Values)
+        Text: this.replacePlaceholdersDirect(DefScaling, OffScaling, text)
       })
     })
     this.Passives = this.Class?.Passives.concat(
@@ -423,7 +423,7 @@ export class Enemy {
       }
       this.PassivesShown.push({
         Name: p.Name || '',
-        Text: this.replacePlaceholders(DefScaling, OffScaling, text, p.Values)
+        Text: this.replacePlaceholdersDirect(DefScaling, OffScaling, text)
       })
     })
   }
