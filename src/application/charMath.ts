@@ -332,13 +332,13 @@ export class Enemy {
     })
     const Resistances = this.Class?.Resistances.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Resistances), [] as string[])
-    )
+    ).concat(this.Archetype.Resistances)
     const Weaknesses = this.Class?.Weaknesses.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Weaknesses), [] as string[])
-    )
+    ).concat(this.Archetype.Weaknesses)
     const Immunities = this.Class?.Immunities.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Immunities), [] as string[])
-    )
+    ).concat(this.Archetype.Immunities)
     const TotalledRWI: { name: string; value: number }[] = []
     Resistances.forEach((res) => {
       const item = TotalledRWI.find((x) => x.name == res)

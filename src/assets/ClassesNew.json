@@ -580,8 +580,8 @@
         "Values": ["4+MOV", "BLK"]
       },
       {
-        "Name": "Reaction",
-        "Text": "An enemy attacks you or an ally within Radius 3. Radius 3 - you and all allies gain {BLK-3} Block. You may consume Light and/or Ice. If Light is consumed, after this attack, inflict {TIR+1} Pulse on the attacker and they may only draw line of sight to adjacent spaces this turn. If Ice is consumed, Defend and inflict {TIR} Slow to the attacker.",
+        "Name": "Protect",
+        "Text": "Reaction - An enemy attacks you or an ally within Radius 3. Radius 3 - you and all allies gain {BLK-3} Block. You may consume Light and/or Ice. If Light is consumed, after this attack, inflict {TIR+1} Pulse on the attacker and they may only draw line of sight to adjacent spaces this turn. If Ice is consumed, Defend and inflict {TIR} Slow to the attacker.",
         "Values": ["Math.round(BLK/2)", "TIR+1", "BLK-1", "TIR"]
       }
     ],
@@ -597,61 +597,82 @@
     "Weaknesses": ["Fire"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
+        "Name": "Royal",
+        "Strike": "",
+        "Defend": "Gain {BLK-2} Block. Radius 3 - each ally gains {TIR} Strength and {BLK-3} Barrier.",
+        "Maneuver": "Move 2.",
+        "HPMod": 0,
+        "Actions": [],
+        "Passives": [
+          {
+            "Name": "In the presence of royalty",
+            "Text": "Enemies within range 5 deal {TIR*2} less damage to targets other than this chracter. Allies within range 5 gain {TIR} less negative status effects.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Indomitable",
+        "Strike": "",
+        "Defend": "Gain {BLK-2} Block. Reduce any status on you to 0.",
+        "Maneuver": "",
+        "Resistances": ["Dark"],
+        "Weaknesses": [""],
+        "HPMod": 0,
+        "Actions": [
+          {
+            "Name": "Deny",
+            "Text": "Reaction - an ally within range 5 gains a status. You may consume Light. If you do, reduce that status to 0.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Unstoppable",
+            "Text": "Ignores difficult terrain.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Radiant",
+        "Strike": "Radius {TIR+1}. Deal {DMG} damage. Inflict {TIR+1} Pulse.",
+        "Defend": "",
+        "Maneuver": "",
         "HPMod": -5,
         "Actions": [
           {
             "Name": "Melee",
-            "Text": "Strike.",
+            "Text": "Defend. Radius+2 - Strike+1.",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Bask in their light",
+            "Text": "At the end of your turn, Radius 3 - each ally gains {BLK-2} Block. If Light is channeled, they gain that much Barrier instead.",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Fearsome",
-        "Strike": "",
+        "Name": "Storm Calling",
+        "Strike": "Range {TIR+2}. Deal 2 damage and inflict {TIR} Sundered {TIR+1} times.",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
         "Maneuver": "",
         "HPMod": 0,
+        "Resistances": ["Lightning"],
+        "Weaknesses": ["Earth", "Light"],
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Text": "Maneuver. At the end of this round, Strike, replacing your Range with Radius. Channel Lightning.",
             "Values": []
+          },
+          {
+            "Name": "Protect",
+            "Text": "Reaction - An enemy attacks you or an ally within Radius 3. Radius 3 - you and all allies gain {BLK-3} Block. You may consume Lightning and/or Ice. If Lightning is consumed, the attacked character gains {TIR*2} Counter. If Ice is consumed, Defend and inflict {TIR} Slow to the attacker.",
+            "Values": ["Math.round(BLK/2)", "TIR+1", "BLK-1", "TIR"]
           }
         ],
         "Passives": []
@@ -1089,6 +1110,8 @@
         "Defend": "Gain {BLK} Block. Channel Dark.",
         "Maneuver": "",
         "HPMod": 0,
+        "Resistances": ["Dark"],
+        "Weaknesses": ["Light"],
         "Actions": [
           {
             "Name": "Melee",
