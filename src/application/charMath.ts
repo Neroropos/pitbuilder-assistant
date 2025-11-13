@@ -394,6 +394,8 @@ export class Enemy {
       .join(', ') // this.ImmunitiesShown = Immunities.sort((a, b) => a.localeCompare(b)).join(', ')
     this.Actions = this.Class?.Actions.concat(
       this.Templates?.reduce((sum, current) => sum.concat(current.Actions), [] as Action[])
+    ).concat(
+      this.Archetype.Actions.filter((a) => !this.Class.Actions.some((c) => c.Name == a.Name))
     )
     this.ActionsShown = []
     this.Actions.forEach((a) => {
@@ -401,16 +403,19 @@ export class Enemy {
       if (this.Archetype.Actions.find((x) => x.Name == a.Name)) {
         text = this.Archetype.Actions.find((x) => x.Name == a.Name)?.Text as string
       }
-      this.ActionsShown.push({
-        Name: a.Name || '',
-        Text: this.replacePlaceholdersDirect(DefScaling, OffScaling, text)
-      })
+      if (text != '')
+        this.ActionsShown.push({
+          Name: a.Name || '',
+          Text: this.replacePlaceholdersDirect(DefScaling, OffScaling, text)
+        })
     })
     this.Passives = this.Class?.Passives.concat(
       this.Templates?.reduce(
         (sum, current) => sum.concat(current.GetPassives(this)),
         [] as Passive[]
       )
+    ).concat(
+      this.Archetype.Passives.filter((a) => !this.Class.Passives.some((c) => c.Name == a.Name))
     )
     if (this.Passives.find((x) => x.Name == 'Grunt')) {
       this.HP = 1
@@ -421,10 +426,11 @@ export class Enemy {
       if (this.Archetype.Passives.find((x) => x.Name == p.Name)) {
         text = this.Archetype.Passives.find((x) => x.Name == p.Name)?.Text as string
       }
-      this.PassivesShown.push({
-        Name: p.Name || '',
-        Text: this.replacePlaceholdersDirect(DefScaling, OffScaling, text)
-      })
+      if (text != '')
+        this.PassivesShown.push({
+          Name: p.Name || '',
+          Text: this.replacePlaceholdersDirect(DefScaling, OffScaling, text)
+        })
     })
   }
 }

@@ -1358,8 +1358,8 @@
       },
       {
         "Name": "Burner",
-        "Strike": "Range 5. Target exiles 2 non-status cards from their hand. Inflict {DMG} Burn.",
-        "Defend": "",
+        "Strike": "Range 5. Target exiles 2 non-status cards from their hand. Consume Ice. If Ice wasn't consumed, inflict {DMG} Burn.",
+        "Defend": "Gain {BLK} Barrier. Channel Fire.",
         "Maneuver": "",
         "HPMod": 0,
         "Resistances": ["Fire"],
@@ -1464,7 +1464,7 @@
       },
       {
         "Name": "Sapping Pillar",
-        "Text": "Radius 3 - All enemies deal 3 less damage.",
+        "Text": "Radius 3 - All enemies deal {TIR*2+1} less damage.",
         "Values": []
       },
       {
@@ -1489,7 +1489,13 @@
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Chaining Pillar",
+            "Text": "",
+            "Values": []
+          }
+        ]
       },
       {
         "Name": "Fearsome",
@@ -1560,7 +1566,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Maneuver+2. Range+4 - Strike-1 and {DMG} Slow.",
+        "Text": "Maneuver+2. Range+4 - Strike-1 and inflict {DMG} Slow.",
         "Values": ["5+MOV", "DMG"]
       }
     ],
@@ -1577,7 +1583,7 @@
       },
       {
         "Name": "Last Breath",
-        "Text": "When defeated, perform the Melee action.",
+        "Text": "When defeated, perform the One action.",
         "Values": []
       }
     ],
