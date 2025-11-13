@@ -35,7 +35,7 @@
       {
         "Name": "Swift",
         "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
+        "Defend": "Gain {TIR} Evasive.",
         "Maneuver": "Move 4.",
         "HPMod": -5,
         "Actions": [
@@ -166,10 +166,12 @@
       },
       {
         "Name": "Impassible",
-        "Strike": "",
+        "Strike": "Deal {DMG} Earth damage.",
         "Defend": "Gain {BLK} Block. Range 3 - target must attack you if able and can only move closer to you on their next turn.",
         "Maneuver": "Move 2.",
         "HPMod": 5,
+        "Resistances": ["Earth"],
+        "Weaknesses": ["Air"],
         "Actions": [],
         "Passives": [
           {
@@ -181,7 +183,7 @@
       },
       {
         "Name": "Coordinated",
-        "Strike": "Deal {DMG-3} damage. If the target is adjacent to your ally, that ally may strike the target.",
+        "Strike": "Deal {DMG-3} damage. If the target is adjacent to your ally, that ally may Strike the target.",
         "Defend": "Gain {BLK-2} Block. An ally within Range 3 gains {BLK-2} Block.",
         "Maneuver": "",
         "HPMod": 0,
@@ -306,7 +308,7 @@
       },
       {
         "Name": "Ravenous",
-        "Strike": "Deal {DMG} damage. You may consume Dark. If you do, gain half the damage dealt as barrier.",
+        "Strike": "Deal {DMG} Dark damage. You may consume Dark. If you do, gain half the damage dealt as barrier.",
         "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
@@ -425,7 +427,7 @@
       },
       {
         "Name": "Direct",
-        "Strike": "",
+        "Strike": "Deal {DMG} Lightning damage.",
         "Defend": "Gain {BLK-2}. Channel Lightning.",
         "Maneuver": "",
         "HPMod": -5,
@@ -560,7 +562,7 @@
     "DefScaling": 3,
     "OffScaling": 1,
     "Challenge": 2,
-    "Strike": "Line {TIR+1}. Deal {DMG} damage. Inflict {TIR+1} Slow.",
+    "Strike": "Line {TIR+1}. Deal {DMG} Ice damage. Inflict {TIR+1} Slow.",
     "Maneuver": "Move 3.",
     "Defend": "Gain {BLK} Block.",
     "Actions": [
@@ -636,7 +638,7 @@
       },
       {
         "Name": "Radiant",
-        "Strike": "Radius {TIR+1}. Deal {DMG} damage. Inflict {TIR+1} Pulse.",
+        "Strike": "Radius {TIR+1}. Deal {DMG} Light damage. Inflict {TIR+1} Pulse.",
         "Defend": "",
         "Maneuver": "",
         "HPMod": -5,
@@ -656,8 +658,8 @@
         ]
       },
       {
-        "Name": "Storm Calling",
-        "Strike": "Range {TIR+2}. Deal 2 damage and inflict {TIR} Sundered {TIR+1} times.",
+        "Name": "Stormcaller",
+        "Strike": "Range {TIR+2}. Deal 2 Lightning damage and inflict {TIR} Sundered {TIR+1} times.",
         "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
@@ -685,7 +687,7 @@
     "DefScaling": 1,
     "OffScaling": 2,
     "Challenge": 3,
-    "Strike": "Range {TIR*2+3}. Deal {DMG} damage.",
+    "Strike": "Range {TIR*2+3} - Deal {DMG} damage.",
     "Maneuver": "Move 3.",
     "Defend": "Gain {BLK} Block",
     "Actions": [
@@ -709,60 +711,73 @@
     "PostAttack": [],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
+        "Name": "Rapid",
+        "Strike": "Range {TIR*2+3} - Deal 2 damage {TIR+1} times.",
+        "Defend": "Gain {TIR} Evasive.",
         "Maneuver": "Move 4.",
         "HPMod": -5,
         "Actions": [
           {
-            "Name": "Melee",
-            "Text": "Strike.",
+            "Name": "Far",
+            "Text": "Range +{TIR+1}. Strike-1. Inflict {TIR} Bleed each hit.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Fearsome",
-        "Strike": "",
+        "Name": "Sniper",
+        "Strike": "Range {TIR*3+1} - Deal {DMG} damage.",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
+        "Maneuver": "",
+        "HPMod": -5,
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
+            "Text": "Range +{TIR+1}. Strike-1. Reactions cannot be used against this attack.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Hunter",
+        "Strike": "Range {TIR*2+1} - Deal {DMG} Nature damage.",
+        "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
+        "Weaknesses": ["Fire"],
+        "Resistances": ["Nature"],
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Text": "Range {TIR*3+1} - Inflict {TIR+1} Slow and {TIR} Poison. Target becomes Marked.",
+            "Values": []
+          },
+          {
+            "Name": "Hunt",
+            "Text": "Reaction - a Marked character ends their turn and hasn't moved. Strike+1 that character.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Hunter's Mark",
+            "Text": "Whenever a Marked character Maneuvers, target ally of the Hunter within line of sight of the Marked character may Maneuver.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Scout",
+        "Strike": "Range {TIR*2+1} - Deal {DMG-2} Air damage and inflict {TIR+1} Soft.",
+        "Defend": "",
+        "Maneuver": "Move 4. Channel Nature.",
+        "HPMod": 0,
+        "Actions": [
+          {
+            "Name": "Mobility",
+            "Text": "Maneuver. If there are no enemies within Range 5 of you, an ally within Range 5 may Maneuver.",
             "Values": []
           }
         ],
@@ -1213,7 +1228,7 @@
       },
       {
         "Name": "Chipping",
-        "Text": "At the start of your turn, if you're bloodied, gain 1 Haste and 2 Soft.",
+        "Text": "At the start of your turn, if this character is bloodied, gain 1 Haste and 2 Soft.",
         "Values": []
       }
     ],
@@ -2137,7 +2152,7 @@
     "OffScaling": 1,
     "Challenge": 2,
     "Strike": "Deal {DMG} damage. Inflict {DMG-1} Bleed.",
-    "Maneuver": "Move 4.",
+    "Maneuver": "Move {3+TIR}.",
     "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
@@ -2228,7 +2243,7 @@
     "OffScaling": 3,
     "Challenge": 4,
     "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 5.",
+    "Maneuver": "Move {3+TIR}.",
     "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
@@ -2238,12 +2253,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Maneuver-2. Range 3 - Strike-2. Inflict {TIR*2} Poison.",
+        "Text": "Maneuver-1. Range 3 - Strike-2. Inflict {TIR*2} Poison.",
         "Values": ["3+MOV", "DMG-2", "PSTATK", "TIR*2"]
       },
       {
         "Name": "Far",
-        "Text": "Maneuver. Defend.",
+        "Text": "Maneuver+1. Defend.",
         "Values": ["5+MOV"]
       }
     ],
@@ -2330,7 +2345,7 @@
     "OffScaling": 2,
     "Challenge": 2,
     "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 4.",
+    "Maneuver": "Move {3+TIR}.",
     "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
     "Actions": [
       {
@@ -2421,7 +2436,7 @@
     "OffScaling": 2,
     "Challenge": 2,
     "Strike": "Line 2. Deal {DMG} Air damage.",
-    "Maneuver": "Move 4.",
+    "Maneuver": "Move {3+TIR}.",
     "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
@@ -2520,7 +2535,7 @@
     "OffScaling": 1,
     "Challenge": 2,
     "Strike": "Deal {DMG-2} damage twice.",
-    "Maneuver": "Move 4.",
+    "Maneuver": "Move {3+TIR}.",
     "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
