@@ -1334,64 +1334,94 @@
     "PostAttack": [],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
+        "Name": "Poisoner",
+        "Strike": "Range 5. Target exiles 1 non-status cards from their hand. Inflict {DMG+1} Poison.",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 0,
+        "Resistances": ["Nature"],
+        "Weaknesses": [],
         "Actions": [
           {
             "Name": "Melee",
-            "Text": "Strike.",
+            "Text": "Maneuver. Create a three 1 HP Size 1 obstacles in three adjacent spaces. When one of those obstacles is destroyed, Radius 1 from it - Inflict {TIR} Poison.",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Auto-hex",
+            "Text": "When attacked, inflict {TIR} Poison to the attacker.",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Fearsome",
-        "Strike": "",
+        "Name": "Burner",
+        "Strike": "Range 5. Target exiles 2 non-status cards from their hand. Inflict {DMG} Burn.",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Maneuver": "",
         "HPMod": 0,
+        "Resistances": ["Fire"],
+        "Weaknesses": ["Water"],
         "Actions": [
           {
             "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
+            "Text": "Strike. Inflict {DMG} Pulse.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Heavy",
+        "Name": "Blinder",
         "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
+        "Resistances": ["Light"],
+        "Weaknesses": ["Earth"],
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Melee",
+            "Text": "Maneuver. Create a {TIR*5} HP Size 3 obstacle in an adjacent space.",
+            "Values": ["3+MOV"]
+          },
+          {
+            "Name": "Close",
+            "Text": "Strike. Until end of their next turn, target may only draw line of sight to spaces within range X, where X is the number of cards in their hand.",
             "Values": []
           }
         ],
         "Passives": []
+      },
+      {
+        "Name": "Wildling",
+        "Strike": "Radius 3 - each enemy exiles 2 non-status cards from their hand. Inflict {DMG} Poison.",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 5,
+        "Resistances": ["Ice"],
+        "Weaknesses": ["Fire"],
+        "Actions": [
+          {
+            "Name": "Melee",
+            "Text": "Radius 2 - all terrain becomes difficult terrain. Maneuver.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Unstoppable",
+            "Text": "Ignores difficult terrain.",
+            "Values": []
+          },
+          {
+            "Name": "Auto-hex",
+            "Text": "When attacked, the attacker exiles 1 non-status card from their hand. You gain Block equal to {TIR+1} times the cost of that card.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Controller"
@@ -2312,11 +2342,17 @@
         "Defend": "Gain {TIR} Evasive. Channel Dark.",
         "Maneuver": "Move 5. Channel Air.",
         "HPMod": 0,
-        "Actions": [],
-        "Passives": [
+        "Actions": [
           {
             "Name": "Like the shadows",
             "Text": "Reaction - you are attacked. Consume Dark - Teleport 3. Ignore all efects of the triggering attack.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Unseen",
+            "Text": "If this character is not scanned, it's Strike gains 'Inflict 1 Slow and 1 Stunned.'",
             "Values": []
           }
         ]
