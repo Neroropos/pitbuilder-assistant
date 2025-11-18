@@ -130,7 +130,7 @@
     "Archetypes": [
       {
         "Name": "Swift",
-        "Strike": "Deal 2 damage {TIR+1} times.",
+        "Strike": "Deal {TIR+1} damage {TIR+1} times.",
         "Defend": "",
         "Maneuver": "Move 5.",
         "HPMod": 0,
@@ -146,7 +146,7 @@
       {
         "Name": "Spellproof",
         "Strike": "",
-        "Defend": "Gain {BLK} block. Choose an element. Gain resistance to that element until your next turn.",
+        "Defend": "Gain {BLK} Block. Choose an element. Gain resistance to that element until your next turn.",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
@@ -159,7 +159,7 @@
         "Passives": [
           {
             "Name": "Spellproof",
-            "Text": "Attacks that have an element cannot ignore this character's block.",
+            "Text": "Attacks that have an element cannot ignore your Block.",
             "Values": []
           }
         ]
@@ -475,7 +475,7 @@
       },
       {
         "Name": "Riposte",
-        "Text": "Reaction - You are attacked from any range. Ignore all damage from dice showing 1 or 2. Deal damage equal to damage ignored back to the attacker.",
+        "Text": "Reaction - You are attacked from any Range. Ignore all damage from dice showing 1 or 2. Deal damage equal to damage ignored back to the attacker.",
         "Values": ["5+MOV"]
       }
     ],
@@ -497,7 +497,7 @@
         "Actions": [
           {
             "Name": "Riposte",
-            "Text": "Reaction - You or an adjacent character is attacked from any range. Ignore all damage from dice showing 1, 2 or 3. Deal damage equal to damage ignored back to the attacker.",
+            "Text": "Reaction - You or an adjacent character is attacked from any Range. Ignore all damage from dice showing 1, 2 or 3. Deal damage equal to damage ignored back to the attacker.",
             "Values": []
           }
         ],
@@ -608,7 +608,7 @@
         "Passives": [
           {
             "Name": "In the presence of royalty",
-            "Text": "Enemies within range 5 deal {TIR*2} less damage to targets other than this chracter. Allies within range 5 gain {TIR} less negative status effects.",
+            "Text": "Enemies within Range 5 deal {TIR*2} less damage to targets other than this chracter. Allies within Range 5 gain {TIR} less negative status effects.",
             "Values": []
           }
         ]
@@ -624,7 +624,7 @@
         "Actions": [
           {
             "Name": "Deny",
-            "Text": "Reaction - an ally within range 5 gains a status. You may consume Light. If you do, reduce that status to 0.",
+            "Text": "Reaction - an ally within Range 5 gains a status. You may consume Light. If you do, reduce that status to 0.",
             "Values": []
           }
         ],
@@ -659,7 +659,7 @@
       },
       {
         "Name": "Stormcaller",
-        "Strike": "Range {TIR+2}. Deal 2 Lightning damage and inflict {TIR} Sundered {TIR+1} times.",
+        "Strike": "Range {TIR+2}. Deal {TIR+1} Lightning damage and inflict {TIR} Sundered {TIR+1} times.",
         "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
@@ -712,7 +712,7 @@
     "Archetypes": [
       {
         "Name": "Rapid",
-        "Strike": "Range {TIR*2+3} - Deal 2 damage {TIR+1} times.",
+        "Strike": "Range {TIR*2+3} - Deal {TIR+1} damage {TIR+1} times.",
         "Defend": "Gain {TIR} Evasive.",
         "Maneuver": "Move 4.",
         "HPMod": -5,
@@ -727,7 +727,7 @@
       },
       {
         "Name": "Sniper",
-        "Strike": "Range {TIR*3+1} - Deal {DMG} damage.",
+        "Strike": "Range {TIR*3+3} - Deal {DMG} damage.",
         "Defend": "",
         "Maneuver": "",
         "HPMod": -5,
@@ -816,7 +816,7 @@
     "Archetypes": [
       {
         "Name": "Stormcaller ",
-        "Strike": "Range {TIR*2+1}. If there are three or more elements channeled, may consume one element. Otherwise, channel any element. The attack deals the consumed element's type of damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{TIR+1} damage. Air, Light, Water: +{TIR+1} Range. Ice, Earth, Nature: Gain {TIR+1} Block. Deal 2 damage {TIR+1} times. Ignore Block.",
+        "Strike": "Range {TIR*2+1}. If there are three or more elements channeled, may consume one element. Otherwise, channel any element. The attack deals the consumed element's type of damage and gains an extra effect based on the element consumed. Fire, Lighting, Dark: +{TIR+1} damage. Air, Light, Water: +{TIR+1} Range. Ice, Earth, Nature: Gain {TIR+1} Block. Deal {TIR+1} damage {TIR+1} times. Ignore Block.",
         "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
@@ -882,9 +882,9 @@
     "DefScaling": 1,
     "OffScaling": 3,
     "Challenge": 3,
-    "Strike": "Range 10. Spend 1 Ammo to deal {DMG+1} damage or Reload 1.",
+    "Strike": "Range {TIR*2+8}. Spend 1 Ammo to deal {DMG+1} damage or Reload 1.",
     "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block. Reload 1.",
+    "Defend": "Gain {BLK+1} Block. Reload 1.",
     "Actions": [
       {
         "Name": "Mobility",
@@ -898,7 +898,7 @@
       },
       {
         "Name": "Far",
-        "Text": "Choose a target in range. At the start of your next turn, if the target is in range, Strike them dealing double damage.",
+        "Text": "Choose a target in Range. At the start of your next turn, if the target is in Range, Strike them dealing double damage.",
         "Values": ["(DMG+1)*2", "PSTATK"]
       }
     ],
@@ -912,64 +912,83 @@
     "PostAttack": [],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
+        "Name": "Sniper",
+        "Strike": "Range {TIR*3+8}. Spend 1 Ammo to deal {DMG+1} damage or Reload 1.",
+        "Defend": "",
+        "Maneuver": "",
         "HPMod": -5,
         "Actions": [
           {
-            "Name": "Melee",
-            "Text": "Strike.",
-            "Values": []
+            "Name": "Far",
+            "Text": "Range +{TIR*2+3}. Choose a target in Range. At the start of your next turn, if the target is in Range, Strike them dealing double damage. Reactions cannot be used against this attack.",
+            "Values": ["(DMG+1)*2", "PSTATK"]
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Fearsome",
+        "Name": "Lonesome",
         "Strike": "",
-        "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Defend": "Gain {BLK+1} Block. Reload 1. You may Consume Earth to create a size 1 Obstacle.",
+        "Maneuver": "",
         "HPMod": 0,
+        "Weaknesses": ["Lightning"],
+        "Resistances": ["Earth"],
         "Actions": [
           {
             "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
+            "Text": "Maneuver-2. Strike. If there are no characters within Range 5 of you, Reload 1.",
             "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
-        "Actions": [
+          },
           {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
+            "Name": "Eyes in the Back",
+            "Text": "Reaction - you are attacked and no allies are within Range 5. Defend, then Strike the attacker, dealing half damage.",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Army of One",
+            "Text": "If there are no allies, you deal {TIR*2} extra damage and Defend at the end of each of your turns.",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Reliable",
+        "Strike": "Range {TIR*3+8}. Spend 1 Ammo to deal {DMG+1} damage or Reload 1. Evasive halves the damage instead of reducing it to 1.",
+        "Defend": "",
         "Maneuver": "",
-        "HPMod": 0,
+        "HPMod": 5,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
-            "Values": []
+            "Name": "Mobility",
+            "Text": "Maneuver. Defend. Range 3 - Target ally may Defend or Maneuver. Channel Air.",
+            "Values": ["3+MOV", "BLK+1"]
           }
         ],
         "Passives": []
+      },
+      {
+        "Name": "Bruiser",
+        "Strike": "Range {TIR*3+8}. Spend 1 Ammo to deal {DMG-1} damage or Reload 1 or deal {DMG-3} damage to an adjacent target.",
+        "Defend": "Gain {BLK+3} Block.",
+        "Maneuver": "",
+        "HPMod": 10,
+        "Actions": [
+          {
+            "Name": "Far",
+            "Text": "Choose a target in Range. At the start of your next turn, if the target is in Range, Strike them dealing double damage. If they are adjacent, inflict {TIR} Vulnerable.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Bloody strength",
+            "Text": "As long as you're bloodied, deal +{TIR*2+1} damage to adjacent targets.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Striker"
@@ -980,7 +999,7 @@
     "OffScaling": 1,
     "Challenge": 1,
     "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 2.",
+    "Maneuver": "Move 3.",
     "Defend": "Gain {BLK} Block.",
     "Actions": [
       {
@@ -990,12 +1009,12 @@
       },
       {
         "Name": "Close",
-        "Text": "Maneuver. Strike. Channel Ice or Earth.",
+        "Text": "Maneuver-1. Strike. Channel Ice or Earth.",
         "Values": ["2+MOV", "DMG", "PSTATK"]
       },
       {
         "Name": "Far",
-        "Text": "Maneuver+2. Range 3 - target gains {BLK} Block. You may consume Ice or Earth. If you do, create a size 1 Obstacle adjacent to the target.",
+        "Text": "Maneuver+1. Range 3 - target gains {BLK} Block. You may consume Ice or Earth. If you do, create a size 1 Obstacle adjacent to the target.",
         "Values": ["4+MOV", "BLK"]
       }
     ],
@@ -1016,64 +1035,81 @@
     "Weaknesses": ["Nature"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
-        "Actions": [
-          {
-            "Name": "Melee",
-            "Text": "Strike.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Fearsome",
+        "Name": "Fearless",
         "Strike": "",
-        "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
+        "Defend": "Gain {BLK} Block. You may reduce a condition on an adjacent ally by 1.",
         "Maneuver": "Move 2.",
         "HPMod": 0,
         "Actions": [
           {
+            "Name": "Melee",
+            "Text": "Strike+1. Defend.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Death so close",
+            "Text": "",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Ferocious",
+        "Strike": "Deal {DMG+TIR} damage. Gain 2 Soft.",
+        "Defend": "Gain {DMG+TIR} Counter.",
+        "Maneuver": "",
+        "HPMod": 0,
+        "Actions": [
+          {
+            "Name": "Melee.",
+            "Text": "Maneuver-2. Strike+2. Defend.",
+            "Values": []
+          },
+          {
             "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
+            "Text": "Maneuver+1. Range 3 - target gains {DMG+TIR} Counter. You may consume Ice or Earth. If you do, create a size 1 Obstacle adjacent to the target.",
+            "Values": ["4+MOV", "BLK"]
+          }
+        ],
+        "Passives": []
+      },
+      {
+        "Name": "Fast",
+        "Strike": "Deal {TIR} damage {TIR+1} times.",
+        "Defend": "",
+        "Maneuver": "Move 4.",
+        "HPMod": -5,
+        "Actions": [
+          {
+            "Name": "Far",
+            "Text": "Maneuver+1. Range 3 - target gains {BLK} Block and may Move 1. You may consume Ice or Earth. If you do, create a size 1 Obstacle adjacent to the target.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Fortunate",
+        "Strike": "Deal {DMG} damage. The target exiles the top card of their deck. If a card with Strike is exiled this way, deal {DMG} damage.",
+        "Defend": "Gain {TIR} Evasive.",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Missed by a Millimeter",
+            "Text": "Reaction - you are dealt damage. Ignore all damage from dice showing 1. If there are more 1s than any other number on the dice rolled, ignore all damage and effects from the attack.",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Turn Away Fate",
+            "Text": "When your health is reduced to 0, roll 1d6. On a 6, your health becomes 1 instead of you being defeated.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Striker"
@@ -1228,7 +1264,7 @@
       },
       {
         "Name": "Chipping",
-        "Text": "At the start of your turn, if this character is bloodied, gain 1 Haste and 2 Soft.",
+        "Text": "At the start of your turn, if you are bloodied, gain 1 Haste and 2 Soft.",
         "Values": []
       }
     ],
@@ -1389,7 +1425,7 @@
           },
           {
             "Name": "Close",
-            "Text": "Strike. Until end of their next turn, target may only draw line of sight to spaces within range X, where X is the number of cards in their hand.",
+            "Text": "Strike. Until end of their next turn, target may only draw line of sight to spaces within Range X, where X is the number of cards in their hand.",
             "Values": []
           }
         ],
@@ -1573,12 +1609,12 @@
     "Passives": [
       {
         "Name": "Mist of Mind",
-        "Text": "Whenever an enemy ends their turn within range 5 of Mindmister, inflict {TIR} Dazed.",
+        "Text": "Whenever an enemy ends their turn within Range 5 of Mindmister, inflict {TIR} Dazed.",
         "Values": ["TIR"]
       },
       {
         "Name": "Pain of Clarity",
-        "Text": "Whenever an enemy within range 5 plays Dazed, they lose {DMG} life.",
+        "Text": "Whenever an enemy within Range 5 plays Dazed, they lose {DMG} life.",
         "Values": ["DMG"]
       },
       {
@@ -1746,7 +1782,7 @@
           },
           {
             "Name": "Protect our own",
-            "Text": "Reaction - an ally within range 3 is attacked. That ally gains {TIR*4} Block and you may Strike the attacker.",
+            "Text": "Reaction - an ally within Range 3 is attacked. That ally gains {TIR*4} Block and you may Strike the attacker.",
             "Values": []
           }
         ],
@@ -2110,7 +2146,7 @@
       },
       {
         "Name": "Illumination",
-        "Text": "Allies may draw line of sight, but not range, from you.",
+        "Text": "Allies may draw line of sight, but not Range, from you.",
         "Values": []
       }
     ],
@@ -2187,13 +2223,13 @@
     "DefScaling": 1,
     "OffScaling": 1,
     "Challenge": 2,
-    "Strike": "Deal {DMG} damage. Inflict {DMG-1} Bleed.",
-    "Maneuver": "Move {3+TIR}.",
+    "Strike": "Deal {DMG} damage. Inflict {DMG-1} Bleed. Move 1.",
+    "Maneuver": "Move {3+TIR}. Ignore zone of control.",
     "Defend": "Gain {TIR} Evasive.",
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Strike+1. Exile a random card from the target's hand, deck and discard. Maneuver-2.",
+        "Text": "Strike+1. Exile a random card from the target's hand, deck and discard.",
         "Values": ["DMG+1", "PSTATK", "2+MOV", "DMG"]
       },
       {
@@ -2211,64 +2247,87 @@
     "PostAttack": [],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
+        "Name": "Sneaky",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "",
         "HPMod": -5,
         "Actions": [
           {
-            "Name": "Melee",
-            "Text": "Strike.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Fearsome",
-        "Strike": "",
-        "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
-        "HPMod": 0,
-        "Actions": [
-          {
             "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
+            "Text": "Maneuver. Range 2 - Strike. Exile a random card from the target's hand. If you are not inspected, exile the top two cards of their deck.",
             "Values": []
           }
         ],
-        "Passives": []
-      },
-      {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
-        "Actions": [
+        "Passives": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
+            "Name": "Unseen",
+            "Text": "If you are not inspected, you cannot take more than 1 damage from attacks.'",
             "Values": []
           }
-        ],
-        "Passives": []
+        ]
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Daring",
+        "Strike": "Move 1. Deal {DMG} damage. Inflict {DMG-1} Bleed.",
+        "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Melee",
+            "Text": "Strike+1. The target may exile two random cards from thei hand, deck and discard each. If they don't, Strike+1.",
+            "Values": []
+          },
+          {
+            "Name": "Offensive Parry",
+            "Text": "Reaction - you are attacked. Maneuver towards the attacker, then Strike them.",
             "Values": []
           }
         ],
         "Passives": []
+      },
+      {
+        "Name": "Sacrilegious",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "Move {3+TIR}. Ignore zone of control. You may consume any element.",
+        "HPMod": 0,
+        "Actions": [
+          {
+            "Name": "Close",
+            "Text": "Maneuver. Range 2 - Strike. Exile a random card from the target's hand. If there are no elements channeled, Burst 2 centered on the target - inflict {TIR+1} Bleed.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Divinity Denied",
+            "Text": "As long as no elements are channeled, you have resistance to all damage.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Experienced",
+        "Strike": "",
+        "Defend": "Gain {TIR+1} Evasive.",
+        "Maneuver": "Move {2+TIR}. Ignore zone of control.",
+        "HPMod": -5,
+        "Actions": [
+          {
+            "Name": "Far",
+            "Text": "Maneuver+2. Defend. Until your next turn, whenever you are attacked, you may move 1 after the attack.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Prepared",
+            "Text": "At the start of combat, Defend.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Skirmisher"
@@ -2314,7 +2373,7 @@
     "Archetypes": [
       {
         "Name": "Swift",
-        "Strike": "Deal 2 damage {TIR+1} times.",
+        "Strike": "Deal {TIR+1} damage {TIR+1} times.",
         "Defend": "",
         "Maneuver": "Move 6.",
         "HPMod": -5,
@@ -2358,7 +2417,7 @@
         "Passives": [
           {
             "Name": "Unseen",
-            "Text": "If this character is not scanned, it's Strike gains 'Inflict 1 Slow and 1 Stunned.'",
+            "Text": "If you are not not inspected, your Strike gains 'Inflict 1 Slow and 1 Stunned.'",
             "Values": []
           }
         ]

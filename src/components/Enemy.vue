@@ -33,6 +33,7 @@ const isBloodied = ref()
 isBloodied.value = false
 
 function changedClass(ev: {}) {
+  currentEnemy.value.Archetype = new EnemyArchetype()
   enemyArchetypes.value = currentEnemy.value.Class.Archetypes
   enemyArchetypes.value.push(new EnemyArchetype())
   // currentEnemy.value.Class.Archetypes.forEach((item) => {
