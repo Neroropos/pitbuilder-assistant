@@ -1944,14 +1944,14 @@
       },
       {
         "Name": "Far",
-        "Text": "Maneuver+1. Consume Fire and/or Ice. Burst 3 - Strike-1 of the consumed elements type. If Fire was consumed, inflict {TIR+1} Burn to each enemy. If Ice was consumed, each ally gains {BLK-1} Block.",
+        "Text": "Maneuver+1. Consume Fire and/or Ice. Burst 3 - Strike-1 dealing damage of one of the consumed element's type. If Fire was consumed, inflict {TIR+1} Burn to each enemy. If Ice was consumed, each ally gains {BLK-1} Block.",
         "Values": ["4+MOV", "DMG-1", "TIR+1", "BLK-1"]
       }
     ],
     "Passives": [
       {
         "Name": "Blood scream",
-        "Text": "When bloodied for the first time, Channel Fire or Ice and inflict {TIR} Dazed to each enemy within line of sight.",
+        "Text": "When you become bloodied for the first time, Channel Fire or Ice and inflict {TIR} Dazed to each enemy within line of sight.",
         "Values": ["TIR"]
       }
     ],
@@ -1960,64 +1960,103 @@
     "Weaknesses": ["Light"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
-        "Actions": [
-          {
-            "Name": "Melee",
-            "Text": "Strike.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Fearsome",
-        "Strike": "",
+        "Name": "Binder",
+        "Strike": "Range 5 - Deal {DMG} damage. You may replace a status on the target with Slow.",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Bind",
+            "Text": "Maneuver. Channel Fire or Ice. Strike.",
+            "Values": []
+          },
+          {
+            "Name": "Melee",
+            "Text": "",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Bound Imp",
+            "Text": "Start of combat: Deploy an Imp within Range 3 of you. It has {TIR*5+5} HP and at the end of each of your turns moves 3, then Range 3 - Deal {DMG} damage and inflict {TIR} Strength and {TIR} Poison. It ignores difficult terrain.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Scarred",
+        "Strike": "",
+        "Defend": "Gain {BLK} Block. Channel Fire.",
+        "Maneuver": "",
+        "HPMod": 5,
+        "Actions": [
+          {
+            "Name": "Close",
+            "Text": "Maneuver-1. Defend. Radius 3 - Inflict {TIR+1} Strength and {TIR+1} Bleed to each other character.",
+            "Values": []
+          },
+          {
+            "Name": "My blood freezes",
+            "Text": "Reaction - you are attacked. You may consume Ice. If you do, Defend.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Scars that protect",
+            "Text": "Whenever you lose health from an attack, gain {TIR} Sturdy.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Charismatic",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 0,
+        "Actions": [
+          {
+            "Name": "Close",
+            "Text": "Maneuver-1. Range 5 - Target character gains {TIR+1} Strength and {TIR+1} Bleed. Then, if it is an enemy, they may either lose {TIR+1} Strength and gain {TIR} Weak or Maneuver and Strike, with you controlling the action.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Too lovely to harm",
+            "Text": "Whenever you are attacked, the attacker chooses to either gain {TIR} Feeble or lose {TIR*2} health.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Host",
+        "Strike": "Deal {DMG} damage and inflict {TIR} Bleed. ",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": -10,
+        "Actions": [
+          {
+            "Name": "Melee",
+            "Text": "Channel Fire or Ice. Defend. Strike.",
+            "Values": []
+          },
+          {
+            "Name": "Far",
+            "Text": "Maneuver. Strike. You may consume Fire. If you do, Strike, inflicting Burn instead of Bleed. You may consume Ice. If you do, Strike, inflicting Slow instead of Bleed.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Breach containment",
+            "Text": "When defeated for the first time, if you were not defeated by Light damage, any enemy may receive a Wound. If none does, restore your health to full and perfom the Far action. You gain Flying for the rest of combat.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Support"
@@ -2043,14 +2082,14 @@
       },
       {
         "Name": "Perform",
-        "Text": "Maneuver+1. Defend. Radius 3 - Each ally gains 2 Haste.",
+        "Text": "Maneuver+1. Defend. Radius {TIR+2} - Each ally gains {TIR+1} Haste.",
         "Values": ["4+MOV"]
       }
     ],
     "Passives": [
       {
         "Name": "Retaliation",
-        "Text": "After being attacked, any ally within line of sight may attack the attacker if able.",
+        "Text": "After being attacked, any ally within line of sight may Strike the attacker if able.",
         "Values": []
       }
     ],
@@ -2058,64 +2097,82 @@
     "Resistances": ["Air", "Water", "Fire"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
+        "Name": "Blade",
+        "Strike": "Deal 2 damage {TIR+1} times.",
+        "Defend": "",
+        "Maneuver": "",
         "HPMod": -5,
         "Actions": [
           {
-            "Name": "Melee",
-            "Text": "Strike.",
-            "Values": []
+            "Name": "Mobility",
+            "Text": "Maneuver. Defend+1. Strike.",
+            "Values": ["3+MOV", "TIR+1"]
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Retaliation",
+            "Text": "After being attacked, you may move 1, then Strike the attacker if able.",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Fearsome",
+        "Name": "Heron",
         "Strike": "",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Maneuver": "",
         "HPMod": 0,
+        "Weaknesses": ["Lightning"],
         "Actions": [
           {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
+            "Name": "Dance",
+            "Text": "Maneuver-1. Radius {TIR} - each ally that has already activated this turn may activate again.",
+            "Values": ["2+MOV"]
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
+        "Name": "Tempest",
+        "Strike": "Deal {DMG} Air damage. The target discards a card at random, then draws a card.",
+        "Defend": "",
+        "Maneuver": "Move 3. You may consume Air to Teleport 3 instead.",
+        "HPMod": -5,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
+            "Name": "Dance",
+            "Text": "Maneuver-1. An ally may perform an action. At the end of that action, Push {TIR} that ally.",
+            "Values": ["2+MOV"]
+          },
+          {
+            "Name": "Perform",
+            "Text": "Maneuver+1. Channel Air. Radius {TIR*2+3} - Each other character gains {TIR+1} Haste. Strike.",
+            "Values": ["4+MOV"]
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Incensed",
+        "Strike": "Deal {DMG} Fire damage.",
+        "Defend": "Gain {TIR} Evasive. Gain {TIR} Strength",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
-            "Values": []
+            "Name": "Perform",
+            "Text": "Maneuver+1. Defend. Radius {TIR+2} - Each ally gains {TIR+1} Strength.",
+            "Values": ["4+MOV"]
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Things are heating up!",
+            "Text": "Adjacent allies deal X more damage, where X is your Strength.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Support"
@@ -2255,14 +2312,14 @@
         "Actions": [
           {
             "Name": "Close",
-            "Text": "Maneuver. Range 2 - Strike. Exile a random card from the target's hand. If you are not inspected, exile the top two cards of their deck.",
+            "Text": "Maneuver. Range 2 - Strike. Exile a random card from the target's hand. If you are not examined, exile the top two cards of their deck.",
             "Values": []
           }
         ],
         "Passives": [
           {
             "Name": "Unseen",
-            "Text": "If you are not inspected, you cannot take more than 1 damage from attacks.'",
+            "Text": "If you are not examined, you cannot take more than 1 damage from attacks.'",
             "Values": []
           }
         ]
@@ -2276,7 +2333,7 @@
         "Actions": [
           {
             "Name": "Melee",
-            "Text": "Strike+1. The target may exile two random cards from thei hand, deck and discard each. If they don't, Strike+1.",
+            "Text": "Strike+1. The target may exile two random cards from their hand, deck and discard each. If they don't, Strike+1.",
             "Values": []
           },
           {
@@ -2417,7 +2474,7 @@
         "Passives": [
           {
             "Name": "Unseen",
-            "Text": "If you are not not inspected, your Strike gains 'Inflict 1 Slow and 1 Stunned.'",
+            "Text": "If you are not not examined, your Strike gains 'Inflict 1 Slow and 1 Stunned.'",
             "Values": []
           }
         ]
