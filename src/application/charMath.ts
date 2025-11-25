@@ -278,7 +278,9 @@ export class Enemy {
       .replace(/TIR/g, this.Tier.toString())
     result = newVal.replace(/{([^{}]+)}/g, (_, expr) => {
       try {
-        return eval(expr)
+        const evalVal = eval(expr)
+        const returnVal = Math.max(evalVal, 1)
+        return returnVal.toString()
       } catch (e) {
         console.error('Error evaluating:', expr, e)
         return `{${expr}}` // fallback if eval fails
