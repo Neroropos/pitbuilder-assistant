@@ -654,6 +654,11 @@
             "Name": "Bask in their light",
             "Text": "At the end of your turn, Radius 3 - each ally gains {BLK-2} Block. If Light is channeled, they gain that much Barrier instead.",
             "Values": []
+          },
+          {
+            "Name": "Shine On",
+            "Text": "Whenever an enemy attacks you, inflict {TIR} Pulse to them.",
+            "Values": []
           }
         ]
       },
@@ -1237,7 +1242,7 @@
     "OffScaling": 1,
     "Challenge": 2,
     "Strike": "Deal {DMG} damage.",
-    "Maneuver": "Move 3.",
+    "Maneuver": "Move 1.",
     "Defend": "Gain {BLK+3} Block.",
     "Actions": [
       {
@@ -1247,7 +1252,7 @@
       },
       {
         "Name": "Close",
-        "Text": "Maneuver. Range 5 - target enemy maneuvers to be as close as possible to you. If it becomes adjacent to you, inflict {TIR+1} Slow and Strike them.",
+        "Text": "Maneuver. Range 5 - target enemy Maneuvers to be as close as possible to you. If it becomes adjacent to you, inflict {TIR+1} Slow and Strike them.",
         "Values": ["1+MOV", "TIR+1", "DMG+2", "PSTATK"]
       },
       {
@@ -1264,7 +1269,7 @@
       },
       {
         "Name": "Chipping",
-        "Text": "At the start of your turn, if you are bloodied, gain 1 Haste and 2 Soft.",
+        "Text": "At the start of your turn, if you are bloodied, gain {TIR} Haste and {TIR*2} Soft.",
         "Values": []
       }
     ],
@@ -1273,11 +1278,11 @@
     "Weaknesses": ["Earth"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
+        "Name": "Unbreakable",
+        "Strike": "",
+        "Defend": "Gain {BLK*2+3} Block.",
+        "Maneuver": "",
+        "HPMod": 0,
         "Actions": [
           {
             "Name": "Melee",
@@ -1285,52 +1290,78 @@
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Chipping",
+            "Text": "At the start of your turn, if you are bloodied, gain {TIR} Slow and {TIR*2} Hard.",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Fearsome",
+        "Name": "Beckoning",
         "Strike": "",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
             "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
+            "Text": "Maneuver. Range 7 - target enemy Maneuvers+2 to be as close as possible to you. If it becomes adjacent to you, inflict {TIR+1} Slow and Strike them.",
+            "Values": ["1+MOV", "TIR+1", "DMG+2", "PSTATK"]
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Pulling",
+            "Text": "Zone of control +1. At the start of your turn, push each enemy within your zone of control to be adjacent to you.",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
+        "Name": "Radiant",
+        "Strike": "Radius {TIR+1} - deal {DMG} Light damage.",
+        "Defend": "",
+        "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
+            "Name": "Melee",
+            "Text": "Strike+1. At the start of your next turn, if the target is within your Strike range and Bloodied, inflict 1 Wound.",
+            "Values": ["DMG+2", "PSTATK"]
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Shine On",
+            "Text": "Whenever an enemy attacks you, inflict {TIR} Pulse to them.",
+            "Values": ["DMG+2", "PSTATK"]
+          }
+        ],
+        "Resistances": ["Light"],
+        "Weaknesses": ["Ice"]
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Commanding",
+        "Strike": "",
+        "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
-            "Values": []
+            "Text": "Maneuver+1. Defend. Radius 5 - each ally gains {TIR} Haste, then may maneuver as far as possible towards the enemy closest to them.",
+            "Values": ["2+MOV", "BLK+3"]
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Idol of Superiority",
+            "Text": "Allies within Radius 3 deal receive {TIR} less of any negative statuses. Enemies within Radius 3 discard a card at the start of their turn.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Controller"
@@ -1467,9 +1498,9 @@
     "DefScaling": 2,
     "OffScaling": 1,
     "Challenge": 2,
-    "Strike": "Range 5 - Deal {DMG+1} damage.",
+    "Strike": "Range 5 - Deal {DMG+1} Earth damage.",
     "Maneuver": "Move 3.",
-    "Defend": "Gain {BLK} Block and {DMG-3} Counter.",
+    "Defend": "Gain {BLK} Block.",
     "Actions": [
       {
         "Name": "Melee",
@@ -1513,19 +1544,24 @@
     "Resistances": ["Earth"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
+        "Name": "Elemental",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 0,
         "Actions": [
           {
-            "Name": "Melee",
-            "Text": "Strike.",
+            "Name": "Close",
+            "Text": "Maneuver. Strike. Place a Damping Pillar next to the target.",
             "Values": []
           }
         ],
         "Passives": [
+          {
+            "Name": "Damping Pillar",
+            "Text": "Whenever an enemy within range 5 channels an element, they gain {TIR} Feeble and {TIR} Slow. Whenever an enemy within range 5 consumes an element, deal {DMG} damage to them.",
+            "Values": []
+          },
           {
             "Name": "Chaining Pillar",
             "Text": "",
@@ -1534,49 +1570,73 @@
         ]
       },
       {
-        "Name": "Fearsome",
-        "Strike": "",
+        "Name": "Captivating",
+        "Strike": "Range 5 - Deal {DMG+1} Dark damage. Push {TIR} towards the closest pillar.",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Maneuver": "",
         "HPMod": 0,
+        "Resistances": ["Dark"],
+        "Weaknesses": ["Ice"],
         "Actions": [
           {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
+            "Name": "Melee",
+            "Text": "Maneuver. Place a Captivating Pillar.",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Captivating Pillar",
+            "Text": "Enemies within line of sight can't attack targets that are farther away from them than Captivating Pillar.",
+            "Values": []
+          },
+          {
+            "Name": "Sapping Pillar",
+            "Text": "",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Heavy",
+        "Name": "Erecting",
         "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
+        "Defend": "Gain {BLK+1} Block. Create a Size 1 Obstacle.",
         "Maneuver": "Move 2.",
         "HPMod": 0,
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
+            "Text": "Maneuver. Range 5 - Place {TIR*3+3} size 1 Obstacles. Then, inflict {TIR} Weak and {TIR} Soft to each enemy adjacent to an obstacle placed this way.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Draining",
+        "Strike": "Range 5 - Deal {DMG+1} Ice damage. Reduce up to one status on the target by {TIR}.",
+        "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Melee",
+            "Text": "Maneuver. Place a Draining Pillar.",
             "Values": []
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Draining Pillar",
+            "Text": "Whenever an enemy starts their turn adjacent to the Draining Pillar, reduce all of their positive statuses by {TIR}.",
+            "Values": []
+          },
+          {
+            "Name": "Sapping Pillar",
+            "Text": "",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Controller"
@@ -1816,7 +1876,7 @@
     "DefScaling": 2,
     "OffScaling": 1,
     "Challenge": 1,
-    "Strike": "Deal {DMG-1} damage. If the target is inside a Circle, deal that damage {TIR} more times.",
+    "Strike": "Range 5 - deal {DMG-1} damage. If the target is inside a Circle, deal that damage {TIR} more times.",
     "Maneuver": "Move 3.",
     "Defend": "Gain {BLK-1} Barrier.",
     "Actions": [
@@ -1839,86 +1899,113 @@
     "Passives": [
       {
         "Name": "Circles",
-        "Text": "All Circles are Radius 3 terrain. They can be attacked at the center and have {TIR*5+5} HP.",
+        "Text": "All Circles are Radius 3 terrain. They can be attacked and have {TIR*5+5} HP. When you deploy a Circle, choose your space or an adjacent space. That is the center of the Circle.",
         "Values": ["TIR*2+6"]
       },
       {
         "Name": "Binding Circle",
-        "Text": "At the start of their turn, inflict 1 Slowed and deal {DMG} damage to each enemy within this Circle.",
+        "Text": "At the start of their turn, inflict {TIR} Slowed and deal {DMG} damage to each enemy within this Circle.",
         "Values": ["DMG"]
       },
       {
         "Name": "Emboldening Circle",
-        "Text": "At the start of their turn, each ally within this Circle gains 3 Strength for that turn and {BLK} Block.",
+        "Text": "At the start of their turn, each ally within this Circle gains {TIR+2} Strength for that turn and {BLK} Block.",
         "Values": ["BLK"]
       },
       {
         "Name": "Invigorating Circle",
-        "Text": "At the start of their turn, each ally within this Circle gains 3 Haste for that turn and recovers {TIR} HP.",
+        "Text": "At the start of their turn, each ally within this Circle gains {TIR+2} Haste for that turn and recovers {TIR*3} HP.",
         "Values": ["TIR"]
       }
     ],
     "PostAttack": [],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
-        "Actions": [
-          {
-            "Name": "Melee",
-            "Text": "Strike.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Fearsome",
+        "Name": "Evoker",
         "Strike": "",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Invigorating Circle",
+            "Text": "",
             "Values": []
+          },
+          {
+            "Name": "Explosive Dismissal",
+            "Text": "Chose any Circle, regardless of range or line of sight - Strike+2 each enemy inside that circle and inflict 1 Stunned. Destroy that Circle.",
+            "Values": ["TIR"]
+          },
+          {
+            "Name": "Restoring Dismissal",
+            "Text": "Chose any Circle, regardless of range or line of sight - Each ally inside the circle recovers {TIR*6} HP. Destroy that Circle.",
+            "Values": ["TIR"]
           }
         ],
         "Passives": []
+      },
+      {
+        "Name": "Imbuer",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 0,
+        "Actions": [],
+        "Passives": [
+          {
+            "Name": "Imbuement",
+            "Text": "Whenever you deploy a circle, if it overlaps perfectly with another circle, increase all numberic values in both circles by {TIR}.",
+            "Values": ["TIR"]
+          }
+        ]
+      },
+      {
+        "Name": "Enduring",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 0,
+        "Actions": [
+          {
+            "Name": "Fight",
+            "Text": "Maneuver. Strike.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Grow",
+            "Text": "At the start of your turn, gain {TIR} Hard if you have any Binding Circles. Do the same for Emboldening and {TIR} Strength, and Invigorating and {TIR} Haste.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Binder",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 0,
+        "Actions": [
+          {
+            "Name": "Invigorating Circle",
+            "Text": "",
+            "Values": []
+          },
+          {
+            "Name": "Dazzling Circle",
+            "Text": "At the start of their turn, each enemy within this Circle gains gains {TIR} Dazed and discards a non-status card.",
+            "Values": ["TIR"]
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Binding",
+            "Text": "Enemies cannot move out of Circles.",
+            "Values": []
+          }
+        ]
       }
     ],
     "Type": "Support"
@@ -2599,7 +2686,7 @@
     "Actions": [
       {
         "Name": "Melee",
-        "Text": "Line +2. Strike+1. Move to the end of the line. Channel Air.",
+        "Text": "Line+{TIR+1}. Strike+1. Move to the end of the line. Channel Air.",
         "Values": ["DMG+1", "PSTATK"]
       },
       {
@@ -2616,70 +2703,93 @@
     "Passives": [
       {
         "Name": "Carry the Warriors",
-        "Text": "Whenever an ally with Radius 5 is defeated, gain 1 Haste, 1 Strength and channel Light.",
+        "Text": "Whenever an ally with Range 5 is defeated, gain 1 Haste, 1 Strength and channel Light.",
         "Values": []
       }
     ],
     "PostAttack": [],
     "Resistances": ["Air", "Light"],
-    "Weaknesses": ["Earth"],
+    "Weaknesses": ["Earth", "Lightning"],
     "Archetypes": [
       {
         "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
+        "Strike": "Deal 2 Air damage {TIR+1} times.",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 0,
         "Actions": [
           {
             "Name": "Melee",
-            "Text": "Strike.",
+            "Text": "Line+{TIR+1}. Strike. Move to the end of the line. Channel Air.",
             "Values": []
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Fearsome",
-        "Strike": "",
+        "Name": "Radiant",
+        "Strike": "Line 3. Deal {DMG} Light damage.",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Text": "Maneuver+2. Channel Light. Defend. Radius 5 - Inflict {TIR+2} Pulse.",
             "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Shine On",
+            "Text": "Whenever an enemy attacks you, inflict {TIR} Pulse to them.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Soaring",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "Move {4+TIR}.",
+        "HPMod": -10,
+        "Actions": [
+          {
+            "Name": "Close",
+            "Text": "Maneuver. Strike-1 dealing Light damage instead. If you aren't bloodied, you may consume Air. If you do, Maneuver, then Radius 3 - Strike and push 1 all enemies away. If you are bloodied, you may consume Light. If you do, choose any ally regardless of range or line of sight - that ally gains Barrier equal to your health, {TIR+2} Strength and {TIR+2} Hard and you are defeated.",
+            "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Winged",
+            "Text": "You have Flying.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Furious",
+        "Strike": "Line 2. Deal {DMG} Fire damage. Gain 1 Strength.",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": 0,
+        "Resistances": ["Fire"],
+        "Actions": [
+          {
+            "Name": "Melee",
+            "Text": "Line+{TIR+1}. Strike+1. Move to the end of the line. Channel Fire.",
+            "Values": ["DMG+1", "PSTATK"]
+          },
+          {
+            "Name": "Close",
+            "Text": "Maneuver. Strike-1. You may consume Fire. If you do, Burst 3 at the end of the line - Strike-1 and inflict {TIR+1} Pulse.",
+            "Values": ["3+MOV", "DMG-1", "PSTATK", "BLK"]
+          },
+          {
+            "Name": "Far",
+            "Text": "Maneuver+2. Channel Fire. Defend.",
+            "Values": ["6+MOV"]
           }
         ],
         "Passives": []
@@ -2692,7 +2802,7 @@
     "DefScaling": 2,
     "OffScaling": 1,
     "Challenge": 2,
-    "Strike": "Deal {DMG-2} damage twice.",
+    "Strike": "Deal {DMG} damage twice.",
     "Maneuver": "Move {3+TIR}.",
     "Defend": "Gain {TIR} Evasive.",
     "Actions": [
@@ -2712,8 +2822,8 @@
         "Values": ["6+MOV", "TIR*2+2"]
       },
       {
-        "Name": "Reaction",
-        "Text": "You are attacked by a non adjacent enemy. Gain {TIR} Evasive. Deal {DMG} damage to the attacker.",
+        "Name": "Deflect",
+        "Text": "Reaction - You are attacked by a non adjacent enemy. Gain {TIR} Evasive and deal {DMG} damage to the attacker.",
         "Values": ["TIR", "DMG"]
       }
     ],
@@ -2722,63 +2832,68 @@
     "Resistances": ["Light", "Dark"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
-        "Actions": [
-          {
-            "Name": "Melee",
-            "Text": "Strike.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Fearsome",
+        "Name": "Balanced",
         "Strike": "",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Maneuver": "",
         "HPMod": 0,
-        "Actions": [
+        "Actions": [],
+        "Passives": [
           {
-            "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
+            "Name": "Harmony",
+            "Text": "If neither Light or Dark is channeled, you have resistance to all damage with an element. If both Light and Dark are channeled, you deal {TIR} extra damage and take {TIR*3} less damage.",
             "Values": []
           }
-        ],
-        "Passives": []
+        ]
       },
       {
-        "Name": "Heavy",
-        "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
-        "Actions": [
-          {
-            "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Disabling",
+        "Strike": "Deal {DMG} damage twice. Inflict 1 Feeble.",
+        "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Close",
+            "Text": "Maneuver. Strike. Choose Strike, Defend or Maneuver. Until the end of their next turn, when the target performs that action, they discard a card and lose {TIR} life. Channel Light or Dark. ",
             "Values": []
           }
         ],
+        "Passives": []
+      },
+      {
+        "Name": "Experienced",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": -5,
+        "Actions": [
+          {
+            "Name": "Far",
+            "Text": "Maneuver+2. Defend. Gain {TIR*3+2} Counter with Range 6.",
+            "Values": []
+          },
+          {
+            "Name": "Deflect",
+            "Text": "",
+            "Values": ["TIR", "DMG"]
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Untouchable",
+            "Text": "Whenver you are attacked by a non adjacent enemy gain {TIR} Evasive and deal {DMG} damage to the attacker.",
+            "Values": ["TIR", "DMG"]
+          }
+        ]
+      },
+      {
+        "Name": "Mindful",
+        "Strike": "Deal {DMG} damage twice and gain {TIR+1} Haste.",
+        "Defend": "Gain {TIR} Evasive and 1 Strength.",
+        "Maneuver": "Move {3+TIR} and gain {TIR} Hard.",
+        "HPMod": 0,
+        "Actions": [],
         "Passives": []
       }
     ],
