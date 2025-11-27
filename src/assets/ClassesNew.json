@@ -2287,74 +2287,114 @@
         "Name": "Far",
         "Text": "Teleport to be adjacent to an ally. That ally gains {BLK+1} Block. You may consume Light. If you do, Radius 5 - inflict {DMG+1} Pulse.",
         "Values": ["BLK+1", "DMG+1"]
-      },
+      }
+    ],
+    "Passives": [
       {
         "Name": "Illumination",
         "Text": "Allies may draw line of sight, but not Range, from you.",
         "Values": []
       }
     ],
-    "Passives": [],
     "PostAttack": [],
     "Weaknesses": ["Dark"],
     "Resistances": ["Light"],
     "Archetypes": [
       {
-        "Name": "Swift",
-        "Strike": "Deal 3 damage {TIR+1} times.",
-        "Defend": "Gain TIR Evasive.",
-        "Maneuver": "Move 4.",
-        "HPMod": -5,
-        "Actions": [
-          {
-            "Name": "Melee",
-            "Text": "Strike.",
-            "Values": []
-          }
-        ],
-        "Passives": []
-      },
-      {
-        "Name": "Fearsome",
-        "Strike": "",
+        "Name": "Scorching",
+        "Strike": "Range 3 - Deal {DMG} Fire damage. Inflict {TIR+1} Burn.",
         "Defend": "",
-        "Maneuver": "Move 3. Inflict 1 Soft.",
+        "Maneuver": "",
         "HPMod": 0,
+        "Weaknesses": ["Water"],
+        "Resistances": ["Fire"],
         "Actions": [
           {
             "Name": "Close",
-            "Text": "Maneuver. Strike. Inflict 2 Weak and 2 Sundered.",
-            "Values": []
+            "Text": "Maneuver. Radius 3 - Allies gain {TIR+2} Barrier. Strike each enemy. Channel Fire.",
+            "Values": ["3+MOV", "TIR+2", "TIR+2"]
           }
         ],
-        "Passives": []
+        "Passives": [
+          {
+            "Name": "Burn through me",
+            "Text": "Whenever an ally Strikes an enemy within Range 5 of you, inflict 1 Burn to that enemy.",
+            "Values": []
+          },
+          {
+            "Name": "Petering out",
+            "Text": "When you become bloodied for the first time, each enemy within line of sight may exile up to {TIR+1} cards from their hand.",
+            "Values": []
+          }
+        ]
       },
       {
-        "Name": "Heavy",
+        "Name": "Educating",
         "Strike": "",
-        "Defend": "Gain {BLK+3} Block.",
-        "Maneuver": "Move 2.",
-        "HPMod": 0,
+        "Defend": "",
+        "Maneuver": "",
+        "HPMod": -5,
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Maneuver. Defend. Range 3 - all of targets attacks until your next turn or until you are defeated must include you as a target.",
-            "Values": []
+            "Text": "Teleport to be adjacent to an ally. That ally gains {BLK+1} Block. You may consume Light. If you do, that ally gains {TIR} Powerful.",
+            "Values": ["BLK+1", "DMG+1"]
           }
         ],
         "Passives": []
       },
       {
-        "Name": "Inspiring",
-        "Strike": "Deal {DMG-2} damage. An ally within Range 3 gains 1 Strength.",
-        "Defend": "Gain {BLK} Block. And ally within Range 3 gains 1 Wary.",
+        "Name": "Protecting",
+        "Strike": "",
+        "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
         "Actions": [
           {
-            "Name": "Far",
-            "Text": "Maneuver. Each ally with Radius 3 gains 2 Haste and 2 Wary.",
+            "Name": "Melee",
+            "Text": "Maneuver. Strike-1.",
+            "Values": ["DMG+1", "TIR+1", "PSTATK", "3+MOV"]
+          },
+          {
+            "Name": "Close",
+            "Text": "Maneuver. Radius 3 - Allies gain {TIR+2} Barrier. Then Range 5 - Inflict {TIR+2} Pulse and that enemy may not draw line of sight further than their Pulse value until the end of their turn.",
+            "Values": ["3+MOV", "TIR+2", "TIR+2"]
+          },
+          {
+            "Name": "Ward",
+            "Text": "Reaction - an ally within Range 3 is attacked. That ally gains {TIR*3} Barrier. Channel Light.",
             "Values": []
+          }
+        ],
+        "Passives": [
+          {
+            "Name": "Sheltering Light",
+            "Text": "At the start of your turn you may consume Light. If you do, Radius 3 - each ally gains {TIR*3} Barrier.",
+            "Values": []
+          }
+        ]
+      },
+      {
+        "Name": "Transporting",
+        "Strike": "",
+        "Defend": "",
+        "Maneuver": "Teleport 3.",
+        "HPMod": 0,
+        "Actions": [
+          {
+            "Name": "Melee",
+            "Text": "Strike. Choose and adjacent ally. Maneuver, then teleport the chosen ally to be adjacent to you.",
+            "Values": ["DMG+1", "TIR+1", "PSTATK", "3+MOV"]
+          },
+          {
+            "Name": "Close",
+            "Text": "Maneuver. Radius 3 - Inflict {TIR+2} Pulse. Enemies may not draw line of sight further than their Pulse value until the end of their turn. Channel Light.",
+            "Values": ["3+MOV", "TIR+2", "TIR+2"]
+          },
+          {
+            "Name": "Escape",
+            "Text": "Reaction - you are attacked. You may consume Light. If you do, Maneuver. If you are can no longer be targeted by the attack, ignore all of it's effects.",
+            "Values": ["3+MOV", "TIR+2", "TIR+2"]
           }
         ],
         "Passives": []
