@@ -68,6 +68,17 @@ export class PlayerCard {
     Object.assign(this, init)
   }
 }
+export class PlayerCard2 {
+  Types: string[] = []
+  Tags: string[] = []
+  Cost: string = ''
+  Range: string = ''
+  Text: string = ''
+  Name: string = ''
+  public constructor(init?: Partial<PlayerCard>) {
+    Object.assign(this, init)
+  }
+}
 export class GroupedPlayerCard {
   Type: string = ''
   Values: PlayerCard[] = []

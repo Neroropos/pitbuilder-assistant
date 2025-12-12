@@ -294,6 +294,7 @@ export class Enemy {
       this.Templates?.reduce((sum, current) => sum + current.DefScaling || 0, 0)
     this.HPMod =
       DefScaling * 7 +
+      (DefScaling - 1) * (this.Tier - 1) * 4 +
       this.Templates?.reduce((sum, current) => sum + current.HPMod || 0, 0) +
       this.Archetype.HPMod
     this.HP = this.Tier * 10 + this.HPMod
