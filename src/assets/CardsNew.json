@@ -87,7 +87,7 @@
     "Name": "Placeholder",
     "Cost": "1, Consume Dark",
     "Types": ["Dark"],
-    "Text": "Stance. Whenever you discard a card, put a counter on this card. At any time during your turn, you may remove three counters from this card - return target card from your discard to your hand."
+    "Text": "Stance. Whenever you discard a card, put a counter on this card. At any time during your turn, you may remove three counters from this card - return target card from your dtich to your hand."
   },
   {
     "Name": "Placeholder",
@@ -105,7 +105,7 @@
     "Name": "Placeholder",
     "Cost": "1",
     "Types": ["Dark"],
-    "Text": "Consume Dark. Channel Light. Return up to two cards from your discard to your hand. Exile."
+    "Text": "Consume Dark. Channel Light. Return up to two cards from your ditch to your hand. Exile."
   },
   {
     "Name": "Placeholder",
@@ -159,7 +159,7 @@
     "Name": "Placeholder",
     "Cost": "2",
     "Types": ["Earth"],
-    "Text": "Continuous - Radius 3. Create Size 3 walls around the radius. Inflict Slow 3. While no walls are destroyed and you are inside them, deal an extra 2d6 Earth damage on your attacks. When this card is put into your discard, destroy all walls created this way."
+    "Text": "Continuous - Radius 3. Create Size 3 walls around the radius. Inflict Slow 3. While no walls are destroyed and you are inside them, deal an extra 2d6 Earth damage on your attacks. When this card is put into your ditch, destroy all walls created this way."
   },
   {
     "Name": "Placeholder",
@@ -195,7 +195,7 @@
     "Name": "Placeholder",
     "Cost": "2, Consume Earth",
     "Types": ["Earth"],
-    "Text": "Continuous. Opener. You cannot move. At the start of your turn, Radius 5 - Deal 6d6 Earth Damage. For each enemy defeated or obstacle destroyed this way an ally may return a card from their discard to their hand."
+    "Text": "Continuous. Opener. You cannot move. At the start of your turn, Radius 5 - Deal 6d6 Earth Damage. For each enemy defeated or obstacle destroyed this way an ally may return a card from their ditch to their hand."
   },
   {
     "Name": "Placeholder",
@@ -315,7 +315,7 @@
     "Name": "Placeholder",
     "Cost": "1, Consume Ice",
     "Types": ["Ice"],
-    "Text": "Stance. At the end of your turn, look at the top three cards of your deck. You may draw one and put the rest into your discard. Radius 3 - Each friendly character gains Block equal to twice the energy cost of the drawn card."
+    "Text": "Stance. At the end of your turn, look at the top three cards of your deck. You may draw one and put the rest into your ditch. Radius 3 - Each friendly character gains Block equal to twice the energy cost of the drawn card."
   },
   {
     "Name": "Placeholder",
@@ -333,13 +333,13 @@
     "Name": "Placeholder",
     "Cost": "0",
     "Types": ["Ice"],
-    "Text": "Choose one: Consume Ice - Range 3 - Target ally may look at the top five cards of their deck and put any number of them into their discard, then put the rest  back on top in any order. They gain 1 Block for each card put into discard this way."
+    "Text": "Choose one: Consume Ice - Range 3 - Target ally may look at the top five cards of their deck and put any number of them into their ditch, then put the rest  back on top in any order. They gain 1 Block for each card put into the ditch this way."
   },
   {
     "Name": "Placeholder",
     "Cost": "1, Consume Ice",
     "Types": ["Ice"],
-    "Text": "Radius 7 - Deal 1d6 Ice damage. Inflict 1 Slow. Each ally may look at the top three cards of their deck and put any number of them into their discard."
+    "Text": "Radius 7 - Deal 1d6 Ice damage. Inflict 1 Slow. Each ally may look at the top three cards of their deck and put any number of them into their ditch."
   },
   {
     "Name": "Placeholder",
@@ -645,7 +645,7 @@
     "Name": "Placeholder",
     "Cost": "1",
     "Types": ["Elemental"],
-    "Text": "Continuous. Whenever an element is consumed, put a counter on this card. When this card is put into your discard, draw a card for each counter on this card."
+    "Text": "Continuous. Whenever an element is consumed, put a counter on this card. When this card is put into your dtich, draw a card for each counter on this card."
   },
   {
     "Name": "Placeholder",
@@ -867,7 +867,7 @@
     "Name": "Placeholder",
     "Cost": "0",
     "Types": ["Draw"],
-    "Text": "Look at the top 3 cards of your deck. Draw one of them and put the others into your discard."
+    "Text": "Look at the top 3 cards of your deck. Draw one of them and put the others into your ditch."
   },
   {
     "Name": "Placeholder",
@@ -975,7 +975,7 @@
     "Name": "Placeholder",
     "Cost": "1, Discard a card",
     "Types": ["Discard"],
-    "Text": "Range 3 - Target ally may play a card from their discard without paying the Energy cost. Then, exile that card."
+    "Text": "Range 3 - Target ally may play a card from their ditch without paying the Energy cost. Then, exile that card."
   },
   {
     "Name": "Placeholder",
