@@ -1,4 +1,4 @@
-import { GetCard, PlayerCard } from './cardController'
+import { GetCard, PlayerCard2 } from './cardController'
 import backgroundsJson from '../assets/Backgrounds.json' assert { type: 'json' }
 import heritageJson from '../assets/Heritages.json' assert { type: 'json' }
 
@@ -24,7 +24,7 @@ export class Heritage {
   Name: string = ''
   Elements: string[] = []
   CardName: string = ''
-  Card: PlayerCard | null = null
+  Card: PlayerCard2 | null = null
 
   public constructor(init?: Partial<Heritage>) {
     Object.assign(this, init)
@@ -38,7 +38,7 @@ export class Background {
   Skills: string[] = []
   Talent: string = ''
   CardNames: string[] = []
-  Cards: PlayerCard[] = []
+  Cards: PlayerCard2[] = []
   StartingBoost: string = ''
 
   public constructor(init?: Partial<Heritage>) {
@@ -70,7 +70,7 @@ export class PlayerCharacter {
   Background: string | null = null
   MaxHP: number = 10
   Heritage: Heritage | null = null
-  CardsInDeck: PlayerCard[] = []
+  CardsInDeck: PlayerCard2[] = []
   public constructor(init?: Partial<PlayerCharacter>) {
     Object.assign(this, init)
   }
