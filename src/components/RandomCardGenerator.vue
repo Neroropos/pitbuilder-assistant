@@ -43,7 +43,7 @@ function removeAllPickedCards() {
 }
 </script>
 <template>
-  <FloatLabel variant="in" class="dropDown">
+  <!-- <FloatLabel variant="in" class="dropDown">
     <Multiselect
       v-model="selectedCardTypesAll"
       filter
@@ -53,7 +53,7 @@ function removeAllPickedCards() {
       class="dropDown"
     />
     <label for="typeSelect">Must have types</label>
-  </FloatLabel>
+  </FloatLabel> -->
   <FloatLabel variant="in" class="dropDown">
     <Multiselect
       v-model="selectedCardTypesOne"
@@ -65,7 +65,7 @@ function removeAllPickedCards() {
     />
     <label for="typeSelect2">Include types</label>
   </FloatLabel>
-  <FloatLabel variant="in" class="dropDown">
+  <!-- <FloatLabel variant="in" class="dropDown">
     <Multiselect
       v-model="excludeCardTypes"
       filter
@@ -75,7 +75,7 @@ function removeAllPickedCards() {
       class="dropDown"
     />
     <label for="typeSelect3">Exclude types</label>
-  </FloatLabel>
+  </FloatLabel> -->
   <div class="row">
     <input
       v-model="cardName"
@@ -100,13 +100,15 @@ function removeAllPickedCards() {
       <div>
         <span style="font-size: small">{{ index + 1 }}. </span>
         <span style="font-weight: bold"
-          >{{ card.Cost }} {{ card.Name
+          >{{ card.Cost }} - {{ card.Name
           }}<span @click="removeCard(card)" class="clickable" v-tooltip="'Remove'"
             ><i class="pi pi-minus"></i></span
         ></span>
 
         <br />
-        {{ card.Text }}
+        <pre style="font-family: inherit; font-size: inherit; white-space: pre-wrap">{{
+          card.Text
+        }}</pre>
       </div>
       <div class="row">
         <i>{{ card.Types.sort().join(', ') }}</i>
@@ -120,12 +122,14 @@ function removeAllPickedCards() {
       <div>
         <span style="font-size: small">{{ index + 1 }}. </span>
         <span style="font-weight: bold"
-          >{{ card.Cost }} {{ card.Name }}
+          >{{ card.Cost }} - {{ card.Name }}
           <span @click="pickCard(card)" class="clickable" v-tooltip="'Save'"
             ><i class="pi pi-plus"></i></span
         ></span>
         <br />
-        {{ card.Text }}
+        <pre style="font-family: inherit; font-size: inherit; white-space: pre-wrap">{{
+          card.Text
+        }}</pre>
       </div>
       <div class="row">
         <i>{{ card.Types.sort().join(', ') }}</i>

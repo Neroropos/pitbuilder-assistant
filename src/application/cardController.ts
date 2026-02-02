@@ -1,9 +1,11 @@
-import cardsJson from '../assets/Cards.json' assert { type: 'json' }
+import cardsJson from '../assets/CardsNew.json' assert { type: 'json' }
+//import cardsNewJson from '../assets/CardsNew.json' assert { type: 'json' }
+
 function GetCards() {
-  const cards: PlayerCard[] = []
-  const cardsFromJson = cardsJson as PlayerCard[]
+  const cards: PlayerCard2[] = []
+  const cardsFromJson = cardsJson as PlayerCard2[]
   cardsFromJson.forEach((element) => {
-    cards.push(new PlayerCard(element))
+    cards.push(new PlayerCard2(element))
   })
   return cards
 }
@@ -24,13 +26,13 @@ export function GetCardList(
 }
 export function GetCard(name: string) {
   const card = GetCards().filter((c) => c.Name == name)
-  if (card.length != 1) return new PlayerCard()
+  if (card.length != 1) return new PlayerCard2()
   else return card[0]
 }
 export function FindCardsByName(searchString: string) {
   return GetCards().filter((c) => c.Name.toLowerCase().includes(searchString.toLowerCase()))
 }
-export function GetRandomCards(cardList: PlayerCard[], cardAmount) {
+export function GetRandomCards(cardList: PlayerCard2[], cardAmount) {
   let n = cardAmount
   let len = cardList.length
   if (!n) n = 0
@@ -75,13 +77,13 @@ export class PlayerCard2 {
   Range: string = ''
   Text: string = ''
   Name: string = ''
-  public constructor(init?: Partial<PlayerCard>) {
+  public constructor(init?: Partial<PlayerCard2>) {
     Object.assign(this, init)
   }
 }
 export class GroupedPlayerCard {
   Type: string = ''
-  Values: PlayerCard[] = []
+  Values: PlayerCard2[] = []
   public constructor(init?: Partial<GroupedPlayerCard>) {
     Object.assign(this, init)
   }

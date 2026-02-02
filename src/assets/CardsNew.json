@@ -1,0 +1,968 @@
+[
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Air",
+    "Types": ["Air"],
+    "Text": "Permanent. You and adjacent allies get +2 Range."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Air",
+    "Types": ["Air"],
+    "Text": "Range 4 - Strike, dealing Air damage. Inflict 2 Bleed."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2, Consume Air",
+    "Types": ["Air"],
+    "Text": "Line 4. Strike, then move to the end of the line. Radius 2. Strike. Push all targets up 3. They fall at the end of your turn."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Air",
+    "Types": ["Air"],
+    "Text": "Radius 2 - Strike."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Air"],
+    "Text": "Maneuver. Maneuver. Maneuver. Channel Air."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Air",
+    "Types": ["Air"],
+    "Text": "Maneuver. Maneuver. Ignore difficult terrain during these maneuvers."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1,  Discard a card",
+    "Types": ["Air"],
+    "Text": "Channel Air. Strike. If you defeat the enemy, gain 1 Evasive."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Air",
+    "Types": ["Air"],
+    "Text": "Reaction - you are attacked. Gain 1 Evasive."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Air"],
+    "Text": "Line 5 - Deal 1d6 Air or Lightning damage. You may consume Air or Lightning. Move to the end of the line."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Air"],
+    "Text": "Choose one - Channel Air or Consume Air- Range 3 - Target ally gains 3 Haste and may discard up to 3 cards, then draw that many cards."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "4",
+    "Types": ["Air"],
+    "Text": "Channel Air. Maneuver. Strike. Each ally regardless of range may discard a card to reduce the energy cost of this card by 1. Each ally who discards a card this way may Move 1."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Air",
+    "Types": ["Dark"],
+    "Text": "Gain 1 Evasive. Maneuver."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Dark"],
+    "Text": "Channel Dark. Strike. You may consume Fire or Lightning. If you do, +1d6 damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Dark",
+    "Types": ["Dark"],
+    "Text": "Discard up to three cards. Radius 3 - Deal Xd6 damage, where X is the number of cards discarded this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Dark",
+    "Types": ["Dark"],
+    "Text": "Stance. Whenever you discard a card, put a counter on this card. At any time during your turn, you may remove three counters from this card - return target card from your discard to your hand."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Dark",
+    "Types": ["Dark"],
+    "Text": "Range 5 - Target enemy loses 1 of each status. You gain all statuses lost this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Dark"],
+    "Text": "Opener. Radius 3 - Each enemy strikes themselves. Channel Dark."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Dark"],
+    "Text": "Consume Dark. Channel Light. Return up to two cards from your discard to your hand. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Dark, Lose X Life",
+    "Types": ["Dark"],
+    "Text": "Range X - Deal Xd6 Dark damage. If this defeats the enemy, put a mark on this card. Marks persist between combats. X is equal to the number of marks on this card. This card starts with one mark. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0, Consume Dark",
+    "Types": ["Dark"],
+    "Text": "Reaction - any number of dice are rolled. Set all dice showing 1s to 6s."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2, Consume Dark",
+    "Types": ["Dark"],
+    "Text": "Reaction - your health drops to 0. Radius 3 - Strike, rolling twice the number of dice and dealing Dark damage. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Dark"],
+    "Text": "Choose one - Channel Dark or Consume Dark - Range 3 - Target ally gains 1 Empowered. You lose 3 life."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Lose 2 Life",
+    "Types": ["Dark"],
+    "Text": "Draw 3 cards. Channel Dark. Whenever you draw this card, you may pay 1 life. If you do, draw a card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0, Consume Dark",
+    "Types": ["Earth"],
+    "Text": "Range 3 - Deal dark damage equal to the target's health. Gain 1 Nihil."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Earth",
+    "Types": ["Earth"],
+    "Text": "Reaction - you are attacked by a non-adjacent enemy. Create a size 1 Obstacle adjacent to you between you and the target. The attack targets the obstacle. If the Obstacle is destroyed by this attack, you take any leftover damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Earth"],
+    "Text": "Channel Earth. Create a Size 1 Obstacle in your space, placing yourself on top of it."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Earth"],
+    "Text": "Continuous - Radius 3. Create Size 3 walls around the radius. Inflict Slow 3. While no walls are destroyed and you are inside them, deal an extra 2d6 Earth damage on your attacks. When this card is put into your discard, destroy all walls created this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Earth"],
+    "Text": "Line 5 - Deal 4d6 Earth damage. The area becomes one level lower if able. Then you may consume Earth. If you do, deal 1d6 Earth damage to each enemy adjacent to the Line and Create up to three Size 1 Obstacles adjacent to the line."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Earth"],
+    "Text": "Choose one - Channel Earth or Consume Earth - Range 3 - Target ally gains 3 Sturdy and may reduce their Weak by their Sturdy."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Earth",
+    "Types": ["Earth"],
+    "Text": "Stance. At the end of your turn, gain 1 Empowered. You may not play more than 2 cards each turn."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Earth"],
+    "Text": "Maneuver. Create a Size 1 Obstacle adjacent to you. Channel Earth."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Fire"],
+    "Text": "Continuous. Strike. The target can’t move. Channel Earth."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Fire"],
+    "Text": "Channel Fire. Strike. You may consume Lightning or Dark. If you do, +1d6 damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Fire",
+    "Types": ["Fire"],
+    "Text": "Your next card is played twice. Exile that card. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Fire",
+    "Types": ["Fire"],
+    "Text": "Exile the top four cards of your deck. Play one of them for free."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Fire"],
+    "Text": "Exile the top card of your deck. Radius X - Strike, where X is the energy cost of the exiled card. Channel Fire."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "4",
+    "Types": ["Fire"],
+    "Text": "Radius 3 - Deal 3d6 Fire damage to each other character, including allies. This costs 1 less for each ally affected. Channel Fire."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Fire",
+    "Types": ["Fire"],
+    "Text": "Range 5 - Exile the top 5 cards of your deck. Target ally gains 3 Strength and 1 Empowered."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Fire"],
+    "Text": "Range 5, Blast 2 - Deal 2d6 Fire damage and inflict 3 Pulse. Channel Fire."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Fire"],
+    "Text": "Deal 1d6 Fire damage. Reduce target’s Bleed and Poison by twice the damage dealt. Channel Fire."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Fire"],
+    "Text": "Continuous. Whenever Fire or Water is consumed, draw a card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Fire",
+    "Types": ["Fire"],
+    "Text": "Exile any number of cards from your hand. Strike, dealing +1d6 damage for each card exiled this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Fire"],
+    "Text": "Choose one - Channelr Fire or Consume Fire - Range 3 - Target ally gains 3 Strength and may reduce their Bleed by their Strength."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Fire",
+    "Types": ["Fire"],
+    "Text": "Radius 3 - Each ally exiles the top card of their deck. They may play it without paying the Energy cost."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Ice"],
+    "Text": "Range 5, Blast 2 - Deal 3d6 fire damage. Gain Burn equal to the lowest number rolled."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Ice"],
+    "Text": "Permanent. Whenever Ice is consumed, put a counter on this card. At the end of your turn, gain 2 Block for each counter on this card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Ice",
+    "Types": ["Ice"],
+    "Text": "If Water is channeled, Radius+2 and Push+2. Radius 2 - Push 2 away from you. Channel Water."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Ice"],
+    "Text": "Range 5, Blast 2 - Deal 2d6 Ice damage. The area becomes difficult terrain. Channel Ice."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3, Consume Ice",
+    "Types": ["Ice"],
+    "Text": "Radius 5 - Deal 5d6 Ice damage. Inflict 2 Slow. Gain 3 Block for each character dealt damage this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Ice"],
+    "Text": "Radius 1 - Inflict 2 Slow. Defend. Gain 2 Slow. Channel Ice."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Ice",
+    "Types": ["Ice"],
+    "Text": "Stance. At the end of your turn, look at the top three cards of your deck. You may draw one and put the rest into your discard. Radius 3 - Each friendly character gains Block equal to twice the energy cost of the drawn card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Ice",
+    "Types": ["Ice"],
+    "Text": "Radius 5 - Each ally may look at the top 4 cards of their deck and exile any number of them. They gain 3 Block for each card exiled this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2, Consume Ice",
+    "Types": ["Ice"],
+    "Text": "Permanent. You may look at the top card of your deck at any time. You may play the top card of your deck."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Light"],
+    "Text": "Choose one: Consume Ice - Range 3 - Target ally may look at the top five cards of their deck and put any number of them into their discard, then put the rest  back on top in any order. They gain 1 Block for each card put into discard this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Light"],
+    "Text": "Radius 3 - Each character gains 3 Barrier. Channel Light."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Light"],
+    "Text": "Range 5 - Remove a negative status from an ally. Channel Light."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Light",
+    "Types": ["Light"],
+    "Text": "Radius 3 - Remove all statuses from all characters."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Light"],
+    "Text": "Remove a negative status from an ally. You may consume Light. If you do, remove all negative statuses from that ally."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Light",
+    "Types": ["Light"],
+    "Text": "Channel Dark. Search your deck for a card and draw it, then shuffle your deck. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Light",
+    "Types": ["Light"],
+    "Text": "Range 10. Ignore line of sight. Deal 2d6 Light damage. Inflict 2 Pulse."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3, Consume Light",
+    "Types": ["Light"],
+    "Text": "Range 5 - Deal 3d6 Light damage three times. Inflict 3 Pulse to each enemy damaged this way, then trigger their Pulse."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Light"],
+    "Text": "Continuous. Gain 3 Pulse. Whenever you are attacked, Radius 3 - Deal Light damage equal to your pulse to all other characters, including allies, then lose 1 Pulse. Channel Light."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Light",
+    "Types": ["Light"],
+    "Text": "Permanent. Range 5 - Place a Size 1 Obstacle. You and your allies may draw line of sight, but not range, from the Obstacles space if you have line of sight to it. At the end of each turn, the Obstacle performs Radius 3 - Inflict 2 Pulse."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Light"],
+    "Text": "Radius 3 - Each ally may search their deck for a card and draw it, then gain 3 Pulse. Channel Light."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Light",
+    "Types": ["Light"],
+    "Text": "Range 5 - Deal 3d6 Light damage. If the target is scanned, draw 3 cards. Otherwise, scan the enemy and gain 3 Barrier."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Light",
+    "Types": ["Light"],
+    "Text": "Reaction - you are attacked. Ignore all effects of that attack. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Light"],
+    "Text": "Channel Light. Range 3 - Target ally performs all effects of the next card you play this turn."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Lightning"],
+    "Text": "Choose one: Consume Light. Range 3 - Target ally gains 3 Barrier and searches their deck for a card, draws it, then shuffles their deck."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Lightning"],
+    "Text": "Channel Lightning. Strike. You may consume Fire or Dark. If you do, +1d6 damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Lightning",
+    "Types": ["Lightning"],
+    "Text": "Teleport 8."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Lightning",
+    "Types": ["Lightning"],
+    "Text": "Range 7 - Swap positions of any two characters. Deal 1d6 lightning damage to each enemy swapped this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Lightning"],
+    "Text": "Line 5 - Deal 1d6 Air or Lightning damage. You may consume Air or Lightning. Move to the end of the line."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Lightning",
+    "Types": ["Lightning"],
+    "Text": "Line 5. Affects allies and enemies. Deal 4d6 Lightning damage and inflict 3 Sundered."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Lightning",
+    "Types": ["Lightning"],
+    "Text": "Stance. Whenever you roll a 6, gain 2 Counter and Range 3 - Deal 1d6 Lightning damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3, Consume Lightning",
+    "Types": ["Lightning"],
+    "Text": "Put 3 counters on this card. Range 5 - Deal Xd6 Lightning damage, where X is the number of counters on this card, then remove a counter from this card. Then, choose an enemy within Range 3 from the last target that hasn’t been affected by this card yet and repeat this process. Stop when this card has no more counters on it. Whenever you roll a 6, put a counter on this card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Lightning",
+    "Types": ["Lightning"],
+    "Text": "Permanent. At the end of your turn, Range 3 - Deal 1d6 Lightning damage. If you roll a 6, inflict Distracted until your next turn and 3 Sundered."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Lightning"],
+    "Text": "Permanent. Whenever Lightning is consumed, Range 3 - Deal 1d6 Lightning damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Lightning",
+    "Types": ["Lightning"],
+    "Text": "Permanent. Whenever you roll a 6, put a counter on this card. During your turn, you may remove 1 counter to gain 2 Counter. you may remove 3 counters to Channel Lightning. You may remove 5 counters to perform Line 3 - Deal 2d6 Lightning damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Lightning"],
+    "Text": "Radius 7 - Each enemy becomes distracted until the end of their next turn. Inflict 2 Sundered. Channel Lightning."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Lightning",
+    "Types": ["Nature"],
+    "Text": "Stance. Radius 5 - Whenever an ally attacks, that ally deals an extra 1d6 Lightning damage and you gain 1 Sundered."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Nature"],
+    "Text": "Range 5 - Deal 3d6 Nature damage. If the enemy isn’t defeated, instead of dealing the damage, inflict X poison, where X is the lowest dice value rolled."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Nature"],
+    "Text": "YOU MAY EAT FRIEND. FRIEND TASTE GOOD. YUM YUM. BECOME FULL."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Nature",
+    "Types": ["Nature"],
+    "Text": "Permanent. Radius 3 - the area becomes difficult terrain to your enemies. Enemies starting their turn in this area gain 2 Soft."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Nature",
+    "Types": ["Nature"],
+    "Text": "Permanent. Place a Sigil on the ground. It has 10 HP. When the Sigil is destroyed, exile this card. As long as you are within Range 3 of the Sigil, whenever you move, you may instead teleport to any space within Range 3 of the Sigil. Whenever you Strike an enemy within Range 3 of the Sigil, inflict 1 Soft before Striking."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Nature"],
+    "Text": "Strike, dealing Nature damage. For each 1 rolled, inflict 2 Poison and 2 Soft. Channel Nature."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3, Consume Nature",
+    "Types": ["Nature"],
+    "Text": "Range 7, Blast 3 - Deal 6d6 Nature damage. Inflict 4 Soft and 3 Slow. For every 1 rolled, you gain 1 life and draw a card. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Nature"],
+    "Text": "Choose one - Channel Nature or Consume Nature - Range 3 - Target ally regains 3 Health and may reduce their Poison by 3."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Water"],
+    "Text": "Permanent. Whenever you attack, if you are rolling any dice, you may set any number of them to 1 instead of rolling. If you do, Channel Nature."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Water"],
+    "Text": "Consume Water. Continuous. Radius 2 - The area becomes difficult terrain. Deal 2d6 Water damage. At the end of your turn. Push each other character within that difficult terrain as close to the center as possible."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Water"],
+    "Text": "Range 6 - Push 4. You may Consume Water. If you do, play a copy of this card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0, Consume Water",
+    "Types": ["Water"],
+    "Text": "Draw 2 cards."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0, Consume Water",
+    "Types": ["Water"],
+    "Text": "Permanent. Whenever you Strike or deal Water damage, you may increase or decrease one die result by 1."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3, Consume Water",
+    "Types": ["Water"],
+    "Text": "Continuous. Range 6, Blast 1 - Deal 4d6 Water damage. The area cannot be entered or exited."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Water"],
+    "Text": "Range 5 - Push 4. If the target is an ally, they draw 3 cards."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0, Consume Water",
+    "Types": ["Water"],
+    "Text": "Reaction - any number of dice are rolled. Set one die to any side."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Water"],
+    "Text": "Continuous. Whenever Fire or Water is consumed, draw a card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Elemental"],
+    "Text": "Choose one - Consume Water - Range 3 - Target ally draws 3 cards. Push them 3."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Elemental"],
+    "Text": "Channel each Element."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2, Consume each channelled Element",
+    "Types": ["Elemental"],
+    "Text": "Radius X - For each consumed element, deal 1d6 damage of that element’s Type, where X is the number of elements consumed"
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Elemental"],
+    "Text": "Channel any Element. Strike, dealing that type of element’s damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Elemental"],
+    "Text": "Reaction - you are attacked. Channel any element. You resist that element for this attack."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Bleed"],
+    "Text": "Continuous. Whenever an element is consumed, put a counter on this card. When this card is put into your discard, draw a card for each counter on this card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Bleed"],
+    "Text": "Range 7 - Inflict 5 Bleed."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Bleed"],
+    "Text": "Range 3 - Target Maneuvers. If they move less than 1, Inflict 3 Bleed on them."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Bleed"],
+    "Text": "Radius 5 - Inflict 4 Bleed. Each character affected may Maneuver."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Bleed"],
+    "Text": "Stance. Your Strikes inflict 2 Bleed."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Bleed"],
+    "Text": "Range 3 - Target loses life equal to its Bleed, then reduces their Bleed by 1. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Pulse"],
+    "Text": "Radius 5 - Each ally may maneuver. For each ally who does, you gain 2 Bleed."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Poison"],
+    "Text": "Radius 3 - Deal X Light damage to each other character, including allies, where X is your Pulse value."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Poison"],
+    "Text": "Stance. Your Strikes inflict 2 Poison."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Poison"],
+    "Text": "Gain 3 Poison. Radius 3 - Each ally may reduce any number of statuses on them by 2, then look at the top two cards of their deck and exile any number of them."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Poison"],
+    "Text": "Range 5 - Inflict 1 Poison, then Blast 3 - Inflict Poison to each other enemy equal to the Poison on the first target."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Poison"],
+    "Text": "Reaction - You are attacked. Gain 1 Poison. Gain Block equal to your Poison."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Poison"],
+    "Text": "Gain 2 Poison. Radius 3 - Inflict Poison equal to your Poison."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Tank"],
+    "Text": "Radius 5 - Reduce the Poison on each other character to 0. You gain Poison equal to the poison reduced this way. Gain 1 Energy for every 5 Poison reduced this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Tank"],
+    "Text": "Continuous. Whenever you Maneuver, place a counter on this card. Zone of Control +1 for each counter on this card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Tank"],
+    "Text": "Stance. Radius 3 - Each enemy must target you if able."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Tank"],
+    "Text": "Continuous. Each scanned enemy regardless of range must target you if able."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Tank"],
+    "Text": "Reaction - you are attacked. Gain X Block, where X the number of cards in your hand."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Tank"],
+    "Text": "Stance. When you lose block at the start of your turn, lose only half of it instead."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Tank"],
+    "Text": "Reaction - you lose block at the start of your turn. Maneuver, then deal 1d6 damage for every 5 Block lost."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Tank"],
+    "Text": "Reaction - You are attacked. Double your block."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Tank"],
+    "Text": "Continuous. Whenever an ally within Range 2 takes damage, prevent half of that damage. You take damage equal to the damage prevented this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Support"],
+    "Text": "Continuous. Whenever an ally is within Range 2 is attacked, you may swap places with that ally. The attack targets you instead."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Support"],
+    "Text": "Continuous. Whenever you Move, place a counter on this card for each space moved. Whenever you Strike, remove all counters from this card. For every 4 counters removed this way, +1d6 damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Support"],
+    "Text": "Permanent. Put a counter on this card. Range 3, Blast 3 - The area becomes Emboldening Terrain. It can be attacked and has 10 HP.  When it reaches 0 HP, exile this card. At the end of their turn, each friendly character within the Emboldening Terrain gains X Strength and X Block, where X is the number of counters on this card. At the start of your turn, you may pay 1 Energy. If you do, put a counter on this card. If this card would leave play, exile it instead."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Support"],
+    "Text": "Range 5 - Target ally gains 3 Strength, then may Strike. You gain 3 Weak."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Support"],
+    "Text": "Radius 3 - Each ally gains 1 Empowered and may Defend."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Support"],
+    "Text": "Range 7 - Target ally may Maneuver, then play a card from their hand."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Support"],
+    "Text": "Radius 3 - Each ally gains 2 Sturdy, then may discard two cards to Defend."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3",
+    "Types": ["Support"],
+    "Text": "Range 3 - Target ally gains 3 Empowered, 3 Strength, 3 Haste and draws 3 cards. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Control"],
+    "Text": "Radius 7 - Each ally may Maneuver, then Strike. Their strikes inflict 2 Soft."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Control"],
+    "Text": "Inflict 1 Feeble to each enemy within line of sight regardless of range."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Control"],
+    "Text": "Range 5 - Target enemy Maneuvers to be as close to you as possible."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Control"],
+    "Text": "Range 5 - Inflict 2 Slow and 2 Weak."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3",
+    "Types": ["Draw"],
+    "Text": "Range 5 - Until the end of its next turn, target enemy becomes your ally. It activates during your team’s turn and you control all of its actions. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Draw"],
+    "Text": "Radius 3 - Each ally draws 3 cards, then discards 3 cards. Channel Light or Water."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0, lose 3 life",
+    "Types": ["Draw"],
+    "Text": "Radius 5 - Each ally draws 3 cards. If you are not bloodied, they discard 3 cards."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Draw"],
+    "Text": "Look at the top 3 cards of your deck. Draw one of them and put the others into your discard."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Draw"],
+    "Text": "Draw 6 cards. Exile any number of cards from your hand. Finisher."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Draw"],
+    "Text": "Range 5 - Reduce any number of statuses on target ally by 2. For each different status reduced this way, they draw a card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Draw"],
+    "Text": "Range 3 - Deal 1d6 Fire damage. Draw cards equal to the damage dealt this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Draw"],
+    "Text": "Discard any number of cards. Radius 3 - Each ally draws X cards, where X is the number of cards discarded. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Summon"],
+    "Text": "Permanent. Radius 3 - at the end of your turn, each ally draws a card, then discards a card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Summon"],
+    "Text": "Permanent. Consume any Element. Summon an Elemental. Its type is the consumed element. (6 HP, Size 1, Immune to its element’s type.). At the end of your turn it Maneuvers, then Strikes. Whenever you consume its element, it Defends. Maneuver - move 3. Strike - deal 2d6 damage of its element’s type. Defend - gain 2 Barrier."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Summon"],
+    "Text": "Permanent. Lose 4 Life. Summon a Dark Elemental. Its type is Dark. (6 HP, Size 1, Immune to Dark, Weak to Light). At the end of your turn it Maneuvers, then Strikes. Maneuver - move 3. Strike - deal 2d6 Dark damage and gain Barrier equal to half the highest value rolled. Defend - gain 2 Barrier."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Summon"],
+    "Text": "Permanent. Summon a Lookout (5 HP, Size 1). At the end of your turn, it Maneuvers, then scans an enemy within Range 5. Maneuver - Move 3. Strike - Deal 1d6 damage. Defend - gain 3 Block."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Summon"],
+    "Text": "Permanent. Summon a Familiar (5 HP, Size 1). At the end of your turn, it Maneuvers, then channels any element. Maneuver - Move 3. Strike - Deal 1d6 damage. Defend - gain 3 Block."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Summon"],
+    "Text": "Permanent. Summon a Warden (5 HP, Size 1). At the end of your turn, it Maneuvers, then Defends. Maneuver - Move 3. Strike - Deal 1d6 damage. Defend - gain 3 Block and 3 Counter."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Summon"],
+    "Text": "Destroy one of your Summons, regardless of range or line of sight. Gain 1 Empowered. Channel any element."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Summon"],
+    "Text": "Destroy one of your Summons, regardless of range or line of sight. At its location, Radius 2 - deal 3d6 damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Discard"],
+    "Text": "Strike, dealing Dark damage. If you defeat the enemy, you may consume Dark to summon a Skeleton (3*T HP, Size 1, Weak to Light). At the end of this turn it Maneuvers, then Strikes. Maneuver - Move 3+T. Strike - Deal Td6 damage. Defend -Gain 2*T Block. T is equal to the defeated enemies Tier."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Discard"],
+    "Text": "Maneuver. Whenever this card is discarded, Move 1."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Discard three cards",
+    "Types": ["Discard"],
+    "Text": "Continuous. Exile any number of basic cards discarded this way. You may play the exiled cards without paying their costs."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2",
+    "Types": ["Discard"],
+    "Text": "Permanent. Whenever you discard a card, Range 3 - Deal 1d6 damage."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Discard"],
+    "Text": "Strike. Whenever this card is discarded, look at the top four cards of your deck. You may exile any number of them, then put the rest back in any order."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Discard a card",
+    "Types": ["Discard"],
+    "Text": "Range 3 - Target ally may play a card from their discard without paying the Energy cost. Then, exile that card."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Discard a card",
+    "Types": ["Discard"],
+    "Text": "Radius 3 - If you discarded a Maneuver, each ally may Maneuver. If you discarded a Defend, each ally may Defend. If you discarded a Strike , each ally may Strike."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "0",
+    "Types": ["Discard"],
+    "Text": "Draw a card. Whenever this card is discarded, Radius 3 - Each ally may draw 2 cards."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Discard your hand",
+    "Types": ["Discard"],
+    "Text": "Draw 4 cards."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1",
+    "Types": ["Other"],
+    "Text": "Strike. Mark this card. Whenever this card has 5 marks, remove them all and pick an upgrade that hasn’t yet been chosen. \nChannel any Element.\n+1d6 Damage.\nBefore or after your Strike, Maneuver.\nIgnore Block.\nCosts 1 less energy. Take this upgrade only if it’s the only upgrade available."
+  }
+]

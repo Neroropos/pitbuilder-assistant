@@ -6,8 +6,10 @@ import { ref } from 'vue'
 const heritage = ref()
 const element = ref()
 const background = ref()
+const backSkill = ref()
 const heritages = GetHeritages()
 const backgrounds = GetBackgrounds()
+const skills: String[] = ['Battles', 'Hymns']
 </script>
 <template>
   <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block; width: 100%">
@@ -44,4 +46,16 @@ const backgrounds = GetBackgrounds()
     ></Select>
     <label for="backgroundSelect">Background</label>
   </FloatLabel>
+  <div v-if="background != null">
+    <FloatLabel class="w-full md:w-56" variant="in" style="display: inline-block; width: 100%">
+      <Select
+        v-model="backSkill"
+        :options="skills"
+        class="w-full md:w-56"
+        inputId="skillSelect"
+        style="width: 100%"
+      ></Select>
+      <label for="skillSelect">Skill from background</label>
+    </FloatLabel>
+  </div>
 </template>
