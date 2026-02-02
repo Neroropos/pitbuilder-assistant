@@ -68,7 +68,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1, Consume Air",
-    "Types": ["Dark"],
+    "Types": ["Air"],
     "Text": "Gain 1 Evasive. Maneuver."
   },
   {
@@ -140,7 +140,7 @@
   {
     "Name": "Placeholder",
     "Cost": "0, Consume Dark",
-    "Types": ["Earth"],
+    "Types": ["Dark"],
     "Text": "Range 3 - Deal dark damage equal to the target's health. Gain 1 Nihil."
   },
   {
@@ -188,8 +188,20 @@
   {
     "Name": "Placeholder",
     "Cost": "2",
-    "Types": ["Fire"],
+    "Types": ["Earth"],
     "Text": "Continuous. Strike. The target can’t move. Channel Earth."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "2, Consume Earth",
+    "Types": ["Earth"],
+    "Text": "Continuous. Opener. You cannot move. At the start of your turn, Radius 5 - Deal 6d6 Earth Damage. For each enemy defeated or obstacle destroyed this way an ally may return a card from their discard to their hand."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "4",
+    "Types": ["Earth"],
+    "Text": "Strike. Defend. Channel Earth. This card costs 1 less for each enemy within Radius 3 of you."
   },
   {
     "Name": "Placeholder",
@@ -266,7 +278,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1",
-    "Types": ["Ice"],
+    "Types": ["Fire"],
     "Text": "Range 5, Blast 2 - Deal 3d6 fire damage. Gain Burn equal to the lowest number rolled."
   },
   {
@@ -320,8 +332,14 @@
   {
     "Name": "Placeholder",
     "Cost": "0",
-    "Types": ["Light"],
+    "Types": ["Ice"],
     "Text": "Choose one: Consume Ice - Range 3 - Target ally may look at the top five cards of their deck and put any number of them into their discard, then put the rest  back on top in any order. They gain 1 Block for each card put into discard this way."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Ice",
+    "Types": ["Ice"],
+    "Text": "Radius 7 - Deal 1d6 Ice damage. Inflict 1 Slow. Each ally may look at the top three cards of their deck and put any number of them into their discard."
   },
   {
     "Name": "Placeholder",
@@ -404,7 +422,7 @@
   {
     "Name": "Placeholder",
     "Cost": "0",
-    "Types": ["Lightning"],
+    "Types": ["Light"],
     "Text": "Choose one: Consume Light. Range 3 - Target ally gains 3 Barrier and searches their deck for a card, draws it, then shuffles their deck."
   },
   {
@@ -476,7 +494,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1, Consume Lightning",
-    "Types": ["Nature"],
+    "Types": ["Lightning"],
     "Text": "Stance. Radius 5 - Whenever an ally attacks, that ally deals an extra 1d6 Lightning damage and you gain 1 Sundered."
   },
   {
@@ -524,8 +542,20 @@
   {
     "Name": "Placeholder",
     "Cost": "0",
-    "Types": ["Water"],
+    "Types": ["Nature"],
     "Text": "Permanent. Whenever you attack, if you are rolling any dice, you may set any number of them to 1 instead of rolling. If you do, Channel Nature."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "1, Consume Nature",
+    "Types": ["Nature"],
+    "Text": "Radius 3 - Each ally gains 1 Regrowth. Exile."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3",
+    "Types": ["Nature"],
+    "Text": "Permanent. At the start of your turn, Range 5 - Inflict 3 Poison. If the target has 10 or more Poisoned, you may exile this card and Consume Nature to gain 3 Regrowth."
   },
   {
     "Name": "Placeholder",
@@ -578,8 +608,14 @@
   {
     "Name": "Placeholder",
     "Cost": "0",
-    "Types": ["Elemental"],
+    "Types": ["Water"],
     "Text": "Choose one - Consume Water - Range 3 - Target ally draws 3 cards. Push them 3."
+  },
+  {
+    "Name": "Placeholder",
+    "Cost": "3",
+    "Types": ["Water"],
+    "Text": "Continuous. Channel Water. Line 6 - Deal 5d6 Water damage, then note all the dice rolled. Whenever an ally within Range 6 rolls dice, they may instead set any number of those dice to values you have noted. Use each noted value only once."
   },
   {
     "Name": "Placeholder",
@@ -608,7 +644,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1",
-    "Types": ["Bleed"],
+    "Types": ["Elemental"],
     "Text": "Continuous. Whenever an element is consumed, put a counter on this card. When this card is put into your discard, draw a card for each counter on this card."
   },
   {
@@ -644,7 +680,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1",
-    "Types": ["Pulse"],
+    "Types": ["Bleed"],
     "Text": "Radius 5 - Each ally may maneuver. For each ally who does, you gain 2 Bleed."
   },
   {
@@ -686,7 +722,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1",
-    "Types": ["Tank"],
+    "Types": ["Poison"],
     "Text": "Radius 5 - Reduce the Poison on each other character to 0. You gain Poison equal to the poison reduced this way. Gain 1 Energy for every 5 Poison reduced this way."
   },
   {
@@ -740,7 +776,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1",
-    "Types": ["Support"],
+    "Types": ["Tank"],
     "Text": "Continuous. Whenever an ally is within Range 2 is attacked, you may swap places with that ally. The attack targets you instead."
   },
   {
@@ -788,7 +824,7 @@
   {
     "Name": "Placeholder",
     "Cost": "2",
-    "Types": ["Control"],
+    "Types": ["Support"],
     "Text": "Radius 7 - Each ally may Maneuver, then Strike. Their strikes inflict 2 Soft."
   },
   {
@@ -812,7 +848,7 @@
   {
     "Name": "Placeholder",
     "Cost": "3",
-    "Types": ["Draw"],
+    "Types": ["Control"],
     "Text": "Range 5 - Until the end of its next turn, target enemy becomes your ally. It activates during your team’s turn and you control all of its actions. Exile."
   },
   {
@@ -860,7 +896,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1",
-    "Types": ["Summon"],
+    "Types": ["Draw"],
     "Text": "Permanent. Radius 3 - at the end of your turn, each ally draws a card, then discards a card."
   },
   {
@@ -908,7 +944,7 @@
   {
     "Name": "Placeholder",
     "Cost": "1",
-    "Types": ["Discard"],
+    "Types": ["Summon"],
     "Text": "Strike, dealing Dark damage. If you defeat the enemy, you may consume Dark to summon a Skeleton (3*T HP, Size 1, Weak to Light). At the end of this turn it Maneuvers, then Strikes. Maneuver - Move 3+T. Strike - Deal Td6 damage. Defend -Gain 2*T Block. T is equal to the defeated enemies Tier."
   },
   {
