@@ -698,7 +698,7 @@
     "Actions": [
       {
         "Name": "Mobility",
-        "Text": "Maneuver.",
+        "Text": "Defend. Maneuver.",
         "Values": ["3+MOV"]
       },
       {
@@ -747,7 +747,7 @@
       },
       {
         "Name": "Hunter",
-        "Strike": "Range {TIR*2+1} - Deal {DMG} Nature damage.",
+        "Strike": "Range {TIR*2+3} - Deal {DMG} Nature damage.",
         "Defend": "",
         "Maneuver": "",
         "HPMod": 0,
@@ -756,7 +756,7 @@
         "Actions": [
           {
             "Name": "Far",
-            "Text": "Range {TIR*3+1} - Inflict {TIR+1} Slow and {TIR} Poison. Target becomes Marked.",
+            "Text": "Range {TIR*3+4} - Inflict {TIR+1} Slow and {TIR} Poison. Target becomes Marked.",
             "Values": []
           },
           {

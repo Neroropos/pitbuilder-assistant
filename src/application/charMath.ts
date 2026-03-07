@@ -423,6 +423,7 @@ export class Enemy {
     if (this.Passives.find((x) => x.Name == 'Grunt')) {
       this.HP = 1
     }
+    console.log(this.Passives)
     this.PassivesShown = []
     this.Passives.forEach((p) => {
       let text = p.Text

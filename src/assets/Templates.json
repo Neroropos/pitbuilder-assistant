@@ -962,25 +962,25 @@
       },
       {
         "Name": "Elite - Defender",
-        "Text": "At the start of your turn and at the start of combat, gain {0} Block.",
+        "Text": "At the start of your turn and at the start of combat, gain {BLK} Block.",
         "Values": ["BLK"],
         "Condition": { "Check": "Type", "Value": "Defender" }
       },
       {
         "Name": "Elite - Striker",
-        "Text": "At the end of your turn, deal {0} Damage. {1}",
+        "Text": "At the end of your turn, Strike, dealing half damage and inflicting no conditions. {1}",
         "Values": ["Math.round(DMG/2)", "PSTATK"],
         "Condition": { "Check": "Type", "Value": "Striker" }
       },
       {
         "Name": "Elite - Controller",
-        "Text": "At the end of your turn, Range {0} - inflict 1 Stunned.",
+        "Text": "At the end of your turn, Range {TIR*2+3} - inflict 1 Stunned.",
         "Values": ["TIR*2+3"],
         "Condition": { "Check": "Type", "Value": "Controller" }
       },
       {
         "Name": "Elite - Support",
-        "Text": "At the start of your turn and at the start of combat, Range {0} - target ally gains 1 Haste and 1 Strength.",
+        "Text": "At the start of your turn and at the start of combat, Range {TIR*2+3} - target ally gains 1 Haste and 1 Strength.",
         "Values": ["TIR*2+3"],
         "Condition": { "Check": "Type", "Value": "Support" }
       }
